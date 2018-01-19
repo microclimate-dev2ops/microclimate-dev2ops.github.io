@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112407000-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112407000-1');
+</script>
+
+<title>Getting started - Microclimate</title>
+<meta name="description"
+	content="IBM Microclimate">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous" />
+<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	rel="stylesheet prefetch" />
+
+<link rel='stylesheet prefetch'
+	href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css' />
+
+<link href="css/styles.css" rel="stylesheet prefetch" />
+<link href="css/ibm-type.min.css" rel="stylesheet prefetch" />
+<link rel="shortcut icon" href="/dev-ex/landing-pages/favicon.ico" type="image/x-icon" />
+
+</head>
+
+<body class="">
+
+	<header>
+
+<nav class="navbar navbar-transparent header-zindex999" >
+    <div class="container">
+    		
+        <div class="navbar-header">
+            <button id="navbar_responsive_button" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+            <a id="navbar_home_link" class="navbar-brand" href="." aria-label="Home">
+            		<img height="18px" src="images/microclimate-logo-white.svg"/></a>
+           
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right text-right">
+                <li><a href="about" >About</a></li>
+                <li><a href="gettingstarted"  class="active-button" >Getting Started</a></li>
+                <li><a href="document" >Documentation</a></li>
+                
+                <li><a href="community" >Community</a></li>
+                <li><a href="https://github.com/microclimate-dev2ops">Git</a></li>
+                <!-- li class="hidden-xs"><a id="navbar_github_link" href="https://github.com/OpenLiberty" target="new" aria-label="Open Liberty GitHub Repository"></a></li -->
+            </ul>
+        </div>
+    </div>
+  </nav>
+
+</header>
+	<section class="main">
+		<div class="header-bg">
+			<div class="container doc-container-header">
+				<div class="row full-width">
+					<div class="col-lg-12">
+						<div class="header-doc-intro">
+							<div class="header-doc-main ">Getting started</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container main-content document-content"><p><a href="./download/microclimate.zip" class="download-link" style="color: white;">Download</a></p>
+
+<p>Quickly build and deploy micro-services in the blink of an eye</p>
+
+<p><img src="https://img.shields.io/badge/runtime-Java%20%7C%20Swift%20%7C%20Node-yellow.svg" alt="platforms" /></p>
+
+<ul>
+  <li><a href="#local-microclimate-deployment">Local deployment</a></li>
+  <li><a href="#ibm-cloud-private-deployment">IBM Cloud Private deployment</a></li>
+</ul>
+
+<h2 id="local-microclimate-deployment">Local microclimate deployment</h2>
+
+<h4 id="prerequisites">Prerequisites</h4>
+<ul>
+  <li><a href="https://www.docker.com/get-docker">Docker</a> <strong>v17.06 minimum</strong></li>
+  <li>Linux only: follow post-installation steps to
+    <ul>
+      <li><a href="https://docs.docker.com/engine/installation/linux/linux-postinstall/">Run docker as a non-root user</a></li>
+      <li><a href="https://docs.docker.com/compose/install/">Update docker-compose</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="install-and-run">Install and run</h4>
+
+<ol>
+  <li>
+    <p>Unzip the downloaded file from the download link on the front page.</p>
+  </li>
+  <li>
+    <p>Install the microclimate command line interface (mcdev).</p>
+  </li>
+</ol>
+
+<h5 id="linuxmacos">Linux/MacOS</h5>
+<p>Non-sudo installation (Run as ~/mcdev or manually add to path)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd cli
+./install.sh
+cd ..
+</code></pre></div></div>
+<p>Sudo user installation (install as root and to <code class="highlighter-rouge">/usr/local/bin</code> automatically putting it on your path)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd cli
+sudo ./install.sh
+cd ..
+</code></pre></div></div>
+<p>NOTE: You won’t be able to run <code class="highlighter-rouge">mcdev</code> commands from inside the cli directory due to the file name conflict. To run commands change to another directory.</p>
+<h5 id="for-windows-powershell-ps1">For Windows, PowerShell (.ps1)</h5>
+<p>In a PowerShell session run</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cli\install.ps1
+</code></pre></div></div>
+<ol>
+  <li>Run the following command to start and open microclimate.
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mcdev start -o
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="stopping">Stopping</h3>
+
+<ol>
+  <li>To stop Microclimate just run the command:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mcdev stop
+</code></pre></div>    </div>
+    <p>This will stop and remove your Microclimate Docker containers.</p>
+  </li>
+</ol>
+
+<h2 id="ibm-cloud-private-deployment">IBM Cloud Private deployment</h2>
+
+<h4 id="prerequisites-1">Prerequisites</h4>
+<ul>
+  <li><a href="https://www.docker.com/get-docker">Docker</a></li>
+  <li><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">Kubectl (Kubernetes Command Line Tool)</a></li>
+</ul>
+
+<h4 id="installing-microclimate">Installing Microclimate</h4>
+
+<p>Microclimate uses Helm, the package manager for Kubernetes, to provide installation in Kubernetes environments including IBM Cloud Private. For more information about Helm see <a href="https://docs.helm.sh/using_helm/">https://docs.helm.sh/using_helm/</a>.</p>
+
+<ul>
+  <li>
+    <p>Configure the Kubernetes client API to point to your ICP instance: in the ICP admin GUI, click the account symbol in the top right and go to Configure Client, copy the provided commands and paste them into your local terminal.</p>
+  </li>
+  <li>
+    <p>Run the <code class="highlighter-rouge">helm install</code> command to deploy Microclimate into your ICP instance. This will create Deployment and Service definitions in ICP and pull the Microclimate docker images from https://hub.docker.com/.</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>helm install <span class="nt">--name</span> microclimate chart/microclimate
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>To uninstall Microclimate from ICP run the following command:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>helm delete microclimate <span class="nt">--purge</span>
+</code></pre></div></div>
+
+<p>The <a href="https://github.ibm.com/dev-ex/microclimate/blob/master/chart/microclimate/README.md">Helm chart README</a> provides further information on using persistence storage and other for more configuration options. For build instructions and running with a local build of the Microclimate docker images see: <a href="https://github.ibm.com/dev-ex/microclimate/wiki/Microclimate-Development">Microclimate-Development</a></p>
+</div>
+	</section>
+
+	<footer>
+<div class="footer-bg">
+	<div class="container footer-container">
+		<div class="row full-width">
+			<div class="col-lg-12 text-right">
+			<a href="https://www.ibm.com/privacy/us/en/">Privacy Policy</a> &nbsp;© Copyright IBM Corp. 2018
+			</div>
+		</div>
+	</div>
+</div>
+
+</footer>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+</body>
+
+</html>
