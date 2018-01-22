@@ -103,6 +103,9 @@ h2 {
 	display: none;
 }
 
+#homepage #navbar_home_link_beta {
+	display: none;
+}
 .header-zindex999 {
 	z-index: 999;
 }
@@ -224,7 +227,10 @@ h2 {
 	text-align: center;
 	color: white;
 }
-
+.home_beta {
+	color: white;
+	top: 5px;
+}
 .header-doc-main {
 	font-size: 46pt;
 }
