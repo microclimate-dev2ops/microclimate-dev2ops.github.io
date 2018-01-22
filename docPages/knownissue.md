@@ -4,6 +4,7 @@ title: Known issues
 description: Known issues
 duration: 1 minute
 permalink: issues
+type: document
 ---
 
 ## Swift apps don't rebuild or redeploy

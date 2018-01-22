@@ -4,6 +4,7 @@ title: Documentation
 description: Documents
 duration: 1 minute
 permalink: document
+type: document
 ---
 
 Hitting a problem? Start with our [known issues and limitations page](./knownissue.md) to see if it is something we are aware of. If you don't see your issue there, log an issue in our [GitHub repository](https://github.com/orgs/microclimate-dev2ops).

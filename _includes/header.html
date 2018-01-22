@@ -19,7 +19,7 @@
             <ul class="nav navbar-nav navbar-right text-right">
                 <li><a href="about" {% if page.permalink == 'about' %} class="active-button" {% endif %}>About</a></li>
                 <li><a href="gettingstarted" {% if page.permalink == 'gettingstarted' %} class="active-button" {% endif %}>Getting Started</a></li>
-                <li><a href="document" {% if page.permalink == 'document' or page.permalink == 'issues' or page.permalink == 'cli' or page.permalink == 'ide' %} class="active-button" {% endif %}>Documentation</a></li>
+                <li><a href="document" {% if page.type == 'document' %} class="active-button" {% endif %}>Documentation</a></li>
                 <li><a href="community" {% if page.permalink == 'community' %} class="active-button" {% endif %}>Community</a></li>
                 <li><a href="https://github.com/microclimate-dev2ops">Git</a></li>
                 <!-- li class="hidden-xs"><a id="navbar_github_link" href="https://github.com/OpenLiberty" target="new" aria-label="Open Liberty GitHub Repository"></a></li -->

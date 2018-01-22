@@ -4,6 +4,7 @@ title: How to set up your own IDE for use with Microclimate
 description: How-to set up your own IDE for use with Microclimate
 duration: 1 minute
 permalink: ide
+type: document
 ---
 
 ## Using Eclipse

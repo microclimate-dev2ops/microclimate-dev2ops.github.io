@@ -95,4 +95,5 @@ To uninstall Microclimate from ICP run the following command:
 helm delete microclimate --purge
 ```
 
-The [Helm chart README](https://github.ibm.com/dev-ex/microclimate/blob/master/chart/microclimate/README.md) provides further information on using persistence storage and other for more configuration options. For build instructions and running with a local build of the Microclimate docker images see: [Microclimate-Development](https://github.ibm.com/dev-ex/microclimate/wiki/Microclimate-Development)
+For information on using persistence storage and other configuration options see [Persistent storage in ICP](./persistent) and the [Helm chart README](./helmchart). For development build instructions and running with a local build of the Microclimate docker images see [Microclimate-Development](./microclimatedev).
+
