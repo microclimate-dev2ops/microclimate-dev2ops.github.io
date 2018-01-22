@@ -26,11 +26,13 @@ Quickly build and deploy micro-services in the blink of an eye
 * Linux only: follow post-installation steps to
   * [Run docker as a non-root user](https://docs.docker.com/engine/installation/linux/linux-postinstall/)
   * [Update docker-compose](https://docs.docker.com/compose/install/)
+* Windows only: 
+  * We strongly recommend that you do not run using Experimental Features enabled (which is enabled by default in Docker) when running Windows 10. To turn it off, go to Docker->Settings->Daemon and de-select **Experimental Features**.
 
 #### Install and run
 
 
-1. Unzip the downloaded file from the download link on the front page.
+1. Unzip the downloaded file.
 
 2. Install the microclimate command line interface (mcdev).
 
