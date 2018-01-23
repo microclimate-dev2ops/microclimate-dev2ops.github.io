@@ -22,3 +22,9 @@ When testing out the user application from the Open Application view in Microcli
 For the beta, we had to restrict project deletion in the Microclimate UI to only those that are within a running container.
 
 **Workaround:** Navigate to the microclimate-workspace directory, delete the project folder, and refresh the Microclimate UI.
+
+## Windows: Dockerfile edit does not start the Liberty server after a container refresh
+
+On making a Dockerfile change in Windows, the Liberty server is not started after a container refresh.
+
+**Workaround:** A pom.xml edit or a Microclimate(mcdev) restart, restarts the Liberty Server.
