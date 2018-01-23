@@ -6,9 +6,16 @@ $(document).keydown(function(e) {
 	}
 });
 
+
 $(document)
 		.ready(
 				function() {
+					
+					$(".trackdownload").on("click", function(e) {
+						var file=$(this).attr('href');
+					      gtag('event', 'download', { event_category: 'download', event_label: file});
+					});
+					
 					$(".navbar").on("show.bs.collapse", function(e) {
 						  console.log("open")
 							$(".navbar").css("background", "black");
@@ -27,6 +34,8 @@ $(document)
 									function(e) {
 										e.preventDefault();
 										var file = $(this).data("video");
+										
+									    gtag('event', 'videoView', { event_category: 'videoView', event_label: file});
 										var htmlTemplate = '<div class="videoContainer"><div class="videoPlayer"><div style="display: block; padding-top:56%; width: 100%;">'
 												+ '</div><button class="closeBtn">X</button><video class="video-iframe" width="100%" height="100%" autobuffer controls autoplay>'
 												+ '<source id="mp4" src="'
