@@ -27,21 +27,20 @@ When testing Microclimate you can use the HostPath storage type to persist your 
 
 3. Alternative to step 2. Create a volume.yaml file containing the specification below, changing the hostPath path value to the directory you created in step 1. Log on to your ICP instance as in step 4 below, and and run ``kubectl create -f volume.yaml`` to install the PersistentVolume.
 
-```sh
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: microclimate
-spec:
-  accessModes:
-    - ReadWriteOnce
-  capacity:
-    storage: 5Gi
-  hostPath:
-    path: /home/rnchamberlain/workspace
- ```
- 
- 
+    ```sh
+    apiVersion: v1
+    kind: PersistentVolume
+    metadata:
+      name: microclimate
+    spec:
+      accessModes:
+        - ReadWriteOnce
+      capacity:
+        storage: 5Gi
+      hostPath:
+        path: /home/rnchamberlain/workspace
+     ```
+
 4. Log on to your ICP instance using the credentials from the IBM Cloud Private -> admin -> configure client
 
 5. Run ``helm install --name microclimate --set persistence.enabled=true chart/microclimate`` to install Microclimate with persistence enabled.
