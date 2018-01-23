@@ -47,6 +47,10 @@
 	border-radius: 4px;
 }
 
+.homeicon-div {
+	min-width: 200px;
+}
+
 .dark-bg {
 	opacity: 1;
 }
