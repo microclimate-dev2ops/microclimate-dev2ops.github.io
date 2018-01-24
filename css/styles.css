@@ -72,6 +72,10 @@
 	font-family: ibm-plex-sans;
 }
 
+.beta-padding {
+	padding-left: 6px;
+	padding-right: 6px !important;
+}
 h1 {
 	font-size: 24px;
 	line-height: 1.5em;
