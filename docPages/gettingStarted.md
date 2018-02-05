@@ -26,51 +26,47 @@ Quickly build and deploy micro-services in the blink of an eye
 * Linux only: follow post-installation steps to
   * [Run docker as a non-root user](https://docs.docker.com/engine/installation/linux/linux-postinstall/)
   * [Update docker-compose](https://docs.docker.com/compose/install/)
-* Windows only: 
+* Windows only:
+  * Windows 10 or Windows Server 2016
+  * [Docker for Windows](https://www.docker.com/docker-windows)
   * We strongly recommend that you do not run using Experimental Features enabled (which is enabled by default in Docker) when running Windows 10. To turn it off, go to Docker->Settings->Daemon and de-select **Experimental Features**.
 
-#### Install and run
-
-
-1. Unzip the downloaded file.
-
-2. Install the microclimate command line interface (mcdev).
-
-
-##### Linux/MacOS  
-Non-sudo installation (Run as ~/mcdev or manually add to path)
+#### Install and run on Linux or MacOS
+1. Unzip the download file, open a terminal session and change directory into the microclimate directory.
+2. Install the Microclimate CLI. This will install the mcdev command as a link in your HOME directory:
 ```
 cd cli
 ./install.sh
 cd ..
 ```
-Sudo user installation (install as root and to `/usr/local/bin` automatically putting it on your path)
+3. Start Microclimate. This will download docker images and open Microclimate in your default browser:
 ```
-cd cli
-sudo ./install.sh
-cd ..
+~/mcdev start -o
 ```
-NOTE: You won't be able to run `mcdev` commands from inside the cli directory due to the file name conflict. To run commands change to another directory.
-##### For Windows, PowerShell (.ps1)
-In a PowerShell session run
-```
+
+#### Install and run on Windows
+1. Open the file properties menu for the download file. Tick the Unblock box on the General tab then click OK.
+2. Unzip the download file, open a PowerShell session and change directory into the microclimate directory.
+3. Install the Microclimate CLI. This will add the mcdev command to your PATH:
+```bash
 cli\install.ps1
 ```
-3. Run the following command to start and open microclimate.
+4. Start Microclimate. This will download docker images and open Microclimate in your default browser:
+```bash
+mcdev start
 ```
-mcdev start -o
+
+#### Microclimate CLI
+```bash
+Usage:  mcdev COMMAND
+
+Commands:
+  start             Pull Microclimate docker images and start Microclimate
+  open              Open Microclimate in your browser
+  stop              Stop Microclimate docker containers
+  update            Update Microclimate docker images
 ```
-
-
-### Stopping
-
-1. To stop Microclimate just run the command:
-```
-mcdev stop
-```
-This will stop and remove your Microclimate Docker containers.
-
-
+For full installation and usage details see [Microclimate CLI](./cli).
 
 
 ## IBM Cloud Private deployment
@@ -85,7 +81,9 @@ Microclimate uses Helm, the package manager for Kubernetes, to provide installat
 
 - Configure the Kubernetes client API to point to your ICP instance: in the ICP admin GUI, click the account symbol in the top right and go to Configure Client, copy the provided commands and paste them into your local terminal.
 
-- Run the `helm install` command to deploy Microclimate into your ICP instance. This will create Deployment and Service definitions in ICP and pull the Microclimate docker images from https://hub.docker.com/.
+- Follow the instructions in [Persistent storage in ICP](./persistent) to set up a persistent workspace for your Microclimate projects and install and run Microclimate.
+
+- Alternatively, if you want to explore Microclimate capabilities in ICP without setting up a persistent workspace, run the following command. Note that your projects will be deleted when the ICP pod is restarted.
 ```bash
 helm install --name microclimate chart/microclimate
 ```

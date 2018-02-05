@@ -7,6 +7,12 @@ permalink: issues
 type: document
 ---
 
+## Windows: cli\install.ps1 cannot be loaded, the file is not digitally signed
+
+The default security settings on Windows 10 and Windows Server 2016 do not allow downloaded PowerShell scripts to run.
+
+**Workaround:** Right-click on the microclimate.zip file and open the file Properties menu. On the General tab, tick the Unblock box beside the "This file came from another computer" message. Unzip the file again and retry the cli\install.ps1 script.
+
 ## Swift apps don't rebuild or redeploy
 
 Swift support in Microclimate is not fully implemented for the initial Beta release and currently if you edit the application it will not rebuild or redeploy like Java and Node.js applications.

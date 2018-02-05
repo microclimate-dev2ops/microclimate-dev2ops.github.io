@@ -7,7 +7,7 @@ permalink: document
 type: document
 ---
 
-Hitting a problem? Start with our [known issues and limitations page](./knownissue.md) to see if it is something we are aware of. If you don't see your issue there, log an issue in our [GitHub repository](https://github.com/orgs/microclimate-dev2ops).
+Hitting a problem? Start with our [known issues and limitations page](./issues) to see if it is something we are aware of. If you don't see your issue there, log an issue in our [GitHub repository](https://github.com/orgs/microclimate-dev2ops).
 
 Maybe you are just looking for some pointers? Have a look through the links below. If you can't find what you need, reach out to us at our ibm-cloud-tech [Slack channel](https://ibm-cloud-tech.slack.com/messages/microclimate)! If you are new to Slack you can [create a user ID here!](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 
