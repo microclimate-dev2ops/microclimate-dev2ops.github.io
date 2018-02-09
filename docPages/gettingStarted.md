@@ -23,10 +23,11 @@ Quickly build and deploy micro-services in the blink of an eye
 
 #### Prerequisites
 * [Docker](https://www.docker.com/get-docker) **v17.06 minimum**
-* Linux only: follow post-installation steps to
-  * [Run docker as a non-root user](https://docs.docker.com/engine/installation/linux/linux-postinstall/)
+* Linux: 
+  * Supported architecture: x86-64 only
+  * Follow post-installation steps to [run docker as a non-root user](https://docs.docker.com/engine/installation/linux/linux-postinstall/)
   * [Update docker-compose](https://docs.docker.com/compose/install/)
-* Windows only:
+* Windows:
   * Windows 10 or Windows Server 2016
   * [Docker for Windows](https://www.docker.com/docker-windows)
   * We strongly recommend that you do not run using Experimental Features enabled (which is enabled by default in Docker) when running Windows 10. To turn it off, go to Docker->Settings->Daemon and de-select **Experimental Features**.

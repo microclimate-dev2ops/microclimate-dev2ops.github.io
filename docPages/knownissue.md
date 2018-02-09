@@ -7,6 +7,10 @@ permalink: issues
 type: document
 ---
 
+## Linux: standard_init_linux.go:195: exec user process caused "exec format error"
+
+Microclimate docker images are available for x86-64 architectures only. On other Linux architectures, Microclimate will fail to start, with the error message above in the Microclimate docker container logs.
+
 ## Windows: cli\install.ps1 cannot be loaded, the file is not digitally signed
 
 The default security settings on Windows 10 and Windows Server 2016 do not allow downloaded PowerShell scripts to run.
