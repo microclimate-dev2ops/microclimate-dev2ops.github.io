@@ -17,7 +17,7 @@ We are just getting started, and as we are building out our project we also want
 ## How to reach us
 
 ### Want to chat?
-If you are looking for a more interactive way to communicate with us, drop in to our [Slack channel](https://ibm-cloud-tech.slack.com/messages/microclimate) to ask questions, share ideas, or just hang out and chat about all things Microclimate. If you are new to Slack, [create a user ID here first!](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+If you are looking for a more interactive way to communicate with us, drop in to our [Slack channel](https://ibm-cloud-tech.slack.com/messages/microclimate) to ask questions, share ideas, or just hang out and chat about all things Microclimate. If you have not previously used the ibm-cloud-tech slack instance, [click here to request an invite](https://slack-invite-ibm-cloud-tech.mybluemix.net/).
 
 
 ### Find something that needs to be improved?

@@ -11,6 +11,10 @@ This is a chart used to deploy Microclimate to IBM Cloud Private or Kubernetes
 
 ## Prerequisites
 1. An active IBM Cloud Private or Kubernetes cluster (including minikube)
+2. [Kubectl (Kubernetes Command Line Tool)](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+3. Unzipped Microclimate download file.
+4. Terminal session in the microclimate directory with the Kubernetes client API to pointing to your ICP instance. 
+    - In the ICP admin GUI, click the account symbol in the top right and go to Configure Client, copy the provided commands and paste them into your local terminal.
 
 ## Installing the Chart
 

@@ -38,13 +38,13 @@ Commands:
 2. [stop](#stop)
 3. [open](#open)
 4. [update](#update)
-5. [healthcheck](#health-check)
+5. [delete](#delete)
 
 Run ``mcdev COMMAND --help`` for more information on a command.
 
 ### Start
 
-Start Microclimate
+Start Microclimate. This will download docker images if necessary.
 
 ```sh
 mcdev start [OPTIONS]
@@ -84,10 +84,10 @@ Update Microclimate by pulling the newest images down from the repository.
 mcdev update
 ```
 
-### Health check
+### Delete
 
-Run a check through your system to ensure that microclimate-workspace, the config directory and your git username and email are set up correctly. Also prints the current amount of projects in your workspace.
+Delete all microclimate docker images.  
 
 ```sh
-mcdev healthcheck
+mcdev delete
 ```

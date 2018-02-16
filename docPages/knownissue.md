@@ -38,3 +38,15 @@ For the beta, we had to restrict project deletion in the Microclimate UI to only
 On making a Dockerfile change in Windows, the Liberty server is not started after a container refresh.
 
 **Workaround:** A pom.xml edit or a Microclimate(mcdev) restart, restarts the Liberty Server.
+
+## Windows: Editing project file(s) using an external IDE/editor does not deploy changes to the server
+
+When making changes to project file(s) using an external IDE/editor, the changes are not deployed to the server. 
+
+**Workaround:** Editing the same file(s) in the Microclimate Orion editor, builds and deploys the changes to the server.
+
+## Java Applications will not start after running mcdev delete
+
+If a java application has been created and mcdev delete is then used to delete the microclimate docker images the java applicaation will no longer start when microcloimate is restarted.
+
+**Workaround** Delete the .idc directory from the microclimate-woprkspace directory and restart microclimate.
