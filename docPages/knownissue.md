@@ -45,8 +45,8 @@ When making changes to project file(s) using an external IDE/editor, the changes
 
 **Workaround:** Editing the same file(s) in the Microclimate Orion editor, builds and deploys the changes to the server.
 
-## Java Applications will not start after running mcdev delete
+## Java Application will not start after running mcdev delete
 
-If a java application has been created and mcdev delete is then used to delete the microclimate docker images the java applicaation will no longer start when microcloimate is restarted.
+If a java application has been created and mcdev delete is then used to delete the Microclimate docker images the java application will no longer start when Microclimate is restarted.
 
-**Workaround** Delete the .idc directory from the microclimate-woprkspace directory and restart microclimate.
+**Workaround** Stop Microclimate, delete the .idc directory from the microclimate-workspace directory, and then start Microclimate.

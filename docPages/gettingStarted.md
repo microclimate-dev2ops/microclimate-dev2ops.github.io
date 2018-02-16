@@ -56,17 +56,17 @@ cd ..
 ```
 ~/mcdev stop
 ```
-2. Delete the microclimate docker images:
+2. Delete the Microclimate docker images:
 ```bash
 ~/mcdev delete
 ```
-3. Uninstall the Microclimate CLI. From the microclimate directory:
+3. Uninstall the Microclimate CLI. From the Microclimate directory:
 ```
 cd cli
 sudo ./uninstall.sh
 cd ../..
 ```
-4. Delete the microclimate directory and its subdirectories
+4. Delete the Microclimate directory and its subdirectories
 ```
 rm -rf <microclimate directory>
 ```
@@ -89,11 +89,11 @@ mcdev start -o
 ```bash
 mcdev stop
 ```
-2. Delete the microclimate docker images:
+2. Delete the Microclimate docker images:
 ```bash
 mcdev delete
 ```
-3. Delete the microclimate directory and its subdirectories:
+3. Delete the Microclimate directory and its subdirectories:
 ```bash
 rmdir  <microclimate directory> /S
 ```
