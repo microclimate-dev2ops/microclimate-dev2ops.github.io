@@ -1,9 +1,9 @@
 /* preload image */
 #preload_area {
-	background-image: url(../images/microclimate_header.png);
-	background-image: url(../images/microclimate_header992.png);
-	background-image: url(../images/microclimate_header768.png);
-	background-image: url(../images/microclimate_header1200.png);
+	background-image: url(../images/microclimate_header.jpg);
+	background-image: url(../images/microclimate_header992.jpg);
+	background-image: url(../images/microclimate_header768.jpg);
+	background-image: url(../images/microclimate_header1200.jpg);
 	width: 0px;
 	height: 0px;
 	display: inline;
@@ -184,7 +184,7 @@ h2 {
 }
 
 .header-bg {
-	background-image: url('../images/microclimate_header.png');
+	background-image: url('../images/microclimate_header.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: 100%;
@@ -396,7 +396,7 @@ a.download-link, a.download-link:visited, a.download-link:active, a.download-lin
 		font-size: 18px;
 	}
 	.header-bg {
-		background-image: url('../images/microclimate_header1200.png');
+		background-image: url('../images/microclimate_header1200.jpg');
 		height: 300px;
 	}
 	.selling-points {
@@ -454,7 +454,7 @@ a.download-link, a.download-link:visited, a.download-link:active, a.download-lin
 /* Medium Devices, Desktops */
 @media ( max-width : 992px) {
 	.header-bg {
-		background-image: url('../images/microclimate_header992.png');
+		background-image: url('../images/microclimate_header992.jpg');
 		height: 250px;
 	}
 	.document-content h1 {
@@ -600,7 +600,7 @@ a.download-link, a.download-link:visited, a.download-link:active, a.download-lin
 		align-items: unset
 	}
 	.header-bg {
-		background-image: url('../images/microclimate_header768.png');
+		background-image: url('../images/microclimate_header768.jpg');
 		height: 200px;
 	}
 	.main-content {
