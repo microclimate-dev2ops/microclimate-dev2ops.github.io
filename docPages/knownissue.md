@@ -17,12 +17,6 @@ The default security settings on Windows 10 and Windows Server 2016 do not allow
 
 **Workaround:** Right-click on the microclimate.zip file and open the file Properties menu. On the General tab, tick the Unblock box beside the "This file came from another computer" message. Unzip the file again and retry the cli\install.ps1 script.
 
-## Swift apps don't rebuild or redeploy
-
-Swift support in Microclimate is not fully implemented for the initial Beta release and currently if you edit the application it will not rebuild or redeploy like Java and Node.js applications.
-
-**Workaround:** After making a change to a Swift application, you must issue an 'mcdev stop' and 'mcdev start' to have the changes built and redeployed.
-
 ## HTTPS links won't launch in Microclimate
 
 When testing out the user application from the Open Application view in Microclimate UI, HTTPS links within the application will fail to be opened, e.g. the links on the home page on a created Swift application. This problem only happens for HTTPS links while HTTP links will work properly. To workaround this problem, open HTTPS links on a new browser tab.

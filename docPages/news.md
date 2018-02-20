@@ -4,7 +4,6 @@ title: News
 description: Latest news
 duration: 30 seconds
 permalink: news
-type: document
 ---
 
 ## Microclimate beta refresh now available
