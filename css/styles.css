@@ -285,14 +285,14 @@ a.download-link, a.download-link:visited, a.download-link:active, a.download-lin
 .value-props {
 	margin: auto;
 	width: 840px;
-	color: #989A9C;
+	color: #787A7C;
 	text-align: center;
 	font-size: 1.4em;
 	line-height: 1.6em;
 }
 
 .main-content a {
-	color: #db3f66;
+	color: #db0066;
 	text-decoration: none;
 }
 
