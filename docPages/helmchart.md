@@ -7,14 +7,14 @@ permalink: helmchart
 type: document
 ---
 
-This is a chart used to deploy Microclimate to IBM Cloud Private or Kubernetes
+This is a chart used to deploy Microclimate to IBM Cloud Private or Kubernetes.
 
 ## Prerequisites
 1. An active IBM Cloud Private or Kubernetes cluster (including minikube)
 2. [Kubectl (Kubernetes Command Line Tool)](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
-3. Unzipped Microclimate download file.
-4. Terminal session in the microclimate directory with the Kubernetes client API to pointing to your ICP instance. 
-    - In the ICP admin GUI, click the account symbol in the top right and go to Configure Client, copy the provided commands and paste them into your local terminal.
+3. Unzipped Microclimate download file
+4. Terminal session in the Microclimate directory with the Kubernetes client API pointing to your ICP instance.
+    - In the ICP admin GUI: Click the account symbol in the top right and go to Configure Client, copy the provided commands and paste them into your local terminal.
 
 ## Installing the Chart
 
@@ -28,7 +28,7 @@ The command deploys Microclimate on the Kubernetes cluster in the default config
 
 ## Verifying the Chart
 
-Once the helm install has completed successfully, enter the commands provided at the end of the installation to open your Microclimate instance
+When the Helm install has completed successfully, enter the commands provided at the end of the installation to open your Microclimate instance
 
 ## Uninstalling the Chart
 
@@ -44,7 +44,7 @@ The command removes all the Kubernetes components associated with the chart and 
 
 ### Configuring Microclimate persistent storage
 
-The default Microclimate deployment uses a local workspace for your generated project code. This will be deleted if the microclimate pod in ICP is deleted. You can define a persistent storage volume in ICP for saving the generated project code. See the following information on creating a persistent storage volume:
+The default Microclimate deployment uses a local workspace for your generated project code. This is deleted if the microclimate pod in ICP is deleted. You can define a persistent storage volume in ICP for saving the generated project code. For more information about creating a persistent storage volume, see:
 
 [https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0/manage_cluster/cluster_storage.html](https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0/manage_cluster/cluster_storage.html)
 
@@ -58,7 +58,7 @@ You can also specify `persistence.size` and `persistence.class` values to connec
 
 ### Configuration parameters
 
-The following tables lists the configurable parameters of the Microclimate chart and their default values. These are defined in the included values.yaml file and can either be changed within this file or by setting them at installation time use the `--set` option.
+The following tables lists the configurable parameters of the Microclimate chart and their default values. These are defined in the included values.yaml file and can either be changed within this file or by setting them at installation time by using the `--set` option.
 
 | Parameter                  | Description                                     | Default                                                    |
 | -----------------------    | ---------------------------------------------   | ---------------------------------------------------------- |
