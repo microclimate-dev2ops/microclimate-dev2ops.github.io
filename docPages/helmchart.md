@@ -28,7 +28,7 @@ The command deploys Microclimate on the Kubernetes cluster in the default config
 
 ## Verifying the Chart
 
-When the Helm install has completed successfully, enter the commands provided at the end of the installation to open your Microclimate instance
+When the Helm install has completed successfully, enter the commands provided at the end of the installation to open your Microclimate instance.
 
 ## Uninstalling the Chart
 
