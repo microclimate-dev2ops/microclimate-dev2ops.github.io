@@ -1,4 +1,4 @@
----
+h---
 layout: document
 title: Documentation
 description: Documents
@@ -21,6 +21,6 @@ Maybe you are just looking for some pointers? Have a look through the links belo
 ## Documentation links
 [Known issues and limitations](./issues) - Some issues we are aware of, with suggested work arounds.
 
-[Dev-Ops Pipeline](https://www.ibm.com/support/knowledgecenter/SS5PWC/index.html) - Find out more information on how to set up your Microclimate DevOps pipeline
+[Dev-Ops Pipeline](https://www.ibm.com/support/knowledgecenter/SS5PWC/index.html) - Find out more information about how to set up your Microclimate DevOps pipeline.
 
-[Orion IDE](https://orionhub.org/) - Find out more information on the Orion editor
+[Orion IDE](https://orionhub.org/) - Find out more information about the Orion editor.
