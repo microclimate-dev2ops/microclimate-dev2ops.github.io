@@ -24,7 +24,7 @@ When you test microclimate you can use the **hostPath** storage type to persist 
 	2. On the configuration panel set Name = 'microclimate', Capacity = 5, Storage type = 'Host path'
 	3. On the Parameters tab, add a parameter with Key = 'path' and Value = the full path to the directory you created in step 1
 
-4. An alternative to step 3. Create a volume.yaml file that contains the specification below, changing the hostPath path value to the directory that you created in step 1.  Run ``kubectl create -f volume.yaml`` to install the PersistentVolume.
+4. An alternative to step 3. Create a volume.yaml file that contains the specification below, changing the **hostPath** path value to the directory that you created in step 1.  Run ``kubectl create -f volume.yaml`` to install the PersistentVolume.
 
     ```sh
     apiVersion: v1
