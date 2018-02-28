@@ -1,13 +1,13 @@
 ---
 layout: document
 title: Microclimate-Development
-description: HMicroclimate-Development
+description: Microclimate-Development
 duration: 1 minute
 permalink: microclimatedev
 type: document
 ---
 
-This page provides additional instructions for Microclimate developers. The Microclimate user documentation is provided in the getting started page [here](./gettingstarted)
+This page provides additional instructions for microclimate developers. The microclimate user documentation is provided in the getting started page [here](./gettingstarted)
 
 ## Local Docker (no Kubernetes)
 
@@ -19,21 +19,21 @@ cd microclimate
 ./run.sh
 ```
 
-This will build all the docker images needed and start the docker containers using a docker-compose file. Running the script subsequently will update the docker images, remove existing Microclimate docker containers and create new containers using the updated images.
+This builds all the Docker images that are needed and starts the Docker containers by using a docker-compose file. If you subsequently run the script it updates the Docker images, removes existing microclimate Docker containers, and creates new containers by using the updated images.
 
 ```sh
 ./stop.sh [ options ]
 ```
 
-This will stop and remove your Microclimate docker containers. Options are:
+This stops and removes your microclimate Docker containers. Options are:
 
 ```sh
--i, --image: also deletes the Microclimate docker images
--a, --all: stops and removes all docker containers, not just Microclimate
+-i, --image: also deletes the microclimate docker images
+-a, --all: stops and removes all docker containers, not just microclimate
 -h, --help: show the help
 ```
 
-Alternatively use these commands to manage local docker images:
+Alternatively, use these commands to manage local Docker images:
 
 ```sh
 docker ps
@@ -44,16 +44,16 @@ docker rmi [-f] image_name
 
 ## Docker in IBM Cloud Private/Kubernetes
 
-First follow the the getting started page [here](./gettingstarted) for prerequisites and steps for using an existing ICP instance or creating a local one using Vagrant.
+First follow the the getting started page [here](./gettingstarted) for prerequisites and steps for using an existing ICP instance or creating a local one by using Vagrant.
 
 To allow you to push locally built images to the ICP instance, follow these additional steps:
 
 ### Add your remote cluster IP to your local hosts file
 
 1. Open */etc/hosts* on your local machine with your chosen text editor
-2. Add an entry containing your ICP master IP with your cluster name (e.g. ``192.168.27.100 mycluster.icp``)
+2. Add an entry that  contains your ICP master IP with your cluster name (e.g. ``192.168.27.100 mycluster.icp``)
 
-### Set insecure docker registry
+### Set insecure Docker registry
 
 Your local instance of Docker needs to be made aware of the Docker image registry on ICP. Using the Docker GUI:
 
@@ -71,28 +71,29 @@ Alternatively, this can be done manually by creating the file ``/etc/docker/dock
 
 ### Copy the Docker certificate
 
-Next, you need to get the docker certificate from the environment your ICP is running in and copy it to your local machine:
+Next, you need to get the Docker certificate from the environment that your ICP is running in, and copy it to your local machine:
 
-1. On the machine your ICP instance is running on, copy the docker certificate locally using:
+1. On the machine that your ICP instance is running on, copy the Docker certificate locally by using:
 	``vagrant ssh -- "sudo cat /etc/docker/certs.d/mycluster.icp:8500/ca.crt" > /tmp/ca.crt``
-2. Copy the the certificate file you have copied to /etc/docker/certs.d/mycluster.icp:8500/ca.crt on your local machine, you may need to create the directory first with:
+2. Copy the certificate file you have copied to /etc/docker/certs.d/mycluster.icp:8500/ca.crt on your local machine, you might need to create the directory first with:
 	``mkdir -p /etc/docker/certs.d/mycluster.icp:8500/``
-3. On MacOS, you will need to register that the certificate is trusted using the following:
-	``sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain /etc/docker/certs.d/mycluster.icp:8500/ca.crt``
-4. Restart docker to register these changes
-5. Use ``docker login mycluster.icp:8500`` to test this has worked, the login should be successful, the default username/password is admin/admin.
+3. On MacOS, you need to register that the certificate is trusted by using the following:
+	``sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain /etc/docker/certs.d/mycluster.icp:8500/ca.crt``.
+``
+4. Restart Docker to register these changes.  
+5. Use ``docker login mycluster.icp:8500`` to test that this has worked, the login should be successful, the default username/password is admin/admin.
 
-Note: With Vagrant, the certificate will change if you have to destroy and recreate the machine so this step will need to be repeated in that situation.
+Note: With Vagrant, the certificate changes if you have to destroy and recreate the machine so this step needs to be repeated in that situation.
 
 ### Building and deploying Microclimate
 
 Configure the Kubernetes client API to point to your ICP instance: in the ICP admin GUI, click the account symbol in the top right and go to Configure client, copy the provided commands and paste them into your local terminal.
 
-With the above steps completed, you can use run_icp.sh script to build and deploy microclimate. The script will build, tag and push the Microclimate images and create the deployment and service in ICP.
+With the above steps completed, you can use run_icp.sh script to build and deploy microclimate. The script will build, tag and push the microclimate images and create the deployment and service in ICP.
 
-Alternatively you can build the Microclimate images using the normal (local docker) run.sh script, manually tag and push images to ICP, then use the Helm chart to just do the deployment. Follow the additional steps below if you want to manually tag and push images and deploy using Helm.
+Alternatively, you can build the microclimate images by using the normal (local docker) run.sh script, manually tag and push images to ICP, then use the Helm chart to just do the deployment. Follow the additional steps below if you want to manually tag and push images and deploy by using Helm.
 
-The deployment may take 2-3 minutes to process once the script completes the first time around. The progress of the deployment can be viewed by opening Workloads->Deployment->microclimate->pod in the ICP admin GUI. Once each of the containers in the pod have the 'RUNNING' status, Microclimate can be opened by following the second URL printed when the script completes.
+The deployment might take 2-3 minutes to process after the script completes the first time around. The progress of the deployment can be viewed by opening Workloads->Deployment->microclimate->pod in the ICP admin GUI. When each of the containers in the pod have the 'RUNNING' status, microclimate can be opened by following the second URL printed when the script completes.
 
 ### Additional steps to use Helm:
 
@@ -113,14 +114,14 @@ with
 portal: mycluster.icp:8500/default/microclimate-portal
 ```
 
-then 
+then
 
 ```sh
 run helm install --name microclimate chart/microclimate
 ```
 as usual
 
-### Local Kubernetes (minikube - may also work for ICP)
+### Local Kubernetes (minikube - might also work for ICP)
 [First time]:
 
 ```sh
@@ -141,7 +142,7 @@ Start minikube:
 > minikube start
 ```
 
-Install via helm:
+Install by using Helm:
 
 ```sh
 > helm install /Users/hhellyer/work/consumability/microclimate.git/chart/microclimate/
@@ -176,7 +177,7 @@ Run the build script:
 > script/build.sh
 ```
 
-Change the helm chart to only use the copies that already exist in kubernetes docker: (We may be able to parameterise the files and have a dev flag to enable this.)
+Change the helm chart to use only the copies that already exist in kubernetes docker: (We might be able to parameterise the files and have a dev flag to enable this.)
 
 Replace values.yaml with the following code
 
@@ -250,7 +251,7 @@ spec:
   hostPath:
     path: /data/microclimate
  ```
- 
+
 Enable persistence when you deploy microclimate:
 
 ```sh
