@@ -19,7 +19,7 @@ type: document
 ## Installing on Linux or MacOS
 
 ### Before you start
-* Download the Microclimate zip file, see [Getting started](./gettingStarted).
+* Download the Microclimate zip file, see [Getting started](./gettingstarted).
 
 ### Prerequisites
 * [Docker](https://www.docker.com/get-docker) **v17.06 minimum**
@@ -43,7 +43,7 @@ cd ..
 ## Installing on Windows
 
 ### Before you start
-* Download the Microclimate zip file, see [Getting started](./gettingStarted).
+* Download the Microclimate zip file, see [Getting started](./gettingstarted).
 
 ### Prerequisites
 * Windows 10 or Windows Server 2016
