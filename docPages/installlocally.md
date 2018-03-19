@@ -11,7 +11,7 @@ type: document
 ## Before you start
 * Download the Microclimate zip file, see [Getting started](./gettingstarted).
 
-## Installing Microclimate locally on your machine.
+## Installing Microclimate locally on your machine
 
 * [Installing on Linux or MacOS](#installing-on-linux-or-macos)
 * [Installing on Windows](#installing-on-windows)

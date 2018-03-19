@@ -11,7 +11,7 @@ type: document
 
 ## Prerequisites
 
-- An active IBM Cloud Private or Kubernetes cluster 
+* An active IBM Cloud Private or Kubernetes cluster
 
 ## Installing the Chart
 
@@ -39,11 +39,11 @@ To install the chart with the release name `microclimate`:
 
 `helm dep update`
 
-this will retrieve the subcharts that Microclimate uses.
+This will retrieve the subcharts that Microclimate uses.
 
 `helm install --name microclimate <path_to_this_chart>`
 
-this command deploys Microclimate on the Kubernetes cluster in the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
+This command deploys Microclimate on the Kubernetes cluster in the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
 
 ## Verifying the Chart
 Once the helm install has completed successfully, enter the commands provided at the end of the installation to open your Microclimate instance

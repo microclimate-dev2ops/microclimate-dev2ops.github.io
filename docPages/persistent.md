@@ -12,7 +12,7 @@ type: document
 
 When you test Microclimate you can use the **hostPath** storage type to persist your workspace:
 
-1. Create a directory on your IBM Cloud Private host machine, with 777 permissions, eg ``/home/rnchamberlain/workspace``
+1. Create a directory on your IBM Cloud Private host machine, with 777 permissions, for example:  ``/home/yourusername/workspace``
 2. Configure the Kubernetes client API to point to your ICP instance: in the ICP admin GUI, click the account symbol in the top right and go to Configure Client, copy the provided commands and paste them into your local terminal.
 3. Create a persistent volume specification on ICP to link to the directory you created above. You can do this by using the ICP admin console:
 

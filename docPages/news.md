@@ -9,7 +9,7 @@ permalink: news
 
 *Sunday, March 18th, 2018*
 
-We have another beta refresh with some additional features for you to check out. We did a refresh on our UI, making things leaner and cleaner, and in the process swapped in Theia as our new browser based IDE. In that shiny new UI you will also notice we started adding support for importing existing projects from a Git server (we have even included GitLab if you need it), a local directory, or an archive. For those of you running Microclimate on IBM Cloud Private (ICP), you now have the ability to create a devops pipeline that will allow you to automatically deploy your projects from Git to ICP.
+We have another beta refresh with some additional features for you to check out. We did a refresh on our UI, making things leaner and cleaner, and in the process swapped in Theia as our new browser based IDE. In that shiny new UI,  you will also notice we started adding support for importing existing projects from a Git server (we have even included GitLab if you need it), a local directory, or an archive. For those of you running Microclimate on IBM Cloud Private (ICP), you now have the ability to create a devops pipeline that will allow you to automatically deploy your projects from Git to ICP. To learn more about these new features, watch the <a href="#" data-video="videos/think-beta.mp4"  class='showVideo'>Import and devops pipeline video</a>.
 
 We also upped the fun factor by highlighting Rogue Cloud this time around. If you like games, are interested in Microservice development, and would like to use Microclimate to marry those two things together, make your way over to our [Rogue Cloud](./roguecloud) page for the details on how to get up and running.
 

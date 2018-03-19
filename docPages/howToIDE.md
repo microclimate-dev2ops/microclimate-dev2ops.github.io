@@ -9,26 +9,26 @@ type: document
 
 ## Using Eclipse
 
-1. Download and unzip [Oxygen.1a JEE package](https://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/oxygen1a)
-2. Select ``File->Import...->General->Projects from Folder or Archive``
-3. Select the root of the project directory as the Import source, for example, for a project named ``myjavamicroservices1``, select the directory ``microclimate-workspace/myjavamicroservices1`` and click ``Finish``.
+1. Download and unzip [Oxygen.1a JEE package](https://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/oxygen1a).
+2. Select ``File->Import...->General->Projects from Folder or Archive``.
+3. Select the root of the project directory as the Import source, for example, for a project named ``myjavamicroservices1``, select the directory ``microclimate-workspace/myjavamicroservices1`` and then click ``Finish``.
 4. You can now edit the application, for example, ``src/main/java/application/rest/v1/HealthEndpoint.java``. When you have finished editing, save your changes. Microclimate auto-detects your changes and rebuilds and redeploys the updated app. Refresh your browser to see the results.
 
 ## Using Visual Studio Code
 
-1. Download and install [Visual Studio Code](https://code.visualstudio.com/download)
+1. Download and install [Visual Studio Code](https://code.visualstudio.com/download).
 2. Install the following extensions from the Visual Studio Marketplace by using the Extensions page:
    * Java Extension Pack
-3. Select ``File->Add Folder to Workspace...``
-4. Select the root of the project directory, for example, for a project named ``myjavamicroservices1``, select the directory ``microclimate-workspace/myjavamicroservices1`` and click ``Add``.
+3. Select ``File->Add Folder to Workspace...``.
+4. Select the root of the project directory, for example, for a project named ``myjavamicroservices1``, select the directory ``microclimate-workspace/myjavamicroservices1`` and then click ``Add``.
 5. You can now edit the application, for example,  ``src/main/java/application/rest/v1/HealthEndpoint.java``. When you have finished editing, save your changes. Microclimate auto-detects your changes and rebuilds and redeploys the updated app. Refresh your browser to see the results.
 
 ## Intellj IDEA
 
-1. Download and install [Intellj IDEA](https://www.jetbrains.com/idea/download/)
+1. Download and install [Intellj IDEA](https://www.jetbrains.com/idea/download/).
 2. Enable the ``Maven Integration`` plugin if not already enabled under the Plugins section in the Preferences.
-3. Select ``File->Open...``
-4. Select the root of the project directory, for example, for a project named ``myjavamicroservices1``, select the directory ``microclimate-workspace/myjavamicroservices1`` and click ``Open``.
+3. Select ``File->Open...``.
+4. Select the root of the project directory, for example, for a project named ``myjavamicroservices1``, select the directory ``microclimate-workspace/myjavamicroservices1`` and then click ``Open``.
 5. You can now edit the application, for example,  ``src/main/java/application/rest/v1/HealthEndpoint.java``. If a java file is open and there is a message saying 'Module SDK is not defined', click the link ``Setup SDK`` to configure the SDK.
 6. After you modify a file, save your changes. Microclimate auto-detects your changes and rebuilds and redeploys the updated app. Refresh your browser to see the results.
 
