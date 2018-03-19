@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+{% include head.html %}
+
+
+<style>
+.main-content {
+	margin-top: 0px;
+}
+.header-bg {
+	height: 60px;
+}
+.rogue-cloud-banner {
+	max-height:100%;
+	max-width:100%;
+}
+
+</style>
+<body class="{{ page.abc }}">
+
+	{% include header.html homepath="." %}
+	<section aria-label="main section" class="main">
+		<div class="header-bg">
+			<div class="container doc-container-header">
+				<div class="row full-width">
+					<div class="col-lg-12">
+						<div class="header-doc-intro">
+							<div class="header-doc-main ">{{ page.title }}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <img src="./images/rogue-cloud.png" class="rogue-cloud-banner"></img>
+    </div>
+  </div>
+</div>
+		<div class="container main-content document-content">{{ content }}</div>
+	</section>
+
+	{% include footer.html %}
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+</body>
+
+</html>

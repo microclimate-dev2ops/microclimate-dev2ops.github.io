@@ -29,7 +29,13 @@ $(document)
 							$(".navbar").css("background", "transparent");
 						    $(".navbar-collapse").css("background", "transparent");
 						});
-						
+					// track embeded video play
+					$(".embeded-video").on('play',function(){
+						var file =  $(this).children("source").attr("src");
+						if (typeof gtag === "function") { 
+							gtag('event', 'videoView', { event_category: 'videoView', event_label: file});
+						}
+					});
 					$(".showVideo")
 							.on(
 									"click",

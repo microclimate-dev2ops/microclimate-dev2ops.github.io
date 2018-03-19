@@ -4,27 +4,28 @@ title: Microclimate CLI
 description: Microclimate CLI
 duration: 1 minute
 permalink: cli
+type: document
 ---
 
-Installing the Microclimate CLI allows you to run Microclimate from anywhere on your computer. Your Microclimate projects will be created in your home directory. Normally ``$HOME/microclimate-workspace``.
+Installing the Microclimate CLI enables you to run Microclimate from anywhere on your computer. Your Microclimate projects are created in your home directory. Normally ``$HOME/microclimate-workspace``.
 
 ## Setup
 
-Run the install script found in the cli directory (``microclimate/cli``). You can either run this as sudo or as a non-root user. 
-  
+Run the install script found in the cli directory (``microclimate/cli``). You can either run this as a sudo or a non-root user.
+
   **Effects**:
-  
+
   ``sudo ./install.sh``: Installs mcdev to your ``/usr/local/bin`` directory, automatically adding it to the path.
-    
-  ``./install.sh``: Installs mcdev to ``~/mcdev``. You can either run Microclimate using ``~/mcdev`` start or add mcdev to your path manually (Instructions given at the end of the install script).
-  
+
+  ``./install.sh``: Installs mcdev to ``~/mcdev``. You can either run Microclimate using ``~/mcdev`` start or add mcdev to your path manually. Instructions are given at the end of the install script.
+
   ```sh
   cd cli &&
   ./install.sh &&
   cd ..
   ```
 
-NOTE: You won't be able to run ``mcdev`` commands from inside the cli directory due to the file name conflict. To run commands change to another directory.
+NOTE: You cannot run ``mcdev`` commands from inside the cli directory due to the file name conflict. To run commands, change to another directory.
 
 ## Usage
 
@@ -40,11 +41,11 @@ Commands:
 4. [update](#update)
 5. [delete](#delete)
 
-Run ``mcdev COMMAND --help`` for more information on a command.
+For more information about a command, run ``mcdev COMMAND --help``.
 
 ### Start
 
-Start Microclimate. This will download docker images if necessary.
+Start Microclimate. This downloads Docker images if necessary.
 
 ```sh
 mcdev start [OPTIONS]
@@ -54,7 +55,7 @@ mcdev start [OPTIONS]
 
 ```sh
 1. -o, --open: Open Microclimate in your default browser after it has started.
-2. -u, --update: Update Microclimate to its latest version before starting.
+2. -u, --update: Update Microclimate to the latest version before starting.
 ```
 
 ### Stop
@@ -74,7 +75,7 @@ Open Microclimate in your default browser.
 mcdev open
 ```
 
-**Note**: This will look for the port that 'microclimate-portal' is on and open it.
+**Note**: This looks for the port that 'microclimate-portal' is on and opens it.
 
 ### Update
 
@@ -86,7 +87,7 @@ mcdev update
 
 ### Delete
 
-Delete all microclimate docker images.  
+Delete all Microclimate Docker images.  
 
 ```sh
 mcdev delete

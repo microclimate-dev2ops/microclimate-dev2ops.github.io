@@ -178,6 +178,9 @@ h2 {
 	background-color: #DB2663;
 }
 
+.active-button-roguecloud:after{
+	background-color: #337ab7;
+}
 .navbar a:hover {
 	color: #DB2663;
 	text-decoration: none;
@@ -541,6 +544,55 @@ a.download-link, a.download-link:visited, a.download-link:active, a.download-lin
 	.footer-bg {
 		margin-top: 150px;
 		height: 150px;
+	}
+}
+/* show mobile icon earlier because our menu is too long */
+@media (max-width: 991px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-collapse.collapse.in {display: block !important; }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+  #navbar {
+		position: relative;
+		width: 100%;
+		z-index: 9999;
+	}
+	.navbar-toggle .icon-bar {
+		background-color: #DB2663 !important;
+	}
+	.navbar-toggle.collapsed .icon-bar {
+		background-color: #DB2663 !important;
 	}
 }
 

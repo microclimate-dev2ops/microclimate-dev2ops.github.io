@@ -1,36 +1,33 @@
 ---
 layout: document
-title: Persistent storage in ICP
-description: Persistent storage in ICP
+title: Installing and running using persistent storage in ICP 2.1.0.1
+description: Installing and running using persistent storage in ICP 2.1.0.1
 duration: 1 minute
 permalink: persistent
 type: document
 ---
 
-When running Microclimate in local Docker containers, your workspace for generated projects is created as a local directory when you use the CLI to start Microclimate. This workspace persists when you stop and re-start Microclimate.
 
-When running Microclimate in IBM Cloud Private (ICP), the workspace is created in the Microclimate pod, and will be deleted when the pod is deleted. IBM Private Cloud does not provide persistent storage by default, but you can define a persistent storage volume in ICP for storing your generated project code. IBM Cloud Private supports a variety of persistence storage types, for a full list see [https://v1-8.docs.kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volumes](https://v1-8.docs.kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volumes)
+## Setting up persistence storage for Microclimate in ICP 2.1.0.1
 
-## Setting up Persistence Storage for Microclimate in ICP
-
-When testing Microclimate you can use the HostPath storage type to persist your workspace:
+When you test Microclimate you can use the **hostPath** storage type to persist your workspace:
 
 1. Create a directory on your IBM Cloud Private host machine, with 777 permissions, eg ``/home/rnchamberlain/workspace``
 2. Configure the Kubernetes client API to point to your ICP instance: in the ICP admin GUI, click the account symbol in the top right and go to Configure Client, copy the provided commands and paste them into your local terminal.
-3. Create a persistent volume specification on ICP to link to the directory you created above. You can do this using the ICP admin console:
+3. Create a persistent volume specification on ICP to link to the directory you created above. You can do this by using the ICP admin console:
 
 
 	1. Open Platform -> Storage -> CreatePersistentVolume
-	2. On the configuration panel set Name = 'microclimate', Capacity = 5, Storage type = 'Host path'
+	2. On the configuration panel set Name = 'ibm-microclimate', Capacity = 5, Storage type = 'Host path'
 	3. On the Parameters tab, add a parameter with Key = 'path' and Value = the full path to the directory you created in step 1
 
-4. Alternative to step 3. Create a volume.yaml file containing the specification below, changing the hostPath path value to the directory you created in step 1.  Run ``kubectl create -f volume.yaml`` to install the PersistentVolume.
+4. An alternative to step 3. Create a volume.yaml file that contains the specification below, changing the **hostPath** path value to the directory that you created in step 1.  Run ``kubectl create -f volume.yaml`` to install the PersistentVolume.
 
     ```sh
     apiVersion: v1
     kind: PersistentVolume
     metadata:
-      name: microclimate
+      name: ibm-microclimate
     spec:
       accessModes:
         - ReadWriteOnce
@@ -40,15 +37,15 @@ When testing Microclimate you can use the HostPath storage type to persist your 
         path: /home/rnchamberlain/workspace
      ```
 
-5. Unzip the download file, open a terminal session and change directory into the microclimate directory.
+5. Unzip the download file, open a terminal session and change the directory into the Microclimate directory.
 6. Run the following command:
 ```bash
-helm install --name microclimate --set persistence.enabled=true chart/microclimate
-``` 
+helm install --name ibm-microclimate --set persistence.enabled=true stable/ibm-microclimate
+```
 
-You can check on the ICP admin console **Storage** page that the Microclimate **PersistenceVolumeClaim** was bound to the **PersistentVolume** that you created in step 2 or step 3. When you create projects in Microclimate you should see their files appear in the directory on the ICP host machine.
+You can check on the ICP admin console **Storage** page that the Microclimate **PersistenceVolumeClaim** is bound to the **PersistentVolume** that you created in step 2 or step 3. When you create projects in Microclimate you should see their files appear in the directory on the ICP host machine.
 
-For information on configuration options see the [Helm chart README](./helmchart). For development build instructions and running with a local build of the Microclimate docker images see [Microclimate-Development](./microclimatedev).
+For information on configuration options, see [Helm chart](./helmchart).
 
 ## Further information
 
