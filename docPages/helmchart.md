@@ -46,7 +46,7 @@ The command removes all the Kubernetes components associated with the chart and 
 
 The default Microclimate deployment uses a local workspace for your generated project code. This is deleted if the Microclimate pod in ICP is deleted. You can define a persistent storage volume in ICP for saving the generated project code. For more information on creating a persistent storage volume, see
 [https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0/manage_cluster/cluster_storage.html](https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0/manage_cluster/cluster_storage.html), and
-[https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/Working_with_storage]([https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/Working_with_storage).
+[https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/Working_with_storage](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/Working_with_storage).
 
 The `helm install` command enables you to configure Microclimate to use a persistent storage volume, for example:
 ```bash

@@ -9,7 +9,7 @@ type: document
 ---
 
 ## Before you start
-* Download the Microclimate zip file, see [Getting started](./gettingStarted).
+* Download the Microclimate zip file, see [Getting started](./gettingstarted).
 
 ## Installing Microclimate locally on your machine.
 
