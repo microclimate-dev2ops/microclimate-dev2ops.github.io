@@ -79,7 +79,7 @@ mcdev open
 
 ### Update
 
-Update Microclimate by pulling the newest images down from the repository.
+Update Microclimate by pulling the newest images down from the repository. Note: Updates are to the current version only.
 
 ```sh
 mcdev update

@@ -18,10 +18,9 @@ type: document
 
 ## Installing on Linux or MacOS
 
-### Before you start
-* Download the Microclimate zip file, see [Getting started](./gettingstarted).
 
 ### Prerequisites
+* The downloaded Microclimate zip file
 * [Docker](https://www.docker.com/get-docker) **v17.06 minimum**
 * Supported architecture: x86-64 only
 * On Linux, follow the post-installation steps to [run docker as a non-root user](https://docs.docker.com/engine/installation/linux/linux-postinstall/)
@@ -42,13 +41,11 @@ cd ..
 
 ## Installing on Windows
 
-### Before you start
-* Download the Microclimate zip file, see [Getting started](./gettingstarted).
-
 ### Prerequisites
-* Windows 10 or Windows Server 2016
-* [Docker for Windows](https://www.docker.com/docker-windows)
-* On Windows 10, we strongly recommend that you do not run using Experimental Features which is enabled by default in Docker. To turn it off, go to Docker->Settings->Daemon and de-select **Experimental Features**.
+* Supported Windows versions are Windows 10 and Windows Server 2016.
+* Install [Docker for Windows](https://www.docker.com/docker-windows).
+* Enable your local disk drive for sharing in Docker: open Docker->Settings->Shared Drives and select the drive on which you are installing Microclimate. 
+* Ensure that Docker Experimental Features are disabled: open Docker->Settings->Daemon and de-select Experimental Features.
 
 ### Installing and running on Windows
 1. Open the file properties menu for the download file. Tick the Unblock box on the General tab, and then click OK.
