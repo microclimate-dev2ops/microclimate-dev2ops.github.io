@@ -33,6 +33,6 @@ Ready for an adventure? Here are some links to get you started!
 * [Introduction and Concepts](https://github.com/microclimate-dev2ops/rogue-cloud/tree/master/docs)  
 * [Coding a Rogue Cloud agent](https://github.com/microclimate-dev2ops/rogue-cloud/blob/master/docs/Developing-CodingNextSteps.md)  
 * Develop your code using:  
-   * [Microclimate beta](https://github.com/microclimate-dev2ops/rogue-cloud/blob/master/docs/Developing-Microclimate.md)  
+   * [Microclimate](https://github.com/microclimate-dev2ops/rogue-cloud/blob/master/docs/Developing-Microclimate.md)  
    * [A text editor like Visual Studio Code, Atom, and so on](https://github.com/microclimate-dev2ops/rogue-cloud/blob/master/docs/Developing-Text-Editor.md)  
    * [Eclipse and IBM Liberty Developer Tools](https://github.com/microclimate-dev2ops/rogue-cloud/blob/master/docs/Developing-LibertyDevTools.md)
