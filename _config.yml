@@ -1,8 +1,9 @@
 title: Microclimate
 email: tiaoyuw@ca.ibm.com
-description: IBM Microclimate
+description: IBM Microclimate - Helping developers build services for IBM Cloud Private
+keywords: IBM, microclimate, docker, container, devops, applications, development, iteration, microservices, cloud, ICP, services, rapid, integrated
 baseurl: ""
-url: ""
+url: "https://microclimate-dev2ops.github.io"
 twitter_username: jekyllrb
 github_username:  jekyll
 
