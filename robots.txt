@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: {{ site.url }}/sitemap.xml
+Sitemap: https://microclimate-dev2ops.github.io/sitemap.xml
