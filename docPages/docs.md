@@ -1,7 +1,8 @@
 ---
 layout: document
 title: Documentation
-description: Documents
+description: Microclimate Documents
+keywords: getting started, install, setup, command line, import, pipeline, update, samples, help, theia
 duration: 1 minute
 permalink: document
 type: document

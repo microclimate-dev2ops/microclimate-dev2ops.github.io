@@ -1,7 +1,8 @@
 ---
 layout: document
 title: Updating Microclimate
-description: Documents
+description: Update Microclimate
+keywords: update, refresh, uninstall, install, upgrade, path, fix
 duration: 1 minute
 permalink: update
 type: document

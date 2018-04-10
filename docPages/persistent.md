@@ -2,6 +2,7 @@
 layout: document
 title: Setting up persistent storage for Microclimate in ICP 2.1.0.1
 description: Setting up persistent storage for Microclimate in ICP 2.1.0.1
+keywords: ICP. presistent, storage, install, configure
 duration: 1 minute
 permalink: persistent
 type: document
@@ -19,13 +20,13 @@ https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0.1/manage_cluster/cre
     mkdir -m 777 /home/<yourusername>/workspace
     mkdir -m 777 /home/<yourusername>/pipeline
   ```
-2. Configure the Kubernetes client API to point to your ICP instance: in the ICP console UI, click on the admin pull-down in the top right corner and open Configure Client, copy the provided commands and paste them into your local terminal.
-3. Create persistent volume specifications on ICP to link to the directories you created above.  You can create the persistent volume specifications using the ICP console:
+2. Configure the Kubernetes client API to point to your ICP instance. To do this, in the ICP console UI, click on the admin pull-down in the top right corner and open Configure Client, copy the provided commands and paste them into your local terminal.
+3. Create persistent volume specifications on ICP to link to the directories you created. You can create the persistent volume specifications using the ICP console:
 
 	1. Open Platform -> Storage -> CreatePersistentVolume
 	2. On the configuration panel set Name = 'microclimate-workspace', Capacity = 2 Gi, Storage type = 'Host path', Reclaim policy = Retain
 	3. On the Parameters tab, add a parameter with Key = 'path' and Value = the full path to the workspace directory you created in step 1
-Repeat this procedure for the second persistent volume, using `Name = 'microclimate-pipeline', Capacity = 8 Gi` and the full path to the pipeline directory you created in step 1.
+Repeat this procedure for the second persistent volume, using `Name = 'microclimate-pipeline', Capacity = 8 GB` and the full path to the pipeline directory you created in step 1.
 
 4. As an alternative to step 3, you can create `volume.yaml` files that contain the persistent volume specifications, and  run ``kubectl create -f volume.yaml`` to install them in ICP. For example, for the Microclimate workspace volume:
 
@@ -39,12 +40,12 @@ Repeat this procedure for the second persistent volume, using `Name = 'microclim
         - ReadWriteOnce
   	persistentVolumeReclaimPolicy: Retain
       capacity:
-        storage: 2Gi
+        storage: 2 GB
       hostPath:
-        path: /home/yourusername/workspace
+        path: /home/<yourusername>/workspace
      ```
 
-When you install Microclimate, you can check on the ICP console Storage page that the Microclimate PersistenceVolumeClaims are bound to the PersistentVolumes that you created. When you create or import projects in Microclimate you will see their files appear in the workspace directory that you created on the host machine for the ICP worker node.
+When you install Microclimate, you can check on the ICP console Storage page that the Microclimate PersistenceVolumeClaims are bound to the PersistentVolumes that you created. When you create or import projects in Microclimate, you see their files appear in the workspace directory that you created on the host machine for the ICP worker node.
 
 ## Further information
 

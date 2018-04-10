@@ -2,6 +2,7 @@
 layout: document
 title: Installing Microclimate in IBM Cloud Private (ICP)
 description: Installing Microclimate in IBM Cloud Private (ICP)
+keywords: ICP, cluster, prerequisites, docker, install, storage, chart, uninstall, Configuration
 duration: 1 minute
 auto_ids: true
 permalink: installicp
@@ -44,7 +45,9 @@ Note: If there are other secrets that need to be associated to this service acco
 
 Microclimate requires two persistent storage volumes. One volume is needed for the Microclimate workspace, it is used for generated and imported code projects. The other is needed for the Microclimate DevOps pipeline, and is used to store Jenkins build data and logs.
 
-The PersistentVolumeClaim definition for the Microclimate workspace has a default size of 2Gi. This should be configured, by using the `persistence.size` option (see below), to scale with the number and size of projects expected to be created in Microclimate. As a rough guide, a generated Java project requires approximately 128Mi, a generated Swift project approximately 100Mi and a generated Node.js project approximately 1Mi. The Microclimate DevOps pipeline has a fixed PersistentVolumeClaim size of 8Gi.
+When using your own PersistentVolumeClaim, you must specify the name for your workspace as <workspacename>-ibm-microclimate, for example, `workspace-ibm-microclimate`. If you do not use this naming convention, your project is created but will not start.
+
+The PersistentVolumeClaim definition for the Microclimate workspace has a default size of 2 GB. This should be configured, by using the `persistence.size` option (see below), to scale with the number and size of projects expected to be created in Microclimate. As a rough guide, a generated Java project requires approximately 128 MB, a generated Swift project approximately 100 MB and a generated Node.js project approximately 1 MB. The Microclimate DevOps pipeline has a fixed PersistentVolumeClaim size of 8 GB.
 
 Dynamic Provisioning is also enabled by default and uses the default storage class set up in the given IBM Cloud Private instance. A different storage class can be used by editing the `persistence.storageClassName` option (see below).
 
@@ -100,7 +103,7 @@ If you are installing by using the Helm package manager for Kubernetes then valu
 | `portal.tag`               | Tag for portal image                            | `latest`|
 | `imagePullPolicy`          | Image pull policy used for all images           | `Always`    |
 | `persistence.enabled`      | Use persistent storage for microclimate workspace | `true` |
-| `persistence..existingClaimName`  | Name of an existing PVC to be used for the Microclimate workspace - this should be left blank if using Dynamic Provisioning or if you want Microclimate to use it's own PVC | `""` |
+| `persistence.existingClaimName`  | Name of an existing PVC to be used for the Microclimate workspace - this should be left blank if using Dynamic Provisioning or if you want Microclimate to use it's own PVC | `""` |
 | `persistence.useDynamicProvisioning`      | Use dynamic provisioning | `true` |
 | `persistence.size`         | Storage size allowed for microclimate workspace   | `2Gi` |
 | `persistence.storageClassName`        | Storage class name for microclimate workspace     | `""` |
@@ -132,9 +135,9 @@ You can determine the proxy IP address by using the IBM Cloud Private web interf
 
 You can install the chart with overrides for Ingress with:
 
-`helm install --name microclimate --set jenkins.Master.HostName=jenkins.${INGRESS_IP}.nip.io,gitlab-ce.ingress.url=gitlab.${INGRESS_IP}.nip.io,gitlab-ce.externalUrl=http://gitlab.${INGRESS_IP}.nip.io .`
+`helm install --name microclimate --set jenkins.Master.HostName=jenkins.${INGRESS_IP}.nip.io .`
 
-The Jenkins pod takes a while to start as it is installing plugins. This means that the DevOps pod might restart several times while it is waiting for GitLab and Jenkins to start.
+The Jenkins pod takes a while to start as it is installing plugins. This means that the DevOps pod might restart several times while it is waiting for Jenkins to start.
 
 ## What next
 After you have installed Microclimate, you can deploy a [sample](./samples) or deploy your own code.

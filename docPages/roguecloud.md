@@ -2,6 +2,7 @@
 layout: roguecloud
 title: Rogue Cloud
 description: Rogue Cloud
+keywords: coding, game, competition, play, fun, adventure
 duration: 1 minute
 permalink: roguecloud
 ---  

@@ -1,7 +1,8 @@
 ---
 layout: document
 title: Uninstalling Microclimate
-description: Documents
+description: How to uninstall Microclimate
+keywords: uninstall, remove, delete, macos, windows, linux
 duration: 1 minute
 permalink: uninstall
 type: document

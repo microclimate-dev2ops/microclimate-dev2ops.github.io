@@ -2,6 +2,7 @@
 layout: document
 title: Known issues and limitations
 description: Known issues and limitations
+keywords: issues, workaround, memory, icp
 duration: 1 minute
 permalink: knownissues
 type: document
@@ -79,24 +80,6 @@ If a pod that uses a GlusterFS PersistentVolume for storage is stuck in the Ter
 **Workaround:** Run the following command:
 `kubectl -n <namespace> delete pods --grace-period=0 --force <pod_name>`
 
-## Locked out of GitLab
-When you use our GitLab as a source code repository, it is possible to lock yourself out of GitLab due to rack-attack being enabled in GitLab. This happens if you specify incorrect credentials on a pipeline accessing GitLab, after a number of failed logins, GitLab blocks access to the Jenkins IP.
-
-**Workaround:** Wait for one minute before attempting again with correct credentials. Note: Rack Attack can be disabled by using `kubectl exec -it <your Gitlab pod name> /bin/bash` to launch a Bash shell where Gitlab is running, you then modify `/etc/gitlab/gitlab.rb` and add the following:
-
-```
-gitlab_rails['rack_attack_git_basic_auth'] = {
-   'enabled' => false,
-}
-```
-
-You can retrieve the Gitlab pod name by running `kubectl get pods | grep -i gitlab`, assuming you have [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) downloaded, it's executable, and is configured to point to your Kubernetes cluster where Microclimate is installed.
-
-## Dockerfile edit does not start the Liberty server after a container refresh
-On making a Dockerfile change in a ICP 2.1.0.2 Cluster, the Liberty server is not started after a container refresh.
-
-**Workaround:** The pom.xml can be edited, with any trivial change, to trigger a restart of the Liberty Server.
-
 # Linux
 
 ## standard_init_linux.go:195: exec user process caused "exec format error"
@@ -122,11 +105,6 @@ The default security settings on Windows 10 and Windows Server 2016 do not allow
 When you start Microclimate, this message might be issued when you accept the Microclimate license.
 
 **Workaround:** Ensure that your local disk drive is enabled for sharing in Docker: open Docker->Settings->Shared Drives, then restart Docker for Windows. This can often be a glitch in Docker for Windows. Going into the same Shared Drives settings and deselecting the shared drive->Apply->reset credentials->selecting the shared drive again will resolve the issue.
-
-## An application is not accessible after a Dockerfile edit on Windows
-On Windows, after making a Dockerfile change, the Liberty server is not started.
-
-**Workaround:** A pom.xml edit or running the `mcdev` restart command, restarts the Liberty Server.
 
 ## Editing project files by using an external IDE/editor does not deploy changes to the server
 Changes to project files using an external IDE/editor are not reflected on the running application.

@@ -1,7 +1,8 @@
 ---
 layout: document
 title: Getting started
-description: Getting started
+description: Microclimate Getting started
+keywords: build, deploy, local, IBM cloud private
 duration: 1 minute
 auto_ids: true
 permalink: gettingstarted

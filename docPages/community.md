@@ -2,6 +2,7 @@
 layout: document
 title: Microclimate Community
 description: Microclimate community
+keywords: feedback, chat, communication, slack, idea, recommendation, question, answer
 duration: 1 minute
 permalink: community
 ---

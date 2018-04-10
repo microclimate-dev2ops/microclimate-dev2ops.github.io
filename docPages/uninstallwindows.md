@@ -1,7 +1,8 @@
 ---
 layout: document
 title: Uninstalling Microclimate on Windows
-description: Documents
+description: Uninstalling Microclimate on Windows
+keywords: uninstall, remove, delete, windows, cli
 duration: 1 minute
 permalink: uninstallwindows
 type: document

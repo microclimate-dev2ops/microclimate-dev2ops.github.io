@@ -2,6 +2,7 @@
 layout: document
 title: Install and run using nonpersistent storage in ICP
 description: Install and run using nonpersistent storage in ICP
+keywords: docker, kubernetes, command, bash, helm, install, run
 duration: 1 minute
 auto_ids: true
 permalink: nonpersistent

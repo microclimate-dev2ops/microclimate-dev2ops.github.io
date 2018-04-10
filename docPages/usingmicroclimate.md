@@ -1,7 +1,8 @@
 ---
 layout: document
 title: Using Microclimate
-description: Documents
+description: Using Microclimate
+keywords: Using, coding, run, apply, import, create, edit, log, monitor
 duration: 1 minute
 permalink: usingmicroclimate
 type: document

@@ -2,6 +2,7 @@
 layout: document
 title: Microclimate Licenses
 description: Landing page for microclimate licenses
+keywords: license
 duration: 1 minute
 permalink: license
 type: document

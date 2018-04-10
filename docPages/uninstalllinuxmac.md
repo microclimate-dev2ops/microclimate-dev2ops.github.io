@@ -1,7 +1,8 @@
 ---
 layout: document
 title: Uninstalling Microclimate on Linux or Mac/OS
-description: Documents
+description: Uninstalling Microclimate on Linux or MacOS
+keywords: uninstall, delete, remove, linux, macos, cli
 duration: 1 minute
 permalink: uninstalllinuxmac
 type: document

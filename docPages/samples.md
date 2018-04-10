@@ -2,6 +2,7 @@
 layout: document
 title: Samples
 description: Samples
+keywords: samples, examples, testing, simple, fast
 duration: 1 minute
 auto_ids: true
 permalink: samples

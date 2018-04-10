@@ -2,6 +2,7 @@
 layout: document
 title: Setting up your own IDE to use with Microclimate
 description: Setting up your own IDE to use with Microclimate
+keywords: eclipse. application, edit, ide, vsc, visual studio code, intellj, text editor, editor
 duration: 1 minute
 permalink: howToIDE
 type: document

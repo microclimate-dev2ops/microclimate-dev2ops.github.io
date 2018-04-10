@@ -2,6 +2,7 @@
 layout: document
 title: News
 description: Latest news
+keywords: GA, beta, release, version, history
 duration: 20 seconds
 permalink: news
 ---

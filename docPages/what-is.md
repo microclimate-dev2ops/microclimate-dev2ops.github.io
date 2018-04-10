@@ -2,6 +2,7 @@
 layout: document
 title: What is Microclimate?
 description: What is Microclimate?
+keywords: IDE, why, what, container, devbelopment, dev, devops, docker, editor, ide, fast, pipeline, rapid
 duration: 1 minute
 permalink: about
 ---

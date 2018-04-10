@@ -1,7 +1,8 @@
 ---
 layout: document
 title: Uninstalling Microclimate in ICP
-description: Documents
+description: Uninstalling Microclimate in ICP
+keywords: uninstall, ICP, remove, delete, helm
 duration: 1 minute
 permalink: uninstallicp
 type: document

@@ -2,6 +2,7 @@
 layout: document
 title: Importing Projects
 description: Documents
+keywords: import, projects, dokerfile, github, deploy, status
 duration: 1 minute
 permalink: projectimport
 type: document

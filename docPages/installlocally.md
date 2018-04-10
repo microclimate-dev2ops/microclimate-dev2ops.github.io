@@ -2,6 +2,7 @@
 layout: document
 title: Installing Microclimate locally
 description: Installing Microclimate locally
+keywords: linux, macos, windows, install, mcdev
 duration: 1 minute
 auto_ids: true
 permalink: installlocally
