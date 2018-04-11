@@ -15,7 +15,7 @@ Use a pipeline to build the application and Docker image, publish the image to a
 To create a pipeline:
 1. Click ```Pipeline```.
 2. Specify the clone URL of your Git repository, and ensure you include the `.git` suffix. If you previously imported the repository, this is likely to be the same URL you used on the import.
-3. If needed, check the ```Authentication required``` checkbox and enter the relevant credential details.  If you want to use a personal access token, you can enter this in the password field, but you still need to provide a username. To create a personal access token in GitHub, see [Creating a personal access token in GitHub] (#creating-a-personal-access-token-in-github).
+3. If needed, check the ```Authentication required``` checkbox and enter the relevant credential details.  If you want to use a personal access token, you can enter this in the password field, but you still need to provide a username. To create a personal access token in GitHub, see [Creating a personal access token in GitHub](./creatingpat).
 4. In the ```Deploy branch``` field, specify the branch in your Git repository that you want to automatically deploy (defaults to master).
 5. The ```Auto-build``` switch enables or disables the Jenkins build. When switched off, Jenkins ignores any triggers from web hooks and does not have a ```Build Now``` option.
 
