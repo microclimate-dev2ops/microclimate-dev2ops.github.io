@@ -13,5 +13,5 @@ To uninstall Microclimate locally, see:
 * [Uninstalling on Linux or MacOS](./uninstalllinuxmac)
 * [Uninstalling on Windows](./uninstallwindows)
 
-To uninstall Microclimate in ICP, see:
-* [Uninstalling Microclimate in ICP](./uninstallicp)
+To uninstall Microclimate in IBM Cloud Private, see:
+* [Uninstalling Microclimate in IBM Cloud Private](./uninstallicp)

@@ -1,8 +1,8 @@
 ---
 layout: document
-title: Installing Microclimate in IBM Cloud Private (ICP)
-description: Installing Microclimate in IBM Cloud Private (ICP)
-keywords: ICP, cluster, prerequisites, docker, install, storage, chart, uninstall, Configuration
+title: Installing Microclimate in IBM Cloud Private
+description: Installing Microclimate in IBM Cloud Private
+keywords: IBM Cloud Private, cluster, prerequisites, docker, install, storage, chart, uninstall, Configuration
 duration: 1 minute
 auto_ids: true
 permalink: installicp
@@ -11,29 +11,29 @@ type: document
 
 ## Prerequisites
 
-* An IBM Cloud Private (ICP) cluster
+* An IBM Cloud Private cluster
 * Download the Microclimate zip file, see [Getting started](./gettingstarted)
 
 ## Installing the Microclimate Helm Chart
 
 **IMPORTANT** - before installing the Microclimate Helm Chart you must first:
   1. Create a docker registry secret for Microclimate.
-  2. Patch the docker registry secret into your ICP service account.
+  2. Patch the docker registry secret into your IBM Cloud Private service account.
   3. Provide persistent storage volumes for the Microclimate workspace and the Microclimate DevOps pipeline.
 
 #### Create a docker-registry secret
 ```
 kubectl create secret docker-registry microclimate-icp-secret --docker-server=mycluster.icp:8500 --docker-username=<account-name> --docker-password=<account-password> --docker-email=<account-email>
 ```
-The username and password for the secret must be the login credentials for a user that has access to the namespace used in the registry URL. By default, that namespace is ```default``` to which the ```admin``` user has access, but this might vary according to your ICP setup.
+The username and password for the secret must be the login credentials for a user that has access to the namespace used in the registry URL. By default, that namespace is ```default``` to which the ```admin``` user has access, but this might vary according to your IBM Cloud Private setup.
 
 For example, to create a secret with the default admin account:
 ```
 kubectl create secret docker-registry microclimate-icp-secret --docker-server=mycluster.icp:8500 --docker-username=admin --docker-password=admin --docker-email=admin@admin.com
 ```
 
-#### Patch the docker-registry secret into your ICP service account
-After you create a secret, it needs to be patched to the service account by using the following command. ICP comes with a service account called "default".
+#### Patch the docker-registry secret into your IBM Cloud Private service account
+After you create a secret, it needs to be patched to the service account by using the following command. IBM Cloud Private comes with a service account called "default".
 
 ```
 kubectl patch serviceaccount <svc-account-name> -p '{"imagePullSecrets": [{"name": "microclimate-icp-secret"}]}'
@@ -45,13 +45,13 @@ Note: If there are other secrets that need to be associated to this service acco
 
 Microclimate requires two persistent storage volumes. One volume is needed for the Microclimate workspace, it is used for generated and imported code projects. The other is needed for the Microclimate DevOps pipeline, and is used to store Jenkins build data and logs.
 
-When using your own PersistentVolumeClaim, you must specify the name for your workspace as <workspacename>-ibm-microclimate, for example, `workspace-ibm-microclimate`. If you do not use this naming convention, your project is created but will not start.
+When using your own PersistentVolumeClaim, you must specify the name for your workspace as workspacename-ibm-microclimate, for example, `workspace-ibm-microclimate`. If you do not use this naming convention, your project is created but will not start.
 
 The PersistentVolumeClaim definition for the Microclimate workspace has a default size of 2 GB. This should be configured, by using the `persistence.size` option (see below), to scale with the number and size of projects expected to be created in Microclimate. As a rough guide, a generated Java project requires approximately 128 MB, a generated Swift project approximately 100 MB and a generated Node.js project approximately 1 MB. The Microclimate DevOps pipeline has a fixed PersistentVolumeClaim size of 8 GB.
 
 Dynamic Provisioning is also enabled by default and uses the default storage class set up in the given IBM Cloud Private instance. A different storage class can be used by editing the `persistence.storageClassName` option (see below).
 
-For more information about creating Persistent Volumes and enabling Dynamic Provisioning in ICP, visit the following pages :
+For more information about creating Persistent Volumes and enabling Dynamic Provisioning in IBM Cloud Private, visit the following pages :
 
 [Cluster Storage](https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0.1/manage_cluster/cluster_storage.html)
 
@@ -59,21 +59,21 @@ For more information about creating Persistent Volumes and enabling Dynamic Prov
 
 [Dynamic Provisioning](https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0.1/installing/storage_class_all.html)
 
-For testing purposes, on an ICP cluster with a single worker node, you can use the HostPath storage type to provide persistent storage, see
+For testing purposes, on an IBM Cloud Private cluster with a single worker node, you can use the HostPath storage type to provide persistent storage, see
 [Setting up persistent storage for Microclimate](./persistent)
 
 #### Install Microclimate
 
 `helm install --name microclimate stable/ibm-microclimate`
 
-This command deploys Microclimate into ICP with default options. The [configuration](#configuration) section lists the options that can be configured during the  installation.
+This command deploys Microclimate into IBM Cloud Private with default options. The [configuration](#configuration) section lists the options that can be configured during the  installation.
 
 ## Verifying the Chart
 When the helm install has completed successfully, enter the commands provided at the end of the installation to open your Microclimate instance.
 
 ## Uninstalling the Chart
 
-To uninstall Microclimate from ICP:
+To uninstall Microclimate from IBM Cloud Private:
 
 ```bash
 $ helm delete microclimate --purge
@@ -83,9 +83,9 @@ The command removes all the Kubernetes components that are associated with the c
 
 ## Configuration
 
-Microclimate provides a number of configuration options to customise its installation. The table below shows a list of configurable parameters.
+Microclimate provides a number of configuration options to customize its installation. The table below shows a list of configurable parameters.
 
-If you are installing in IBM Cloud Private, then these can be configured through the Configuration page when you install Microclimate from the ICP catalog.
+If you are installing in IBM Cloud Private, then these can be configured through the Configuration page when you install Microclimate from the IBM Cloud Private catalog.
 
 If you are installing by using the Helm package manager for Kubernetes then values can be set by using one or more `--set` arguments when you do a  `helm install`. For example, to increase the size of the persistent storage allocation for the Microclimate workspace from the default value of 2Gi to 5Gi, you can use the following:
 
@@ -118,10 +118,10 @@ Each Microclimate container has a set of default requests and limits for CPU and
 
 | Parameter                  | Description                                     | Default                                                    |
 | -----------------------    | ---------------------------------------------   | ---------------------------------------------------------- |
-| `<containerName>.resources.cpuRequest`         | CPU Request size for a given container  | View the ICP configuration page for Microclimate, or the `values.yaml` file to view default values for each container|
-| `<containerName>.resources.cpuLimit`         | CPU Limit size for a given container  | View the ICP configuration page for Microclimate, or the `values.yaml` file to view default values for each container|
-| `<containerName>.resources.memRequest`         | Memory Request size for a given container  | View the ICP configuration page for Microclimate, or the `values.yaml` file to view default values for each container|
-| `<containerName>.resources.memLimit`         | Memory Limit size for a given container  | View the ICP configuration page for Microclimate, or the `values.yaml` file to view default values for each container|
+| `<containerName>.resources.cpuRequest`         | CPU Request size for a given container  | View the IBM Cloud Private configuration page for Microclimate, or the `values.yaml` file to view default values for each container|
+| `<containerName>.resources.cpuLimit`         | CPU Limit size for a given container  | View the IBM Cloud Private configuration page for Microclimate, or the `values.yaml` file to view default values for each container|
+| `<containerName>.resources.memRequest`         | Memory Request size for a given container  | View the IBM Cloud Private configuration page for Microclimate, or the `values.yaml` file to view default values for each container|
+| `<containerName>.resources.memLimit`         | Memory Limit size for a given container  | View the IBM Cloud Private configuration page for Microclimate, or the `values.yaml` file to view default values for each container|
 
 
 #### Configuration for the Microclimate DevOps Pipeline

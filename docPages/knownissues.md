@@ -2,7 +2,7 @@
 layout: document
 title: Known issues and limitations
 description: Known issues and limitations
-keywords: issues, workaround, memory, icp
+keywords: issues, workaround, memory, IBM Cloud Private
 duration: 1 minute
 permalink: knownissues
 type: document
@@ -35,7 +35,7 @@ If an application has been imported via GIT/File, it is possible that when selec
 **Workaround**
 Further details on enabling applications within the AppMetrics can be found on the project pages https://github.com/RuntimeTools/ (appmetrics,javametrics, swiftmetrics).
 
-# IBM Cloud Private (ICP)
+# IBM Cloud Private
 
 ## Helm releases deployed by Microclimate do not appear in the IBM Cloud Private dashboard
 Microclimate must be deployed in to the default namespace. Microclimate deploys its own Helm Tiller in to that namespace. As a consequence, Helm releases deployed by Microclimate do not appear in the IBM Cloud Private dashboard. The Microclimate Helm Tiller and portal do not currently have access control and consequently Microclimate should not be deployed in to a production environment.
@@ -44,16 +44,16 @@ Microclimate must be deployed in to the default namespace. Microclimate deploys 
 After several days of heavy use, inotify may fail to start in Microclimate's microclimate-file-watcher container, with "Couldn’t initialize inotify" messages displayed in the microclimate-file-watcher logs. After this error, updates to other running projects are not detected.
 
 **Workaround:**
-This is a known issue with inotify on Kubernetes (see https://github.com/kubernetes/kubernetes/issues/10421). To fix this, reboot the ICP cluster. After the reboot, inotify works properly, and projects can be updated.
+This is a known issue with inotify on Kubernetes (see https://github.com/kubernetes/kubernetes/issues/10421). To fix this, reboot the IBM Cloud Private cluster. After the reboot, inotify works properly, and projects can be updated.
 
 ## Microclimate Node port is an internal IP address and is not accessible
-For ICP clusters built on OpenStack environments, with floating IP addresses, the Microclimate portal Node port that appears in the helm installation notes and on the ICP Services view might have an IP address that is internal to the ICP cluster. This IP address is not accessible in the user's browser.
+For IBM Cloud Private clusters built on OpenStack environments, with floating IP addresses, the Microclimate portal Node port that appears in the helm installation notes and on the IBM Cloud Private Services view might have an IP address that is internal to the IBM Cloud Private cluster. This IP address is not accessible in the user's browser.
 
 **Workaround:**
-You can access Microclimate by replacing the internal IP portion of the Microclimate URL with the external ICP cluster IP address. The external IP address can be obtained using the `kubectl cluster-info` command. The recommended permanent solution is to specify the `proxy_access_ip` when configuring ICP in an OpenStack environment. For more information, see https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0/installing/config_yaml.html.
+You can access Microclimate by replacing the internal IP portion of the Microclimate URL with the external IBM Cloud Private cluster IP address. The external IP address can be obtained using the `kubectl cluster-info` command. The recommended permanent solution is to specify the `proxy_access_ip` when configuring IBM Cloud Private in an OpenStack environment. For more information, see https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0/installing/config_yaml.html.
 
-## Swift build logs are empty in ICP
-Swift build logs are currently not visible in the Build logs view when Microclimate is running in ICP.
+## Swift build logs are empty in IBM Cloud Private
+Swift build logs are currently not visible in the Build logs view when Microclimate is running in IBM Cloud Private.
 
 ## Microclimate becomes unresponsive during project deletion
 Microclimate may occasionally become unresponsive during project deletion.
@@ -61,21 +61,21 @@ Microclimate may occasionally become unresponsive during project deletion.
 **Workaround**
 Refresh the webpage and the UI will become responsive once again. The project will have also been deleted.
 
-## Imported projects fail to start on ICP
-When you import a project to Microclimate on ICP, if the project name doesn't match the Helm chart name defined in the project, then the project will fail to start.
+## Imported projects fail to start on IBM Cloud Private
+When you import a project to Microclimate on IBM Cloud Private, if the project name doesn't match the Helm chart name defined in the project, then the project will fail to start.
 
 **Workaround**
 During project import, change the project name to match the Helm chart name.
 
 ## Generated Swift projects require a Dockerfile change to be deployed with the Microclimate pipeline
-For the Beta, generated Swift projects cannot easily be deployed through the Microclimate pipeline to ICP. This is because the generated project assumes you are building the application yourself locally, and doesn't include the Jenkinsfile.
+For the Beta, generated Swift projects cannot easily be deployed through the Microclimate pipeline to IBM Cloud Private. This is because the generated project assumes you are building the application yourself locally, and doesn't include the Jenkins file.
 
 To get around this you can modify the `Dockerfile` in your source repository that the pipeline uses so that it is based on `ibmcom/swift-ubuntu`, this contains the Swift binary to build your project. You also need to include `RUN cd /swift-project && swift build` after the `COPY` to swift-project command, and finally you'll need to add `CMD [ "sh", "-c", "cd /swift-project && .build/x86_64-unknown-linux/debug/project-name" ]` to actually run the Swift project when it's built.
 
 An example Swift project that can be deployed with the Microclimate pipeline has been provided [on Github](https://github.com/a-roberts/adamswift). You also need to include the `Jenkinsfile` where `image` is what you'd like your release to be named, this can be anything, and `CHART_FOLDER` is the location of the Helm chart, for example, `chart/project-name`.
 
 ## Pods remain stuck in terminating state
-If a pod that uses a GlusterFS PersistentVolume for storage is stuck in the Terminating state after you try to delete it, you must manually delete the pod. This is a known issue in ICP https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0.1/getting_started/known_issues.html
+If a pod that uses a GlusterFS PersistentVolume for storage is stuck in the Terminating state after you try to delete it, you must manually delete the pod. This is a known issue in IBM Cloud Private https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0.1/getting_started/known_issues.html
 
 **Workaround:** Run the following command:
 `kubectl -n <namespace> delete pods --grace-period=0 --force <pod_name>`

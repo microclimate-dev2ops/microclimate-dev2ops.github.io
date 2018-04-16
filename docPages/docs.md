@@ -20,8 +20,8 @@ Maybe you are just looking for some pointers? Have a look through the links belo
 * [Installing the Microclimate Command Line Interface (CLI)](./cli)
 * [Setting up your own Integrated Development Environment (IDE) to use with Microclimate](./howToIDE)
 
-#### [Installing Microclimate in IBM Cloud Private (ICP)](./installicp)
-* [Setting up persistent storage for Microclimate in ICP 2.1.0.1](./persistent)
+#### [Installing Microclimate in IBM Cloud Private](./installicp)
+* [Setting up persistent storage for Microclimate in IBM Cloud Private 2.1.0.1](./persistent)
 
 #### [Using Microclimate](./usingmicroclimate)
 

@@ -1,19 +1,19 @@
 ---
 layout: document
-title: Uninstalling Microclimate in ICP
-description: Uninstalling Microclimate in ICP
-keywords: uninstall, ICP, remove, delete, helm
+title: Uninstalling Microclimate in IBM Cloud Private
+description: Uninstalling Microclimate in IBM Cloud Private
+keywords: uninstall, IBM Cloud Private, remove, delete, helm
 duration: 1 minute
 permalink: uninstallicp
 type: document
 ---
 
-## Uninstalling Microclimate in ICP
+## Uninstalling Microclimate in IBM Cloud Private
 
-To uninstall Microclimate in ICP:
+To uninstall Microclimate in IBM Cloud Private:
 
 1. Open a terminal session.
-2. Configure the Kubernetes client API to point to your ICP instance: In the ICP admin GUI, click the account symbol in the top right and go to Configure Client, copy the provided commands and paste them into your local terminal.
+2. Configure the Kubernetes client API to point to your IBM Cloud Private instance: In the IBM Cloud Private admin GUI, click the account symbol in the top right and go to Configure Client, copy the provided commands and paste them into your local terminal.
 3. Run the following command:
 ```bash
 helm delete ibm-microclimate --purge
