@@ -15,7 +15,7 @@ We are getting our groove on, and have put out another monthly release for you. 
 
 One of the key features we added was the ability to use Microclimate running locally on your machine to create a pipepline running on ICP that will deploy your app. In addition we added ANSI format support for log files so that we can leverage colors and effects. 
 
-![Colors and effects](../images/colorsandeffects.png)
+![Colors and effects](../images/colorsandeffects.png){: .fullwidth }
 
 We continue to work away on new features we think will make your life easier. But if there are things we are missing out on, please feel free to hit our [Community](./community) page so you can let us know!
 

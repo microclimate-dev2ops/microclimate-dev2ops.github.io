@@ -9,6 +9,10 @@
 	display: inline;
 }
 
+.fullwidth {
+    width: 100%;
+}
+
 /* Video player popup */
 .closeBtn {
 	position: absolute;
