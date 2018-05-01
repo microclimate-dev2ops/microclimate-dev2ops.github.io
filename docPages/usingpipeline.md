@@ -19,7 +19,7 @@ To create a pipeline:
 4. In the ```Deploy branch``` field, specify the branch in your Git repository that you want to automatically deploy (defaults to master).
 5. The ```Auto-build``` switch enables or disables the Jenkins build. When switched off, Jenkins ignores any triggers from web hooks and does not have a ```Build Now``` option.
 
-The Jenkins pipeline that is created can be accessed by clicking ```Open pipeline```. Log in by using the credentials specified when the Microclimate Helm chart was installed (admin/admin by default).
+The Jenkins pipeline that is created can be accessed by clicking ```Open pipeline```. Log in by using the credentials specified when the Microclimate Helm chart was installed (admin/admin by default), or by using the IBM Cloud Private credential when Microclimate is installed in IBM Cloud Private.
 
 ## Configuring the pipeline
 

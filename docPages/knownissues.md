@@ -80,6 +80,12 @@ If a pod that uses a GlusterFS PersistentVolume for storage is stuck in the Ter
 **Workaround:** Run the following command:
 `kubectl -n <namespace> delete pods --grace-period=0 --force <pod_name>`
 
+## Devops does not install in IBM Cloud Private
+Devops does not install in IBM Cloud Private because Jenkins is unable to mount its persistent volume. Jenkins requires 7 GB.
+
+**Workaround:**
+Check the persistence volume size, and increase to 7 GB if it is set to a value lower than this.
+
 # Linux
 
 ## standard_init_linux.go:195: exec user process caused "exec format error"

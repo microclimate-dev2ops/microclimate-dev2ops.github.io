@@ -7,7 +7,7 @@ permalink: licenses/18.03/ibmlicense
 type: document
 ---
 
-# Microclimate 18.03 IBM licence 
+# Microclimate 18.03 IBM license 
 
 LICENSE INFORMATION
 
