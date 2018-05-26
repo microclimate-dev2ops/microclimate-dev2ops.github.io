@@ -9,6 +9,11 @@ type: document
 ---
 # General issues
 
+## Webhooks not triggering Jenkins builds
+Webhooks that have SSL validation configured might fail to trigger Jenkins jobs due to the presence of a self-signed certificate on the Jenkins kubernetes ingress definition.
+
+**Workaround:** Disable SSL validation on your webhook in GitLab or GitHub. If you require SSL validation, replace any Microclimate Jenkins TLS self-signed certificate with a CA signed certificate.  The process of replacing the Microclimate Jenkins TLS certificate can be found in the readme of the Helm chart. For GitLab, you have the additional option of configuring GitLab to accept the custom certificate, see the GitLab documentation for details.
+
 ## Errors during project deletion for projects that take longer to delete
 For certain projects that take longer to delete, you might see an error stating that the project could not be deleted, and an error message stating to try again later. Often the project has been deleted, but needs a refresh to show that it's gone.
 
@@ -19,15 +24,20 @@ When launching applications from the Open Application view in Microclimate, HTTP
 
 **Workaround:** Open HTTPS URLs using a new browser tab.
 
-## Java Applications do not start after running mcdev delete
-If a java application is created and `mcdev` delete is then used to remove Microclimate, java applications no longer start when Microclimate is restarted.
-
-**Workaround** Stop Microclimate, delete the `.idc` directory from the microclimate-workspace directory, and then start Microclimate.
-
 ## Theia container leaking memory
 If left up and running, over time, the Theia container in Microclimate leaks memory. The Theia team is aware of this, and are currently pursuing a fix for this issue. https://github.com/theia-ide/theia/issues/1284
 
 **Workaround** In Microclimate, reloading the Theia editor releases the memory.
+
+## Theia stops working when second window opened
+If a second Theia window is opened for the same micrcoclimate instance the first Theia window will stop working and you cannot edit files, open files, or expand folders. The Theia team is aware of this, and are currently pursuing a fix for this issue. https://github.com/theia-ide/theia/issues/1930.
+
+**Workaround** Micrclimate is not yet enabled for multiple users and must be used in a single window by a single user.  
+
+## New projects sometimes don't show in Theia's hierarchy view
+Sometimes when a new project is created, it doesn't show up in Theia's hierarchy view.
+
+**Workaround** Refresh the Microclimate page in the browser.
 
 ## Application Monitoring unavailable after Project Import
 If an application has been imported via GIT/File, it is possible that when selecting App Monitor the dashboard is not displayed and results in a 'Cannot GET /appmetrics-dash/'. This is because the application was not created by Microclimate or previously had AppMetrics integration.  
@@ -37,8 +47,6 @@ Further details on enabling applications within the AppMetrics can be found on t
 
 # IBM Cloud Private
 
-## Helm releases deployed by Microclimate do not appear in the IBM Cloud Private dashboard
-Microclimate must be deployed in to the default namespace. Microclimate deploys its own Helm Tiller in to that namespace. As a consequence, Helm releases deployed by Microclimate do not appear in the IBM Cloud Private dashboard. The Microclimate Helm Tiller and portal do not currently have access control and consequently Microclimate should not be deployed in to a production environment.
 
 ## Projects fail to update
 After several days of heavy use, inotify may fail to start in Microclimate's microclimate-file-watcher container, with "Couldn’t initialize inotify" messages displayed in the microclimate-file-watcher logs. After this error, updates to other running projects are not detected.
@@ -46,45 +54,49 @@ After several days of heavy use, inotify may fail to start in Microclimate's mic
 **Workaround:**
 This is a known issue with inotify on Kubernetes (see https://github.com/kubernetes/kubernetes/issues/10421). To fix this, reboot the IBM Cloud Private cluster. After the reboot, inotify works properly, and projects can be updated.
 
+## Changing the Theia preference to show all projects may not be persisted
+When clicking on the gear icon in the upper-right corner of the screen and accessing the preferences page, changing the Theia option to show all projects and clicking on "Save" may not persist the preference.
+
+**Workaround:**
+Check that a directory named ".config" exists in the microclimate workspace. If the directory is missing, create it. After that, restart Microclimate and the preference persistence should work.
+
 ## Microclimate Node port is an internal IP address and is not accessible
 For IBM Cloud Private clusters built on OpenStack environments, with floating IP addresses, the Microclimate portal Node port that appears in the helm installation notes and on the IBM Cloud Private Services view might have an IP address that is internal to the IBM Cloud Private cluster. This IP address is not accessible in the user's browser.
 
 **Workaround:**
 You can access Microclimate by replacing the internal IP portion of the Microclimate URL with the external IBM Cloud Private cluster IP address. The external IP address can be obtained using the `kubectl cluster-info` command. The recommended permanent solution is to specify the `proxy_access_ip` when configuring IBM Cloud Private in an OpenStack environment. For more information, see https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0/installing/config_yaml.html.
 
-## Swift build logs are empty in IBM Cloud Private
-Swift build logs are currently not visible in the Build logs view when Microclimate is running in IBM Cloud Private.
-
-## Microclimate becomes unresponsive during project deletion
-Microclimate may occasionally become unresponsive during project deletion.
-
-**Workaround**
-Refresh the webpage and the UI will become responsive once again. The project will have also been deleted.
-
-## Imported projects fail to start on IBM Cloud Private
-When you import a project to Microclimate on IBM Cloud Private, if the project name doesn't match the Helm chart name defined in the project, then the project will fail to start.
-
-**Workaround**
-During project import, change the project name to match the Helm chart name.
-
-## Generated Swift projects require a Dockerfile change to be deployed with the Microclimate pipeline
-For the Beta, generated Swift projects cannot easily be deployed through the Microclimate pipeline to IBM Cloud Private. This is because the generated project assumes you are building the application yourself locally, and doesn't include the Jenkins file.
-
-To get around this you can modify the `Dockerfile` in your source repository that the pipeline uses so that it is based on `ibmcom/swift-ubuntu`, this contains the Swift binary to build your project. You also need to include `RUN cd /swift-project && swift build` after the `COPY` to swift-project command, and finally you'll need to add `CMD [ "sh", "-c", "cd /swift-project && .build/x86_64-unknown-linux/debug/project-name" ]` to actually run the Swift project when it's built.
-
-An example Swift project that can be deployed with the Microclimate pipeline has been provided [on Github](https://github.com/a-roberts/adamswift). You also need to include the `Jenkinsfile` where `image` is what you'd like your release to be named, this can be anything, and `CHART_FOLDER` is the location of the Helm chart, for example, `chart/project-name`.
-
-## Pods remain stuck in terminating state
+## Pods remain stuck in terminating state on IBM Cloud Private 2.0.1.2 and earlier
 If a pod that uses a GlusterFS PersistentVolume for storage is stuck in the Terminating state after you try to delete it, you must manually delete the pod. This is a known issue in IBM Cloud Private https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0.1/getting_started/known_issues.html
 
-**Workaround:** Run the following command:
+**Workaround:** Upgrade to IBM Cloud Private 2.1.0.3 or run the following command:
 `kubectl -n <namespace> delete pods --grace-period=0 --force <pod_name>`
 
-## Devops does not install in IBM Cloud Private
-Devops does not install in IBM Cloud Private because Jenkins is unable to mount its persistent volume. Jenkins requires 7 GB.
+## Jenkins fails to mount persistent volume.  
+If Jenkins is configured to use an existing persistent volume of less that 7GB it will fail to mount that volume. By default an 8GB persistent volume is used.
 
 **Workaround:**
-Check the persistence volume size, and increase to 7 GB if it is set to a value lower than this.
+Check the persistent volume size, and either increase its size to at least 7 GB, or use the default persistent volume.
+
+## Node.JS Service Enablement Does not work on IBM Cloud Private 
+On Microclimate 18.05, Node projects created with an IBM Cloud service enablement will fail to deploy on IBM Cloud Private due to required secrets that are missing. 
+
+**Workaround:**
+To use IBM Cloud service enablement with a Node project, for each service required, create the required secret and patch it into your service account beforehand. See the following table to see what secrets are required for each service enablement. 
+
+| Service        | Secret                     | 
+| ---------------|:--------------------------:|
+| Alert          | bind-alert-name            |
+| AppId          | binding-auth-name          |
+| Cloudant       | binding-cloudant-name      |
+| MongoDB        | binding-my-mongodb         |
+| Object Storage | binding-object-storage-name|
+| Postgres       | binding-my-postgresql      |
+| Push           | binding-push-name          |
+| Redis          | binding-my-redis           |
+| Watson SDK     | binding-conversation-name  |
+
+Each secret must have a key named "binding". The value corresponding to "binding" will depend on the type of service selected.
 
 # Linux
 
@@ -93,8 +105,8 @@ Microclimate Docker images are available for x86-64 architectures only. On other
 
 # Windows
 
-## Microclimate beta does not support Microsoft Edge.
-For the beta, Microclimate does not support Microsoft Edge.
+## Microclimate does not support Microsoft Edge.
+Microclimate does not support Microsoft Edge.
 
 **Workaround:** Use a different web browser.
 
@@ -110,7 +122,7 @@ The default security settings on Windows 10 and Windows Server 2016 do not allow
 ## An error occurred while attempting to store the license status
 When you start Microclimate, this message might be issued when you accept the Microclimate license.
 
-**Workaround:** Ensure that your local disk drive is enabled for sharing in Docker: open Docker->Settings->Shared Drives, then restart Docker for Windows. This can often be a glitch in Docker for Windows. Going into the same Shared Drives settings and deselecting the shared drive->Apply->reset credentials->selecting the shared drive again will resolve the issue.
+**Workaround:** Ensure that your local disk drive is enabled for sharing in Docker: open Docker->Settings->Shared Drives, then restart Docker for Windows.
 
 ## Editing project files by using an external IDE/editor does not deploy changes to the server
 Changes to project files using an external IDE/editor are not reflected on the running application.

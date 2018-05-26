@@ -1,9 +1,9 @@
 ---
 layout: document
-title: Microclimate 18.03beta IBM Licences
+title: Microclimate 18.03 IBM Licences
 description: Landing page for microclimate IBM licenses
 duration: 1 minute
-permalink: licenses/18.03/ibmlicense
+permalink: licenses-18_03-ibmlicense
 type: document
 ---
 

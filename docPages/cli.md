@@ -1,6 +1,6 @@
 ---
 layout: document
-title: Microclimate CLI
+title: Installing the Microclimate CLI
 description: How to setup and run microclimate from command line
 keywords: install, command line, cli, command, start, stop, update, open, delete, options, operation, devops
 duration: 1 minute

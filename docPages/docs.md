@@ -14,6 +14,8 @@ Maybe you are just looking for some pointers? Have a look through the links belo
 
 ## How-tos and Guides
 
+#### [Introducing Microclimate](./introducing)
+
 #### [Getting Started](./gettingstarted)
 
 #### [Installing Microclimate locally](./installlocally)
@@ -21,7 +23,6 @@ Maybe you are just looking for some pointers? Have a look through the links belo
 * [Setting up your own Integrated Development Environment (IDE) to use with Microclimate](./howToIDE)
 
 #### [Installing Microclimate in IBM Cloud Private](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md)
-
 
 #### [Using Microclimate](./usingmicroclimate)
 
@@ -39,3 +40,5 @@ Maybe you are just looking for some pointers? Have a look through the links belo
 For more information about some issues we are aware of, with suggested work-arounds, see [Known issues and limitations](./knownissues).
 
 For more information about Theia, see [Theia IDE](http://www.theia-ide.org/).
+
+For more information about Microclimate license, see [License page](./license)

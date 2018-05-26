@@ -46,6 +46,7 @@ cd ..
 * Supported Windows versions are Windows 10 and Windows Server 2016.
 * Install [Docker for Windows](https://www.docker.com/docker-windows).
 * Enable your local disk drive for sharing in Docker: open Docker->Settings->Shared Drives and select the drive on which you are installing Microclimate. 
+* Ensure that you are using Linux containers (default): From the Docker for Windows menu, you can toggle which daemon (Linux or Windows) the Docker CLI talks to. Select Switch to Windows containers to use Windows containers, or select Switch to Linux containers to use Linux containers (the default). We only support running using Linux containers.
 * Ensure that Docker Experimental Features are disabled: open Docker->Settings->Daemon and de-select Experimental Features.
 
 ### Installing and running on Windows

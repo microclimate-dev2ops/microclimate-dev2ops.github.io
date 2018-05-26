@@ -315,6 +315,12 @@ a.download-link, a.download-link:visited, a.download-link:active, a.download-lin
 	height: 333px;
 }
 
+.workspace-img {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 140px;
+	padding-right: 140px;
+}
 .selling-points-text-left {
 	padding-right: 140px;
 	padding-left: 60px;
@@ -515,6 +521,10 @@ a.download-link, a.download-link:visited, a.download-link:active, a.download-lin
 	.header-intro {
 		margin-top: 60px;
 	}
+	.workspace-img {
+       	padding-left: 30px;
+	    padding-right: 30px;
+     }
 	.selling-points-text-right {
 		text-align: right;
 		padding-right: 55px;
@@ -683,6 +693,10 @@ a.download-link, a.download-link:visited, a.download-link:active, a.download-lin
 	.header-intro {
 		margin-top: 20px;
 	}
+	.workspace-img {
+	  padding-left: unset;
+	  padding-right: unset;
+    }
 	.selling-points-text-right {
 		text-align: center;
 		padding-right: unset;
@@ -716,6 +730,10 @@ a.download-link, a.download-link:visited, a.download-link:active, a.download-lin
 		padding-right: 30px;
 		padding-left: 30px;
 	}
+	.workspace-img {
+	    padding-left: 30px;
+	    padding-right: 30px;
+    }
 	.selling-points-text-right {
 		padding-left: 30px;
 		padding-right: 30px;

@@ -1,20 +1,18 @@
 ---
 layout: document
-title: Microclimate 18.04 IBM Licences
+title: Microclimate 18.05 IBM Licences
 description: Landing page for microclimate IBM licenses
 duration: 1 minute
-permalink: licenses-18_04-ibmlicense
+permalink: licenses-18_05-ibmlicense
 type: document
 ---
 
-# Microclimate 18.04 IBM license 
-
-LICENSE INFORMATION
+# Microclimate 18.05 IBM license LICENSE INFORMATION
 
 The Programs listed below are licensed under the following License Information terms and conditions in addition to the Program license terms previously agreed to by Client and IBM. If Client does not have previously agreed to license terms in effect for the Program, the International License Agreement for Non-Warranted Programs (Z125-5589-05) applies.
 
 Program Name (Program Number):
-Microclimate 18.04 (Tool)
+Microclimate 18.05 (Tool)
 
 The following standard terms apply to Licensee's use of the Program.
 
@@ -84,8 +82,8 @@ The following are Separately Licensed Code:
 * javax.interceptor-api
 * caniuse-lite
 * font-awesome
-* ua-parser-js   
-  
+* ua-parser-js
+
 * accept-24x24.svg
 * accept.svg
 * blue.svg
@@ -150,13 +148,13 @@ The following are Separately Licensed Code:
 * save.svg
 * graph.svg
 * redo.svg
-* previous.svg  
-  
+* previous.svg
+
 * attribute.svg
-* application-certificate.svg  
-  
-* font-awesome.min.css    
-      
+* application-certificate.svg
+
+* font-awesome.min.css
+
 * Advapi32.java 2
 * Options.java 3
 * RegistryKey.java 4
@@ -168,10 +166,19 @@ The following are Separately Licensed Code:
 * plugin.svg
 * keys.svg
 * shield.svg
-* emblem-urgent.svg   
-    
-* 13resosaw.wav    
-   
+* emblem-urgent.svg
+
+* 13resosaw.wav
+
+* bsh - 2.0.b4
+* git - 2.17.0
+* java10api - 10
+* Jenkins - 2.107.3
+* libc6 - 2.23.0
+* oniguruma - 6.3.0
+* sensible-utils - 0.0.9
+* systemd - 229-4ubuntu21.2
+
 Benchmarking
 
 Licensee may disclose the results of any benchmark test of the Program or its subcomponents to any third party provided that Licensee (A) publicly discloses the complete methodology used in the benchmark test (for example, hardware and software setup, installation procedure and configuration files), (B) performs Licensee's benchmark testing running the Program in its Specified Operating Environment using the latest applicable updates, patches and fixes available for the Program from IBM or third parties that provide IBM products ("Third Parties"), and (C) follows any and all performance tuning and "best practices" guidance available in the Program's documentation and on IBM's support web sites for the Program. If Licensee publishes the results of any benchmark tests for the Program, then notwithstanding anything to the contrary in any agreement between Licensee and IBM or Third Parties, IBM and Third Parties will have the right to publish the results of benchmark tests with respect to Licensee's products provided IBM or Third Parties complies with the requirements of (A), (B) and (C) above in its testing of Licensee's products.
@@ -193,9 +200,9 @@ Export and Import Restrictions
 
 This Program may contain cryptography. Transfer to, or use by, users of the Program may be prohibited or subject to export or import laws, regulations or policies, including those of the United States Export Administration Regulations. Licensee assumes all responsibility for complying with all applicable laws, regulations, and policies regarding the export, import, or use of this Program, including but not limited to, U.S. restrictions on exports or reexports. To obtain the export classification of this Program refer to: https://www.ibm.com/products/exporting/.
 
-L/N:  L-MLIN-AXXRYT
-D/N:  L-MLIN-AXXRYT
-P/N:  L-MLIN-AXXRYT
+L/N:  L-MLIN-AYBKMV
+D/N:  L-MLIN-AYBKMV
+P/N:  L-MLIN-AYBKMV
 
 
 International License Agreement for Non-Warranted Programs

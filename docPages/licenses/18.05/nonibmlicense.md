@@ -1,18 +1,18 @@
 ---
 layout: document
-title: Microclimate 18.04 non IBM Licences
+title: Microclimate 18.05 non IBM Licences
 description: Landing page for microclimate non IBM licenses
 duration: 1 minute
-permalink: licenses-18_04-nonibmlicense
+permalink: licenses-18_05-nonibmlicense
 type: document
 ---
 
 
-# Microclimate 18.04 Non IBM Licenses
+# Microclimate 18.05 Non IBM Licenses
 
 TERMS AND CONDITIONS FOR SEPARATELY LICENSED CODE
 
-Microclimate 18.04
+Microclimate 18.05
 
 The IBM license agreement and any applicable information on the web
 download page for IBM products refers Licensee to this file for details
@@ -75,8 +75,8 @@ The following are Separately Licensed Code:
 * javax.interceptor-api
 * caniuse-lite
 * font-awesome
-* ua-parser-js   
-   
+* ua-parser-js
+
 * accept-24x24.svg
 * accept.svg
 * blue.svg
@@ -141,13 +141,13 @@ The following are Separately Licensed Code:
 * save.svg
 * graph.svg
 * redo.svg
-* previous.svg   
-   
+* previous.svg
+
 * attribute.svg
-* application-certificate.svg   
-   
-* font-awesome.min.css   
-   
+* application-certificate.svg
+
+* font-awesome.min.css
+
 * Advapi32.java 2
 * Options.java 3
 * RegistryKey.java 4
@@ -159,9 +159,18 @@ The following are Separately Licensed Code:
 * plugin.svg
 * keys.svg
 * shield.svg
-* emblem-urgent.svg   
-   
+* emblem-urgent.svg
+
 * 13resosaw.wav
+
+* bsh - 2.0.b4
+* git - 2.17.0
+* java10api - 10
+* Jenkins - 2.107.3
+* libc6 - 2.23.0
+* oniguruma - 6.3.0
+* sensible-utils - 0.0.9
+* systemd - 229-4ubuntu21.2
 
 
 
@@ -428,9 +437,14 @@ e. This License constitutes the entire agreement between the parties with respec
  The Program includes some or all of the following licensed to you as Separately Licensed Code under the GNU General Public License ("GPL") and/or the GNU Lesser General Public License ("LGPL") V2.0." 
 
 gitlab 9.4.1+ce.0 - portions under LGPL v2
+gitlab 2.16.2
 jenkins 2.89.4
-git  is under GPLv2
-cmd-parser - https://github.com/bitnami/node-cmd-parser/graphs/contributors
+ Jenkins - 2.107.1
+ Jenkins - 2.107.3
+git  2.16.2
+git 2.17.0
+git 3.8.0
+md-parser - https://github.com/bitnami/node-cmd-parser/graphs/contributors
 nami - https://github.com/bitnami/nami/graphs/contributors
 nami-tool - https://github.com/bitnami/nami/graphs/contributors
 nami-core - https://github.com/bitnami/nami-core/graphs/contributors
@@ -439,6 +453,7 @@ nami-tests - https://github.com/bitnami/nami-test/graphs/contributors
 nami-utils - https://github.com/bitnami/nami-utils/graphs/contributors
 javax.annotation-api 1.2,
 javax.el-api 3.0.0,
+ bsh - 2.0.b4
 
 
 ua-parser-js 0.7.12 - Copyright (C) 2012-2016 Faisal Salman <<fyzlman@gmail.com>>, Copyright (C) 2012-2016 Faisal Salman <fyzlman@gmail.com>,
@@ -464,6 +479,11 @@ plugin.svg
 keys.svg
 shield.svg
 emblem-urgent.svg
+java10api - 10
+libc6 - 2.23.0
+sensible-utils - 0.0.9
+ systemd - 229-4ubuntu21.2
+
 
 
 
@@ -538,6 +558,7 @@ End of GPL v2 LICENSE
 --------------------------------------
 
 
+GPL/LGPL v3 License
   The Program includes some or all of the following licensed to you as Separately Licensed Code under the GNU General    Public License ("GPL") and/or the GNU Lesser General Public License ("LGPL") v3.0." 
 
       bash - Copyright (C) 1993-2012 Free Software Foundation, Inc. 
@@ -710,6 +731,6 @@ Specify each legal  component name and, if applicable, the version/release/modif
 Enter only one item per line with no general or descriptive text.
 
 
-L/N:  L-MLIN-AXXRYT
-D/N:  L-MLIN-AXXRYT
-P/N:  L-MLIN-AXXRYT
+L/N:  L-MLIN-AYBKMV
+D/N:  L-MLIN-AYBKMV
+P/N:  L-MLIN-AYBKMV

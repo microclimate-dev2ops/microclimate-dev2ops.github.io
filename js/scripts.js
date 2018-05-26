@@ -12,10 +12,7 @@ $(document)
 				function() {
 					
 					$(".trackdownload").on("click", function(e) {
-						if (typeof gtag === "function") { 
-						  var file=$(this).attr('href');
-					      gtag('event', 'download', { event_category: 'download', event_label: file});
-						}
+						// do nothing for now, will add segment tracking
 					});
 					
 					$(".navbar").on("show.bs.collapse", function(e) {
@@ -32,9 +29,7 @@ $(document)
 					// track embeded video play
 					$(".embeded-video").on('play',function(){
 						var file =  $(this).children("source").attr("src");
-						if (typeof gtag === "function") { 
-							gtag('event', 'videoView', { event_category: 'videoView', event_label: file});
-						}
+						// will add segment
 					});
 					$(".showVideo")
 							.on(
@@ -42,9 +37,7 @@ $(document)
 									function(e) {
 										e.preventDefault();
 										var file = $(this).data("video");
-										if (typeof gtag === "function") { 
-											gtag('event', 'videoView', { event_category: 'videoView', event_label: file});
-										}
+										// will add segment
 									    
 										var htmlTemplate = '<div class="videoContainer"><div class="videoPlayer"><div style="display: block; padding-top:56%; width: 100%;">'
 												+ '</div><button class="closeBtn">X</button><video class="video-iframe" width="100%" height="100%" autobuffer controls autoplay>'

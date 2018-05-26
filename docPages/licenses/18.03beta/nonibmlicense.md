@@ -3,7 +3,7 @@ layout: document
 title: Microclimate 18.03beta non IBM Licences
 description: Landing page for microclimate non IBM licenses
 duration: 1 minute
-permalink: licenses/18.03beta/nonibmlicense
+permalink: licenses-18_03beta-nonibmlicense
 type: document
 ---
 

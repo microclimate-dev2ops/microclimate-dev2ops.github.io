@@ -21,6 +21,8 @@ To create a pipeline:
 
 The Jenkins pipeline that is created can be accessed by clicking ```Open pipeline```. Log in by using the credentials specified when the Microclimate Helm chart was installed (admin/admin by default), or by using the IBM Cloud Private credential when Microclimate is installed in IBM Cloud Private.
 
+You can also access the pipeline deployed in your IBM Cloud Private environment directly from Microclimate running on your laptop. To do this when running locally, click ```Pipeline``` and you are prompted for the details. Specify the remote workspace URL, and log in with your username and password.
+
 ## Configuring the pipeline
 
 The pipeline pushes the Docker image to the Docker registry specified in the `jenkins.Pipeline.Registry.Url` Helm chart value. This URL should include the port and the registry namespace. For example, in IBM Cloud Private use `mycluster.icp:8500/default`. If the registry is secured, then the name of a Kubernetes `docker-registry` secret should be specified by using `jenkins.Pipeline.Registry.Secret`.
@@ -46,3 +48,10 @@ To create web hooks in GitHub:
 3. Select the ```Let me select individual events``` option.
 4. From the list of events that are displayed, select ```Pull requests``` and ```Pushes```.
 5. Click ```Add webhook```.
+
+## Deleting a project before deleting a pipeline
+
+Deleting a project does not delete the pipeline. Pipelines are shared by projects that target the same Git repo. If you want to delete the pipeline, you must do so before you delete the project. If you accidentally delete a project before you delete a pipeline, you can reimport the project, delete the pipeline, and then delete the project by doing the following procedure:
+1. Click ```Import project```.
+2. Click ```Delete pipeline```.
+3. Click ```Delete project```.

@@ -16,114 +16,129 @@ Microclimate projects can be imported from Github, a local directory, or an arch
 
 Microclimate is designed to develop cloud native microservices, therefore, each project must be self-sufficient and not dependent on other projects to build. The requirements to import projects for each of the supported application types are outlined in the following sections.
 
-### Java Microprofile projects
+### Eclipse MicroProfile projects
 
-Microprofile projects are Java applications that are deployed to WebSphere Liberty. They are built using Maven and the liberty-maven-plugin, and are based on the websphere-liberty docker image (https://hub.docker.com/_/websphere-liberty/_). Microprofile projects support rapid iterative development in Microclimate with a few changes to your pom.xml.
+MicroProfile projects are Java applications that are deployed to WebSphere Liberty. They are built by using Maven and the liberty-maven-plugin, and are based on the [websphere-liberty docker image](https://hub.docker.com/_/websphere-liberty/_).  MicroProfile projects support rapid iterative development in Microclimate with a few changes to your ```pom.xml``` file.
 
-<b>Instructions:</b>
+#### Instructions
 
 Avoid copying files from the project’s Maven target folder as part of any Dockerfile instructions because Microclimate builds your project within the container. The application builds against the same runtime that is used in production in order to avoid inconsistencies between development and production environments.
 
-<b>Pre-import instructions:</b>
+#### Pre-import instructions
 
-*Build*
+MicroProfile projects must be configured to build by using Maven.
 
-Microprofile projects must be configured to build using Maven.
+Tip: For an example of a working MicroProfile application, simply create a new MicroProfile project in Microclimate. You can see the ```pom.xml``` file contents and use it as a template when you configure your project's ```pom.xml``` file.
 
-Tip: For an example of a working Microprofile application, simply create a new Microprofile project in Microclimate. You can see the pom.xml contents and use it as a template when configuring your project's pom.xml file.
+Configure your ```pom.xml``` file as follows:
 
-pom.xml configuration:
+1. The Liberty Maven parent is required for rapid iterative development:
 
-1. The Liberty Maven parent is required for rapid iterative development.
-        <parent>
-            <groupId>net.wasdev.wlp.maven.parent</groupId>
-            <artifactId>liberty-maven-app-parent</artifactId>
-            <version>2.1.1</version>
-        </parent>
+```
+<parent>
+    <groupId>net.wasdev.wlp.maven.parent</groupId>
+    <artifactId>liberty-maven-app-parent</artifactId>
+    <version>2.1.1</version>
+</parent>
+```
 
-2a. Add a Maven profile for Microclimate that configures the Liberty Maven plugin.
-        <profile>
-            <id>microclimate</id>
-            <activation>
-                <property>
-                    <name>libertyEnv</name>
-                    <value>microclimate</value>
-                </property>
-            </activation>
-            <build>
-                <directory>${microclimateOutputDir}</directory>
-                <plugins>
-                    <!-- Enablement of liberty-maven plugin in microclimate -->
-                    <plugin>
-                        <groupId>net.wasdev.wlp.maven.plugins</groupId>
-                        <artifactId>liberty-maven-plugin</artifactId>
-                        <version>2.1.1</version>
-                        <extensions>true</extensions>
-                        <configuration>
-                            <looseApplication>true</looseApplication>
-                            <appsDirectory>apps</appsDirectory>
-                            <installDirectory>/opt/ibm/wlp</installDirectory>
-                            <userDirectory>${project.build.directory}/liberty/wlp/usr</userDirectory>
-                            <configFile>${basedir}/src/main/liberty/config/server.xml</configFile>
-                            <serverEnv>${basedir}/src/main/liberty/config/server.env</serverEnv>
-                            <jvmOptionsFile>${basedir}/src/main/liberty/config/jvm.options</jvmOptionsFile>
-                            <include>usr</include>
-                            <bootstrapProperties>
-                                <default.http.port>9080</default.http.port>
-                                <default.https.port>9443</default.https.port>
-                            </bootstrapProperties>
-                            <installAppPackages>project</installAppPackages>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
+  2a. Add a Maven profile for Microclimate that configures the Liberty Maven plugin
 
-Required Liberty Maven plugin configuration:
+  ```sh
+  <profile>
+      <id>microclimate</id>
+      <activation>
+          <property>
+              <name>libertyEnv</name>
+              <value>microclimate</value>
+          </property>
+      </activation>
+      <build>
+          <directory>${microclimateOutputDir}</directory>
+          <plugins>
+              <!-- Enablement of liberty-maven plugin in microclimate -->
+              <plugin>
+                  <groupId>net.wasdev.wlp.maven.plugins</groupId>
+                  <artifactId>liberty-maven-plugin</artifactId>
+                  <version>2.1.1</version>
+                  <extensions>true</extensions>
+                  <configuration>
+                      <looseApplication>true</looseApplication>
+                      <appsDirectory>apps</appsDirectory>
+                      <installDirectory>/opt/ibm/wlp</installDirectory>
+                      <userDirectory>${project.build.directory}/liberty/wlp/usr</userDirectory>
+                      <configFile>${basedir}/src/main/liberty/config/server.xml</configFile>
+                      <serverEnv>${basedir}/src/main/liberty/config/server.env</serverEnv>
+                      <jvmOptionsFile>${basedir}/src/main/liberty/config/jvm.options</jvmOptionsFile>
+                      <include>usr</include>
+                      <bootstrapProperties>
+                          <default.http.port>9080</default.http.port>
+                          <default.https.port>9443</default.https.port>
+                      </bootstrapProperties>
+                      <installAppPackages>project</installAppPackages>
+                  </configuration>
+              </plugin>
+          </plugins>
+      </build>
+  </profile>
+  ```        
 
-2b. Liberty server configuration file (server.xml) located in the source folder referenced in the pom.xml
-<configFile>${basedir}/src/main/liberty/config/server.xml</configFile>
+  Then add the required Liberty Maven plugin configuration:
 
-2c. Optional: Liberty server environment file
-<serverEnv>${basedir}/src/main/liberty/config/server.env</serverEnv>
+  2b. Liberty server configuration file, ```server.xml```, that is located in the source folder that is referenced in the ```pom.xml``` file.
 
-2d. Optional: Liberty Java Virtual Machine options file (jvm.options)
-<jvmOptionsFile>${basedir}/src/main/liberty/config/jvm.options</jvmOptionsFile>
+  ```sh      
+  <configFile>${basedir}/src/main/liberty/config/server.xml</configFile>
+  ```        
 
-<b>Post-import instructions:</b>
+  2c. Optional: Liberty server environment file:
+
+  ```sh      
+  <serverEnv>${basedir}/src/main/liberty/config/server.env</serverEnv>
+  ```        
+
+  2d. Optional: Liberty Java Virtual Machine options file:
+
+  ```sh      
+  (jvm.options)
+  <jvmOptionsFile>${basedir}/src/main/liberty/config/jvm.options</jvmOptionsFile>
+  ```
+
+### Post-import instructions
 
 The following files are generated during the import process. If your project requires additional configuration files or instructions for build, you might need to modify them.
 
-*Dockerfile-lang*
+**Dockerfile-lang**
 
-The 'Dockerfile-lang' file is an optional project file that contains instructions used to set up any plumbing required for your application. This can include copying application resources from source. For example, if your application requires configuration files, you can use a COPY instruction to copy those files into your application's Docker container.
+The `Dockerfile-lang` file is an optional project file that contains instructions that are used to set up any plumbing required for your application. This can include copying application resources from source. For example, if your application requires configuration files, you can use a `COPY` instruction to copy those files into your application's Docker container.
 
-Maven is included in a generated Dockerfile-build file so it is not necessary to include instructions to set up Maven download in Dockerfile-lang. 
+Maven is included in a generated `Dockerfile-build` file so it is not necessary to include instructions to set up Maven download in `Dockerfile-lang`.
 
-*Dockerfile-build*
+**Dockerfile-build**
 
-This file is used to install a Java SDK and Maven. This file must be updated if your application requires different versions of these tools.
+The `Dockerfile-build` file is used to install a Java SDK and Maven. This file must be updated if your application requires different versions of these tools.
 
 ### Java Spring projects
 
-Java Spring Boot projects are built using Maven and produce stand-alone runnable applications.
+Java Spring Boot projects are built by using Maven and produce stand-alone runnable applications.
 
 Requirements:
 
-- The project must be a valid Spring Boot project. The pom.xml must contain a dependency on an artifact from the <groupId>org.springframework.boot</groupId> group.
-- Configure the project to build with Maven and produce a exectutable jar file.
+- The project must be a valid Spring Boot project. The `pom.xml` must contain a dependency on an artifact from the `<groupId>org.springframework.boot</groupId> group`.
+- Configure the project to build with Maven and produce a exectutable `.jar` file.
 - Configure the application to use port 8080.
-- Copy the executable jar file produced by the Maven build to /app.jar within the Docker container. To do this, simply add a COPY instruction to the Dockerfile. If your project does not have a Dockerfile, one will be generated for you.
+- Copy the executable `.jar` file produced by the Maven build to `/app.jar` within the Docker container. To do this, simply add a `COPY` instruction to the Dockerfile. If your project does not have a Dockerfile, one is generated for you.
 
-For example,
-
-    FROM ibmjava:8-sfj
+For example:
+```sh
+FROM ibmjava:8-sfj
     MAINTAINER IBM Java engineering at IBM Cloud
 
     COPY target/spring-application-2.0.0.BUILD-SNAPSHOT.jar /app.jar
 
     ENV JAVA_OPTS=""
     ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]
+```    
 
 ### NodeJS projects
 
@@ -131,11 +146,11 @@ NodeJS projects require a dependency on Nodemon. Nodemon is used to quickly proc
 
 Requirements:
 
-- Ensure the project can be started by running "nodemon start".
-- A 'Dockerfile' file is generated if it does not exist. Ensure the Dockerfile exposes port 3000, for example:
-  ```EXPOSE 3000```
-- The application is expected to be in the ```/app``` folder within the Docker container.
-- The working directory must also be set to ```/app```
+- Ensure the project can be started by running `nodemon start`.
+- A `Dockerfile` file is generated if it does not exist. Ensure the Dockerfile exposes port 3000, for example:
+  `EXPOSE 3000`.
+- The application is expected to be in the `/app` folder within the Docker container.
+- The working directory must also be set to `/app`.
 
 ### Swift projects
 
@@ -143,9 +158,10 @@ Microclimate works with Swift projects that use the Kitura web framework.
 
 Requirements:
 
-- A 'Dockerfile-tools' file will be generated to build the project. Ensure the project can be built using a "release" build configuration.
-For example, you should be able to build the project using the command "swift build --configuration release"
-- A 'Dockerfile' file is generated. It runs the application that was built using 'Dockerfile-tools'.
+- A `Dockerfile-tools` file is generated to build the project. Ensure the project can be built by using a `release` build configuration.
+For example, you should be able to build the project by using the command
+`swift build --configuration release`.
+- A `Dockerfile` file is generated. It runs the application that was built by using `Dockerfile-tools`.
 
 ## Importing in IBM Cloud Private (ICP)
 
