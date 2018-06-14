@@ -6,13 +6,42 @@ $(document).keydown(function(e) {
 	}
 });
 
+function trackVideoPlay(file) {
+	window.bluemixAnalytics.trackEvent("Custom Event",{
+	    productTitle: digitalData.page.pageInfo.productTitle,
+	    category: digitalData.page.pageInfo.analytics.category,
+	    action: "View video",
+	    customName1: "source",
+	    customValue1: "Landing page",
+	    objectType: "Video",
+	    object: file
+    });
+}
+
+
+function trackDownload(file) {
+	window.bluemixAnalytics.trackEvent("Downloaded Hybrid Solution",{
+	    productTitle: digitalData.page.pageInfo.productTitle,
+	    category: digitalData.page.pageInfo.analytics.category,
+	    productVersion: "latest",
+	    customName2: "fileName",
+	    customName1: "source",
+	    customValue1: "Landing page",
+	    customValue2: file
+    });
+}
+
+
+
 
 $(document)
 		.ready(
 				function() {
 					
 					$(".trackdownload").on("click", function(e) {
-						// do nothing for now, will add segment tracking
+						var file=$(this).attr('href');
+						
+						trackDownload(file);
 					});
 					
 					$(".navbar").on("show.bs.collapse", function(e) {
@@ -29,7 +58,9 @@ $(document)
 					// track embeded video play
 					$(".embeded-video").on('play',function(){
 						var file =  $(this).children("source").attr("src");
-						// will add segment
+						trackVideoPlay(file);
+						
+						
 					});
 					$(".showVideo")
 							.on(
@@ -37,7 +68,7 @@ $(document)
 									function(e) {
 										e.preventDefault();
 										var file = $(this).data("video");
-										// will add segment
+										trackVideoPlay(file);
 									    
 										var htmlTemplate = '<div class="videoContainer"><div class="videoPlayer"><div style="display: block; padding-top:56%; width: 100%;">'
 												+ '</div><button class="closeBtn">X</button><video class="video-iframe" width="100%" height="100%" autobuffer controls autoplay>'
