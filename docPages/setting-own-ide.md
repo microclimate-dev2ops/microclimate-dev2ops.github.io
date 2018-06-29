@@ -4,11 +4,11 @@ title: Setting up your own IDE to use with Microclimate
 description: Setting up your own IDE to use with Microclimate
 keywords: eclipse. application, edit, ide, vsc, visual studio code, intellj, text editor, editor
 duration: 1 minute
-permalink: howToIDE
+permalink: setting-own-ide
 type: document
-category: How-tos and Guides
-parent: Installing Microclimate locally
 ---
+
+Microclimate includes the powerful Theia IDE in the box, with extended capabilities including some [language servers](http://langserver.org) in the image, including our very own [XML Language Support](https://marketplace.visualstudio.com/items?itemName=IBM.XMLLanguageSupport). If you do not want to use Theia, you can choose your own IDE including Eclipse, Visual Studio Code, Orion, or Atom IDE. Follow the appropriate instructions for your choice.
 
 ## Using Eclipse
 
@@ -32,9 +32,8 @@ parent: Installing Microclimate locally
 2. Enable the ``Maven Integration`` plugin if not already enabled under the Plugins section in the Preferences.
 3. Select ``File->Open...``.
 4. Select the root of the project directory, for example, for a project named ``myjavamicroservices1``, select the directory ``microclimate-workspace/myjavamicroservices1`` and then click ``Open``.
-5. You can now edit the application, for example,  ``src/main/java/application/rest/v1/HealthEndpoint.java``. If a java file is open and there is a message saying 'Module SDK is not defined', click the link ``Setup SDK`` to configure the SDK.
+5. You can now edit the application, for example,  ``src/main/java/application/rest/v1/HealthEndpoint.java``. If a Java file is open and there is a message saying 'Module SDK is not defined', click the link ``Setup SDK`` to configure the SDK.
 6. After you modify a file, save your changes. Microclimate auto-detects your changes and rebuilds and redeploys the updated app. Refresh your browser to see the results.
-
 
 ## General text editors
 

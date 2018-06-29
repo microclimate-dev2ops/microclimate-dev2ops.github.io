@@ -7,6 +7,8 @@ duration: 1 minute
 auto_ids: true
 permalink: samples
 type: document
+category: How-tos and Guides
+order: 8
 ---
 
 ## Samples

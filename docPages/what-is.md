@@ -23,9 +23,9 @@ The environment is built by using Docker too - so you can run it locally, or hos
 
 ## IDE
 
-We’ve included the powerful Theia IDE in the box, and extended it's capabilities by including some [language servers](http://langserver.org) in the image (including our very own [XML LS](https://marketplace.visualstudio.com/items?itemName=IBM.XMLLanguageSupport)).
+We’ve included the powerful Theia IDE in the box, and extended it's capabilities by including some [language servers](http://langserver.org) in the image,  including our very own [XML Language Support](https://marketplace.visualstudio.com/items?itemName=IBM.XMLLanguageSupport).
 
-Don't want to use a web-based IDE? No problem - that's why we've taken care to setup your project for rapid development in any popular IDE, including Eclipse, Visual Studio Code, Orion, Atom IDE, or Theia. Just point your IDE at the project, it's ready to go!
+Don't want to use a web-based IDE? No problem - that's why we've taken care to setup your project for rapid development in any popular IDE, including Eclipse, Visual Studio Code, Orion, Atom IDE, or Theia. Just point your IDE at the project, it's ready to go! For more information, see [Setting up your own IDE to use with Microclimate](./setting-own-ide).
 
 
 ## Iterative Development

@@ -6,6 +6,8 @@ keywords: uninstall, remove, delete, windows, cli
 duration: 1 minute
 permalink: uninstallwindows
 type: document
+category: How-tos and Guides
+parent: Uninstalling Microclimate
 ---
 
 ## Uninstalling on Windows

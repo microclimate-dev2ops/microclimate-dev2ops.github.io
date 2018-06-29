@@ -20,15 +20,20 @@ Maybe you are just looking for some pointers? Have a look through the links belo
 
 #### [Installing Microclimate locally](./installlocally)
 * [Installing the Microclimate Command Line Interface (CLI)](./cli)
-* [Setting up your own Integrated Development Environment (IDE) to use with Microclimate](./howToIDE)
+* [Setting up your own Integrated Development Environment (IDE) to use with Microclimate](./setting-own-ide)
 
 #### [Installing Microclimate in IBM Cloud Private](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md)
+* [Installing Microclimate into a non-default namespace](./installndnamespace)
+* [Multiple users in IBM Cloud Private](./multiuser)
 
 #### [Using Microclimate](./usingmicroclimate)
 
 #### [Importing Projects](./projectimport)
 
 #### [Using a Pipeline](./usingpipeline)
+* [Configuring webhooks](./configurewebhooks)
+* [Creating a personal access token in GitHub](./creatingpat)
+* [Creating a personal access token in GitLab](./creatingpatgitlab)
 
 #### [Updating Microclimate](./update)
 

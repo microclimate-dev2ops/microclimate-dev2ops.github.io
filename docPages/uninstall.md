@@ -6,6 +6,8 @@ keywords: uninstall, remove, delete, macos, windows, linux
 duration: 1 minute
 permalink: uninstall
 type: document
+category: How-tos and Guides
+order: 9
 ---
 
 ## Uninstalling Microclimate

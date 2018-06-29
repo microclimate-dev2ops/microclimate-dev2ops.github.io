@@ -44,7 +44,7 @@ Enables you to create microservices and automated builds in Docker from the begi
 Enables you to generate microservices in Java, Node and Swift; edit and see your changes as you go. When coding is complete, you can check it in and the pipeline will automatically build and deploy to Kubernetes. Save time with application monitoring tools and an HTTP load-driver to start. Each is preinstalled and preconfigured, and you can add more tools as needed.
 
 #### Mulitple IDE options
-Includes Theia IDE in the box. Microclimate can also leverage popular IDEs including Eclipse, Visual Studio Code, Orion, and Atom IDE.
+Includes Theia IDE in the box. Microclimate can also leverage popular IDEs including Eclipse, Visual Studio Code, Orion, and Atom IDE, for more information, see [Setting up your own IDE to use with Microclimate](./setting-own-ide).
 
 ## What is IBM Cloud Private?
 IBM Cloud Private provides an integrated IaaS and PaaS environment that can be deployed on premises, behind firewalls, and managed and controlled by any user that the enterprise determines. For containerized applications, IBM Cloud Private offers a Kubernetes-based container orchestrator, a private image repository, along with security, event management, a management console, and monitoring frameworks.

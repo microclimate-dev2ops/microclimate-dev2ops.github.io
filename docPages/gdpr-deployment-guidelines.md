@@ -6,6 +6,8 @@ keywords: introducing, GDPR
 duration: 1 minute
 permalink: gdpr-deployment-guidelines
 type: document
+category: How-tos and Guides
+parent: Introducing Microclimate
 ---
 
 # Microclimate considerations for GDPR readiness

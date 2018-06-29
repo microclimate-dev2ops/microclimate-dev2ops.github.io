@@ -16,7 +16,7 @@ Microclimate projects can be imported from Github, a local directory, or an arch
 
 Microclimate is designed to develop cloud native microservices, therefore, each project must be self-sufficient and not dependent on other projects to build. The requirements to import projects for each of the supported application types are outlined in the following sections.
 
-### Eclipse MicroProfile projects
+## Eclipse MicroProfile projects
 
 MicroProfile projects are Java applications that are deployed to WebSphere Liberty. They are built by using Maven and the liberty-maven-plugin, and are based on the [websphere-liberty docker image](https://hub.docker.com/_/websphere-liberty/_).  MicroProfile projects support rapid iterative development in Microclimate with a few changes to your ```pom.xml``` file.
 
@@ -104,6 +104,8 @@ Configure your ```pom.xml``` file as follows:
   <jvmOptionsFile>${basedir}/src/main/liberty/config/jvm.options</jvmOptionsFile>
   ```
 
+```Note: Due to a known issue the server needs to be configured to use port 9080 in order for the project to be detected as started. See [Known Issues](./knownissues) for more details.```
+
 ### Post-import instructions
 
 The following files are generated during the import process. If your project requires additional configuration files or instructions for build, you might need to modify them.
@@ -118,7 +120,7 @@ Maven is included in a generated `Dockerfile-build` file so it is not necessary 
 
 The `Dockerfile-build` file is used to install a Java SDK and Maven. This file must be updated if your application requires different versions of these tools.
 
-### Java Spring projects
+## Java Spring projects
 
 Java Spring Boot projects are built by using Maven and produce stand-alone runnable applications.
 
@@ -140,7 +142,7 @@ FROM ibmjava:8-sfj
     ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]
 ```    
 
-### NodeJS projects
+## NodeJS projects
 
 NodeJS projects require a dependency on Nodemon. Nodemon is used to quickly process source file updates while the project is running.
 
@@ -152,7 +154,7 @@ Requirements:
 - The application is expected to be in the `/app` folder within the Docker container.
 - The working directory must also be set to `/app`.
 
-### Swift projects
+## Swift projects
 
 Microclimate works with Swift projects that use the Kitura web framework.
 
@@ -162,6 +164,9 @@ Requirements:
 For example, you should be able to build the project by using the command
 `swift build --configuration release`.
 - A `Dockerfile` file is generated. It runs the application that was built by using `Dockerfile-tools`.
+
+### Enabling application metrics
+If you import a project that does not have application metrics monitoring data associated with it, you can add application metrics by including the appropriate resource or performance monitoring application. For more information, see [https://github.com/RuntimeTools/](RuntimeTools).
 
 ## Importing in IBM Cloud Private (ICP)
 

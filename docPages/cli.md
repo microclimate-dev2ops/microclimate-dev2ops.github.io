@@ -6,6 +6,8 @@ keywords: install, command line, cli, command, start, stop, update, open, delete
 duration: 1 minute
 permalink: cli
 type: document
+category: How-tos and Guides
+parent: Installing Microclimate locally
 ---
 
 Installing the Microclimate CLI enables you to run Microclimate from anywhere on your computer. Your Microclimate projects are created in your home directory. Normally ``$HOME/microclimate-workspace``.

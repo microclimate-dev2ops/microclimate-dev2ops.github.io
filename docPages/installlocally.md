@@ -7,6 +7,8 @@ duration: 1 minute
 auto_ids: true
 permalink: installlocally
 type: document
+category: How-tos and Guides
+order: 3
 ---
 
 ## Before you start

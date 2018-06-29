@@ -6,9 +6,11 @@ keywords: build, deploy, local, IBM cloud private
 duration: 1 minute
 auto_ids: true
 permalink: gettingstarted
+category: How-tos and Guides
+order: 2
 ---
 
-<a href="./download/microclimate-18.05.zip" class="download-link trackdownload" id="zipDownload" style="color: white;">Download</a>
+<a href="./download/microclimate-18.06.zip" class="download-link trackdownload" id="zipDownload" style="color: white;">Download</a>
 
 
 Quickly build and deploy micro-services in the blink of an eye.

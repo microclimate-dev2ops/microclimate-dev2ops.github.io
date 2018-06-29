@@ -7,6 +7,11 @@ duration: 1 minute
 permalink: license
 type: document
 ---
+## Microclimate 18.06 Licences
+
+* [IBM License.](./licenses-18_06-ibmlicense)
+
+* [Non IBM Licenses.](./licenses-18_06-nonibmlicense)
 
 ## Microclimate 18.05 Licences
 

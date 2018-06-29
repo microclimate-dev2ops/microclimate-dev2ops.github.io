@@ -6,6 +6,8 @@ keywords: uninstall, delete, remove, linux, macos, cli
 duration: 1 minute
 permalink: uninstalllinuxmac
 type: document
+category: How-tos and Guides
+parent: Uninstalling Microclimate
 ---
 
 ## Uninstalling on Linux or MacOS
