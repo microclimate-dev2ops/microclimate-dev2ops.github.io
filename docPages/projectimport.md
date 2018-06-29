@@ -166,7 +166,7 @@ For example, you should be able to build the project by using the command
 - A `Dockerfile` file is generated. It runs the application that was built by using `Dockerfile-tools`.
 
 ### Enabling application metrics
-If you import a project that does not have application metrics monitoring data associated with it, you can add application metrics by including the appropriate resource or performance monitoring application. For more information, see [https://github.com/RuntimeTools/](RuntimeTools).
+If you import a project that does not have application metrics monitoring data associated with it, you can add application metrics by including the appropriate resource or performance monitoring application. For more information, see [https://github.com/RuntimeTools/](https://github.com/RuntimeTools/).
 
 ## Importing in IBM Cloud Private (ICP)
 
