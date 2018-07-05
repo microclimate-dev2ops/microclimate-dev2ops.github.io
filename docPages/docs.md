@@ -34,6 +34,8 @@ Maybe you are just looking for some pointers? Have a look through the links belo
 * [Configuring webhooks](./configurewebhooks)
 * [Creating a personal access token in GitHub](./creatingpat)
 * [Creating a personal access token in GitLab](./creatingpatgitlab)
+* [Deploying to IBM Cloud Kubernetes Service (IKS)](./deployingiks)
+
 
 #### [Updating Microclimate](./update)
 

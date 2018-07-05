@@ -9,89 +9,87 @@ type: document
 category: How-tos and Guides
 parent: Installing Microclimate locally
 ---
-
-Installing the Microclimate CLI enables you to run Microclimate from anywhere on your computer. Your Microclimate projects are created in your home directory. Normally ``$HOME/microclimate-workspace``.
+# Microclimate CLI
+Installing the Microclimate CLI allows you to run Microclimate from anywhere on your computer.
+Your Microclimate projects will be created in your home directory. Normally `$HOME/microclimate-workspace`.
 
 ## Setup
+Run the install script found in the `cli` directory ([microclimate/cli](https://github.ibm.com/dev-ex/microclimate/tree/master/cli)).
+You can either run this as sudo or as a non-root user.
+Effects:
+* `sudo ./install.sh`: Installs mcdev to your `/usr/local/bin` directory, automatically adding it to the path.
+* `./install.sh`: Installs mcdev to `~/mcdev`. You can either run Microclimate using `~/mcdev start` or add mcdev to your path manually (Instructions given at the end of the install script).
+```
+cd cli &&
+./install.sh &&
+cd ..
+```
+NOTES:
+* You won't be able to run `mcdev` commands from inside the cli directory due to the file name conflict. To run commands change to another directory.
+* If you see a BAD_CREDENTIAL error such as below:
+```
+Pulling microclimate-[image-name] (sys-mcs-docker-local.artifactory.swg-devops.com/[image-name])...
+ERROR: Get https://sys-mcs-docker-local.artifactory.swg-devops.com/v2/[image-name]/manifests/2018_M3: unauthorized: BAD_CREDENTIAL
+```
+Ensure you're correctly logged into the Artifactory Docker image repository by running:
+```bash
+# Use your IBM intranet credentials
+docker login sys-mcs-docker-local.artifactory.swg-devops.com
+```
 
-Run the install script found in the cli directory (``microclimate/cli``). You can either run this as a sudo or a non-root user.
 
-  **Effects**:
-
-  ``sudo ./install.sh``: Installs mcdev to your ``/usr/local/bin`` directory, automatically adding it to the path.
-
-  ``./install.sh``: Installs mcdev to ``~/mcdev``. You can either run Microclimate using ``~/mcdev`` start or add mcdev to your path manually. Instructions are given at the end of the install script.
-
-  ```sh
-  cd cli &&
-  ./install.sh &&
-  cd ..
-  ```
-
-NOTE: You cannot run ``mcdev`` commands from inside the cli directory due to the file name conflict. To run commands, change to another directory.
 
 ## Usage
-
-```sh
+```
 mcdev COMMAND [options]
 ```
 
 Commands:
+* [start](#start)
+* [stop](#stop)
+* [open](#open)
+* [update](#update)
+* [healthcheck](#health-check)
+* [delete](#delete)
 
-1. [start](#start)
-2. [stop](#stop)
-3. [open](#open)
-4. [update](#update)
-5. [delete](#delete)
-
-For more information about a command, run ``mcdev COMMAND --help``.
+Run `mcdev COMMAND --help` for more information on a command.
 
 ### Start
-
-Start Microclimate. This downloads Docker images if necessary.
-
-```sh
+Start Microclimate.
+```
 mcdev start [OPTIONS]
 ```
-
-**Options**
-
-```sh
-1. -o, --open: Open Microclimate in your default browser after it has started.
-2. -u, --update: Update Microclimate to the latest version before starting.
-```
+Options
+* `-o, --open`: Open Microclimate in your default browser after it has started.
+* `-u, --update`: Update Microclimate to its latest version before starting.
 
 ### Stop
-
 Stop Microclimate
-
-```sh
+```
 mcdev stop
 ```
 
-
 ### Open
-
 Open Microclimate in your default browser.
-
-```sh
+```
 mcdev open
 ```
-
-**Note**: This looks for the port that 'microclimate-portal' is on and opens it.
+Note: This will look for the port that 'microclimate-portal' is on and open it.
 
 ### Update
-
-Update Microclimate by pulling the newest images down from the repository. Note: Updates are to the current version only. For more information about updating Microclimate, see [Updating Microclimate](./update).
-
-```sh
+Update Microclimate by pulling the newest images down from the repository.
+```
 mcdev update
 ```
 
+### Health check
+Run a check through your system to ensure that microclimate-workspace, the config directory and your git username and email are set up correctly. Also prints the current amount of projects in your workspace.
+```
+mcdev healthcheck
+```
+
 ### Delete
-
-Delete all Microclimate Docker images.  
-
-```sh
+Delete all Microclimate images on your machine.
+```
 mcdev delete
 ```

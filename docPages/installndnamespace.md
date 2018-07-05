@@ -77,11 +77,10 @@ If you are using your own Docker image repository, use the following example com
 
 ### Helm secret
 To create the Helm secret, use the following example command:
-
-`kubectl create secret generic microclimate-helm-secret \
-  --from-file=cert.pem=$HOME/.helm/cert.pem \
-  --from-file=ca.pem=$HOME/.helm/ca.pem \
-  --from-file=key.pem=$HOME/.helm/key.pem \
+`kubectl create secret generic microclimate-helm-secret \  
+  --from-file=cert.pem=.helm/cert.pem \
+  --from-file=ca.pem=.helm/ca.pem \
+  --from-file=key.pem=.helm/key.pem \
   --namespace ns2`
 
 ## Patching the DevOps and File Watcher service accounts

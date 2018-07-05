@@ -10,7 +10,7 @@ type: document
 # General issues
 
 ## Webhooks not triggering Jenkins builds
-Webhooks that have SSL validation configured might fail to trigger Jenkins jobs due to the presence of a self-signed certificate on the Jenkins kubernetes ingress definition. 
+Webhooks that have SSL validation configured might fail to trigger Jenkins jobs due to the presence of a self-signed certificate on the Jenkins kubernetes ingress definition.
 
 Webhooks only currently work if the owner or organisation name contains lower case characters. Webhook status is reported as a success but you must either wait until the branch is scanned for changes (it is checked every fifteen minutes), or kick off the Jenkins build manually.
 
@@ -67,6 +67,14 @@ Check the application logs to find out why the application did not start, then m
 ## Turning off auto build has no effect for Node.js projects when you run Microclimate locally
 If you turn off ```auto build``` for a Node.js project when you run Microclimate locally, it has no effect. Any changes you make to your code automatically start a build, or do a restart, even though ```auto build``` is disabled.
 
+## Project build fails with Docker build failed message
+The project build can fail if the Docker image build fails. The docker build logs are not currently exposed in the UI.
+
+**Workaround**
+To see if the Docker image build failed, look at the docker build output by checking the microclimate-file-watcher container logs.
+* Local: ```docker logs <container id of microclimate-file-watcher>```
+* ICP: ```kubectl logs <microclimate-pod> --container=microclimate-file-watcher```
+
 # IBM Cloud Private
 
 ## Projects fail to update
@@ -74,6 +82,40 @@ After several days of heavy use, inotify might fail to start in Microclimate's m
 
 **Workaround:**
 This is a known issue with inotify on Kubernetes (see https://github.com/kubernetes/kubernetes/issues/10421). To fix this, reboot the IBM Cloud Private cluster. After the reboot, inotify works properly, and projects can be updated.
+
+## Projects fail to build after File-Watcher restart
+If there are several projects in Microclimate's workspace, Microclimate might fail to build them if the File-Watcher container is restarted. This is due to resource constraints on the File-Watcher container.
+
+**Workaround:**
+Increase the amount of RAM and CPU available to File-Watcher in the values.yaml file to values of your choosing. Then upgrade your existing Helm release. You can upgrade the Microclimate chart installation from the Helm CLI.
+
+#### Helm CLI
+
+  `helm repo add ibm-charts-public https://raw.githubusercontent.com/IBM/charts/master/repo/stable`
+
+  `helm upgrade microclimate -f overrides.yaml ibm-charts-public/ibm-microclimate --tls`
+
+  A sample overrides.yaml file can contain these values:
+
+```
+  filewatcher:
+    resources:
+      requests:
+        memory: 1Gi
+        cpu: 1000m
+      limits:
+        memory: 4Gi
+        cpu: 2000m
+```
+**Note:** When running `helm upgrade`, make sure to set any additional values that were set in the original Microclimate install, such as the Microclimate and Jenkins hostnames, otherwise the Helm upgrade may fail.
+
+Restart both the filewatcher and portal pods after the upgrade:
+```
+   kubectl get pods
+   kubectl delete pods admin-microclimate-editorfilewatcher-<xxxxx> microclimate-ibm-microclimate-<xxxxx>
+```      
+
+This upgrades the Microclimate file-watcher container with the resources it needs to build and deploy more projects into IBM Cloud Private.
 
 ## Imported Microprofile project doesn't start in IBM Cloud Private
 
@@ -128,7 +170,13 @@ The Jenkins job is created asynchronously. Periodically refresh this page in the
 Intermittently, Jenkins slaves are unable to be launched, and so builds do not happen.
 
 **Workaround**
-Remove the container cap in Jenkins, which defaults to 10. In Jenkins, from the *Jenkins* button, click on the dropdown to expand the menu, click *Manage Jenkins > Configure System*, then find the *Container Cap* parameter. Remove the value, leaving it blank so it gives unlimited containers.  
+Remove the container cap in Jenkins, which defaults to 10. In Jenkins, from the *Jenkins* button, click on the dropdown to expand the menu, click *Manage Jenkins > Configure System*, then find the *Container Cap* parameter. Remove the value, leaving it blank so it gives unlimited containers.
+
+## Projects are not deployed from file-watcher unless the chart name matches the project name
+
+The project name must match the chart folder name so that file-watcher can deploy projects. Project names are restricted to contain characters a to z and numbers 0 to 9. This is especially important with imported projects because created projects automatically have the same Helm chart folder name as the project name.
+
+**Workaround:** When importing projects, specify the same name as the Helm chart folder name. You might be required to rename the Helm chart folder in order to satisfy the project name restrictions.
 
 # Linux
 
@@ -162,12 +210,6 @@ Changes to project files using an external IDE/editor are not reflected on the r
 **Workaround:** Editing the same files in the Microclimate Theia editor builds and deploys the changes to the server.
 
 ## Projects created never start after install of Microclimate
-Intermittently on Windows after an install of Microclimate, projects can be created but they never start up (remain in Starting). There is an issue with Docker for Windows where, although it shows a volume is mounted, it does not allow any writing to the volume. A good indicator this is the issue is to verify there is no microclimate-workspace directory created within the directory you ran the Microclimate install from. 
+Intermittently on Windows after an install of Microclimate, projects can be created but they never start up (remain in Starting). There is an issue with Docker for Windows where, although it shows a volume is mounted, it does not allow any writing to the volume. A good indicator this is the issue is to verify there is no microclimate-workspace directory created within the directory you ran the Microclimate install from.
 
 **Workaround:** There can be many reasons for this issue to crop up, and therefore many possible workarounds. First, confirm there is a shared drive selected by opening up the Docker->Settings->Shared Drives. If there is one selected, unselect it, hit Apply, and then retry creating projects. If that does not correct the issue and you are using an ID for that shared drive that is not your current user, ensure that the ID being used does not have a password expired that requires a password reset. Finally, if all else fails it may require removing Microclimate (mcdev delete), ensuring Docker for Windows shows a mounted drive selected, and then restarting Microclimate (mcdev start).
-
-# Iterative development
-
-The project name must match the chart folder name in order for the filewatcher pod to be able to function correctly. Project names are restricted to contain characters a to z and numbers 0 to 9.
-
-**Workaround:** Create project names with the same name as the chart, ensuring the chart folder is named so it meets the restrictions of the naming convention.
