@@ -93,7 +93,7 @@ Increase the amount of RAM and CPU available to File-Watcher in the values.yaml 
 
   `helm repo add ibm-charts-public https://raw.githubusercontent.com/IBM/charts/master/repo/stable`
 
-  `helm upgrade microclimate -f overrides.yaml ibm-charts-public/ibm-microclimate --tls`
+  `helm upgrade microclimate -f overrides.yaml ibm-charts-public/ibm-microclimate --reuse-values --tls`
 
   A sample overrides.yaml file can contain these values:
 
@@ -107,9 +107,9 @@ Increase the amount of RAM and CPU available to File-Watcher in the values.yaml 
         memory: 4Gi
         cpu: 2000m
 ```
-**Note:** When running `helm upgrade`, make sure to set any additional values that were set in the original Microclimate install, such as the Microclimate and Jenkins hostnames, otherwise the Helm upgrade may fail.
 
 Restart both the filewatcher and portal pods after the upgrade:
+
 ```
    kubectl get pods
    kubectl delete pods admin-microclimate-editorfilewatcher-<xxxxx> microclimate-ibm-microclimate-<xxxxx>
