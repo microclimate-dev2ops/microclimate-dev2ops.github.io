@@ -6,6 +6,22 @@ keywords: GA, beta, release, version, history
 duration: 20 seconds
 permalink: news
 ---
+## July release has lifted off!
+
+*Friday , 20 July, 2018*
+
+Following a month of the team working hard preparing for launch, the countdown is complete, and we've lifted off with another fine release of Microclimate for you to enjoy. New this month:
+
+- You can name your Helm chart anything you like because Helm chart names no longer need to match the project name.
+- Newly created projects are now set up to dynamically pull in the latest available JDK service release to pick up patches and security fixes.
+- Shutdown of projects is more efficient when you close or log off Microclimate.
+- A new validation step on project import generates any missing files which means a better experience getting your imported projects working in Microclimate.
+- A new tutorial about [Adding a new endpoint to an application in Microclimate](https://pages.github.ibm.com/dev-ex/landing-pages/addendpoint).
+- More information to help you if you get stuck, see our new  [Troubleshooting](./troubleshooting) section.
+- Under the covers we've been refining the code, fixing a few things, and making Microclimate even easier for you to use.
+
+As ever, we encourage you to pick up this latest update. We continue to drop code into Microclimate to add more value and improve on the overall quality and development experience. We would also really like to hear from you about any key function you would like to see that we might have not delivered yet, so swing by our [Community](./community) page and share your thoughts and ideas!
+
 ## June release a go-go!
 
 *Friday, 29 June, 2018*
@@ -24,7 +40,7 @@ Summer is here, the temperature outside is definitely rising, and we're on the u
 
 - Finally, last but definitely not least, we've improved project validation on import. Wow!
 
-As always, we encourage to you pick up this latest update. We continue to drop code into Microclimate to add more value and improve on the overall quality and development experience. We would also really like to hear from you about any key function you would like to see that we might have not delivered yet, so swing by our [Community](./community) page and share your thoughts and ideas!
+As always, we encourage you to pick up this latest update. We continue to drop code into Microclimate to add more value and improve on the overall quality and development experience. We would also really like to hear from you about any key function you would like to see that we might have not delivered yet, so swing by our [Community](./community) page and share your thoughts and ideas!
 
 ## May release live!
 
@@ -34,7 +50,7 @@ These months are flying by, and as such so are our Microclimate releases. While 
 
 That being said there are a few things we would like to call out with this release. We have improved on our IBM Cloud Private (ICP) integration story, and now apps that are deployed from Microclimate by way of our devops pipeline show up in the ICP dashboard. Also in our integration with Theia, we have dropped in a new feature that enables you to choose whether or not you want to see all your projects in the IDE (original behavior), or only the currently selected one. The choice can be made via the Preferences page.
 
-As always, we encourage to you pick up this latest update. We continue to drop code into Microclimate to add more value and improve on the overall quality and development experience while using Microclimate. We also would love to hear from you about any key function you would like to see that we might have not delivered yet, so swing by our [Community](./community) page and share your ideas!
+As always, we encourage you to pick up this latest update. We continue to drop code into Microclimate to add more value and improve on the overall quality and development experience while using Microclimate. We also would love to hear from you about any key function you would like to see that we might have not delivered yet, so swing by our [Community](./community) page and share your ideas!
 
 ## April release available now!
 

@@ -7,9 +7,9 @@ duration: 1 minute
 permalink: about
 ---
 
-The past few years have seen an explosion of technologies - Microservices, Docker, Polyglot... the list goes on. But what about your development environment? Most developers still use a single-language Integrated Development Environment (IDE), debugger, and local tools, that they were using years ago. It's high time to upgrade!
+Microclimate is a Docker-ized, end-to-end development environment. You can generate microservices in Java, Node, and Swift, edit them, and see your changes on the fly. When you're happy with the code, check it in and the pipeline automatically builds and deploys to Kubernetes.
 
-Microclimate is a Docker-ized, end-to-end development environment. Generate microservices in Java, Node, and Swift, edit them, and see your changes on the fly. When you're happy with the code, check it in and the pipeline automatically builds and deploys to Kubernetes.
+The past few years have seen an explosion of technologies - Microservices, Docker, Polyglot... the list goes on. But lots of developers are still using the same single-language Integrated Development Environment (IDE), debugger, and local tools, that they were using years ago. It's high time to upgrade!
 
 And we're not just another friendly IDE! We've included application monitoring tools and an HTTP load-driver to start, and plan to include other tools over time. Each of these is pre-installed and pre-configured for your service so you can just switch tabs and go - no hunting for other tools or trying to set them up when you run into problems.
 

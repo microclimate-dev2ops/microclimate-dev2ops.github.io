@@ -26,12 +26,12 @@ cd ..
 ```
 NOTES:
 * You won't be able to run `mcdev` commands from inside the cli directory due to the file name conflict. To run commands change to another directory.
-* If you see a BAD_CREDENTIAL error such as below:
+* You might see a BAD_CREDENTIAL error:
 ```
 Pulling microclimate-[image-name] (sys-mcs-docker-local.artifactory.swg-devops.com/[image-name])...
 ERROR: Get https://sys-mcs-docker-local.artifactory.swg-devops.com/v2/[image-name]/manifests/2018_M3: unauthorized: BAD_CREDENTIAL
 ```
-Ensure you're correctly logged into the Artifactory Docker image repository by running:
+To resolve the error, ensure you're correctly logged in to the Artifactory Docker image repository with the following command:
 ```bash
 # Use your IBM intranet credentials
 docker login sys-mcs-docker-local.artifactory.swg-devops.com

@@ -27,7 +27,7 @@ If you do not have a namespace to deploy into, for example, one set up by your c
 
 `kubectl create namespace ns2`
 
-In this topic, a worked example is provided using `ns2` as the namespace name.
+In this topic, a worked example is provided by using `ns2` as the namespace name.
 
 ## Creating service accounts
 To create the service account that is used for the DevOps component and for Jenkins, issue the following command:
@@ -77,11 +77,11 @@ If you are using your own Docker image repository, use the following example com
 
 ### Helm secret
 To create the Helm secret, use the following example command:
-`kubectl create secret generic microclimate-helm-secret \  
-  --from-file=cert.pem=.helm/cert.pem \
-  --from-file=ca.pem=.helm/ca.pem \
-  --from-file=key.pem=.helm/key.pem \
-  --namespace ns2`
+
+`kubectl create secret generic microclimate-helm-secret \ --from-file=cert.pem=$HELM_HOME/cert.pem \ --from-file=ca.pem=$HELM_HOME/ca.pem \ --from-file=key.pem=$HELM_HOME/key.pem \ --namespace ns2`
+
+Ensure that the `bx cli` is installed. For more information, see [IBM Cloud CLI Installer](https://console.bluemix.net/docs/cli/reference/bluemix_cli/all_versions.html#ibm-cloud-cli-installer-all-versions).
+Then ensure that you have logged on to the cluster by running `bx pr login`.
 
 ## Patching the DevOps and File Watcher service accounts
 Enable pipeline deployments by patching the DevOps and File Watcher service accounts to pick up the secrets that you have created. For example:
@@ -258,4 +258,4 @@ This creates a new Kubernetes service that you can access in your web browser by
 Note that this endpoint should be unexposed immediately afterwards and should only be used for validation purposes.
 
 3. Check that the service account is picked up by Jenkins when interacting with projects as part of a pipeline.
-Create a pipeline and then kick off a build. Check the logs for `serviceAccountName` at the top of a build, or use the Jenkins UI. In the Jenkins UI, click on ```Manage Jenkins```, and then click on ```Configure System``` where Jenkins environment variables are listed and can be configured. The variable `SERVICE_ACCOUNT_NAME` must be set to the DevOps/Jenkins service account name, which in this example is `ns2-devops-sa`.
+Create a pipeline and then kick off a build. Check the logs for `serviceAccountName` in a build or use the Jenkins UI. In the Jenkins UI, click on ```Manage Jenkins```, and then click on ```Configure System``` where Jenkins environment variables are listed and can be configured. The variable `SERVICE_ACCOUNT_NAME` must be set to the DevOps/Jenkins service account name, which in this example is `ns2-devops-sa`.

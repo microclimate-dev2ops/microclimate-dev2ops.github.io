@@ -8,9 +8,9 @@ permalink: document
 type: document
 ---
 
-Hitting a problem? Start with our [known issues and limitations page](./knownissues) to see if it is something we are aware of. If you don't see your issue there, you can log an issue in our [GitHub repository](https://github.com/orgs/microclimate-dev2ops).
+Hitting a problem? Start with our [troubleshooting page](./troubleshooting) to see if it is something we are aware of. If you don't see your issue there, you can log an issue in our [GitHub repository](https://github.com/orgs/microclimate-dev2ops).
 
-Maybe you are just looking for some pointers? Have a look through the links below. If you can't find what you need, reach out to us at our ibm-cloud-tech [Slack channel](https://ibm-cloud-tech.slack.com/messages/microclimate) ! If you are new to Slack you can [create a user ID here!](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+If you're just looking for some pointers, look through the following links. If you can't find what you need, reach out to us at our ibm-cloud-tech [Slack channel](https://ibm-cloud-tech.slack.com/messages/microclimate) ! If you are new to Slack you can [create a user ID here!](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 
 ## How-tos and Guides
 
@@ -24,7 +24,10 @@ Maybe you are just looking for some pointers? Have a look through the links belo
 
 #### [Installing Microclimate in IBM Cloud Private](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md)
 * [Installing Microclimate into a non-default namespace](./installndnamespace)
-* [Multiple users in IBM Cloud Private](./multiuser)
+* [Multiple users](./multiuser)
+* [Installing Kibana and filtering Microclimate logs](./installkibanafilter)
+
+#### [Tutorials and samples](./tutorials_and_samples)
 
 #### [Using Microclimate](./usingmicroclimate)
 
@@ -36,16 +39,13 @@ Maybe you are just looking for some pointers? Have a look through the links belo
 * [Creating a personal access token in GitLab](./creatingpatgitlab)
 * [Deploying to IBM Cloud Kubernetes Service (IKS)](./deployingiks)
 
-
 #### [Updating Microclimate](./update)
 
-#### [Samples](./samples)
+#### [Troubleshooting](./troubleshooting)
 
 #### [Uninstalling Microclimate](./uninstall)
 
 ## Helpful links
-For more information about some issues we are aware of, with suggested work-arounds, see [Known issues and limitations](./knownissues).
-
 For more information about Theia, see [Theia IDE](http://www.theia-ide.org/).
 
 For more information about Microclimate license, see [License page](./license)

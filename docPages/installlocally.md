@@ -12,7 +12,9 @@ order: 3
 ---
 
 ## Before you start
-* Download the Microclimate zip file, see [Getting started](./gettingstarted).
+Download the Microclimate zip file.
+
+<a href="./download/microclimate-18.07.zip" class="download-link trackdownload" id="zipDownload" style="color: white;">Download Microclimate 18.07</a>
 
 ## Installing Microclimate locally on your machine
 

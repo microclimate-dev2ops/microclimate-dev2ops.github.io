@@ -38,7 +38,7 @@ To import a project into your Microclimate workspace:
 4. Enter the name and any required information depending on the option you choose in the previous step, then click **Next**.
 5. The project is validated. One of the following occurs:
 * The project matched one of the supported project types, so it is auto-detected and you can click **Import**. 
-* The project type could not be determined or isn't the right type for your project, then you must select a project type.
+* The project type could not be determined or isn't the correct type for your project, and you must select a project type.
 * Validation reports that the project is missing required files. You can select the option to generate the missing files or continue with the import. Note: The generated files are likely to be needed to configure your project before you can get the project running.
 
 For more information about importing projects and supported project types, see [Importing projects in Microclimate](./projectimport).
