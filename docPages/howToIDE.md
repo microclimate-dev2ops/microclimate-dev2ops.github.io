@@ -12,7 +12,7 @@ parent: Installing Microclimate locally
 
 ## Using Eclipse
 
-1. Download and unzip [Oxygen.1a JEE package](https://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/oxygen1a).
+1. Download and unzip [Oxygen.1a JEE package](http://www.eclipse.org/downloads/packages/release/Oxygen/1A).
 2. Select ``File->Import...->General->Projects from Folder or Archive``.
 3. Select the root of the project directory as the Import source, for example, for a project named ``myjavamicroservices1``, select the directory ``microclimate-workspace/myjavamicroservices1`` and then click ``Finish``.
 4. You can now edit the application, for example, ``src/main/java/application/rest/v1/HealthEndpoint.java``. When you have finished editing, save your changes. Microclimate auto-detects your changes and rebuilds and redeploys the updated app. Refresh your browser to see the results.
