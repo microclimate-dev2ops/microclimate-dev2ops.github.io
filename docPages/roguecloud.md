@@ -14,8 +14,8 @@ How sharp are your coding skills? Do you consider yourself a master strategist? 
 Welcome to Rogue Cloud, our homage to the old school [roguelike](https://en.wikipedia.org/wiki/Roguelike) games. We spared you the monochrome graphics, but kept to tradition by creating an open-world, turn based world crawler complete with a top-down 2D multiplayer experience. However unlike a traditional game, where you get the luxury of a controller, keyboard, or mouse, with Rogue Cloud, you are  writing code to ensure your character's success...and survival, in a dangerous world.
 
 <br>
-<video width="78%" controls class="center-block embeded-video" poster="./images/Rogue-Cloud-In-Microclimate-Thumbnail_small.png">
-  <source src="./videos/Rogue-Cloud-On-Microclimate.mp4" type="video/mp4">
+<video width="78%" controls class="center-block embeded-video" poster="./images/Rogue-Cloud-In-Microclimate-Thumbnail_small-new.png">
+  <source src="./videos/Rogue-Cloud-On-Microclimate-new.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 ### Why Rogue Cloud?
