@@ -1,3 +1,10 @@
+.anchorjs-link {
+  transition: all .25s linear;
+}
+*:hover > .anchorjs-link {
+  margin-left: -1.125em !important;
+}
+
 /* preload image */
 #preload_area {
 	background-image: url(../images/microclimate_header.jpg);
