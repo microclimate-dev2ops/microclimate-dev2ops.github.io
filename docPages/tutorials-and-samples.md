@@ -5,7 +5,7 @@ description: Tutorials and samples
 keywords: tutorials, samples, examples, testing, simple, fast
 duration: 1 minute
 auto_ids: true
-permalink: tutorials_and_samples
+permalink: tutorials-and-samples
 type: document
 category: How-tos and Guides
 ---

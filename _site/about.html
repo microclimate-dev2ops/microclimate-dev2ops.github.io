@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<script>
+    digitalData = {
+    		customName1: "source",
+    	    customValue1: "Landing page",
+        page: {
+        	customName1: "source",
+    	    customValue1: "Landing page",
+        	subCategory: "data",
+            pageInfo: {
+                pageID: 'Landing page - What is Microclimate? - Microclimate',
+                productTitle: 'Microclimate',
+                customName1: "source",
+        	    customValue1: "Landing page",
+                analytics: {
+                    category: 'Offering Interface',
+                    customName1: "source",
+            	    customValue1: "Landing page",
+                }
+            }
+        }
+    };
+</script>
+<script type="text/javascript"> window._analytics = { "segment_key" : "fbo2tbfqOhsEQA27GiOKcMwpj9Y8cbz9", "coremetrics" : false, "optimizely" : false, "googleAddServices": false, "fullStory" : false}; </script>
+<script src="https://console.cdn.s-bluemix.net/analytics/build/bluemix-analytics.min.js"></script>
 
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112407000-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-112407000-1');
-</script>
 
 <title>What is Microclimate? - Microclimate</title>
 <meta name="description"
-	content="IBM Microclimate">
+	content="What is Microclimate?">
 <meta charset="utf-8">
+<meta name="keywords" content="IDE, why, what, container, development, dev, devops, docker, editor, ide, fast, pipeline, rapid"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet"
@@ -32,7 +48,7 @@
 
 <link href="css/styles.css" rel="stylesheet prefetch" />
 <link href="css/ibm-type.min.css" rel="stylesheet prefetch" />
-<link rel="shortcut icon" href="/dev-ex/landing-pages/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 </head>
 
@@ -43,7 +59,7 @@
 <nav class="navbar navbar-transparent header-zindex999" >
     <div class="container">
     		
-        <div class="navbar-header">
+        <div class="navbar-header homeicon-div">
             <button id="navbar_responsive_button" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -52,7 +68,7 @@
             </button>
             
             <a id="navbar_home_link" class="navbar-brand" href="." aria-label="Home">
-            		<img height="18px" src="images/microclimate-logo-white.svg"/></a>
+            		<img height="18px" alt="home" src="images/microclimate-logo-white.svg"/></a>
            
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -60,8 +76,9 @@
                 <li><a href="about"  class="active-button" >About</a></li>
                 <li><a href="gettingstarted" >Getting Started</a></li>
                 <li><a href="document" >Documentation</a></li>
-                
                 <li><a href="community" >Community</a></li>
+                <li><a href="news" >News</a></li>
+                <li><a href="roguecloud" class="active-button active-button-roguecloud">Rogue Cloud</a></li>
                 <li><a href="https://github.com/microclimate-dev2ops">Git</a></li>
                 <!-- li class="hidden-xs"><a id="navbar_github_link" href="https://github.com/OpenLiberty" target="new" aria-label="Open Liberty GitHub Repository"></a></li -->
             </ul>
@@ -70,7 +87,7 @@
   </nav>
 
 </header>
-	<section class="main">
+	<section aria-label="main section" class="main">
 		<div class="header-bg">
 			<div class="container doc-container-header">
 				<div class="row full-width">
@@ -83,31 +100,37 @@
 			</div>
 		</div>
 
-		<div class="container main-content document-content"><p>The past few years have seen an explosion of technologies - microservices, docker, polyglot, … the list goes on. But what about your development environment? Most developers still use a single-language Integrated Development Environment (IDE), debugger, and local tools that they were using years ago. It’s high time to upgrade!</p>
+		<div class="container main-content document-content"><p>Microclimate provides a free, end-to-end, cloud-native, Docker-ized, end-to-end development environment for creating, building, testing, and deploying applications. You can generate microservices in Java, Node, and Swift, edit them, and immediately see your changes.</p>
 
-<p>Microclimate is a Docker-ized, end-to-end development environment. Generate microservices in Java, Node, and Swift, edit them, and see your changes on the fly. When you’re happy with the code, check it in and the pipeline will automatically build and deploy to Kubernetes.</p>
+<p>Microclimate offers services and tools to help you create and modernize applications in one seamless experience. It covers each step of the process from writing and testing code to building and deployment. Microclimate enables containerized development, rapid iteration with real-time performance insights, intelligent feedback, diagnostic services, an integrated DevOps pipeline and deployment to the cloud. When you’re happy with the code, check it in, and the pipeline automatically builds and deploys to Kubernetes.</p>
+
+<p>The past few years have seen an explosion of technologies - Microservices, Docker, Polyglot… the list goes on. But lots of developers are still using the same single-language Integrated Development Environment (IDE), debugger, and local tools, that they were using years ago. It’s high time to upgrade!</p>
 
 <p>And we’re not just another friendly IDE! We’ve included application monitoring tools and an HTTP load-driver to start, and plan to include other tools over time. Each of these is pre-installed and pre-configured for your service so you can just switch tabs and go - no hunting for other tools or trying to set them up when you run into problems.</p>
 
 <h2 id="containers">Containers</h2>
 
-<p>If you’re deploying to containers, why not start your development there too? Microclimate allows you to create your microservices and automated build in Docker from day one. No more time spent trying to recreate problems that only happen on one machine, or differences when switching to containers in production.</p>
+<p>If you’re deploying to containers, why not start your development there too? Microclimate enables you to create your microservices and automated build in Docker from day one. No more time spent trying to recreate problems that happen only on one machine, or differences when switching to containers in production.</p>
 
-<p>The environment is built using Docker too - so you can run it locally, or host it on your cloud platform and use it over the web. Likewise, no more issues with local settings or installers for multiple tools.</p>
+<p>The environment is built by using Docker so you can run it locally, or host it on your cloud platform and use it over the web. Likewise, no more issues with local settings or installers for multiple tools.</p>
 
 <h2 id="ide">IDE</h2>
 
-<p>We’ve included the powerful Orion IDE in the box, and are working to expand Orion’s polyglot and capabilities through <a href="http://langserver.org">language servers</a>.</p>
+<p>We’ve included the powerful Theia IDE in the box, and extended it’s capabilities by including some <a href="http://langserver.org">language servers</a> in the image, including our very own <a href="https://marketplace.visualstudio.com/items?itemName=IBM.XMLLanguageSupport">XML Language Support</a>.</p>
 
-<p>Don’t want to use a web-based IDE? No problem - that’s why we’ve taken care to setup your project for rapid development in any popular IDE, including Eclipse, Visual Studio Code, Orion, Atom IDE, or Theia. Just point your IDE at the project, it’s ready to go!</p>
+<p>Don’t want to use a web-based IDE? No problem - that’s why we’ve taken care to setup your project for rapid development in any popular IDE, including Eclipse, Visual Studio Code, Orion, Atom IDE, or Theia. Just point your IDE at the project, and it’s ready to go! For more information, see <a href="./setting-own-ide">Setting up your own IDE to use with Microclimate</a>.</p>
 
 <h2 id="iterative-development">Iterative Development</h2>
 
 <p>We’re developers too, so being able to iterate rapidly is very important to us. That’s why we’ve setup every project to react to changes immediately, regardless of language, Docker, or which IDE you use.</p>
 </div>
+
 	</section>
 
-	<footer>
+
+	
+<div role="main">
+<footer role="contentinfo">
 <div class="footer-bg">
 	<div class="container footer-container">
 		<div class="row full-width">
@@ -119,11 +142,18 @@
 </div>
 
 </footer>
+</div>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="js/scripts.js"></script>
+	<script src="js/anchor.min.js"></script>
+	<script>
+	   anchors.options.placement = 'left';
+       anchors.add('h1');
+       anchors.add('h2');
+    </script>
 
 </body>
 

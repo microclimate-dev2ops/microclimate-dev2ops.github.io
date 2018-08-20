@@ -7,7 +7,7 @@ duration: 3 minutes
 permalink: installkibanafilter
 type: document
 ---
-# Installing Kibana and filtering Microclimate logs in IBM Cloud Private
+
 It is sometimes useful to see what's going on with your IBM Cloud Private applications and viewing the log files is a really good way to achieve this.
 
 The following procedure shows you how to install Kibana and Elasticsearch to view and filter the Microclimate log files; your choice of logging infrastructure might be different.

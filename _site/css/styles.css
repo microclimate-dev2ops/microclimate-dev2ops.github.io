@@ -1,12 +1,23 @@
+.anchorjs-link {
+  transition: all .25s linear;
+}
+*:hover > .anchorjs-link {
+  margin-left: -1.125em !important;
+}
+
 /* preload image */
 #preload_area {
-	background-image: url(../images/microclimate_header.png);
-	background-image: url(../images/microclimate_header992.png);
-	background-image: url(../images/microclimate_header768.png);
-	background-image: url(../images/microclimate_header1200.png);
+	background-image: url(../images/microclimate_header.jpg);
+	background-image: url(../images/microclimate_header992.jpg);
+	background-image: url(../images/microclimate_header768.jpg);
+	background-image: url(../images/microclimate_header1200.jpg);
 	width: 0px;
 	height: 0px;
 	display: inline;
+}
+
+.fullwidth {
+    width: 100%;
 }
 
 /* Video player popup */
@@ -47,6 +58,10 @@
 	border-radius: 4px;
 }
 
+.homeicon-div {
+	min-width: 200px;
+}
+
 .dark-bg {
 	opacity: 1;
 }
@@ -68,6 +83,10 @@
 	font-family: ibm-plex-sans;
 }
 
+.beta-padding {
+	padding-left: 6px;
+	padding-right: 6px !important;
+}
 h1 {
 	font-size: 24px;
 	line-height: 1.5em;
@@ -103,6 +122,9 @@ h2 {
 	display: none;
 }
 
+#homepage #navbar_home_link_beta {
+	display: none;
+}
 .header-zindex999 {
 	z-index: 999;
 }
@@ -125,8 +147,7 @@ h2 {
 	content: "";
 	position: absolute;
 	top: 25%;
-	margin-left: -11px;
-	width: 160px;
+	margin-left: -7px;
 	height: 50%;
 	border-radius: 20px;
 	background-color: #DB2663;
@@ -135,7 +156,7 @@ h2 {
 	-moz-transition: all .1s linear;
 	transition: all .1s linear;
 	background-color: #DB2663;
-	width: 160px;
+	width: 150px;
 }
 
 .selling-points-text-left p, .selling-points-text-right p {
@@ -168,13 +189,16 @@ h2 {
 	background-color: #DB2663;
 }
 
+.active-button-roguecloud:after{
+	background-color: #337ab7;
+}
 .navbar a:hover {
 	color: #DB2663;
 	text-decoration: none;
 }
 
 .header-bg {
-	background-image: url('../images/microclimate_header.png');
+	background-image: url('../images/microclimate_header.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: 100%;
@@ -224,7 +248,11 @@ h2 {
 	text-align: center;
 	color: white;
 }
-
+.home_beta {
+	color: white;
+	top: 5px;
+	left: -10px;
+}
 .header-doc-main {
 	font-size: 46pt;
 }
@@ -245,7 +273,7 @@ a.download-link:hover {
 	text-align: center;
 }
 
-a.download-link, a.download-link:active, a.download-link:focus
+a.download-link, a.download-link:visited, a.download-link:active, a.download-link:focus
 	{
 	display: inline-block;
 	font-size: 1.2em;
@@ -271,14 +299,14 @@ a.download-link, a.download-link:active, a.download-link:focus
 .value-props {
 	margin: auto;
 	width: 840px;
-	color: #989A9C;
+	color: #787A7C;
 	text-align: center;
 	font-size: 1.4em;
 	line-height: 1.6em;
 }
 
 .main-content a {
-	color: #db3f66;
+	color: #db0066;
 	text-decoration: none;
 }
 
@@ -294,6 +322,12 @@ a.download-link, a.download-link:active, a.download-link:focus
 	height: 333px;
 }
 
+.workspace-img {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 140px;
+	padding-right: 140px;
+}
 .selling-points-text-left {
 	padding-right: 140px;
 	padding-left: 60px;
@@ -382,7 +416,7 @@ a.download-link, a.download-link:active, a.download-link:focus
 		font-size: 18px;
 	}
 	.header-bg {
-		background-image: url('../images/microclimate_header1200.png');
+		background-image: url('../images/microclimate_header1200.jpg');
 		height: 300px;
 	}
 	.selling-points {
@@ -418,7 +452,7 @@ a.download-link, a.download-link:active, a.download-link:focus
 	.header-intro {
 		margin-top: 65px;
 	}
-	.download-link, .download-link:visited, .download-link:active .download-link:focus
+	a.download-link, a.download-link:visited, a.download-link:active, a.download-link:focus
 		{
 		font-size: 16px;
 		border-radius: 20px;
@@ -440,7 +474,7 @@ a.download-link, a.download-link:active, a.download-link:focus
 /* Medium Devices, Desktops */
 @media ( max-width : 992px) {
 	.header-bg {
-		background-image: url('../images/microclimate_header992.png');
+		background-image: url('../images/microclimate_header992.jpg');
 		height: 250px;
 	}
 	.document-content h1 {
@@ -494,6 +528,10 @@ a.download-link, a.download-link:active, a.download-link:focus
 	.header-intro {
 		margin-top: 60px;
 	}
+	.workspace-img {
+       	padding-left: 30px;
+	    padding-right: 30px;
+     }
 	.selling-points-text-right {
 		text-align: right;
 		padding-right: 55px;
@@ -503,7 +541,7 @@ a.download-link, a.download-link:active, a.download-link:focus
 		padding-left: 55px;
 		padding-right: 60px;
 	}
-	.download-link, .download-link:visited, .download-link:active .download-link:focus
+	a.download-link, a.download-link:visited, a.download-link:active, a.download-link:focus
 		{
 		font-size: 15px;
 		border-radius: 15px;
@@ -527,6 +565,55 @@ a.download-link, a.download-link:active, a.download-link:focus
 	.footer-bg {
 		margin-top: 150px;
 		height: 150px;
+	}
+}
+/* show mobile icon earlier because our menu is too long */
+@media (max-width: 991px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-collapse.collapse.in {display: block !important; }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+  #navbar {
+		position: relative;
+		width: 100%;
+		z-index: 9999;
+	}
+	.navbar-toggle .icon-bar {
+		background-color: #DB2663 !important;
+	}
+	.navbar-toggle.collapsed .icon-bar {
+		background-color: #DB2663 !important;
 	}
 }
 
@@ -586,7 +673,7 @@ a.download-link, a.download-link:active, a.download-link:focus
 		align-items: unset
 	}
 	.header-bg {
-		background-image: url('../images/microclimate_header768.png');
+		background-image: url('../images/microclimate_header768.jpg');
 		height: 200px;
 	}
 	.main-content {
@@ -613,6 +700,10 @@ a.download-link, a.download-link:active, a.download-link:focus
 	.header-intro {
 		margin-top: 20px;
 	}
+	.workspace-img {
+	  padding-left: unset;
+	  padding-right: unset;
+    }
 	.selling-points-text-right {
 		text-align: center;
 		padding-right: unset;
@@ -623,7 +714,7 @@ a.download-link, a.download-link:active, a.download-link:focus
 		text-align: center;
 		margin-top: 20px;
 	}
-	.download-link, .download-link:visited, .download-link:active .download-link:focus
+	a.download-link, a.download-link:visited, a.download-link:active, a.download-link:focus
 		{
 		font-size: 10px;
 		border-radius: 12px;
@@ -646,6 +737,10 @@ a.download-link, a.download-link:active, a.download-link:focus
 		padding-right: 30px;
 		padding-left: 30px;
 	}
+	.workspace-img {
+	    padding-left: 30px;
+	    padding-right: 30px;
+    }
 	.selling-points-text-right {
 		padding-left: 30px;
 		padding-right: 30px;
@@ -696,7 +791,7 @@ a.download-link, a.download-link:active, a.download-link:focus
 	.download-link-container {
 		margin-top: 20px;
 	}
-	.download-link, .download-link:visited, .download-link:active .download-link:focus
+	a.download-link, a.download-link:visited, a.download-link:active, a.download-link:focus
 		{
 		width: 100px;
 	}

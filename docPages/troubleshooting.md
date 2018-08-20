@@ -7,7 +7,7 @@ duration: 1 minute
 permalink: troubleshooting
 type: document
 ---
-# Troubleshooting
+
 When troubleshooting, keep in mind that Microclimate is made up of many components to provide you with a unique development experience. Consider how these components work together as you attempt to isolate the problem by using the information in the following sections.
 
 * [Solving common problems](#solving-common-problems)
@@ -16,6 +16,7 @@ When troubleshooting, keep in mind that Microclimate is made up of many componen
 * [Solving problems on Linux](#solving-problems-on-linux)
 * [Solving problems with Theia](#solving-problems-with-theia)
 * [Solving problems with Docker](#solving-problems-with-docker)
+* [If all else fails](#if-all-else-fails)
 
 <!-- Provide an up-front link to where users can go if they can't figure out how to troubleshoot the problems. Avoid telling them to call IBM support, but you can link to the support website. -->
 
@@ -25,7 +26,6 @@ If you need help, or if you experience a problem that is not listed, the quickes
 # Solving common problems
 The following list describes common problems that might affect Microclimate.
 
-- [Microclimate does not support Microsoft Edge](#microclimate-does-not-support-microsoft-edge)
 - [Webhooks not triggering Jenkins builds](#webhooks-not-triggering-jenkins-builds)
 - [Project deletion takes a long time and fails with errors](#project-deletion-takes-a-long-time-and-fails-with-errors)
 - [Old projects fail to update, but new projects can be created](#old-projects-fail-to-update-but-new-projects-can-be-created)
@@ -33,17 +33,15 @@ The following list describes common problems that might affect Microclimate.
 - [Application Monitoring unavailable after Project Import](#application-monitoring-unavailable-after-project-import)
 - [Application stays in starting state](#application-stays-in-starting-state)
 - [Turning off auto build has no effect for Node.js projects when you run Microclimate locally](#turning-off-auto-build-has-no-effect-for-node-js-projects-when-you-run-microclimate-locally)
-- [Node.js generator not working on localhost Microclimate](#node-js-generator-not-working-on-localhost-microclimate)
+- [Node.js generator fails to start](#node-js-generator-fails-to-start)
 - [Node.js app with addons selected fails to start](#node-js-app-with-addons-selected-fails-to-start)
 - [Imported project never builds or starts](#imported-project-never-builds-or-starts)
-- [Fan running at one hundred percent](#fan-running-at-one-hundred-percent)
+- [High CPU usage](#high-cpu-usage)
 - [Code changes not updated in Git](#code-changes-not-updated-in-git)
 - [Node project is not built intermittently](#node-project-is-not-built-intermittently)
-
-## Microclimate does not support Microsoft Edge
-Microclimate does not support Microsoft Edge.
-
-**Workaround:** Use a different web browser.
+- [Theia editor might not work correctly in Microsoft Edge](#theia-editor-might-not-work-correctly-in-microsoft-edge)
+- [Projects not displaying after deleting the .projects directory](#projects-not-displaying-after-deleting-the-projects-directory)
+- [Microprofile project gets updated twice upon file change](#microprofile-project-gets-updated-twice-upon-file-change)
 
 ## Webhooks not triggering Jenkins builds
 Webhooks that have SSL validation configured might fail to trigger Jenkins jobs due to the presence of a self-signed certificate on the Jenkins kubernetes ingress definition.
@@ -64,7 +62,7 @@ If the microclimate-file-watcher container restarts, it loses any tracking infor
 
 **Workaround:**
 Restart Microclimate so that it can reinitialize the tracking for any existing projects.
-* Local: `~/mcdev stop` followed by `~/mcdev start`.  
+* Local: `~/mcdev stop` followed by `~/mcdev start`.
 * ICP: Microclimate 1805 and earlier, restart the Microclimate pod: `kubectl delete pod <microclimate pod>`.
 * ICP: Microclimate 1806, and later, the file-watcher container runs in a separate pod, so both the file-watcher pod and Microclimate pod need to be deleted: `kubectl delete pod <microclimate pod> <microclimate-file-watcher pod>`.
 
@@ -74,10 +72,10 @@ When launching applications from the Open Application view in Microclimate, HTTP
 **Workaround:** Open HTTPS URLs using a new browser tab.
 
 ## Application Monitoring unavailable after Project Import
-If an application has been imported via GIT/File, it is possible that when selecting App Monitor the dashboard is not displayed and results in a 'Cannot GET /appmetrics-dash/'. This is because the application was not created by Microclimate or previously had AppMetrics integration.  
+After importing an application, when you click `App Monitor`, the dashboard is not displayed and results in a 'Cannot GET /appmetrics-dash/'' error. This is because the application was not created by Microclimate or previously had AppMetrics integration.
 
 **Workaround**
-Further details on enabling applications within the AppMetrics can be found on the project pages https://github.com/RuntimeTools/ (appmetrics,javametrics, swiftmetrics).
+Enable AppMetrics for your application. You can enable AppMetrics for [Node.js](https://developer.ibm.com/node/monitoring-post-mortem/application-metrics-node-js/), [Swift](https://developer.ibm.com/swift/monitoring-diagnostics/application-metrics-for-swift/), and [SpringBoot](https://github.com/RuntimeTools/javametrics#spring-boot) projects.
 
 ## Application stays in starting state
 If there is a problem with the application and it fails to start, it might stay in starting state.
@@ -88,7 +86,7 @@ Check the application logs to find out why the application did not start, then m
 ## Turning off auto build has no effect for Node js projects when you run Microclimate locally
 If you turn off ```auto build``` for a Node.js project when you run Microclimate locally, it has no effect. Any changes you make to your code automatically start a build, or do a restart, even though ```auto build``` is disabled.
 
-## Node js generator not working on localhost Microclimate
+## Node js generator fails to start
 Several different reasons can cause the Node.js generator to fail to start. View the logs to find out why:
 
 ```
@@ -129,30 +127,46 @@ No containerId for running project <project name>
 
 For more information about valid Microclimate projects, see [Importing Projects](https://microclimate-dev2ops.github.io/projectimport).
 
-## Fan running at one hundred percent
-When you are using Microclimate, your computer fan might run at 100% for prolonged periods. To see why this might be happening, issue the following command:
+## High CPU usage
+When you are using Microclimate, your CPU usage might be higher than usual for prolonged periods. To see why this might be happening, issue the following command:
 
 ```
 docker logs microclimate-file-watcher
 ```
 
-**Workaround** If you just issued the ``mcdev start`` command, Microclimate might be actively building or restarting projects. When Microclimate completes building and restarting projects, the fan resumes running at its more optimal level.
+**Workaround** If you just issued the ``mcdev start`` command, Microclimate might be actively building or restarting projects. When Microclimate completes building and restarting projects, your CPU usage resumes to its more optimal level.
 
-If the fan does not stop running at 100%, you might have imported an invalid project. For more information, see [Imported project never builds or starts](#imported-project-never-builds-or-starts).
+If your CPU usage remains high, you might have imported an invalid project. For more information, see [Imported project never builds or starts](#imported-project-never-builds-or-starts).
 
-Your computer fan might run at 100% if you are actively working more than five projects. To resolve this problem, you can disable development on specific projects. For more information, see Disable development on specific projects in [Using Microclimate](./usingmicroclimate).
+Your CPU usage might also be high if you are actively working more than five projects. To resolve this problem, you can disable development on specific projects. For more information, see Disable development on specific projects in [Using Microclimate](./usingmicroclimate).
 
 ## Code changes not updated in Git
 The changes you make to your code do not get reflected in the `Edit Code` view in Git.
 
-**Workaround** Change the Git repo you are pointing to in the Theia editor. Alternatively, you can disable the `Show all projects` setting at the https://microclimate.<icp-proxy.xip.io>/?preferences=true) URL.
-
-This solution works on localhost. However, it might not work in IBM Cloud Private.
+**Workaround** Change the Git repo you are pointing to in the Theia editor. Alternatively, you can disable the `Show all projects` setting at the `https://microclimate.<icp-proxy.xip.io>/?preferences=true` URL.
 
 ## Node project is not built intermittently
 If you build projects in successive order (java, node, swift, spring), sometimes the node project does not build.
 
 **Workaround** Disable and enable the project, and then rebuild by clicking the **Build** button.
+
+## Theia editor might not work correctly in Microsoft Edge
+Theia, the open source code editor used by Microclimate, has limited support for Microsoft Edge at this time. Theia are aware of the issue and are working to fix it. All other functionality in Microclimate is fully supported in Microsoft Edge, including performance, pipeline, and so on.
+
+**Workaround:** Use a different web browser.
+
+## Projects do not display after you delete the .projects directory
+If your `.projects` directory is deleted, Microclimate no longer displays your projects on the dashboard. Your projects are still in the `microclimate-workspace` directory, but are no longer visible to Microclimate.
+
+**Workaround:** Stop Microclimate by using the `mcdev stop` command from the terminal. Rename your `microclimate-workspace` directory to, for example, `workspace-backup`. Start Microclimate again with the `mcdev start` command. Re-import your projects into Microclimate by clicking the **Import project** button on the Projects dashboard, select **Local Project** and navigate to your `workspace-backup` directory. For each of the projects in the `workspace-backup` directory, re-import them by following the normal import process until all projects are re-imported.
+
+## Microprofile project gets updated twice upon file change
+If you modify files in Microprofile projects, sometimes the project gets double updates. You might see the application status changed from Running to Stopped twice. This is because the default PollingRate, which is 500ms, is too short for the application monitor.
+
+**Workaround:** Increase the PollingRate in server.xml to 1000ms, or longer.
+```
+<applicationMonitor pollingRate="1000ms" />
+```
 
 # Solving problems in IBM Cloud Private
 If your IBM Cloud Private applications are not working correctly or if you suspect that something might be going wrong, a good way of finding out what the issues are is to install a logging infrastructure to query the logs. For more information, see [Installing Kibana and filtering Microclimate logs in IBM Cloud Private](./installkibanafilter).
@@ -160,7 +174,7 @@ If your IBM Cloud Private applications are not working correctly or if you suspe
 The following list describes common problems that might affect Microclimate in IBM Cloud Private.
 
 - [Projects fail to automatically build](#projects-fail-to-automatically-build)
-- [Projects fail to build after File-Watcher restart](#projects-fail-to-build-after-file-watcher-restart)
+- [All projects fail to build](#all-projects-fail-to-build)
 - [Imported Microprofile project does not start in IBM Cloud Private](#imported-microprofile-project-does-not-start-in-ibm-cloud-private)
 - [Changing the Theia preference to show all projects might not be persisted](#changing-the-theia-preference-to-show-all-projects-might-not-be-persisted)
 - [Microclimate Node port is an internal IP address and is not accessible](#microclimate-node-port-is-an-internal-ip-address-and-is-not-accessible)
@@ -171,16 +185,17 @@ The following list describes common problems that might affect Microclimate in I
 - [Open pipeline results in 404 Not Found](#open-pipeline-results-in-404-not-found)
 - [Jenkins executors do not become available](#jenkins-executors-do-not-become-available)
 - [Microclimate on localhost not connecting to remote Microclimate in IBM Cloud Private](#microclimate-on-localhost-not-connecting-to-remote-microclimate-in-ibm-cloud-private)
-- [Swift generator not working in IBM Cloud Private](#swift-generator-not-working-in-ibm-cloud-private)
-- [Expired Microclimate Helm secret certificate](#expired-microclimate-helm-secret-certificate)
+- [Swift container failing to build](#swift-container-failing-to-build)
+- [Unable to deploy applications or deployed applications not appearing](#unable-to-deploy-applications-or-deployed-applications-not-appearing)
+- [Broken pipeline links](#broken-pipeline-links)
 
 ## Projects fail to automatically build
 After several days of heavy use, inotify might fail to start in Microclimate's microclimate-file-watcher container, with `Couldn’t initialize inotify` messages displayed in the microclimate-file-watcher logs. After this error, file updates to running projects are not detected.
 
 **Workaround:**
-This is a known issue with inotify on Kubernetes, see [https://github.com/kubernetes/kubernetes/issues/10421](https://github.com/kubernetes/kubernetes/issues/10421). You can click the Build button to kick off a manual build. Alternatively, you can reboot the IBM Cloud Private cluster. After the reboot, inotify works properly, and automatic builds work again.
+This is a known issue with inotify on Kubernetes, see [inotify resources exhausted:possible leak in cAdvisor](https://github.com/kubernetes/kubernetes/issues/10421). You can click the Build button to kick off a manual build. Alternatively, you can reboot the IBM Cloud Private cluster. After the reboot, inotify works properly, and automatic builds work again.
 
-## Projects fail to build after File-Watcher restart
+## All projects fail to build
 If there are several projects in Microclimate's workspace, Microclimate might fail to build them if the File-Watcher container is restarted. This is due to the default resource constraints specified in the Microclimate helm chart.
 
 **Workaround:**
@@ -210,7 +225,7 @@ Delete both the filewatcher and portal pods after the upgrade to have them recre
 ```
    kubectl get pods
    kubectl delete pods admin-microclimate-editorfilewatcher-<xxxxx> microclimate-ibm-microclimate-<xxxxx>
-```      
+```
 
 This upgrades the Microclimate file-watcher container with the resources it needs to build and deploy more projects into IBM Cloud Private.
 
@@ -225,16 +240,16 @@ Configure the Maven pom.xml file and the Liberty server configuration files, for
 When clicking on the gear icon and accessing the Preferences page, changing the Theia option to show all projects and clicking on "Save" might not persist the preference.
 
 **Workaround:**
-Check that a directory named ".config" exists in the Microclimate workspace. If the directory is missing, create it. Restart Microclimate and the preference persistence should work.
+Check that a directory named ".config" exists in the Microclimate workspace. If the directory is missing, create it using, for example, Theia. Restart Microclimate and the preference is persisted.
 
 ## Microclimate Node port is an internal IP address and is not accessible
 For IBM Cloud Private clusters built on OpenStack environments, with floating IP addresses, the Microclimate portal Node port that appears in the Helm installation notes and on the IBM Cloud Private Services view might have an IP address that is internal to the IBM Cloud Private cluster. This IP address is not accessible in the user's browser.
 
 **Workaround:**
-You can access Microclimate by replacing the internal IP portion of the Microclimate URL with the external IBM Cloud Private cluster IP address. The external IP address can be obtained using the `kubectl cluster-info` command. The recommended permanent solution is to specify the `proxy_access_ip` when configuring IBM Cloud Private in an OpenStack environment. For more information, see https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0/installing/config_yaml.html.
+You can access Microclimate by replacing the internal IP portion of the Microclimate URL with the external IBM Cloud Private cluster IP address. The external IP address can be obtained using the `kubectl cluster-info` command. The recommended permanent solution is to specify the `proxy_access_ip` when configuring IBM Cloud Private in an OpenStack environment. For more information, see [Cluster configuration settings](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0/installing/config_yaml.html).
 
 ## Pods remain stuck in terminating state on IBM Cloud Private 2012 and earlier
-If a pod that uses a GlusterFS PersistentVolume for storage is stuck in the Terminating state after you try to delete it, you must manually delete the pod. This is a known issue in IBM Cloud Private 2.0.1.2 and earlier, see https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0.1/getting_started/known_issues.html.
+If a pod that uses a GlusterFS PersistentVolume for storage is stuck in the Terminating state after you try to delete it, you must manually delete the pod. This is a known issue in IBM Cloud Private 2.0.1.2 and earlier, see [Cloud Private Known Issues](https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0.1/getting_started/known_issues.html).
 
 **Workaround:** Upgrade to IBM Cloud Private 2.1.0.3 or run the following command:
 `kubectl -n <namespace> delete pods --grace-period=0 --force <pod_name>`
@@ -267,14 +282,14 @@ The Jenkins job is created asynchronously. Periodically refresh this page in the
 Intermittently, Jenkins slaves are unable to be launched, and so builds do not happen.
 
 **Workaround**
-Remove the container cap in Jenkins, which defaults to 10. In Jenkins, from the *Jenkins* button, click on the dropdown to expand the menu, click *Manage Jenkins > Configure System*, then find the *Container Cap* parameter. Remove the value, leaving it blank so it gives unlimited containers.
+Adjust the container cap in Jenkins, which defaults to 50. In Jenkins, from the *Jenkins* button, click on the dropdown to expand the menu, click *Manage Jenkins > Configure System*, then find the *Container Cap* parameter. Adjust the value according to your needs.
 
 ## Microclimate on localhost not connecting to remote Microclimate in IBM Cloud Private
 Make sure you deploy your Microclimate to IBM Cloud Private.
 
 **Workaround** In your local Microclimate instance, check that the URL you use to connect to the IBM Cloud Private instance is of a similar format to the following URL and not the IBM Cloud Private console URL.
 
-`https://microclimate.<ICP proxy>.xip.io/`
+`https://microclimate.<ICP proxy>.nip.io/`
 
 If this URL returns a `500 Internal Server Error` message, check your Microclimate version. You must have at least Microclimate 18.05 to make a connection to Microclimate in IBM Cloud Private 2.1.0.3.
 
@@ -285,7 +300,7 @@ To view the logs, use the following command:
 docker logs -f microclimate-portal
 ```
 
-## Swift generator not working in IBM Cloud Private
+## Swift container failing to build
 Look at the `icp-mc.log` file by issuing the following command:
 ```
 kubectl logs <microclimate-instance> microclimate-file-watcher > icp-mc.log
@@ -293,12 +308,12 @@ kubectl logs <microclimate-instance> microclimate-file-watcher > icp-mc.log
 
 If the Swift container is failing to build, the Swift generators are building multi-stage Dockerfiles that are not compatible with IBM Cloud Private.
 
-**Workaround** Install the latest Docker Community Edition (CE) image. For more information, see [Docker guides](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce-1).
+**Workaround** Upgrade Docker to the latest Docker Community Edition (CE) image. For more information, see [Docker guides](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce-1).
 
 To see the latest Docker versions that are supported by IBM Cloud Private, see [Supported Docker versions](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0.3/supported_system_config/supported_docker.html).
 
-## Expired Microclimate Helm secret certificate
-Your Microclimate Helm secret certificate might expire.
+## Unable to deploy applications or deployed applications not appearing
+If you are unable to deploy applications to IBM Cloud Private's tiller, your deployed applications are not appearing in Helm releases, you see errors in the Devops logs, or nothing gets deployed through the pipeline, your Helm secret certificate has expired. On IBM Cloud Private 2.1.0.3, the certificate lasts for 90 days.
 
 **Workaround** Regenerate the microclimate-helm-secret by following this procedure:
 
@@ -311,6 +326,13 @@ bx pr login -a https://mycluster.icp:8443
 ```
 kubectl create secret generic microclimate-helm-secret --from-file=cert.pem=<user path>/.helm/cert.pem --from-file=ca.pem=<user path>/.helm/ca.pem --from-file=key.pem=<user path>/.helm/key.pem
 ```
+
+## Broken pipeline links
+
+You might encounter a broken link if you try to access a newly created pipeline.
+
+**Workaround** Wait a moment before trying to access the page again. If the link does not become available, delete and recreate the pipeline.
+
 # Solving problems on Windows
 The following list describes common problems that might affect Microclimate on Windows.
 
@@ -367,41 +389,27 @@ Microclimate Docker images are available for x86-64 architectures only. On other
 The following list describes common problems that might affect Theia.
 
 - [Theia container leaking memory](#theia-container-leaking-memory)
-- [Theia stops working when second window opened](#theia-stops-working-when-second-window-opened)
 - [New projects sometimes do not show in Theia's hierarchy view](#new-projects-sometimes-do-not-show-in-theia-hierarchy-view)
 
 ## Theia container leaking memory
-If left up and running, over time, the Theia container in Microclimate leaks memory. The Theia team is aware of this, and are currently pursuing a fix for this issue. https://github.com/theia-ide/theia/issues/1284
+If left up and running, over time, the Theia container in Microclimate leaks memory. The Theia team is aware of this, and are currently pursuing a fix for this issue. For more information, see [Virtual memory usage continuously grows](https://github.com/theia-ide/theia/issues/1284).
 
-**Workaround** In Microclimate, reloading the Theia editor releases the memory.
-
-## Theia stops working when second window opened
-If a second Theia window is opened for the same Microclimate instance, the first Theia window stops working and you cannot edit files, open files, or expand folders. The Theia team is aware of this, and are currently pursuing a fix for this issue. https://github.com/theia-ide/theia/issues/1930.
-
-**Workaround** Switch to the most recently opened tab or window.  
+**Workaround** In Microclimate, reload the Theia editor to release memory.
 
 ## New projects sometimes do not show in Theia hierarchy view
 Sometimes when a new project is created, it doesn't show up in Theia's hierarchy view.
 
-**Workaround** Refresh the Microclimate page in the browser.
+**Workaround** In Microclimate, refresh the page in the browser.
 
 # Solving problems with Docker
 The following list describes common problems that might affect Docker.
 
+- [Microclimate does not start](#microclimate-does-not-start)
 - [Project build fails with Docker build failed message](#project-build-fails-with-docker-build-failed-message)
-- [Docker not functioning correctly](#docker-not-functioning-correctly)
 - [Docker container crashes unexpectedly](#docker-container-crashes-unexpectedly)
 
-## Project build fails with Docker build failed message
-The project build can fail if the Docker image build fails. The docker build logs are not currently exposed in the UI.
-
-**Workaround**
-To see if the Docker image build failed, look at the docker build output by checking the microclimate-file-watcher container logs.
-* Local: ```docker logs <container id of microclimate-file-watcher>```
-* ICP: ```kubectl logs <microclimate-pod> --container=microclimate-file-watcher```
-
-## Docker not functioning correctly
-Docker doesn't function correctly.
+## Microclimate does not start
+Microclimate not starting might be because Docker isn't functioning correctly. 
 
 **Workaround** To get Docker working correctly, you can restart Docker, prune images, or clean up old images.
 
@@ -412,9 +420,22 @@ To prune Docker images, use the following Docker command:
 docker system prune -a
 ```
 
-For more information about removing old Docker images, including old, dangling, and stopped container images, see the [stackoverflow article](https://stackoverflow.com/questions/45142528/docker-what-is-a-dangling-image-and-what-is-an-unused-image).
+For more information about removing old Docker images, including old, dangling, and stopped container images, see the [stackoverflow article: 'Docker: What is a dangling image and what is an unused image?'](https://stackoverflow.com/questions/45142528/docker-what-is-a-dangling-image-and-what-is-an-unused-image).
+
+## Project build fails with Docker build failed message
+The project build can fail if the Docker image build fails. The docker build logs are not currently exposed in the UI.
+
+**Workaround**
+To see if the Docker image build failed, look at the docker build output by checking the microclimate-file-watcher container logs.
+* Local: ```docker logs <container id of microclimate-file-watcher>```
+* ICP: ```kubectl logs <microclimate-pod> --container=microclimate-file-watcher```
 
 ## Docker container crashes unexpectedly
 Your Docker container might crash unexpectedly.
 
-**Workaround** See [this article](https://medium.com/@pimterry/5-ways-to-debug-an-exploding-docker-container-4f729e2c0aa8) for some useful tips about how to debug a crashed container image.
+**Workaround** For some useful tips about how to debug a crashed container image, see the [medium.com article: '5 ways to debug an exploding Docker container'](https://medium.com/@pimterry/5-ways-to-debug-an-exploding-docker-container-4f729e2c0aa8).
+
+# If all else fails
+If all else fails, you've tried fixing your Microclimate installation and have not been successful, it might be that one or more of the components in your installation is out of date, corrupted, or has stopped working for some unknown reason.
+
+**Workaround** Reach out to us on Slack to have a chat or to raise a bug, we'd love to hear from you. For more information, see our [Community](./community) page. Another option is to reinstall Microclimate, for which see [Updating Microclimate](./update).

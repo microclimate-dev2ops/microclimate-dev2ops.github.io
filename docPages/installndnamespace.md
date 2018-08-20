@@ -8,8 +8,6 @@ permalink: installndnamespace
 type: document
 ---
 
-## Installing Microclimate into a non-default namespace
-
 Microclimate can be installed into a non-default namespace. Example commands and snippets are provided as it's something requiring more than a basic understanding of Kubernetes. There's also plenty of scope for customizing the install.
 
 Follow this procedure. For information about each step, refer to the detailed explanations.

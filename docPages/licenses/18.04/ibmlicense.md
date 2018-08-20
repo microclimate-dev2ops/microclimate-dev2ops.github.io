@@ -1,6 +1,6 @@
 ---
 layout: document
-title: Microclimate 18.04 IBM Licences
+title: Microclimate 18.04 IBM Licenses
 description: Landing page for microclimate IBM licenses
 duration: 1 minute
 permalink: licenses-18_04-ibmlicense

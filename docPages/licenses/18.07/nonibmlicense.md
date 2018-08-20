@@ -1,13 +1,13 @@
 ---
 layout: document
-title: Microclimate 18.07 non IBM Licences
+title: Microclimate 18.07 non IBM Licenses
 description: Landing page for microclimate non IBM licenses
 duration: 1 minute
 permalink: licenses-18_07-nonibmlicense
 type: document
 ---
 
-# Microclimate 18.06 Non IBM Licenses
+# Microclimate 18.07 Non IBM Licenses
 
 TERMS AND CONDITIONS FOR SEPARATELY LICENSED CODE
 

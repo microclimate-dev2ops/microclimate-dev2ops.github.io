@@ -2,32 +2,45 @@
 layout: document
 title: What is Microclimate?
 description: What is Microclimate?
-keywords: IDE, why, what, container, devbelopment, dev, devops, docker, editor, ide, fast, pipeline, rapid
+keywords: IDE, why, what, container, development, dev, devops, docker, editor, ide, fast, pipeline, rapid
 duration: 1 minute
 permalink: about
 ---
+The past few years have seen an explosion of technologies, but many developers still use the same single-language Integrated Development Environment (IDE), debugger, and local tools that they used years ago. It's high time to upgrade!
 
-Microclimate is a Docker-ized, end-to-end development environment. You can generate microservices in Java, Node, and Swift, edit them, and see your changes on the fly. When you're happy with the code, check it in and the pipeline automatically builds and deploys to Kubernetes.
+Microclimate is a Dockerized, end-to-end development environment that enables agile development of microservices in Java, Node, and Swift. Microclimate offers services and tools to help you create and modernize applications in one seamless experience. You can use Microclimate for every step of the process, from writing and testing code locally to building and deployment with a pipeline.
 
-The past few years have seen an explosion of technologies - Microservices, Docker, Polyglot... the list goes on. But lots of developers are still using the same single-language Integrated Development Environment (IDE), debugger, and local tools, that they were using years ago. It's high time to upgrade!
+By default, Microclimate comes with Theia IDE as well as application monitoring tools and an HTTP load testing utility, each preinstalled and preconfigured for your service.
 
-And we're not just another friendly IDE! We've included application monitoring tools and an HTTP load-driver to start, and plan to include other tools over time. Each of these is pre-installed and pre-configured for your service so you can just switch tabs and go - no hunting for other tools or trying to set them up when you run into problems.
+## Why use Microclimate?
 
+Local installations of Microclimate provide the following advantages:
+- Simplified containerized development
+- Built-in support to load test your services with JMeter
+- Built-in microservice templates
+
+You can access more benefits with a Kubernetes deployment of Microclimate:
+- A seamless and configurable end-to-end environment from development to deployment
+- Cluster computing advantages, including cluster storage for local or noncommitted code
+- Ease of deployment, such as specifying the last success on a branch or on a specific build
+- Built-in logging
 
 ## Containers
 
-If you're deploying to containers, why not start your development there too? Microclimate enables you to create your microservices and automated build in Docker from day one. No more time spent trying to recreate problems that happen only on one machine, or differences when switching to containers in production.
+If you're deploying to containers, why not start your development there, too? Use Microclimate to create your microservices and automated build in Docker from day one.
 
-The environment is built by using Docker too - so you can run it locally, or host it on your cloud platform and use it over the web. Likewise, no more issues with local settings or installers for multiple tools.
-
+Check out some of the benefits of developing inside a container:
+- You have a cleaner environment when all the application components exist in the Docker container.
+- If you're using versioned Docker images for your build environment, you can know and reproduce exactly what Docker built.
+- You can avoid issues with local settings and installers for multiple tools.
+- You have less machine setup. Simply use the Docker pull command to begin.
 
 ## IDE
 
-We’ve included the powerful Theia IDE in the box, and extended it's capabilities by including some [language servers](http://langserver.org) in the image,  including our very own [XML Language Support](https://marketplace.visualstudio.com/items?itemName=IBM.XMLLanguageSupport).
+The powerful Theia IDE is included in the box. We've extended its capabilities by putting some [language servers](http://langserver.org) in the image, including our very own [XML Language Support](https://marketplace.visualstudio.com/items?itemName=IBM.XMLLanguageSupport).
 
-Don't want to use a web-based IDE? No problem - that's why we've taken care to setup your project for rapid development in any popular IDE, including Eclipse, Visual Studio Code, Orion, Atom IDE, or Theia. Just point your IDE at the project, it's ready to go! For more information, see [Setting up your own IDE to use with Microclimate](./setting-own-ide).
+Don't want to use a web-based IDE? No problem - that's why we've taken care to set up your project for rapid development in any popular IDE, including Eclipse, Visual Studio Code, Orion, and Atom IDE. Point your IDE at the project, and it's ready to go! For more information, see [Setting up your own IDE to use with Microclimate](./setting-own-ide).
 
+## Iterative development
 
-## Iterative Development
-
-We're developers too, so being able to iterate rapidly is very important to us. That's why we've setup every project to react to changes immediately, regardless of language, Docker, or which IDE you use.
+Every Microclimate project is set up to react to changes immediately, regardless of language, Docker, or your IDE. Use the Microclimate automated build environment for rapid iteration with real-time performance insights, intelligent feedback, diagnostic services, and an integrated DevOps pipeline.

@@ -14,7 +14,7 @@ You can configure webhooks on your Git repository so that your pipeline is autom
 
 GitLab can be deployed to a Kubernetes cluster by using the [Helm chart](https://docs.gitlab.com/ce/install/kubernetes/gitlab_omnibus.html).
 
-Microclimate automatically attempts to create webhooks for repositories in GitLab and does not succeed if you do not provide a valid personal access token on the pipeline credentials. For GitLab, the automatically created webhook, if successfully made, is configured to trigger whenever a push event occurs and whenever a merge request event occurs. SSL validation is currently disabled by default for the automatically created webhook, this is because MicroClimate uses a self-signed certificate.  Note: This certificate can be changed and you can manually modify the webhook to have SSL validation enabled should you want to. See [known issues](./knownissues) for more details.
+Microclimate automatically attempts to create webhooks for repositories in GitLab and does not succeed if you do not provide a valid personal access token on the pipeline credentials. For GitLab, the automatically created webhook, if successfully made, is configured to trigger whenever a push event occurs and whenever a merge request event occurs. SSL validation is currently disabled by default for the automatically created webhook, this is because MicroClimate uses a self-signed certificate.  Note: This certificate can be changed and you can manually modify the webhook to have SSL validation enabled should you want to. See [Troubleshooting](./troubleshooting) for more details.
 
 If the webhook is not automatically added on your repository, follow these steps to manually create a webhook.
 
@@ -23,7 +23,7 @@ To create webhooks in GitLab:
 1. From your repository in GitLabb, click ```Settings```, ```Integrations```.
 2. Enter the URL: ```JENKINS_URL/git/notifyCommit?url=GITHUB_URL```, replacing ```JENKINS_URL``` with the base URL of your Jenkins deployment and ```GITHUB_URL``` with the URL of the GitHub repository. For example, ```http://jenkins.1.2.3.4.nip.io/git/notifyCommit?url=https://gitlab.mycompany.com/microclimate-demo/node.git```.
 3. From the list of trigger events that are displayed, select ```Push events``` and ```Merge Request event```.
-4. Uncheck the ```Enable SSL Verification``` check box unless you have taken actions to enable SSL verification to work successfully. See [known issues](./knownissues) for more details.
+4. Uncheck the ```Enable SSL Verification``` check box unless you have taken actions to enable SSL verification to work successfully. See [Troubleshooting](./troubleshooting) for more details.
 5. Click ```Add webhook```.
 
 To edit a webhook, perhaps to add additional triggers:
@@ -35,7 +35,7 @@ To edit a webhook, perhaps to add additional triggers:
 
 ### GitHub
 
-Microclimate automatically attempts to create webhooks for repositories in GitHub and does not succeed if you do not provide a valid personal access token on the pipeline credentials. These credentials can be user name and password or personal access token. For GitHub, the automatically created webhook, if successfully made, is configured to trigger whenever a push event occurs and whenever a pull request event occurs. SSL validation is currently disabled by default for the automatically created webhook, this is because MicroClimate uses a self-signed certificate.  Note: This certificate can be changed and you can manually modify the webhook to have SSL validation enabled should you want to. See [known issues](./knownissues) for more details.
+Microclimate automatically attempts to create webhooks for repositories in GitHub and does not succeed if you do not provide a valid personal access token on the pipeline credentials. These credentials can be user name and password or personal access token. For GitHub, the automatically created webhook, if successfully made, is configured to trigger whenever a push event occurs and whenever a pull request event occurs. SSL validation is currently disabled by default for the automatically created webhook, this is because MicroClimate uses a self-signed certificate.  Note: This certificate can be changed and you can manually modify the webhook to have SSL validation enabled should you want to. See [Troubleshooting](./troubleshooting) for more details.
 
 If the webhook is not automatically added on your repository, follow these steps to manually create a webhook:
 
@@ -43,7 +43,7 @@ To create webhooks in GitHub:
 
 1. From your repository in GitHub, click ```Settings```, ```Webhooks```, and then click ```Add webhook```.
 2. Enter the Payload URL: ```JENKINS_URL/git/notifyCommit?url=GITHUB_URL```, replacing ```JENKINS_URL``` with the base URL of your Jenkins deployment and ```GITHUB_URL``` with the URL of the GitHub repository. For example, ```http://jenkins.1.2.3.4.nip.io/git/notifyCommit?url=https://github.com/microclimate-demo/node.git```.
-3. Click the ```Disable SSL Verification``` button unless you have taken actions to enable SSL verification to work successfully. See [known issues](./knownissues) for more details.
+3. Click the ```Disable SSL Verification``` button unless you have taken actions to enable SSL verification to work successfully. See [Troubleshooting](./troubleshooting) for more details.
 4. Select the ```Let me select individual events``` option.
 5. From the list of events that are displayed, select ```Pull requests``` and ```Pushes```.
 6. Click ```Add webhook```.

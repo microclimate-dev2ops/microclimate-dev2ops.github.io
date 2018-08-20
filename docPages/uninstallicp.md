@@ -10,8 +10,6 @@ category: How-tos and Guides
 parent: Uninstalling Microclimate
 ---
 
-## Uninstalling Microclimate in IBM Cloud Private
-
 To uninstall Microclimate in IBM Cloud Private:
 
 1. Open a terminal session.

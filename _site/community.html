@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<script>
+    digitalData = {
+    		customName1: "source",
+    	    customValue1: "Landing page",
+        page: {
+        	customName1: "source",
+    	    customValue1: "Landing page",
+        	subCategory: "data",
+            pageInfo: {
+                pageID: 'Landing page - Microclimate Community - Microclimate',
+                productTitle: 'Microclimate',
+                customName1: "source",
+        	    customValue1: "Landing page",
+                analytics: {
+                    category: 'Offering Interface',
+                    customName1: "source",
+            	    customValue1: "Landing page",
+                }
+            }
+        }
+    };
+</script>
+<script type="text/javascript"> window._analytics = { "segment_key" : "fbo2tbfqOhsEQA27GiOKcMwpj9Y8cbz9", "coremetrics" : false, "optimizely" : false, "googleAddServices": false, "fullStory" : false}; </script>
+<script src="https://console.cdn.s-bluemix.net/analytics/build/bluemix-analytics.min.js"></script>
 
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112407000-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-112407000-1');
-</script>
 
 <title>Microclimate Community - Microclimate</title>
 <meta name="description"
-	content="IBM Microclimate">
+	content="Microclimate community">
 <meta charset="utf-8">
+<meta name="keywords" content="feedback, chat, communication, slack, idea, recommendation, question, answer"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet"
@@ -32,7 +48,7 @@
 
 <link href="css/styles.css" rel="stylesheet prefetch" />
 <link href="css/ibm-type.min.css" rel="stylesheet prefetch" />
-<link rel="shortcut icon" href="/dev-ex/landing-pages/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 </head>
 
@@ -43,7 +59,7 @@
 <nav class="navbar navbar-transparent header-zindex999" >
     <div class="container">
     		
-        <div class="navbar-header">
+        <div class="navbar-header homeicon-div">
             <button id="navbar_responsive_button" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -52,7 +68,7 @@
             </button>
             
             <a id="navbar_home_link" class="navbar-brand" href="." aria-label="Home">
-            		<img height="18px" src="images/microclimate-logo-white.svg"/></a>
+            		<img height="18px" alt="home" src="images/microclimate-logo-white.svg"/></a>
            
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -60,8 +76,9 @@
                 <li><a href="about" >About</a></li>
                 <li><a href="gettingstarted" >Getting Started</a></li>
                 <li><a href="document" >Documentation</a></li>
-                
                 <li><a href="community"  class="active-button" >Community</a></li>
+                <li><a href="news" >News</a></li>
+                <li><a href="roguecloud" class="active-button active-button-roguecloud">Rogue Cloud</a></li>
                 <li><a href="https://github.com/microclimate-dev2ops">Git</a></li>
                 <!-- li class="hidden-xs"><a id="navbar_github_link" href="https://github.com/OpenLiberty" target="new" aria-label="Open Liberty GitHub Repository"></a></li -->
             </ul>
@@ -70,7 +87,7 @@
   </nav>
 
 </header>
-	<section class="main">
+	<section aria-label="main section" class="main">
 		<div class="header-bg">
 			<div class="container doc-container-header">
 				<div class="row full-width">
@@ -96,17 +113,21 @@ It’s not.”<br />
 <h2 id="how-to-reach-us">How to reach us</h2>
 
 <h3 id="want-to-chat">Want to chat?</h3>
-<p>If you are looking for a more interactive way to communicate with us, drop in to our <a href="https://ibm-cloud-tech.slack.com/messages/microclimate">Slack channel</a> to ask questions, share ideas, or just hang out and chat about all things Microclimate. If you are new to Slack, <a href="https://slack-invite-ibm-cloud-tech.mybluemix.net/">create a user ID here first!</a></p>
+<p>If you are looking for a more interactive way to communicate with us, drop in to our <a href="https://ibm-cloud-tech.slack.com/messages/microclimate">Slack channel</a> to ask questions, share ideas, or just hang out and chat about all things Microclimate. If you have not previously used the ibm-cloud-tech slack instance, <a href="https://slack-invite-ibm-cloud-tech.mybluemix.net/">click here to request an invite</a>.</p>
 
 <h3 id="find-something-that-needs-to-be-improved">Find something that needs to be improved?</h3>
-<p>Find a bug? Have a recommendation on something we can do to improve the Microclimate experience? We opened up shop on <a href="https://github.com/orgs/microclimate-dev2ops">GitHub</a>! And while our moving vans haven’t all arrived yet, they are all in transit. In the meantime, we have enough of <a href="https://github.com/orgs/microclimate-dev2ops">our project</a> in place to start working with you. Help us help you!</p>
+<p>Found a bug? Have a recommendation on something we can do to improve the Microclimate experience? We opened up shop on <a href="https://github.com/orgs/microclimate-dev2ops">GitHub</a>! And while our moving vans haven’t all arrived yet, they are all in transit. In the meantime, we have enough of <a href="https://github.com/orgs/microclimate-dev2ops">our project</a> in place to start working with you. Help us help you!</p>
 
 <h3 id="in-search-of-some-answers">In search of some answers?</h3>
 <p>While we put a lot of effort into making Microclimate easy to use, we know there will always be questions. If you have something you need help with, post your question to <a href="https://stackoverflow.com/questions/tagged/microclimate">Stack Overflow</a> to leverage the minds and experiences of an army of developers…including ours!</p>
 </div>
+
 	</section>
 
-	<footer>
+
+	
+<div role="main">
+<footer role="contentinfo">
 <div class="footer-bg">
 	<div class="container footer-container">
 		<div class="row full-width">
@@ -118,11 +139,18 @@ It’s not.”<br />
 </div>
 
 </footer>
+</div>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="js/scripts.js"></script>
+	<script src="js/anchor.min.js"></script>
+	<script>
+	   anchors.options.placement = 'left';
+       anchors.add('h1');
+       anchors.add('h2');
+    </script>
 
 </body>
 
