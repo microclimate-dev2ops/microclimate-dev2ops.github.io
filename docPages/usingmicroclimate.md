@@ -10,7 +10,7 @@ type: document
 
 ## Installing Microclimate
 
-`Note`: Before you install Microclimate, decide whether you want to deploy to IBM Cloud Kubernetes Service (IKS) and then take the necessary steps to enable deployment. For more information, see the **Prerequisites** in [Deploying to IBM Cloud Kubernetes Service](./deployingtoiks).
+`Note`: Before you install Microclimate, decide whether you want to deploy to IBM Cloud Kubernetes Service (IKS) and then take the necessary steps to enable deployment. For more information, see the **Prerequisites** in [Deploying to IBM Cloud Kubernetes Service](./deployingiks).
 
 You can install Microclimate locally or into IBM Cloud Private. If you want to develop applications on your computer, you can [install Microclimate locally](./installlocally). If you want to take advantage of IBM Cloud Private, which provides a common and consistent platform for you to rapidly innovate while retaining the flexibility to use public clouds and services, you can [install Microclimate in IBM Cloud Private](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md).
 
