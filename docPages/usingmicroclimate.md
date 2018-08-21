@@ -24,7 +24,7 @@ If you have many projects on the go at the same time, you can focus resources on
 
 ## Deploying projects
 
-Finally, when your project is ready to deploy, you can use Microclimate to [create a pipeline](./usingapipeline). Having created a pipeline, you can then deploy to IBM Cloud Private, or you can [deploy to the IBM Cloud Kubernetes Service](./deployingtoiks).
+Finally, when your project is ready to deploy, you can use Microclimate to [create a pipeline](./usingapipeline). Having created a pipeline, you can then deploy to IBM Cloud Private, or you can [deploy to the IBM Cloud Kubernetes Service](./deployingiks).
 
 ## What next
 After you have installed Microclimate and accepted the [license agreement](./license), you can then follow a [tutorial](./tutorials-and-samples), [deploy a sample](./tutorials-and-samples), [create a new project](./creatingaproject), or [import a project](./importingaproject).
