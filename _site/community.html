@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <script>
     digitalData = {
-    		customName1: "source",
-    	    customValue1: "Landing page",
+        customName1: "source",
+          customValue1: "Landing page",
         page: {
-        	customName1: "source",
-    	    customValue1: "Landing page",
-        	subCategory: "data",
+          customName1: "source",
+          customValue1: "Landing page",
+          subCategory: "data",
             pageInfo: {
                 pageID: 'Landing page - Microclimate Community - Microclimate',
                 productTitle: 'Microclimate',
                 customName1: "source",
-        	    customValue1: "Landing page",
+              customValue1: "Landing page",
                 analytics: {
                     category: 'Offering Interface',
                     customName1: "source",
-            	    customValue1: "Landing page",
+                  customValue1: "Landing page",
                 }
             }
         }
@@ -25,133 +24,161 @@
 </script>
 <script type="text/javascript"> window._analytics = { "segment_key" : "fbo2tbfqOhsEQA27GiOKcMwpj9Y8cbz9", "coremetrics" : false, "optimizely" : false, "googleAddServices": false, "fullStory" : false}; </script>
 <script src="https://console.cdn.s-bluemix.net/analytics/build/bluemix-analytics.min.js"></script>
-
 <head>
-
-<title>Microclimate Community - Microclimate</title>
-<meta name="description"
-	content="Microclimate community">
-<meta charset="utf-8">
-<meta name="keywords" content="feedback, chat, communication, slack, idea, recommendation, question, answer"/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	crossorigin="anonymous" />
-<link
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-	rel="stylesheet prefetch" />
-
-<link rel='stylesheet prefetch'
-	href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css' />
-
-<link href="css/styles.css" rel="stylesheet prefetch" />
-<link href="css/ibm-type.min.css" rel="stylesheet prefetch" />
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <base url="/dev-ex/landing-pages"></base>
+	<title>Microclimate Community | Microclimate</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Microclimate community">
+	<meta name="keywords" content="feedback, chat, communication, slack, idea, recommendation, question, answer"/>
+	<link rel="icon" type="image/png" sizes="16x16" href="/dev-ex/landing-pages/dist/images/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/dev-ex/landing-pages/dist/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="/dev-ex/landing-pages/dist/images/favicon-48x48.png">
+	<link rel="stylesheet" href="/dev-ex/landing-pages/dist/styles/screen.css">
 
 </head>
 
-<body class="">
 
-	<header>
-
-<nav class="navbar navbar-transparent header-zindex999" >
-    <div class="container">
-    		
-        <div class="navbar-header homeicon-div">
-            <button id="navbar_responsive_button" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            
-            <a id="navbar_home_link" class="navbar-brand" href="." aria-label="Home">
-            		<img height="18px" alt="home" src="images/microclimate-logo-white.svg"/></a>
-           
+<body class="community">
+<section class="hero">
+    <div class="masthead">
+    <div class="grid-x">
+        <div class="cell small-8 medium-4 large-5 xxlarge-4 small-order-2 medium-order-1">
+            <a href="/dev-ex/landing-pages/"><img src="dist/images/logo-microclimate.svg" alt="Microclimate logo" class="logo"></a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right text-right">
-                <li><a href="about" >About</a></li>
-                <li><a href="gettingstarted" >Getting Started</a></li>
-                <li><a href="document" >Documentation</a></li>
-                <li><a href="community"  class="active-button" >Community</a></li>
-                <li><a href="news" >News</a></li>
-                <li><a href="roguecloud" class="active-button active-button-roguecloud">Rogue Cloud</a></li>
-                <li><a href="https://github.com/microclimate-dev2ops">Git</a></li>
-                <!-- li class="hidden-xs"><a id="navbar_github_link" href="https://github.com/OpenLiberty" target="new" aria-label="Open Liberty GitHub Repository"></a></li -->
-            </ul>
+        <div class="cell small-2 medium-8 large-7 xxlarge-8 small-order-1 medium-order-2">
+            <div class="mobile-nav-bar" data-responsive-toggle="toggle-main-nav" data-hide-for="medium">
+                <button class="menu-icon" type="button" data-toggle="toggle-main-nav"></button>
+            </div>
+            <div class="main-nav-wrapper" id="toggle-main-nav">
+                <nav class="main-nav">
+                    <!-- future nav -->
+                    <!-- <ul class="vertical medium-horizontal menu">
+                        <li><a href="http://0.0.0.0:1234/about" >About</a></li>
+                        <li><a href="http://0.0.0.0:1234/learn" >Learn</a></li>
+                        <li><a href="http://0.0.0.0:1234/install" >Install</a></li>
+                        <li><a href="http://0.0.0.0:1234/documentation" >Docs</a></li>
+                        <li><a href="http://0.0.0.0:1234/community"  class="current-page" >Community</a></li>
+                    </ul> -->
+                    <ul class="vertical medium-horizontal menu">
+                        <li><a href="about" >About</a></li>
+                        <li><a href="documentation" >Docs</a></li>
+                        <li><a href="community"  class="current-page" >Community</a></li>
+                        <li><a href="news" >News</a></li>
+                        <li><a href="roguecloud" >Rogue Cloud</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div> 
+</div>
+<!-- close masthead -->
+    <div class="hero-content">
+        <div class="grid-x">
+            <div class="cell small-10 small-offset-1 medium-5 medium-offset-7">
+                <div class="hero-title">
+                    Let's work together.
+                </div>
+                <div class="hero-subtitle">
+                    We're just getting started, and we want your help.
+                </div>
+                <!-- /.hero-subtitle -->
+                <div class="hero-cta-buttons">
+                    <div class="grid-x">
+                        <div class="cell small-12">
+                            <a href="#content" class="button" data-smooth-scroll>Learn More</a>
+                        </div>
+                        <!-- /.cell -->
+                    </div>
+                    <!-- /.grid-x -->
+                </div>
+                <!-- /.cta-buttons -->
+            </div>
+            <!-- /.cell -->
+        </div>
+        <!-- /.grid-x -->
+    </div>
+    <!-- /.hero-content -->
+</section>
+<!-- /.hero -->
+
+<main id="content">
+    <div class="grid-container">
+        <div class="grid-x">
+            <div class="cell auto">
+                <div class="card_headline">How to reach us</div>
+            </div>
+        </div>
+        <div class="grid-x grid-margin-x" data-equalizer>
+            <div class="cell large-6">
+                <div class="card" data-equalizer-watch>
+                    <div class="card_content">
+                        <div class="card_title">Chat with us on Slack</div>
+                        <p>If you are looking for a more interactive way to communicate with us, drop in to our <a href="https://ibm-cloud-tech.slack.com/messages/microclimate">Slack channel</a> to ask questions, share ideas, or just hang out and chat about all things Microclimate. If you have not previously used the ibm-cloud-tech slack instance, <a href="https://slack-invite-ibm-cloud-tech.mybluemix.net/">click here to request an invite</a>.</p>
+                        <a href="https://ibm-cloud-tech.slack.com/messages/microclimate" class="button">Go to Channel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cell large-6">
+                <div class="card" data-equalizer-watch>
+                    <div class="card_content">
+                        <div class="card_title">Bugs or recommendations</div>
+                        <p>Found a bug? Have a recommendation on something we can do to improve the Microclimate experience? We opened up shop on <a href="https://github.com/orgs/microclimate-dev2ops">GitHub</a>! And while our moving vans haven’t all arrived yet, they are all in transit. In the meantime, we have enough of <a href="https://github.com/orgs/microclimate-dev2ops">our project</a> in place to start working with you. Help us help you!</p>
+                        <a href="https://github.com/microclimate-dev2ops" class="button">Go to GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-x grid-margin-x" data-equalizer>
+            <div class="cell large-6">
+                <div class="card" data-equalizer-watch>
+                    <div class="card_content">
+                        <div class="card_title">Need answers?</div>
+                        <p>While we put a lot of effort into making Microclimate easy to use, we know there will always be questions. If you have something you need help with, post your question to <a href="https://stackoverflow.com/questions/tagged/microclimate">Stack Overflow</a> to leverage the minds and experiences of an army of developers…including ours!</p>
+                        <a href="https://stackoverflow.com/questions/tagged/microclimate" class="button">Go to StackOverflow</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cell large-6">
+                <div class="card" data-equalizer-watch>
+                    <div class="card_content">
+                        <div class="card_title">Shape the future of Microclimate</div>
+                        <p>Take part in one of our user research studies and receive a gift as a token of our appreciation. We want to make a developer-focused product, and your feedback will help us provide the best experience possible to our users.</p>
+                        <a href="" class="button">Sign Up</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-  </nav>
+</main>
 
-</header>
-	<section aria-label="main section" class="main">
-		<div class="header-bg">
-			<div class="container doc-container-header">
-				<div class="row full-width">
-					<div class="col-lg-12">
-						<div class="header-doc-intro">
-							<div class="header-doc-main ">Microclimate Community</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="container main-content document-content"><blockquote>
-  <p>“Unless someone like you<br />
-cares a whole awful lot,<br />
-nothing is going to get better.<br />
-It’s not.”<br />
-~ Dr. Seuss</p>
-</blockquote>
-
-<p>We are just getting started, and as we are building out our project we also want to develop a community around it. We would love to hear directly from you. Praise or criticism. Questions or suggestions. We look forward to them all.</p>
-
-<h2 id="how-to-reach-us">How to reach us</h2>
-
-<h3 id="want-to-chat">Want to chat?</h3>
-<p>If you are looking for a more interactive way to communicate with us, drop in to our <a href="https://ibm-cloud-tech.slack.com/messages/microclimate">Slack channel</a> to ask questions, share ideas, or just hang out and chat about all things Microclimate. If you have not previously used the ibm-cloud-tech slack instance, <a href="https://slack-invite-ibm-cloud-tech.mybluemix.net/">click here to request an invite</a>.</p>
-
-<h3 id="find-something-that-needs-to-be-improved">Find something that needs to be improved?</h3>
-<p>Found a bug? Have a recommendation on something we can do to improve the Microclimate experience? We opened up shop on <a href="https://github.com/orgs/microclimate-dev2ops">GitHub</a>! And while our moving vans haven’t all arrived yet, they are all in transit. In the meantime, we have enough of <a href="https://github.com/orgs/microclimate-dev2ops">our project</a> in place to start working with you. Help us help you!</p>
-
-<h3 id="in-search-of-some-answers">In search of some answers?</h3>
-<p>While we put a lot of effort into making Microclimate easy to use, we know there will always be questions. If you have something you need help with, post your question to <a href="https://stackoverflow.com/questions/tagged/microclimate">Stack Overflow</a> to leverage the minds and experiences of an army of developers…including ours!</p>
-</div>
-
-	</section>
-
-
-	
-<div role="main">
-<footer role="contentinfo">
-<div class="footer-bg">
-	<div class="container footer-container">
-		<div class="row full-width">
-			<div class="col-lg-12 text-right">
-			<a href="https://www.ibm.com/privacy/us/en/">Privacy Policy</a> &nbsp;© Copyright IBM Corp. 2018
-			</div>
-		</div>
-	</div>
-</div>
-
+<footer>
+    <div class="footer-content">
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="cell small-12">
+                    <ul class="social">
+                        <li><a href="https://github.com/microclimate-dev2ops"><img src="/dev-ex/landing-pages/dist/images/icon-logo-github.svg" alt="Github link"></a></li>
+                        <!-- li><a href=""><img src="dist/images/icon-logo-fb.svg" alt=""></a></li -->
+                        <li><a href="https://stackoverflow.com/questions/tagged/microclimate"><img src="/dev-ex/landing-pages/dist/images/icon-logo-stackoverflow.svg" alt="Microclimate stackoverflow link"></a></li>
+                        <li><a href="https://ibm-cloud-tech.slack.com/messages/microclimate"><img src="/dev-ex/landing-pages/dist/images/icon-logo-slack.svg" alt="Microclimate slack channel"></a></li>
+                        <!--  li><a href=""><img src="dist/images/icon-logo-twitter.svg" alt=""></a></li -->
+                    </ul>
+                    <div class="logo-slogan">                        
+                        <p><a href="#"><img src="/dev-ex/landing-pages/dist/images/logo-microclimate.svg" alt="Microclimate logo"></a></p>
+                        <p>Fast, incremental, intelligent, end-to-end development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>      
 </footer>
-</div>
 
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="js/scripts.js"></script>
-	<script src="js/anchor.min.js"></script>
-	<script>
-	   anchors.options.placement = 'left';
-       anchors.add('h1');
-       anchors.add('h2');
-    </script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.2/dist/js/foundation.min.js" integrity="sha256-G6jsRyH1fxbsvFIXSCuwYmI1aIDYBa28xscrvmYjJy0= sha384-vtoG68NvPc9azmFJr447vvY8qgdyA4FdaJ5/bqvzIM4eAdZfO0iyRRF8l2AAscYI sha512-43seCcNrHA0BQgrtyajB9sp8yOdv5c8QdYvgjP7zJ7v+dmzAcxYDQ2gupb9aztsNWBq1COIp/3NHYkQs4l/dkg==" crossorigin="anonymous"></script>
+<!-- Compressed JavaScript -->
+<script src="/dev-ex/landing-pages/dist/scripts/main.js"></script>
 
 </body>
-
 </html>

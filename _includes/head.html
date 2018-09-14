@@ -1,52 +1,11 @@
-<script>
-    digitalData = {
-    		customName1: "source",
-    	    customValue1: "Landing page",
-        page: {
-        	customName1: "source",
-    	    customValue1: "Landing page",
-        	subCategory: "data",
-            pageInfo: {
-                pageID: 'Landing page - {% if page.title %}{{ page.title | append: ' - ' | append: site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}',
-                productTitle: 'Microclimate',
-                customName1: "source",
-        	    customValue1: "Landing page",
-                analytics: {
-                    category: 'Offering Interface',
-                    customName1: "source",
-            	    customValue1: "Landing page",
-                }
-            }
-        }
-    };
-</script>
-<script type="text/javascript"> window._analytics = { "segment_key" : "fbo2tbfqOhsEQA27GiOKcMwpj9Y8cbz9", "coremetrics" : false, "optimizely" : false, "googleAddServices": false, "fullStory" : false}; </script>
-<script src="https://console.cdn.s-bluemix.net/analytics/build/bluemix-analytics.min.js"></script>
-
-<head>
-
-<title>{% if page.title %}{{ page.title | append: ' - ' |
-	append: site.title | escape }}{% else %}{{ site.title | escape }}{%
-	endif %}</title>
-<meta name="description"
-	content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-<meta charset="utf-8">
-<meta name="keywords" content="{{ page.keywords | default: site.keywords | strip_html | normalize_whitespace | truncate: 160 | escape }}"/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	crossorigin="anonymous" />
-<link
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-	rel="stylesheet prefetch" />
-
-<link rel='stylesheet prefetch'
-	href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css' />
-
-<link href="css/styles.css" rel="stylesheet prefetch" />
-<link href="css/ibm-type.min.css" rel="stylesheet prefetch" />
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-
-</head>
+    <base url="{{site.baseurl}}"></base>
+	<title>{% if page.title %}{{ page.title | append: ' | ' | append: site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+	<meta name="keywords" content="{{ page.keywords | default: site.keywords | strip_html | normalize_whitespace | truncate: 160 | escape }}"/>
+	<link rel="icon" type="image/png" sizes="16x16" href="{% if site.baseurl | size > 1 %}{{site.baseurl | append: '--@@' | remove: '/--@@' | remove: '--@@' }}{% endif %}/dist/images/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="{% if site.baseurl | size > 1 %}{{site.baseurl | append: '--@@' | remove: '/--@@' | remove: '--@@' }}{% endif %}/dist/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="{% if site.baseurl | size > 1 %}{{site.baseurl | append: '--@@' | remove: '/--@@' | remove: '--@@' }}{% endif %}/dist/images/favicon-48x48.png">
+	<link rel="stylesheet" href="{% if site.baseurl | size > 1 %}{{site.baseurl | append: '--@@' | remove: '/--@@' | remove: '--@@' }}{% endif %}/dist/styles/screen.css">

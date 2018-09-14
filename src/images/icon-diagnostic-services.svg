@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="173px" height="85px" viewBox="0 0 173 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-3-Copy-3" transform="translate(-28.000000, -41.000000)">
+            <g id="Group" transform="translate(31.000000, 41.000000)">
+                <g id="Prediction-Market-Icon" transform="translate(133.636364, 52.727273)" fill="#FFAA64">
+                    <rect id="Rectangle-10" x="0" y="8.71541502" width="5.87412587" height="15.770751"></rect>
+                    <rect id="Rectangle-11" x="2.51748252" y="6.22529644" width="1" height="3.3201581"></rect>
+                    <rect id="Rectangle-11-Copy" x="2.51748252" y="23.6561265" width="1" height="3.3201581"></rect>
+                    <g id="Group-26-Copy-2" transform="translate(29.790210, 10.790514)">
+                        <rect id="Rectangle-10" x="0" y="2.67754686" width="5.87412587" height="15.8421522"></rect>
+                        <rect id="Rectangle-11" x="2.4852071" y="0" width="1" height="3.34693357"></rect>
+                        <rect id="Rectangle-11-Copy" x="2.4852071" y="17.4040546" width="1" height="3.34693357"></rect>
+                    </g>
+                    <rect id="Rectangle-10" x="7.55244755" y="10.3754941" width="5.87412587" height="11.2055336"></rect>
+                    <rect id="Rectangle-10-Copy-2" x="22.2377622" y="9.54545455" width="5.87412587" height="7.05533597"></rect>
+                    <rect id="Rectangle-10-Copy" x="15.1048951" y="2.90513834" width="5.87412587" height="22.826087"></rect>
+                    <rect id="Rectangle-11" x="10.0699301" y="2.49011858" width="1" height="7.88537549"></rect>
+                    <rect id="Rectangle-11-Copy-4" x="24.7552448" y="6.64031621" width="1" height="7.88537549"></rect>
+                    <rect id="Rectangle-11-Copy-3" x="17.2027972" y="0" width="1" height="5.39525692"></rect>
+                    <rect id="Rectangle-11-Copy" x="10.0699301" y="20.3359684" width="1" height="3.3201581"></rect>
+                    <rect id="Rectangle-11-Copy-5" x="24.7552448" y="14.9407115" width="1" height="3.3201581"></rect>
+                    <rect id="Rectangle-11-Copy-2" x="17.2027972" y="24.9011858" width="1" height="5.39525692"></rect>
+                </g>
+                <g id="Group-6">
+                    <polyline id="Path-5" stroke="#00132E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="40.964036 43.2303619 71.0162545 43.2303619 86.5517234 14.6425419 99.2857143 14.6425419"></polyline>
+                    <polyline id="Path-5-Copy" stroke="#00132E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(97.202797, 57.524272) scale(1, -1) translate(-97.202797, -57.524272) " points="68.041958 71.8181818 98.0941766 71.8181818 113.629645 43.2303619 126.363636 43.2303619"></polyline>
+                    <g id="bar" transform="translate(106.228771, 0.000000)" fill="#FFAA64">
+                        <rect id="Rectangle-18" x="0" y="0" width="2.19515023" height="19.8195096"></rect>
+                        <rect id="Rectangle-18-Copy" x="4.39030046" y="1.72343562" width="2.19515023" height="18.096074"></rect>
+                        <rect id="Rectangle-18-Copy-2" x="8.78060092" y="8.32993882" width="2.19515023" height="11.4895708"></rect>
+                        <rect id="Rectangle-18-Copy-3" x="13.1709014" y="2.58515343" width="2.19515023" height="17.2343562"></rect>
+                        <rect id="Rectangle-18-Copy-4" x="17.5612018" y="14.0747242" width="2.19515023" height="5.74478539"></rect>
+                    </g>
+                    <g id="cube" transform="translate(0.000000, 17.431598)" fill="#F0F3F6" stroke="#00132E" stroke-linejoin="round" stroke-width="5.39">
+                        <polygon id="Stroke-1" points="29.1606875 25.8005726 14.5804196 50.9002648 43.7414104 50.9002648 58.3216783 25.8005726 58.3207686 25.7987643 58.3194041 25.8005726"></polygon>
+                        <polygon id="Stroke-5" points="29.1590198 25.1008223 14.5795099 0 0 25.1008223 14.5804196 50.2030009 29.1608392 25.1008223"></polygon>
+                        <polygon id="Stroke-7" points="14.5804196 0 29.1609908 25.1015004 58.3207686 25.1015004 58.3216783 25.1001442 43.7420168 0"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
