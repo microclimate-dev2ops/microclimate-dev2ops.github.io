@@ -95,7 +95,7 @@ When launching applications from the Open Application view in Microclimate, HTTP
 After importing an application, when you click `App Monitor`, the dashboard is not displayed and results in a 'Cannot GET /appmetrics-dash/'' error. This is because the application was not created by Microclimate or previously had AppMetrics integration.
 
 **Workaround**
-Enable AppMetrics for your application. You can enable AppMetrics for [Node.js](https://developer.ibm.com/node/monitoring-post-mortem/application-metrics-nodejs/), [Swift](https://developer.ibm.com/swift/monitoring-diagnostics/application-metrics-for-swift/), and [SpringBoot](https://github.com/RuntimeTools/javametrics#spring-boot) projects.
+Enable AppMetrics for your application. You can enable AppMetrics for [Node.js](https://developer.ibm.com/node/monitoring-post-mortem/application-metrics-node-js/), [Swift](https://developer.ibm.com/swift/monitoring-diagnostics/application-metrics-for-swift/), and [SpringBoot](https://github.com/RuntimeTools/javametrics#spring-boot) projects.
 
 ### Application stays in starting state
 If there is a problem with the application and it fails to start, it might stay in starting state.
