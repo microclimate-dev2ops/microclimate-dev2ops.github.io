@@ -1,7 +1,6 @@
-**/_site
-**/.sass-cache
-**/.jekyll-metadata
-**/.jekyll-cache
-**/.DS_Store
-
-/.project
+package-lock.json
+_site/
+.sass-cache
+.jekyll-metadata
+.project
+node_modules/
