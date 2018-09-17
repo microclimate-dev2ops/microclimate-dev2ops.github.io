@@ -20,7 +20,7 @@ Microclimate is designed to develop cloud native microservices, therefore, each 
 
 ## Eclipse MicroProfile projects
 
-MicroProfile projects are Java applications that are deployed to WebSphere Liberty. They are built by using Maven and the liberty-maven-plugin, and are based on the [websphere-liberty docker image](https://hub.docker.com/_/websphere-liberty/_). MicroProfile projects support rapid iterative development in Microclimate with a few changes to your `pom.xml` file.
+MicroProfile projects are Java applications that are deployed to WebSphere Liberty. They are built by using Maven and the `liberty-maven-plugin` and are based on the [WebSphere Liberty Docker image](https://hub.docker.com/_/websphere-liberty/). MicroProfile projects support rapid iterative development in Microclimate with a few changes to your `pom.xml` file.
 
 #### Instructions
 
