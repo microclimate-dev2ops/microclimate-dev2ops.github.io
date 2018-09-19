@@ -4,7 +4,7 @@ title: Adding development languages
 description: Adding startup templates
 keywords: template, project, projects, develop, development, language, languages, build, custom, layout,
 duration: 1 minute
-permalink: addingstartuptemplates
+permalink: addingdevelopmentlanguages
 type: document
 order: 4
 parent: usingmicroclimate
