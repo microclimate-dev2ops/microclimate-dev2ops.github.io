@@ -8,7 +8,7 @@ auto_ids: true
 permalink: tutorials-and-samples
 type: document
 category: How-tos and Guides
-order: 5
+order: 50
 parent: root
 ---
 

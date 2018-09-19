@@ -5,7 +5,7 @@ description: external link
 keywords: IBM Cloud Private, cloud, installation, install, chart
 extlink: https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md
 type: document
-order: 2
+order: 20
 parent: root
 permalink: linkinstallionicp
 ---

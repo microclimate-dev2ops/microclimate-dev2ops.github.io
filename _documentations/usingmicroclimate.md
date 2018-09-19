@@ -6,7 +6,7 @@ keywords: coding, run, apply, import, create, edit, video, projects, introductio
 duration: 1 minute
 permalink: usingmicroclimate
 type: document
-order: 3
+order: 30
 parent: root
 ---
 
@@ -20,7 +20,7 @@ Introduction to the Microclimate user interface in Microclimate 2018_M17_I.
 
 Having chosen the type of installation that best suits your requirements and having installed Microclimate, you can use Microclimate to [create a new project](creatingaproject) or [import an existing one](importingaproject). Projects appear in the [project list](projectlist). You can [check the application status and build status](checkingstatuses) of your application.
 
-You can then [edit your code](edityourcode) by using the Theia development environment, or you can choose a [development environment of your own](settingownide). Now, when you make a change to your project, Microclimate detects the change and automatically rebuilds and redeploys the updated project for testing. You can also easily [test the performance of your developing project by using JMeter](performancetesting).
+You can then [edit your code](edityourcode) by using the Theia development environment, or you can choose a [development environment of your own](settingownide). Now, when you make a change to your project, Microclimate detects the change and automatically rebuilds and redeploys the updated project for testing. You can also [performance test your project](performancetesting).
 
 If you have many projects on the go at the same time, you can focus resources on those you are currently developing by [disabling development on others](disabledevelopmentonprojects).
 

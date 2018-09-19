@@ -16,7 +16,7 @@ Application Metrics instruments Java, Node.js, and Swift runtimes for performanc
 
 ## Application Metrics types
 
-Application Metrics is available in the language of your project. You can monitor each project that you create.
+Application Metrics is available in Java, Node.js, and Swift. You can monitor the projects that you create in these languages.
 * [Application Metrics for Java](https://developer.ibm.com/javasdk/application-metrics-java/)
 * [Application Metrics for Node.js](https://developer.ibm.com/node/monitoring-post-mortem/application-metrics-node-js/)
 * [Application Metrics for Swift](https://developer.ibm.com/swift/monitoring-diagnostics/application-metrics-for-swift/)
@@ -41,7 +41,7 @@ View these metrics to learn if your application is performing as intended. An ap
 * **Other Requests:** This graph indicates the Socket.IO and other requests that the application processes.
 
 ## Clicking the **Run load** button
-Click the **Run load** button to run load your microservice. This button pings endpoints by using a configurable JMeter script.
+Click the **Run load** button to run load your microservice. This button pings endpoints by using the Microclimate load runner service.
 
 ## Viewing metrics information in the **Summary** tab
 View a summary of the information from the performance metrics graphs that you saw in the **Dashboard** tab.

@@ -6,7 +6,7 @@ keywords: troubleshooting, issues, workaround, IBM Cloud Private, logs, common p
 duration: 1 minute
 permalink: troubleshooting
 type: document
-order: 6
+order: 60
 parent: root
 ---
 When troubleshooting, keep in mind that Microclimate is made up of many components to provide you with a unique development experience. Consider how these components work together as you attempt to isolate the problem by using the information in the following sections.
@@ -203,7 +203,7 @@ If your IBM Cloud Private applications are not working correctly or if you suspe
 
 The following list describes common problems that might affect Microclimate in IBM Cloud Private.
 
-- [Projects fail to automatically build](#projects-fail-to-automatically-build)
+- [Projects fail to deploy in non-default namespace using a private docker-registry](#projects-fail-to-deploy-in-non-default-namespace-using-a-private-docker-registry)
 - [All projects fail to build](#all-projects-fail-to-build)
 - [Imported Microprofile project does not start in IBM Cloud Private](#imported-microprofile-project-does-not-start-in-ibm-cloud-private)
 - [Changing the Theia preference to show all projects might not be persisted](#changing-the-theia-preference-to-show-all-projects-might-not-be-persisted)
@@ -220,11 +220,11 @@ The following list describes common problems that might affect Microclimate in I
 - [Broken pipeline links](#broken-pipeline-links)
 - [Microclimate installation fails and cannot be uninstalled](#microclimate-installation-fails-and-cannot-be-uninstalled)
 
-### Projects fail to automatically build
-After several days of heavy use, inotify might fail to start in Microclimate's microclimate-file-watcher container, with `Couldn’t initialize inotify` messages displayed in the microclimate-file-watcher logs. After this error, file updates to running projects are not detected.
+### Projects fail to deploy in non default namespace using a private docker registry
+If a private-docker registry is used for project deployments in a non-default namespace Microclimate installation, the projects may fail to deploy. This is because most project deployments on Microclimate use the default service-account, even if Microclimate is deployed to a separate service account, meaning the image can't be pulled.
 
 **Workaround:**
-This is a known issue with inotify on Kubernetes, see [inotify resources exhausted:possible leak in cAdvisor](https://github.com/kubernetes/kubernetes/issues/10421). You can click the Build button to kick off a manual build. Alternatively, you can reboot the IBM Cloud Private cluster. After the reboot, inotify works properly, and automatic builds work again.
+To resolve this, simply patch the default service account in the non-default namespace with any required secrets, prior to installing Microclimate. This will allow Helm to properly pull the image.
 
 ### All projects fail to build
 If there are several projects in Microclimate's workspace, Microclimate might fail to build them if the File-Watcher container is restarted. This is due to the default resource constraints specified in the Microclimate helm chart.

@@ -6,7 +6,7 @@ keywords: uninstall, remove, delete, macos, windows, linux, IBM Cloud Private
 duration: 1 minute
 permalink: uninstall
 type: document
-order: 8
+order: 80
 parent: root
 ---
 

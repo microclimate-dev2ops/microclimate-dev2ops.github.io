@@ -7,14 +7,11 @@ duration: 1 minute
 auto_ids: true
 permalink: installlocally
 type: document
-order: 2
+order: 20
 parent: root
 ---
 
 ## Before you start
-
-`Note`: Before you install Microclimate, decide whether you want to deploy to IBM Cloud Kubernetes Service (IKS) and then take the necessary steps to enable deployment. For more information, see the **Prerequisites** in [Deploying to IBM Cloud Kubernetes Service](deployingiks).
-
 You can install Microclimate locally or into IBM Cloud Private. If you want to develop applications on your computer, you can install Microclimate locally. If you want to take advantage of IBM Cloud Private, which provides a common and consistent platform for you to rapidly innovate while retaining the flexibility to use public clouds and services, you can [install Microclimate in IBM Cloud Private](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md).
 
 ## Download the Microclimate zip file.
@@ -54,7 +51,7 @@ cd ..
 
 ### Prerequisites
 * Supported Windows versions are Windows 10 and Windows Server 2016.
-* [Git](https://git-scm.com/) 
+* [Git](https://git-scm.com/)
 * Install [Docker for Windows](https://www.docker.com/docker-windows).
 * Enable your local disk drive for sharing in Docker. Open the **Docker Settings** window, click the **Shared Drives** tab, and select the drive on which you are installing Microclimate.
 * Use the default Linux containers setting. From the **Docker for Windows** menu, you can toggle between the Linux or Windows daemon. If your settings have been changed from the default, select **Switch to Linux containers...** to use Linux containers. Microclimate runs only on Linux containers.

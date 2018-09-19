@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Adding startup templates
+title: Adding development languages
 description: Adding startup templates
 keywords: template, project, projects, develop, development, language, languages, build, custom, layout,
 duration: 1 minute
