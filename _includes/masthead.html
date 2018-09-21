@@ -1,4 +1,4 @@
-<div class="masthead">
+<div role="navigation" aria-label="masthead" class="masthead">
     <div class="grid-x">
         <div class="cell small-8 medium-4 large-5 xxlarge-4 small-order-2 medium-order-1">
             <a href="{{site.baseurl}}/"><img src="dist/images/logo-microclimate.svg" alt="Microclimate logo" class="logo"></a>
@@ -8,7 +8,7 @@
                 <button class="menu-icon" type="button" data-toggle="toggle-main-nav"></button>
             </div>
             <div class="main-nav-wrapper" id="toggle-main-nav">
-                <nav class="main-nav">
+                <nav aria-label="main-nav" class="main-nav">
                     <!-- future nav -->
                     <!-- <ul class="vertical medium-horizontal menu">
                         <li><a href="{{ site.url }}/about" {% if page.permalink == 'about' %} class="current-page" {% endif %}>About</a></li>

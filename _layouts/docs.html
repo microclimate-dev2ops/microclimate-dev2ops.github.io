@@ -5,8 +5,8 @@
 <body class="doc-template {{ page.permalink }}">
 <div class="grid-x">
     <div class="sidebar cell small-12 medium-4" data-equalizer>
-        <aside data-equalizer-watch>
-            <nav>
+        <aside aria-label="sidebar-asid" data-equalizer-watch>
+            <nav aria-label="sidebar" >
             <ul>
 {% assign rootCollection = site.documentations | group_by: 'parent' %}
 {% for rootItems in rootCollection %}
@@ -77,13 +77,13 @@
     <!-- Html Elements for Search -->
     <div class="grid-x">
       <div class="cell medium-6 large-8"></div>
-      <div id="search-container" class="cell medium-6 large-4">
-        <input type="text" id="search-input" placeholder="search keyword...">
+      <div role="search" id="search-container" class="cell medium-6 large-4">
+        <input type="text" aria-label="search" id="search-input" placeholder="search keyword...">
         <ul id="results-container"></ul>
       </div>
     </div>
     
-    <div>
+    <div role="main">
         {{ content }}
     </div>
     </div>

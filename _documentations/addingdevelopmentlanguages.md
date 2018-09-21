@@ -10,7 +10,7 @@ order: 4
 parent: usingmicroclimate
 ---
 
-Beginning with Microclimate Version 18.09, you can access your own code startup template as a selectable project type directly from within the user interface. You can code and develop in languages of your choice as well as build projects based on custom project layouts that are suited to your environment.
+Beginning with Microclimate Version 18.09, you can add more development languages in addition to Java, Node.js, and Swift by importing language startup templates. These templates appear as project types directly from within the Microclimate interface. You can code and develop in languages of your choice as well as build projects based on custom project layouts that are suited to your environment.
 
 ## Requirements
 - Your code exists in a GitHub repository.

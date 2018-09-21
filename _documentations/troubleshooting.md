@@ -54,7 +54,6 @@ The following list describes common problems that might affect Microclimate.
 - [Node.js generator fails to start](#nodejs-generator-fails-to-start)
 - [Node.js app with addons selected fails to start](#nodejs-app-with-addons-selected-fails-to-start)
 - [Imported project never builds or starts](#imported-project-never-builds-or-starts)
-- [Project does not build if you override the project type to Docker during the import](#project-does-not-build-if-you-override-the-project-type-to-docker-during-the-import)
 - [High CPU usage](#high-cpu-usage)
 - [Code changes not updated in Git](#code-changes-not-updated-in-git)
 - [Node.js project is not built intermittently](#nodejs-project-is-not-built-intermittently)
@@ -146,11 +145,6 @@ No containerId for running project <project name>
 ```
 
 For more information about valid Microclimate projects, see [Imported projects and supported project types](importedprojects).
-
-### Project does not build if you override the project type to Docker during the import
-The project might not build if you import a Node.js project and choose to override the project type to `docker` during the import.
-
-**Workaround:** Allow Microclimate to select the project type.
 
 ### High CPU usage
 When you are using Microclimate, your CPU usage might be higher than usual for prolonged periods. To see why this might be happening, issue the following command:

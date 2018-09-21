@@ -44,8 +44,8 @@
 
 <div class="grid-x">
     <div class="sidebar cell large-3" data-equalizer>
-      <aside data-equalizer-watch>
-        <nav>
+      <aside aria-label="aside" data-equalizer-watch>
+        <nav aria-label="sidebar">
             <h4>News Archive</h4>
             <ul>
               {% assign allnews = site.news %}
@@ -56,7 +56,7 @@
             </ul>
         </nav>
       </aside>
-      <div class="mc-promo">
+      <div role="region" aria-label="promo" class="mc-promo">
         <h2>Give it a shot!</h2>
         <p>Don't wait for everyone else to be harnessing the power of microservices. <a href="installlocally">Install Microclimate</a> today and see what all the fuss is about!</p>
         <a href="installlocally#doc" class="button">Try It Now!</a>
@@ -76,7 +76,7 @@
           </div>
         </div>
       </div>
-      <div id="newscontent">
+      <div role="main" id="newscontent">
         {{ content }}
       </div>
     </div>

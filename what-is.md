@@ -11,7 +11,7 @@ permalink: about
 
 Microclimate is a Dockerized, end-to-end development environment that enables agile development and delivery of microservices, hybrid, and Docker containerized apps in Java, Node.js, and Swift. Microclimate offers services and tools to help you create and modernize applications in one seamless experience. You can use Microclimate for every step of the process, from writing and testing code locally to building and deployment with a pipeline.
 
-Teams are increasingly turning to continuous delivery, microservices, DevOps, and containers as the foundation for application architectures to enable faster innovation and business agility. As microservices architecture gain traction for developing and delivering the modern, lightweight and composable workloads across public, private, and hybrid application environments, enterprises are increasingly adopting new methods to achieve agility and stability with microservices.
+Teams are increasingly turning to continuous delivery, microservices, DevOps, and containers as the foundation for application architectures to enable faster innovation and business agility. To achieve agility and stability, use a microservices architecture to develop and deliver modern, lightweight, and composable workloads across public, private, and hybrid application environments.
 
 Microclimate users benefit from the following microservices capabilities:
 - Decomposing large applications into small pieces
