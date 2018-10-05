@@ -11,6 +11,8 @@ category: How-tos and Guides
 order: 2
 ---
 
+## Getting started
+
 Quickly build and deploy microservices.
 
 You can install Microclimate locally or into IBM Cloud Private. If you want to develop applications on your computer, you can install Microclimate locally. If you want to take advantage of IBM Cloud Private, which provides a common and consistent platform for you to rapidly innovate while retaining the flexibility to use public clouds and services, you can install Microclimate in IBM Cloud Private.

@@ -10,6 +10,8 @@ order: 70
 parent: root
 ---
 
+## Updating Microclimate
+
 ## Updating to a new version of Microclimate
 
 **Note:** If you installed IBM Cloud Private 3.1, please update to the latest image of Microclimate Version 18.09. Previous versions of Microclimate aren't compatible with IBM Cloud Private 3.1.

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Imported projects and supported project types
+title: Importing projects and supported project types
 description: Documents
 keywords: importing, directory, archive, configuring, cloud, microservices, application, Eclipse, MicroProfile, Java, Spring, Node.js, Swift, Maven, Dockerfile, GitHub, container, Liberty, Helm, Dockerfile-lang
 duration: 1 minute
@@ -10,13 +10,20 @@ parent: importingaproject
 order: 0
 ---
 
-## Importing projects in Microclimate
+## Importing projects and supported project types
 
 Microclimate projects can be imported from GitHub, a local directory, or an archive. Modifications are usually required to import and deploy projects that have never been run in Microclimate before. The import process creates required files if they do not exist. This guide covers the basics of configuring a project to run in Microclimate.
 
 ## What can I import?
 
 Microclimate is designed to develop cloud native microservices, therefore, each project must be self-sufficient and not dependent on other projects to build. The requirements to import projects for each of the supported application types are outlined in the following sections.
+
+* [Eclipse MicroProfile projects](#eclipse-microprofile-projects)
+* [Java Spring projects](#java-spring-projects)
+* [Node.js projects](#nodejs-projects)
+* [Swift projects](#swift-projects)
+* [Generic Docker projects](#generic-docker-projects)
+* [Importing in IBM Cloud Private](#importing-in-IBM-Cloud-Private)
 
 ## Eclipse MicroProfile projects
 
@@ -112,11 +119,15 @@ Note: Due to a known issue the server needs to be configured to use port 9080 in
 
 The following files are generated during the import process. If your project requires additional configuration files or instructions for build, you might need to modify them.
 
+**Note:** Only Microprofile projects enable the use of `Dockerfile-lang` and `Dockerfile-build` files.
+
 **Dockerfile-lang**
 
-The `Dockerfile-lang` file is an optional project file that contains instructions that are used to set up any plumbing required for your application. This can include copying application resources from source. For example, if your application requires configuration files, you can use a `COPY` instruction to copy those files into your application's Docker container.
+The `Dockerfile-lang` file is an optional project file and a development version of the Dockerfile. It contains any Docker instructions that are required only for the development image, including copying application resources from source. For example, if your application requires configuration files, you can use a `COPY` instruction to copy those files into your application's Docker container.
 
-Maven is included in a generated `Dockerfile-build` file so it is not necessary to include instructions to set up Maven download in `Dockerfile-lang`.
+This file is used for building only the projects in the Microclimate workspace. The pipeline build is not affected. The pipeline build uses only the `Dockerfile` file, which is a required project file. If `Dockerfile-lang` doesn't exist, the Dockerfile is used for the development image instead.
+
+Maven is included in a generated `Dockerfile-build` file, so you do not need to include instructions to set up a Maven download in `Dockerfile-lang`.
 
 **Dockerfile-build**
 
@@ -166,6 +177,10 @@ Requirements:
 For example, you should be able to build the project by using the command
 `swift build --configuration release`.
 - A `Dockerfile` file is generated. It runs the application that was built by using `Dockerfile-tools`.
+
+## Generic Docker projects
+
+If you have a Dockerized application that doesn't fit an existing template, you can still import the project into Microclimate by selecting the **Docker** import option. For the application state detection to work, the Dockerfile needs to include an `EXPOSE` instruction to point to the port that is used to determine whether the project is running.
 
 ## Importing in IBM Cloud Private
 

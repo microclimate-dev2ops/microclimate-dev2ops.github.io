@@ -10,6 +10,8 @@ order: 3
 parent: usingapipeline
 ---
 
+## Creating a personal access token in GitLab
+
 To create a personal access token for Jenkins to access the microservice projects in GitLab:
 
    1. In a web browser, log in to GitLab with the user account that Jenkins needs to access GitLab. Typically, this is a system or build identity, but can be your personal account for testing purposes.

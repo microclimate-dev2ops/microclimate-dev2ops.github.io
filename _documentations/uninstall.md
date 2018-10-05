@@ -10,6 +10,8 @@ order: 80
 parent: root
 ---
 
+## Uninstalling Microclimate
+
 To uninstall Microclimate locally, see:
 * [Uninstalling on Linux or MacOS](uninstalllinuxmac)
 * [Uninstalling on Windows](uninstallwindows)

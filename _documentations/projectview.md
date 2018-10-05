@@ -1,12 +1,14 @@
 ---
 layout: docs
-title: Managing projects
+title: Using the project view
 description: Managing projects
 keywords: project, view, list, using, coding, run, apply, import, create, edit, log, monitor
 duration: 1 minute
 permalink: projectview
 type: document
 ---
+
+## Using the project view
 
 ## Project list
 

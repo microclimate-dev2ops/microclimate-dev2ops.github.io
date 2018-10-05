@@ -10,6 +10,8 @@ category: How-tos and Guides
 parent: Uninstalling Microclimate
 ---
 
+## Uninstalling Microclimate on Windows
+
 To uninstall Microclimate on Windows:
 
 1. Stop Microclimate. This stops the Docker containers:

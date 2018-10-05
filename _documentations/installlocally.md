@@ -11,12 +11,11 @@ order: 20
 parent: root
 ---
 
-## Before you start
-You can install Microclimate locally or into IBM Cloud Private. If you want to develop applications on your computer, you can install Microclimate locally. If you want to take advantage of IBM Cloud Private, which provides a common and consistent platform for you to rapidly innovate while retaining the flexibility to use public clouds and services, you can [install Microclimate in IBM Cloud Private](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md).
+## Installing Microclimate locally
 
 ## Download the Microclimate zip file.
 
-<a href="{{ site.downloadlink }}" class="download-link trackdownload" id="zipDownload">Download Microclimate 18.09</a>
+<a href="{{ site.downloadlink }}" class="download-link trackdownload" id="zipDownload">Download Microclimate 2018_M19_I</a>
 
 ## Installing and starting Microclimate locally on your machine
 

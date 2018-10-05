@@ -10,6 +10,8 @@ parent: linkinstallionicp
 order: 2
 ---
 
+## Support for multiple users 
+
 Microclimate provides support for multiple users in a single Microclimate deployment in IBM Cloud Private. User management is provided by the access management facilities in IBM Cloud Private, for more information, see [Managing access to your platform](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0.3/user_management/admin.html). IBM Cloud Private in turn supports connection to a wide range of directory services using Lightweight Directory Access Protocol (LDAP) to support user authentication. This topic describes how support for multiple users in Microclimate works, and provides information on how to configure the resources required to support multiple users in IBM Cloud Private.
 
 When Microclimate is installed in IBM Cloud Private, Kubernetes deployments are created for three Microclimate components: Portal, Devops, and Jenkins. Each of these three deployments starts a single pod and container in IBM Cloud Private. Microclimate users connect to the Microclimate portal by way of the Kubernetes ingress URL that is created during the installation. When you start a Microclimate session, you are presented with the IBM Cloud Private login panel where you are prompted for your user ID and password. On successful login, you are redirected to the initial Microclimate screen.

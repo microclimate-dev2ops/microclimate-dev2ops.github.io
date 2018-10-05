@@ -10,6 +10,8 @@ order: 1
 parent: usingapipeline
 ---
 
+## Configuring webhooks
+
 You can configure webhooks on your Git repository so that your pipeline is automatically triggered based on certain Git repository events. For example, on pushes to the branch or, on the creation of pull requests. You do not need the webhook for the initial build, and branch indexing occurs every 15 minutes regardless of the webhook being present.
 
 ### GitLab

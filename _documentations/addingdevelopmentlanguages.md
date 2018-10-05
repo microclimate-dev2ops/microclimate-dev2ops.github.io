@@ -10,6 +10,8 @@ order: 4
 parent: usingmicroclimate
 ---
 
+## Adding development languages
+
 Beginning with Microclimate Version 18.09, you can add more development languages in addition to Java, Node.js, and Swift by importing language startup templates. These templates appear as project types directly from within the Microclimate interface. You can code and develop in languages of your choice as well as build projects based on custom project layouts that are suited to your environment.
 
 ## Requirements
@@ -22,7 +24,6 @@ To create your own template, create a `<name>.yaml` file with the details of the
 Include the following code in the `.yaml` file:
 
 ```
-yaml
 extensionId: <string identifier>
 buildType: docker
 language: <For example, Go>
@@ -41,7 +42,6 @@ template:
 
 For example, you can create the following `templateGoExample.yaml` file and store it as `microclimate-workspace/.extensions/templateGoExample/templateGoExample.yaml`:
 ```
-yaml
 extensionId: templateGoExample
 buildType: docker
 language: go

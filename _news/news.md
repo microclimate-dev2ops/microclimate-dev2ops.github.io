@@ -18,6 +18,7 @@ If you've been following Microclimate thus far, you've probably noticed that the
 The following list showcases updates for September:
 - Microclimate supports IBM Cloud Private 3.1. For more information about staying up to date, see [Important](#important). 
 - You can [add more development languages to Microclimate](addingdevelopmentlanguages). After you add the languages, they appear with Java, Node.js, and Swift when you create a new project.
+- The [Acme Air sample application](acmeair) runs in Microclimate with the Java Liberty runtime.
 - Installation into a non-default namespace for Microclimate on IBM Cloud Private is simpler. The `Role` and `ClusterRole` bindings are now created automatically.
 - You can add additional `imagePullSecrets` with the IBM Cloud Private catalog.
 - An improved iterative development model for Spring projects is added, and code updates are faster.
@@ -31,7 +32,6 @@ The following list showcases updates for September:
 - Deleting a deployment also deletes the deployed application.
 - The **Validate** page is added in the **Overview** page, and you can see validation during project development.
 - IBM Cloud Private installations of Microclimate now support logging out.
-- The [Acme Air sample application](acmeair) runs in Microclimate with the Java Liberty runtime.
 
 The Microclimate team hopes you install and enjoy the latest update. If you would like to provide feedback, visit the [Community](community) page and share your thoughts and ideas!
 

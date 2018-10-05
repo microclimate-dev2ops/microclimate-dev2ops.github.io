@@ -10,6 +10,8 @@ order: 8
 parent: usingmicroclimate
 ---
 
+## Performance testing your project
+
 When you generate a project, Microclimate generates a basic test plan. You can edit this test plan or use your own. You can then go to the **App monitor** tab to see the application traffic.
 
 Follow the steps to edit and test your code:

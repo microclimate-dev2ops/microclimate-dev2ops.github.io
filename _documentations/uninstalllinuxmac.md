@@ -10,6 +10,8 @@ category: How-tos and Guides
 parent: Uninstalling Microclimate
 ---
 
+## Uninstalling Microclimate on Linux or Mac/OS
+
 To uninstall Microclimate on Linux or MacOS:
 
 1. Stop Microclimate. This stops the Docker containers:

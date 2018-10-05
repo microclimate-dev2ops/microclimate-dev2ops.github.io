@@ -10,6 +10,8 @@ order: 1
 parent: installlocally
 ---
 
+## Installing the Microclimate CLI
+
 Installing the Microclimate Command Line Interface (CLI) enables you to run Microclimate from anywhere on your computer. These instructions are not valid on Windows.
 
 Your Microclimate projects are created in your home directory, normally `$HOME/microclimate-workspace`.

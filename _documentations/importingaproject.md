@@ -10,6 +10,8 @@ order: 2
 parent: usingmicroclimate
 ---
 
+## Importing a project 
+
 To import a project into your Microclimate workspace:
 1. Click the **Import project** button on the Welcome page. If you have already created or imported a project, in the Microclimate header, click **Projects**, and then click **Import project**.
 2. Select the location from which you want to import your project. You can choose from a remote Git repository, a local project folder, or a project archive on your machine. If you use a remote Git repository, paste the HTTPS clone of the Git link into the text field.

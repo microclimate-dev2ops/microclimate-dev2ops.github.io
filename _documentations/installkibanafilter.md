@@ -10,6 +10,8 @@ parent: linkinstallionicp
 order: 3
 ---
 
+## Installing Kibana and filtering logs in IBM Cloud Private
+
 To see what's going on with your IBM Cloud Private applications, view the log files.
 
 The following procedure shows you how to install Kibana and Elasticsearch to view and filter the Microclimate log files; your choice of logging infrastructure might be different.

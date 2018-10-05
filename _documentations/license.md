@@ -8,6 +8,7 @@ permalink: license
 # type: document
 ---
 
+## Microclimate Licenses
 
 ## Microclimate 18.09 Licenses
 

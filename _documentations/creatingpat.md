@@ -10,6 +10,8 @@ parent: usingapipeline
 order: 2
 ---
 
+## Creating a personal access token in GitHub
+
 To create a personal access token for Jenkins to access the microservice projects in GitHub:
 
    1. In a web browser, log in to GitHub or GitHub Enterprise with the user account that Jenkins needs to access GitHub. Typically, this is a system or build identity, but can be your personal account for testing purposes.

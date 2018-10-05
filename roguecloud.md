@@ -37,3 +37,8 @@ Ready for an adventure? Here are some links to get you started!
    * [Microclimate](https://github.com/microclimate-dev2ops/rogue-cloud/blob/master/docs/Developing-Microclimate.md)  
    * [A text editor like Visual Studio Code, Atom, and so on](https://github.com/microclimate-dev2ops/rogue-cloud/blob/master/docs/Developing-Text-Editor.md)  
    * [Eclipse and IBM Liberty Developer Tools](https://github.com/microclimate-dev2ops/rogue-cloud/blob/master/docs/Developing-LibertyDevTools.md)
+
+
+
+##### Note
+The Rogue Cloud Client is currently not supported on Windows for 18.09 Microclimate.

@@ -10,6 +10,8 @@ order: 9
 parent: usingmicroclimate
 ---
 
+## Committing a new project to GitHub
+
 To commit a project created in Microclimate to GitHub:
 
 1. [Create a personal access token for GitHub](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/).

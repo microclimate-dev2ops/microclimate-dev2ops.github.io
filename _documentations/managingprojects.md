@@ -10,6 +10,8 @@ order: 3
 parent: usingmicroclimate
 ---
 
+## Managing projects
+
 The project list page contains a listing of all the projects in your Microclimate workspace, and you can use this page to determine the status of your applications.
 
 To view the project list page, in the Microclimate header, click **Projects**. You must have first created or imported a project to see this page.
