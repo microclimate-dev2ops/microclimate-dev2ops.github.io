@@ -57,6 +57,12 @@ $(document).ready(function(){
         trackVideoPlay(file);   
     });
 
+    // track intro video play
+    $("video").on('play',function(){
+        var file =  $(this).attr("src");
+        trackVideoPlay(file);   
+    });
+    
     $(".showVideo").on("click", function(e) {
         e.preventDefault();
         var file = $(this).data("video");
