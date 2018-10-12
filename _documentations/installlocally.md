@@ -15,8 +15,7 @@ parent: root
 
 ## Download the Microclimate zip file.
 
-<a href="{{ site.downloadlink }}" class="download-link trackdownload" id="zipDownload">Download Microclimate 18.09</a>
-
+<a href="{{ site.downloadlink }}" class="download-link trackdownload" id="zipDownload">Download Microclimate 18.10</a>
 
 ## Installing and starting Microclimate locally on your machine
 
