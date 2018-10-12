@@ -563,4 +563,4 @@ Your Docker container might crash unexpectedly.
 # If all else fails
 If all else fails, you've tried fixing your Microclimate installation and have not been successful, it might be that one or more of the components in your installation is out of date, corrupted, or has stopped working for some unknown reason.
 
-**Workaround** Reach out to us on Slack to have a chat or to raise a bug, we'd love to hear from you. For more information, see our [Community](community) page. Another option is to reinstall Microclimate, for which see [Updating Microclimate](./update).
+**Workaround** Reach out to us on Slack to have a chat or to raise a bug, we'd love to hear from you. For more information, see our [Community](community) page. Another option is to reinstall Microclimate, for which see [Updating Microclimate](./updating).
