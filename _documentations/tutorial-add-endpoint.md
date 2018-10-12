@@ -49,7 +49,7 @@ require('./list')(app);
 
 You're now ready to test the application. You can test within Microclimate directly because it builds and runs the application automatically by default when the project is updated.
 
-Click `Open App` to open the application and show the default page when an application is generated in Microclimate. To view the endpoint you just added, add `/list` onto the end of the Application URL at the top of the page so that it looks something like `http://localhost:<your application port>/list`.
+Click `Open App` to open the application and show the default page when an application is generated in Microclimate. To view the endpoint you just added, add `/list` onto the end of the Application URL so that it looks something like `http://localhost:<your application port>/list`.
 
 You now see the response from the application:
 

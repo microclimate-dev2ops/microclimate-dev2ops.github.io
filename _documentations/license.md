@@ -8,7 +8,11 @@ permalink: license
 # type: document
 ---
 
-## Microclimate Licenses
+## Microclimate 18.10 Licenses
+
+* [IBM License.](./licenses-18_10-ibmlicense)
+
+* [Non IBM Licenses.](./licenses-18_10-nonibmlicense)
 
 ## Microclimate 18.09 Licenses
 

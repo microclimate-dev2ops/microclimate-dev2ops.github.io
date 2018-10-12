@@ -3,7 +3,7 @@ layout: document
 title: Acme Air
 description: Acme Air
 keywords: Java, Liberty, flights, data, services, cloud, application, environment performance, sample
-duration: 1 minute
+duration: 2 minutes
 permalink: acmeair
 ---  
 

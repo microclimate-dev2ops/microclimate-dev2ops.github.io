@@ -19,7 +19,7 @@ By default, Microclimate detects when you make a change and starts a build autom
 
 In these cases, start a build manually when you have made a change or a set of changes:
 
-1. Right click on your Microclimate server in the **Servers** view and select **Start Build**.
+1. Right-click on your Microclimate server in the **Servers** view and select **Start Build**.
 2. Wait for the server to return to **Started** or **Debugging** state in the **Servers** view and then test your changes.
 
 [Next: Unlinking from a Microclimate project](mdteclipseunlinkproject)
