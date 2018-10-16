@@ -18,7 +18,7 @@ parent: root
   <source src="./videos/MicroclimateUI_2018_M17_I.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
-Introduction to the Microclimate user interface in Microclimate 2018_M17_I.
+Introduction to the Microclimate user interface in Microclimate Version 18.08.
 
 Having chosen the type of installation that best suits your requirements and having installed Microclimate, you can use Microclimate to [create a new project](creatingaproject) or [import an existing one](importingaproject). Projects appear in the [project list](projectlist). You can [check the application status and build status](checkingstatuses) of your application.
 
