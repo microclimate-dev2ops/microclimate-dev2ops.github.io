@@ -23,7 +23,7 @@ gulp.task('bs-reload', function () {
 });
 
 gulp.task('images', function(){
-  gulp.src('src/images/**/*')
+  gulp.src(['src/images/**/*','src/images/hero-learn.svg'])
     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
     .pipe(gulp.dest('dist/images/'));
 });
