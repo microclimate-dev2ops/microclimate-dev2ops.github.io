@@ -56,7 +56,6 @@ The following list describes common problems that might affect Microclimate.
 - [Node.js app with addons selected fails to start](#nodejs-app-with-addons-selected-fails-to-start)
 - [Imported project never builds or starts](#imported-project-never-builds-or-starts)
 - [Code changes not updated in Git](#code-changes-not-updated-in-git)
-- [Node.js project is not built intermittently](#nodejs-project-is-not-built-intermittently)
 - [Theia editor might not work correctly in Microsoft Edge](#theia-editor-might-not-work-correctly-in-microsoft-edge)
 - [Microprofile project gets updated twice upon file change](#microprofile-project-gets-updated-twice-upon-file-change)
 

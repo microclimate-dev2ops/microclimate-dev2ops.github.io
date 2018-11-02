@@ -23,7 +23,7 @@ Microclimate is designed to develop cloud native microservices, therefore, each 
 * [Node.js projects](#nodejs-projects)
 * [Swift projects](#swift-projects)
 * [Generic Docker projects](#generic-docker-projects)
-* [Importing in IBM Cloud Private](#importing-in-IBM-Cloud-Private)
+* [Importing in IBM Cloud Private](#importing-in-ibm-cloud-private)
 
 ## Eclipse MicroProfile projects
 
