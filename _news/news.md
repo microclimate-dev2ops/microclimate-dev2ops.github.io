@@ -5,18 +5,18 @@ description: Latest news
 keywords: GA, release, version, history
 duration: 20 seconds
 permalink: news
-order: 9
-linkname: October 2018
+order: 10
+linkname: November 2018
 ---
 
-## October updates
+## November updates
+## Microclimate 18.11
 
-*Friday 12 October 2018*
+*Friday 16 November 2018*
 
-The following list features updates for October:
-- Use [Microclimate Developer Tools for Eclipse](mdteclipseoverview) to work on your Microprofile/Java EE applications from within Eclipse on local installations of Microclimate. Microclimate Developer Tools also includes Java debugging.
-- Java Reactive Platform support is now available with the [Lagom framework](https://www.lagomframework.com/). Lagom is an open source framework that helps you create microservices. It has reactive qualities at its core, being based on the Play framework and the Akka toolkit. It helps you build a responsive user experience, with resilience to failures, and elasticity under load. Lagom, Play, and Akka are all part of the [Reactive Platform](https://developer.ibm.com/technologies/reactive-systems/?cm_mmc=dw-_-cloud-_-lightbend-_-RS2018) from Lightbend and IBM. For more information about creating a Java project based on the Lagom framework, see [Creating a new project](creatingaproject).
-- Build queue rank is now included for projects.
-- Docker project validation now checks for the existence of Dockerfiles.
-- Installation from the IBM Cloud Private catalog has simplified configuration values.
-- Theia is updated to Version 0.3.14.
+The following list features updates for the Microclimate 18.11 release:
+- Support for IBM Cloud Private 3.1.1.
+- Liberty delivered default non-root user support. Microclimate supports builds with non-root users, and the Liberty Java template generates a non-root image sample.
+- Support for debugging Spring applications using the Microclimate Developer Tools for Eclipse.
+- Improved build status for Spring applications.
+- When installing in IBM Cloud Private, Microclimate now checks the details of its installation and gives a message and a link to the documentation if it's unable to start.

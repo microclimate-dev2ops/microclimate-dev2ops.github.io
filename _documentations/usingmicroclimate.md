@@ -12,6 +12,8 @@ parent: root
 
 ## Using Microclimate
 
+After you install Microclimate and use it for the first time, accept the [license agreement](license). You can then begin to work with projects.
+
 ## Working with projects
 
 <video width="78%" controls class="center-block embeded-video">
@@ -20,7 +22,7 @@ Your browser does not support the video tag.
 </video>
 Introduction to the Microclimate user interface in Microclimate Version 18.08.
 
-Having chosen the type of installation that best suits your requirements and having installed Microclimate, you can use Microclimate to [create a new project](creatingaproject) or [import an existing one](importingaproject). Projects appear in the [project list](projectlist). You can [check the application status and build status](checkingstatuses) of your application.
+You can use Microclimate to [create a new project](creatingaproject) or [import an existing one](importingaproject). Projects appear in the [project list](projectview). You can [check the application status and build status](checkingstatuses) of your application.
 
 You can then [edit your code](edityourcode) by using the Theia development environment, or you can choose a [development environment of your own](settingownide). Now, when you make a change to your project, Microclimate detects the change and automatically rebuilds and redeploys the updated project for testing. You can also [performance test your project](performancetesting).
 
@@ -31,4 +33,7 @@ If you have many projects on the go at the same time, you can focus resources on
 Finally, when your project is ready to deploy, you can use Microclimate to [create a pipeline](usingapipeline). Having created a pipeline, you can then deploy to IBM Cloud Private, or you can [configure Microclimate to deploy applications to the IBM Cloud Kubernetes Service](configiks).
 
 ## What next
-After you have installed Microclimate and accepted the [license agreement](license), you can then follow a [tutorial](tutorials-and-samples), [deploy a sample](tutorials-and-samples), [create a new project](creatingaproject), or [import a project](importingaproject).
+Develop a project of your own, or explore Microclimate with [tutorials and samples](tutorials-and-samples).
+
+## Need help?
+If you encounter problems with using Microclimate, check the [Troubleshooting page](troubleshooting#using-microclimate).

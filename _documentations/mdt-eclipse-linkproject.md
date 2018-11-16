@@ -15,10 +15,11 @@ parent: mdteclipseoverview
 Linking a project in Eclipse to a Microclimate project enables you to develop your project from within Eclipse.  Only Microprofile/Java EE projects can be linked.
 
 1. In Microclimate, make sure your project is created and *Running*.
-2. Import your Microclimate project into eclipse as an existing Maven project:
-    - From the **File** menu click **Import** > **Maven** > **Existing Maven Projects** and then click **Next**
-    - For **Root Directory** enter your Microclimate workspace location and click **Enter**
-    - Select the Microprofile/Java EE project or projects that you want to import and click **Finish**
+2. Import your Microclimate project into eclipse:
+    - From the **File** menu click **Import** > **General** > **Projects from Folder or Archive** and then click **Next**
+    - Uncheck **Search for nested projects**
+    - For **Import source** enter your Microclimate project location
+    - Make sure your project is checked in the table and click **Finish**
 3. Link your imported project to its corresponding Microclimate project:
     - Right-click on the imported project in the **Explorer** view and select **Microclimate** > **Link to Microclimate Project**
     - If the **Create a Microclimate Connection** page is opened (it is not opened if a connection already exists):

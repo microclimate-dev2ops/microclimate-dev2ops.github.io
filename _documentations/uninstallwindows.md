@@ -22,8 +22,9 @@ mcdev stop
 ```bash
 mcdev delete
 ```
-3. Delete the Microclimate directory and its subdirectories:
+3. If you plan to [reinstall Microclimate](installlocally) after you uninstall it, such as to update to a newer version, copy your `microclimate-workspace` directory to avoid losing your existing projects. When you're ready to install again, paste the copied directory into the new installation directory before you run the `cli\install.ps1` command for the new installation.
+4. Delete the Microclimate directory and its subdirectories:
 ```bash
 rmdir  <microclimate directory> /S
 ```
-4. Delete the .idc directory from the microclimate-workspace directory.
+5. Delete the `.idc` directory from the `microclimate-workspace` directory.

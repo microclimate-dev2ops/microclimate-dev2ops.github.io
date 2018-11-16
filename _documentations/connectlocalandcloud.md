@@ -7,7 +7,7 @@ duration: 1 minute
 auto_ids: true
 permalink: connectlocalandcloud
 category: How-tos and Guides
-order: 13
+order: 12
 parent: usingmicroclimate
 ---
 
@@ -33,3 +33,6 @@ Install both the local and IBM Cloud Private versions of Microclimate.
 2. Click the **Remote connection** icon. ![Image of the remote connection icon](dist/images/icon-remote-connection.png)
 3. Enter the URL of the Microclimate installation on IBM Cloud Private. Enter your IBM Cloud Private user ID and password.
 4. Click the **Connect** button. Your local Microclimate installation can now access pipelines from the IBM Cloud Private installation.
+
+## Need help?
+If you encounter problems with connecting Microclimate installation options, check the [Troubleshooting page](troubleshooting#connecting-microclimate-installation-options).

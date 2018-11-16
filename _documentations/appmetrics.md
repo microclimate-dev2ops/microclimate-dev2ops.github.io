@@ -7,10 +7,10 @@ duration: 1 minute
 permalink: appmetrics
 type: document
 parent: usingmicroclimate
-order: 5
+order: 6
 ---
 
-## Understanding Application Metrics 
+## Understanding Application Metrics
 
 ## What is Application Metrics?
 
@@ -53,3 +53,6 @@ View a summary of the information from the performance metrics graphs that you s
 
 ## Viewing the graph in the **Profiling** tab
 The **Profiling** tab is available only in Node.js projects. This tab pulls information from the CPU metric in the **Dashboard** tab. CPU cycles are caused by an execution of code. Receiving an endpoint doesn't cause many CPU cycles, but receiving an incoming payload can. Profiling shows you what occurs when a spike appears in the CPU metric. Each spike on the flame graph shows a call stack in the path. The width of a spike indicates how much time the CPU spends on a function. Wide spikes indicate that your CPU spends much time on a particular function and where you might want change the code to optimize it.
+
+## Need help?
+If you encounter problems with application metrics, check the [Troubleshooting page](troubleshooting#understanding-application-metrics).

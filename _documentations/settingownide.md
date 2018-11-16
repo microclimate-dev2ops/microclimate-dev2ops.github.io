@@ -17,3 +17,6 @@ Microclimate includes the powerful Theia IDE in the box, with extended capabilit
 If you do not want to use Theia, you can choose your own IDE including [Eclipse](settingownideeclipse), [Microclimate Developer Tools for Eclipse](mdteclipseoverview), [Visual Studio Code](settingownidevisualstudiocode), [IntelliJ IDEA](settingownideintellij), Orion, or Atom IDE. To Microclimate, using your own IDE is just the same as using Theia - File Watcher continues to monitor your files for changes.
 
 **Note:** These options are applicable to a local installation of Microclimate only.
+
+## Need help?
+If you encounter problems with setting up your IDE, check the [Troubleshooting page](troubleshooting#setting-up-your-own-ide-to-use-with-microclimate).

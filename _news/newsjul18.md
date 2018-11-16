@@ -9,11 +9,12 @@ order: 6
 linkname: July 2018
 ---
 
-## July release has lifted off!
+## July updates
+## Microclimate 18.07
 
 *Friday , 20 July, 2018*
 
-Following a month of the team working hard preparing for launch, the countdown is complete, and we've lifted off with another fine release of Microclimate for you to enjoy. New this month:
+Following a month of the team working hard preparing for launch, the countdown is complete, and we've lifted off with another fine release of Microclimate for you to enjoy. The following list features updates for the Microclimate 18.07 release:
 
 - You can name your Helm chart anything you like because Helm chart names no longer need to match the project name.
 - Newly created projects are now set up to dynamically pull in the latest available JDK service release to pick up patches and security fixes.
