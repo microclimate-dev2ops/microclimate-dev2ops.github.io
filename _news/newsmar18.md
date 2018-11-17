@@ -9,11 +9,12 @@ order: 2
 linkname: March 2018
 ---
 
-## Releasing Microclimate again, no more betas!
+## March updates
+## Microclimate 18.03
 
 *Friday, March 30th, 2018*
 
-Two short weeks, and it's already time for another Microclimate release! This time there's not much in the way of new function to report as we've spent the time doing some housekeeping, fit and finish, and squashing bugs. Some of us were even lucky enough to join our coming out party at the IBM Think conference (https://www.ibm.com/events/think/) and picked up some snazzy Microclimate laptop stickers and t-shirts. However, based on how far we've come in this release - and more importantly, the progress we're making - we've decided to remove our 'beta' tag. Woo hoo! 4 characters less to type each release!
+Two short weeks, and it's already time for the Microclimate 18.03 release! This time there's not much in the way of new function to report as we've spent the time doing some housekeeping, fit and finish, and squashing bugs. Some of us were even lucky enough to join our coming out party at the IBM Think conference (https://www.ibm.com/events/think/) and picked up some snazzy Microclimate laptop stickers and t-shirts. However, based on how far we've come in this release and, more importantly, the progress we're making, we've decided to remove our "beta" tag. Woo hoo! 4 characters less to type each release!
 
 As a recap, here are some of the things we can do!
 - Install locally or on IBM Cloud Private

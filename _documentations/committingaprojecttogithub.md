@@ -6,7 +6,7 @@ keywords: getting started, commit, remote, repository, terminal, root directory
 duration: 1 minute
 permalink: committingaprojecttogithub
 type: document
-order: 9
+order: 10
 parent: usingmicroclimate
 ---
 
@@ -31,3 +31,6 @@ $ git remote add origin remote-repository-URL
 $ git push -u origin master
 ```
 Enter your GitHub username when prompted. When prompted for your password, enter the personal access token created in step 1.
+
+## Need help?
+If you encounter problems with committing a new project to GitHub, check the [Troubleshooting page](troubleshooting#committing-a-new-project-to-github).

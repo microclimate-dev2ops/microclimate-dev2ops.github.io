@@ -6,7 +6,7 @@ keywords: create, build, start, Java, Node.js, Swift, workspace
 duration: 1 minute
 permalink: creatingaproject
 type: document
-order: 1
+order: 2
 parent: usingmicroclimate
 ---
 
@@ -29,3 +29,6 @@ To create, build, and start a new project in your Microclimate workspace:
 5. Click **Create**. This step creates, builds, and starts your project in your Microclimate workspace. Microclimate downloads everything it needs to build the project, and this might take some time depending on the speed of your internet connection.
 6. Check the build status and application status of your new project. For more information, see [Checking the application and build statuses](checkingstatuses).
 7. If your project requires additional configuration files or instructions for build, you might need to modify them. For more information, see [Post-import instructions](https://microclimate-dev2ops.github.io/importedprojects#post-import-instructions).
+
+## Need help?
+If you encounter problems with creating a project, check the [Troubleshooting page](troubleshooting#creating-a-new-project).

@@ -67,3 +67,6 @@ kubectl label secret <secret_name> microclimate-type=cluster-config
 Use `--namespace` again or configure your kubectl client so that the previous commands are performed in the same namespace where Microclimate is installed.
 
 The secret name can be any valid Kubernetes resource name. When you select a build to deploy in the Microclimate UI, this name is available to select from a drop-down menu. You can configure multiple IBM Cloud Kubernetes Service clusters in this way.
+
+## Need help?
+If you encounter problems with configuring Microclimate to deploy applications to the IBM Cloud Kubernetes Service, check the [Troubleshooting page](troubleshooting#configuring-microclimate-to-deploy-applications-to-the-ibm-cloud-kubernetes-service).

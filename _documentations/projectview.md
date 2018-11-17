@@ -1,11 +1,13 @@
 ---
 layout: docs
 title: Using the project view
-description: Managing projects
+description: Project view
 keywords: project, view, list, using, coding, run, apply, import, create, edit, log, monitor
 duration: 1 minute
 permalink: projectview
 type: document
+order: 0
+parent: managingprojects
 ---
 
 ## Using the project view
@@ -61,3 +63,6 @@ The main workspace provides a summary of your project including language, locati
 By default, your project automatically builds when you save your project files. Use the `Auto build` switch located on this page to control automatic building of your project.
 
 Use the `Disable project` button to disable project development. For more information, see [Disable development on specific projects](./disabledevelopmentonprojects).
+
+## Need help?
+If you encounter problems with using the project view, check the [Troubleshooting page](troubleshooting#using-the-project-view).

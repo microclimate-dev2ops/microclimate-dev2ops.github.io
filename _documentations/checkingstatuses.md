@@ -7,7 +7,7 @@ duration: 1 minute
 permalink: checkingstatuses
 type: document
 parent: usingmicroclimate
-order: 6
+order: 7
 ---
 
 ## Checking the application and build statuses
@@ -38,3 +38,6 @@ The build status shows the current stage of your application in the build lifecy
   * The default maximum number of builds that can be run concurrently is three.
   * You can adjust the maximum number of concurrent builds by setting the `MC_MAX_BUILDS` environmental variable.
 * If your build fails, view the build logs. Click the **Build failed** message. In the build logs, you can view error messages that describe the type and cause of failure.
+
+## Need help?
+If you encounter problems with checking the application and build statuses, check the [Troubleshooting page](troubleshooting#checking-the-application-and-build-statuses).

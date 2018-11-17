@@ -6,7 +6,7 @@ keywords: build, pipeline, configure, config, webhook, GitHub, GitLab, Git, Jenk
 duration: 1 minute
 permalink: usingapipeline
 type: document
-order: 10
+order: 11
 parent: usingmicroclimate
 ---
 
@@ -79,3 +79,6 @@ Helm charts can contain resources with names that aren't scoped by the Helm rele
 Deleting a pipeline deletes all of your deployments that are associated with that pipeline.
 
 Deleting a project does not delete the pipeline. Pipelines are shared by projects that target the same Git repository. If you want to delete the pipeline, you must do so before you delete the project. If you accidentally delete a project before you delete a pipeline, you can reimport the project, delete the pipeline, and then delete the project.
+
+## Need help?
+If you encounter problems with using a pipeline, check the [Troubleshooting page](troubleshooting#using-a-pipeline).

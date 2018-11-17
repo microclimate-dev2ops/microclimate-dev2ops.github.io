@@ -12,7 +12,7 @@ parent: mdteclipseoverview
 
 ## Debugging a Microclimate project
 
-To debug your Microclimate project in Eclipse:
+Microclimate Developer Tools for Eclipse supports debugging Microprofile/JEE and Spring projects. For Microprofile/JEE projects, the minimum Microclimate version is 18.09 and for Spring projects, the minimum Microclimate version is 18.11 in order to debug. To debug your Microprofile/JEE or Spring project in Eclipse:
 
 1. Restart the Microclimate server in debug mode. To do this, right-click on the server in the **Servers** view and select **Restart in Debug**.
 2. Wait for the server state to change to **Debugging**.

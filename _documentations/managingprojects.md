@@ -1,12 +1,12 @@
 ---
 layout: docs
 title: Managing projects
-description: Project list
+description: Managing projects
 keywords: project, list, using, status, application, monitor
 duration: 1 minute
-permalink: projectlist
+permalink: managingprojects
 type: document
-order: 3
+order: 4
 parent: usingmicroclimate
 ---
 
