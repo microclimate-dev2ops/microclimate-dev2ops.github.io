@@ -17,8 +17,9 @@ linkname: December 2018
 #### The following list shows updates for the Microclimate 18.12 release:
 - [Microclimate Developer Tools for Eclipse](mdteclipseoverview) and the new [Microclimate Developer Tools for Visual Studio Code](mdt-vsc-overview) are now open source. For more information about these plug-ins, see [the features list](#the-following-list-shows-new-features-for-microclimate-developer-tools-for-eclipse-and-the-new-microclimate-developer-tools-for-visual-studio-code).
 
-- Support for Linux® on Power® (ppc64le).
-   - Swift and Java Microprofile projects are not supported on Linux® on Power®.
+- Support for Linux® on Power® PC (ppc64le) with the following limitations:
+   - Java Microprofile projects that are created by using generators currently have a known limitation. A resolution is in progress.
+   - Swift language support currently is not available on the Power PC platform.
 
 - Improved installation in IBM Cloud Private. The installation process now auto-detects when required parameters for installing into IBM Cloud Private are missing and highlights these to you.
 
