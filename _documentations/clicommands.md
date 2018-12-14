@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Running Microclimate CLI commands
+title: Entering Microclimate CLI commands
 description: How to run Microclimate from the command line
 keywords: command line, cli, command, start, stop, update, open, delete, options, operation, devops, healthcheck
 duration: 1 minute
@@ -48,7 +48,7 @@ mcdev open
 ### Update
 Refresh your current version of Microclimate by pulling the newest images. This command does not upgrade Microclimate to a newer version, but it refreshes the existing version if a patch to your currently installed version is available.
 ```
-mcdev update
+mcdev refresh
 ```
 
 ### Health check

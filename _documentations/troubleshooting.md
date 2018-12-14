@@ -12,10 +12,12 @@ parent: root
 <!-- NOTE: The '***' before each level one title adds a line to the final output, which helps this topic to be more readable and easier to consume. -->
 
 # Troubleshooting
-Microclimate is made of many components to provide a unique development experience. Consider how these components work together as you attempt to isolate the problem by using the information in the following sections.
+
+The following sections contain workarounds for issues that you might encounter when you use Microclimate. If you don't see your issue here, please check our [GitHub repository](https://github.com/microclimate-dev2ops/microclimate-dev2ops.github.io/issues). If you still don't see your issue, you can open a new issue in the repository or contact us through one of the channels on our [community page](./community).
+
 * [Troubleshooting basics](#troubleshooting-basics)
 * [Installing Microclimate locally](#installing-microclimate-locally)
-* [Setting up your own IDE to use with Microclimate](#setting-up-your-own-ide-to-use-with-microclimate)
+* [Working with Microclimate from your editor](#working-with-microclimate-from-your-editor)
 * [Using Microclimate](#using-microclimate)
 * [Creating a new project](#creating-a-new-project)
 * [Importing a project](#importing-a-project)
@@ -32,9 +34,6 @@ Microclimate is made of many components to provide a unique development experien
 
 <!-- Provide an upfront link to where users can go if they can't figure out how to troubleshoot the problems. Avoid telling them to call IBM support, but you can link to the support website. -->
 
-### Need help?
-If you need help, or if you experience a problem that is not listed, please contact us. You can open an issue in our [GitHub repository](https://github.com/microclimate-dev2ops/microclimate-dev2ops.github.io) or see our [community page](./community) for more information.
-
 ***
 # Troubleshooting basics
 
@@ -44,7 +43,7 @@ The first step in many troubleshooting scenarios is to check the logs.
 If you are running Microclimate locally, use this command to access the logs:
 `docker logs <container>`
 
-If you are running Microclimate in IBM Cloud Private, run the `./must-gather.sh` script to gather installation information, including logs. The results are saved to a file in the current directory. For more information and to download this script, see [Microclimate serviceability](https://github.com/microclimate-dev2ops/serviceability/).    
+If you are running Microclimate in IBM Cloud Private, run the `./must-gather.sh` script to gather installation information, including logs. The results are saved to a file in the current directory. For more information and to download this script, see [Microclimate serviceability](https://github.com/microclimate-dev2ops/serviceability/).
 
 Useful logs:
 * The `microclimate-file-watcher` container logs show build and deployment errors.
@@ -52,7 +51,7 @@ Useful logs:
 
 The build and application logs for each application are also available through the UI on their own respective tabs.
 
-## Logging communication in the portal UI.
+## Logging communication in the portal UI
 
 1. To activate the logging, visit the Microclimate portal UI. Add the `debug` parameter to the URL, for example, `localhost:9090?debug`, to clear the local storage and start the logging.
 2. To view the JSON data that you receive from the portal, open the browser debug console.
@@ -64,7 +63,9 @@ The build and application logs for each application are also available through t
 If your IBM Cloud Private applications are not working correctly or if you suspect that something might be going wrong, install a logging infrastructure to query the logs. For more information, see [Installing Kibana and filtering Microclimate logs in IBM Cloud Private](installkibanafilter).
 
 ## Restart or reinstall Microclimate
-Restart Microclimate with the `~/mcdev stop` command followed by the `~/mcdev start` command.
+If you run Microclimate locally, restart Microclimate with the `~/mcdev stop` command followed by the `~/mcdev start` command.
+
+If you run Microclimate in IBM Cloud Private, click the user icon on the Microclimate screen to log out of and shut down your session. Then, log back in to Microclimate. To restart the Microclimate portal, run the `kubectl get pods` command to find the name of the Microclimate portal pod. Then, run `kubectl delete pods microclimate-ibm-microclimate-<xxxxx>-<xxxx>` to restart it.
 
 If you then try the following proposed solutions and still encounter problems, one or more of the components in your Microclimate installation might be out of date, corrupted, or has stopped working for another reason. In these situations, [update Microclimate](./updating).
 
@@ -80,7 +81,7 @@ Issue link:
 ## Microclimate does not start
 Microclimate might not start because Docker isn't functioning correctly.
 
-**Workaround** To get Docker working correctly, you can restart Docker, prune images, or clean up old images.
+**Workaround:** To get Docker working correctly, you can restart Docker, prune images, or clean up old images.
 
 To restart Docker, right-click the Docker symbol in your taskbar and select `Restart`.
 
@@ -118,35 +119,34 @@ Issue type: bug/info
 Issue link:
 18.10:
 -->
-## Standard init Linux exec format error
-Linux reports `standard_init_linux.go:195`: exec user process caused "exec format error".
-
-Microclimate Docker images are available for x86-64 architectures only. On other Linux architectures, Microclimate fails to start and places this error message in the Microclimate Docker container logs.
-
-<!--
-Action/Topic: Installing Microclimate locally
-Issue type: bug/info
-Issue link:
-18.10:
--->
 ## Docker container crashes unexpectedly
 Your Docker container might crash unexpectedly.
 
-**Workaround** For tips about how to debug a crashed container image, see the Medium.com article, [5 ways to debug an exploding Docker container](https://medium.com/@pimterry/5-ways-to-debug-an-exploding-docker-container-4f729e2c0aa8).
+**Workaround:** For tips about how to debug a crashed container image, see the Medium.com article, [5 ways to debug an exploding Docker container](https://medium.com/@pimterry/5-ways-to-debug-an-exploding-docker-container-4f729e2c0aa8).
 
 ***
-# Setting up your own IDE to use with Microclimate
+# Working with Microclimate from your editor
 
 <!--
 Action/Topic: Setting up your own IDE to use with Microclimate
 Issue type: bug
 Issue link: https://github.ibm.com/dev-ex/iterative-dev/issues/111
-18.10: Still an issue
+18.12: Still an issue
 -->
-## Editing project files using an external IDE editor does not deploy changes to the server
-Changes to project files using an external IDE/editor are not reflected on the running application.
+## Auto-build is enabled, but project is not rebuilt on file change
 
-**Workaround:** Edit the same files in the Microclimate Theia editor to build and deploy the changes to the server.
+Auto-build does not work on Windows. Docker for Windows does not allow Microclimate to automatically detect file changes on shared volumes. For more information, see [this issue](https://github.com/docker/for-win/issues/56). You must use one of the following workarounds.
+
+### **Workarounds for all platforms:**
+- Request a manual project build through either of the [IDE plugins](settingownide) or through the **Build** button on the **Overview** page.
+- Make your changes in the Microclimate Theia editor. Theia edits the files directly in the Docker container of the project, working around any Docker volume issues.
+
+### **Fixes for non-Windows platforms:**
+- Restart Microclimate.
+- Stop Microclimate, then run [`docker system prune -a`](https://docs.docker.com/engine/reference/commandline/system_prune/).
+  - **Warning**: This command deletes all stopped containers, networks, images, and caches.
+- If the issue persists despite trying the previous fixes, stop Microclimate and then do a factory reset of your Docker installation.
+  - **Warning**: The factory reset deletes all Docker containers, images, and settings. Use this extreme option only if all other options did not work.
 
 ***
 # Using Microclimate
@@ -180,11 +180,11 @@ docker logs microclimate-file-watcher
 
 The Node.js container that is generated by Microclimate might not be able to access the internet, blocking npm from running.
 
-**Workaround** Check your internet access.
+**Workaround:** Check your internet access.
 
 The Docker runtime on your local machine might not be functioning correctly.
 
-**Workaround** Restart Docker.
+**Workaround:** Restart Docker.
 
 <!--
 Action/Topic: Creating a new project
@@ -198,7 +198,7 @@ The Node.js app with add-ons selected, for example, Mongo and Redis, fails to st
 Error: Redis connection to hostname.dblayer.com:11111 failed - connect javascript:;ECONNREFUSED 52.90.100.35:11111) out of the box.
 ```
 
-**Workaround** Reconfigure the add-ons with valid IP addresses.
+**Workaround:** Reconfigure the add-ons with valid IP addresses.
 
 <!--
 Action/Topic: Creating a new project and/or Checking the application and build statuses
@@ -220,7 +220,7 @@ Issue link: dev-ex/iterative-dev#634
 ## Microclimate Liberty projects are broken
 Liberty projects in Microclimate releases prior to Version 18.11 fail on the application build because the `websphere-liberty` Docker image currently runs as a non-root user.
 
-**Workaround** Install Microclimate 18.11 or a subsequent version. If you have an existing Microclimate Liberty application, edit your `Dockerfile-build` file and declare the `ENV HOME /home/default` environment variable. Then, replace all occurrences of `/root` and `/opt` with `$HOME`.
+**Workaround:** Install Microclimate 18.11 or a subsequent version. If you have an existing Microclimate Liberty application, edit your `Dockerfile-build` file and declare the `ENV HOME /home/default` environment variable. Then, replace all occurrences of `/root` and `/opt` with `$HOME`.
 
 You also need to update your Dockerfile by adding the following code after the `COPY` command and before the `RUN` command:
 ```
@@ -241,6 +241,15 @@ ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib:/opt/ibm/wlp/usr/extension/liberty_dc/
 
 For more information about Liberty non-root support, see the `websphere-liberty` [official repository](https://hub.docker.com/_/websphere-liberty/).
 
+<!--
+Action/Topic: Swift projects fail to build on ppc64le
+Issue type: info
+Issue link: https://github.ibm.com/dev-ex/platform-pLinux/issues/7
+18.10:
+-->
+## Swift projects fail to build on Linux® on Power® (ppc64le)
+Swift project are not supported on Linux® on Power® (ppc64le) and will fail to build.
+
 # Importing a project
 
 <!--
@@ -255,7 +264,7 @@ To view the status of the imported project, enter the following command:
 docker logs microclimate-file-watcher
 ```
 
-**Workaround** If you see the following messages, the imported project is likely not a valid Microclimate project.
+**Workaround:** If you see the following messages, the imported project is likely not a valid Microclimate project.
 ```
 build-log requested, no build log found for project <project name>
 build-log requested, no build log found for project <project name>
@@ -265,19 +274,6 @@ No containerId for running project <project name>
 ```
 
 For more information about valid Microclimate projects, see [Imported projects and supported project types](importedprojects).
-
-<!--
-Action/Topic: Deleting a project
-Issue type: bug/info
-Issue links: https://github.ibm.com/dev-ex/portal-ui/issues/359
-landing-pages https://github.ibm.com/dev-ex/landing-pages/issues/638
-18.11:
--->
-
-## Importing a project with the same name as a recently deleted project fails
-This can happen when deleting a project fails and leaves files in a target directory. When you delete the project, and then try to import the project again, you see failure to import the project together with an error message that tells you that the target directory is not empty.  
-
-**Workaround** Manually delete the files and retry the import.  
 
 ***
 # Using the project view
@@ -292,8 +288,7 @@ Platform: IBM Cloud Private
 ## Microclimate Node.js port is an internal IP address and is not accessible
 For IBM Cloud Private clusters that are built on OpenStack environments with floating IP addresses, the Microclimate portal Node.js port that appears in the Helm installation notes and on the IBM Cloud Private Services view might have an IP address that is internal to the IBM Cloud Private cluster. This IP address is not accessible in your browser.
 
-**Workaround:**
-You can access Microclimate by replacing the internal IP portion of the Microclimate URL with the external IBM Cloud Private cluster IP address. Obtain the external IP address with the `kubectl cluster-info` command. The recommended permanent solution is to specify the `proxy_access_ip` when configuring IBM Cloud Private in an OpenStack environment. For more information, see [Cluster configuration settings](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0/installing/config_yaml.html).
+**Workaround:** You can access Microclimate by replacing the internal IP portion of the Microclimate URL with the external IBM Cloud Private cluster IP address. Obtain the external IP address with the `kubectl cluster-info` command. The recommended permanent solution is to specify the `proxy_access_ip` when configuring IBM Cloud Private in an OpenStack environment. For more information, see [Cluster configuration settings](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0/installing/config_yaml.html).
 
 ***
 # Understanding Application Metrics
@@ -305,8 +300,7 @@ Action/Topic: Understanding application metrics
 ## Application Monitoring unavailable after Project Import
 After importing an application, when you click `App Monitor`, the dashboard is not displayed and results in a `Cannot GET /appmetrics-dash/` error. If this error appears, the application was not created by Microclimate or previously had AppMetrics integration.
 
-**Workaround**
-Enable AppMetrics for your application. You can enable AppMetrics for [Node.js](https://developer.ibm.com/node/monitoring-post-mortem/application-metrics-node-js/), [Swift](https://developer.ibm.com/swift/monitoring-diagnostics/application-metrics-for-swift/), and [SpringBoot](https://github.com/RuntimeTools/javametrics#spring-boot) projects.
+**Workaround:** Enable AppMetrics for your application. You can enable AppMetrics for [Node.js](https://developer.ibm.com/node/monitoring-post-mortem/application-metrics-node-js/), [Swift](https://developer.ibm.com/swift/monitoring-diagnostics/application-metrics-for-swift/), and [SpringBoot](https://github.com/RuntimeTools/javametrics#spring-boot) projects.
 
 ***
 # Checking the application and build statuses
@@ -375,7 +369,7 @@ Platform: IBM Cloud Private
 ## Imported Microprofile project does not start in IBM Cloud Private
 After following the [project import instructions](projectview) to import a Microprofile project, the project does not start. If a port other than 9080 is configured, the project state cannot be determined.
 
-**Workaround** Configure the Maven `pom.xml` file and the Liberty server configuration files, for example, the `server.xml` file, to specify port 9080 for the application. Also ensure the `Dockerfile-build` has an `EXPOSE 9080` instruction line to ensure the port is accessible from the application container.
+**Workaround:** Configure the Maven `pom.xml` file and the Liberty server configuration files, for example, the `server.xml` file, to specify port 9080 for the application. Also ensure the `Dockerfile-build` has an `EXPOSE 9080` instruction line to ensure the port is accessible from the application container.
 
 <!--
 Action/Topic: Importing projects and supported project types and/or Checking the application and build statuses
@@ -387,7 +381,7 @@ Platform: IBM Cloud Private
 ## Swift projects fail to build on IBM Cloud Private
 If your IBM Cloud Private cluster has a Docker version earlier than 17.05, Swift projects fail to build.
 
-**Workaround** Upgrade Docker to the latest Docker Community Edition (CE) image. For more information, see [Docker guides](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce-1).
+**Workaround:** Upgrade Docker to the latest Docker Community Edition (CE) image. For more information, see [Docker guides](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce-1).
 
 <!--
 Action/Topic: Importing projects and supported project types and/or Checking the application and build statuses
@@ -403,7 +397,7 @@ kubectl logs <microclimate-instance> microclimate-file-watcher > icp-mc.log
 
 If the Swift container is failing to build, the Swift generators are building multi-stage Dockerfiles that are not compatible with IBM Cloud Private.
 
-**Workaround** Upgrade Docker to the latest Docker Community Edition (CE) image. For more information, see [Docker guides](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce-1).
+**Workaround:** Upgrade Docker to the latest Docker Community Edition (CE) image. For more information, see [Docker guides](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce-1).
 
 To see the latest Docker versions that are supported by IBM Cloud Private, see [Supported Docker versions](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0.3/supported_system_config/supported_docker.html).
 
@@ -416,7 +410,7 @@ Issue link:
 ## Project build fails with Docker build failed message
 The project build can fail if the Docker image build fails. The Docker build logs are not currently exposed in the UI.
 
-**Workaround** To see if the Docker image build failed, look at the Docker build output by checking the `microclimate-file-watcher` container logs.
+**Workaround:** To see if the Docker image build failed, look at the Docker build output by checking the `microclimate-file-watcher` container logs.
 * Local: `docker logs <container id of microclimate-file-watcher>`
 * IBM Cloud Private: `kubectl logs <microclimate-pod> --container=microclimate-file-watcher`
 
@@ -429,7 +423,7 @@ Issue link: https://github.ibm.com/dev-ex/portal-ui/issues/353
 ## Application stays in starting state
 If a problem occurs with the application and it fails to start, it might stay in starting state.
 
-**Workaround** Check the application logs to find out why the application did not start. Then, make changes to the application to fix the problem. If automatic build is enabled, a new build starts. Otherwise, start a new build manually by clicking the **Build** button.
+**Workaround:** Check the application logs to find out why the application did not start. Then, make changes to the application to fix the problem. If automatic build is enabled, a new build starts. Otherwise, start a new build manually by clicking the **Build** button.
 
 ***
 # Editing your project
@@ -444,7 +438,7 @@ Issue link:
 
 Sometimes the **Edit code** view doesn't display correctly. When you click the **Edit code** tab, you see only an empty space where the code editor should be.
 
-**Workaround** Stop and start Microclimate with the following commands:
+**Workaround:** Stop and start Microclimate with the following commands:
 ```
 ~/mcdev stop
 ~/mcdev start
@@ -470,7 +464,7 @@ Issue link: https://github.ibm.com/dev-ex/theia/issues/1
 ## Theia container leaking memory
 If allowed to stay up and running, over time, the Theia container in Microclimate leaks memory. The Theia team is aware of this issue and is currently pursuing a fix. For more information, see [Virtual memory usage continuously grows](https://github.com/theia-ide/theia/issues/1284).
 
-**Workaround** In Microclimate, reload the Theia editor to release memory.
+**Workaround:** In Microclimate, reload the Theia editor to release memory.
 
 <!--
 Action/Topic: Editing your project
@@ -481,7 +475,7 @@ Issue link:
 ## New projects sometimes do not show in Theia hierarchy view
 Sometimes when a new project is created, it doesn't show up in the Theia hierarchy view.
 
-**Workaround** In Microclimate, refresh the page in the browser.
+**Workaround:** In Microclimate, refresh the page in the browser.
 
 ***
 # Committing a new project to GitHub
@@ -535,7 +529,7 @@ Platform: IBM Cloud Private
 ## Open pipeline results in 404 Not Found
 Immediately after creating a new pipeline, clicking **Open pipeline** might result in a `404 Not found` page after logging into Jenkins.
 
-**Workaround** The Jenkins job is created asynchronously. Periodically refresh this page in the browser until the job is created, and the page returns successfully.
+**Workaround:** The Jenkins job is created asynchronously. Periodically refresh this page in the browser until the job is created, and the page returns successfully.
 
 <!--
 Action/Topic: Using a pipeline
@@ -547,7 +541,7 @@ Platform: IBM Cloud Private
 ## Broken pipeline links
 You might encounter a broken link if you try to access a newly created pipeline.
 
-**Workaround** Wait a moment before trying to access the page again. If the link does not become available, delete and recreate the pipeline.
+**Workaround:** Wait a moment before trying to access the page again. If the link does not become available, delete and recreate the pipeline.
 
 ***
 # Configuring Microclimate to deploy applications to the IBM Cloud Kubernetes Service
@@ -562,7 +556,7 @@ Platform: IBM Cloud Private
 ## Unable to deploy applications or deployed applications not appearing
 Your Helm secret certificate has expired if you are unable to deploy applications to the IBM Cloud Private tiller, your deployed applications are not appearing in Helm releases, you see errors in the DevOps logs, or nothing gets deployed through the pipeline. On IBM Cloud Private 2.1.0.3, the certificate lasts for 90 days.
 
-**Workaround** Regenerate the `microclimate-helm-secret` with the following procedure:
+**Workaround:** Regenerate the `microclimate-helm-secret` with the following procedure:
 
 1. Log in. For example:
 ```
@@ -587,7 +581,7 @@ Platform: IBM Cloud Private
 ## Microclimate on localhost not connecting to remote Microclimate in IBM Cloud Private
 Make sure you deploy Microclimate to IBM Cloud Private.
 
-**Workaround** In your local Microclimate instance, check that the URL you use to connect to the IBM Cloud Private instance is of a similar format to the following URL and not the IBM Cloud Private console URL.
+**Workaround:** In your local Microclimate instance, check that the URL you use to connect to the IBM Cloud Private instance is of a similar format to the following URL and not the IBM Cloud Private console URL.
 `https://microclimate.<ICP proxy>.nip.io/`
 
 If this URL returns a `500 Internal Server Error` message, check to make sure that you have the correct Microclimate version to connect to Microclimate in IBM Cloud Private.
@@ -629,7 +623,7 @@ If you enter the `helm delete --purge microclimate --tls` command to uninstall M
 Error: Job failed: BackoffLimitExceeded
 ```
 
-**Workaround** Enter the `helm delete --purge microclimate --tls --no-hooks` command to remove any leftover jobs or elements.
+**Workaround:** Enter the `helm delete --purge microclimate --tls --no-hooks` command to remove any leftover jobs or elements.
 * Check that the `kubectl get jobs` command returns empty.
 * Delete lingering Persistent Volume Claims if they appear when you run the `kubectl get pvc` command.
 * Check that the Persistent Volumes were deleted with the `kubectl get pv` command.

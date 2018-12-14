@@ -9,6 +9,13 @@ permalink: license
 ---
 
 
+
+## Microclimate 18.12 Licenses
+
+* [IBM License.](./licenses-18_12-ibmlicense)
+
+* [Non IBM Licenses.](./licenses-18_12-nonibmlicense)
+
 ## Microclimate 18.11 Licenses
 
 * [IBM License.](./licenses-18_11-ibmlicense)

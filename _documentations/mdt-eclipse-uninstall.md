@@ -6,7 +6,7 @@ keywords: uninstall, remove, delete, tools, eclipse
 duration: 1 minute
 permalink: mdteclipseuninstall
 type: document
-order: 90
+order: 70
 parent: mdteclipseoverview
 ---
 
@@ -14,12 +14,11 @@ parent: mdteclipseoverview
 
 Use the Eclipse uninstall support to uninstall Microclimate Developer Tools for Eclipse:
 
-1. Delete any Microclimate connections [here](mdteclipsedeleteconnection).  This also removes any project links.
-2. Navigate to **Help** > **About Eclipse IDE**.
-3. Click on **Installation Details**.
-4. Search for *Microclimate Developer Tools*.
-5. Select **Microclimate Developer Tools** and click **Uninstall**.
-6. On the **Uninstall Details** page click **Finish**.
-7. When the uninstall is complete, restart Eclipse.
+1. Navigate to **Help** > **About Eclipse IDE**.
+2. Click on **Installation Details**.
+3. Search for *Microclimate Developer Tools*.
+4. Select **Microclimate Developer Tools** and click **Uninstall**.
+5. On the **Uninstall Details** page click **Finish**.
+6. When the uninstall is complete, restart Eclipse.
 
 [Back to Microclimate Developer Tools overview](mdteclipseoverview)

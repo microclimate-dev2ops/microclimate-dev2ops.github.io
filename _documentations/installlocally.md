@@ -2,7 +2,7 @@
 layout: docs
 title: Installing Microclimate locally
 description: Installing Microclimate locally
-keywords: linux, macos, windows, install, mcdev
+keywords: linux, macos, windows, install, mcdev, power, ppc64le
 duration: 1 minute
 auto_ids: true
 permalink: installlocally
@@ -15,7 +15,7 @@ parent: root
 
 ## Download the Microclimate compressed file.
 
-<a href="{{ site.downloadlink }}" class="download-link trackdownload" id="zipDownload">Download Microclimate 18.11</a>
+<a href="{{ site.downloadlink }}" class="download-link trackdownload" id="zipDownload">Download Microclimate 18.12</a>
 
 ## Installing and starting Microclimate locally on your machine
 
@@ -27,11 +27,11 @@ parent: root
 You can install the Microclimate Command Line Interface (CLI) to run Microclimate from anywhere on your computer.
 
 ### Prerequisites
+* Linux or MacOS, on x86_64 architecture only
 * The downloaded Microclimate compressed file
 * [Git](https://git-scm.com/)
 * [Docker](https://www.docker.com/get-docker) **Version 17.06 minimum**
-* [Docker-Compose](https://docs.docker.com/compose/install/)
-* Supported architecture: x86-64 only
+* [Docker Compose](https://docs.docker.com/compose/install/).
 * On Linux, follow the post-installation steps to [run Docker as a non-root user](https://docs.docker.com/engine/installation/linux/linux-postinstall/).
 * You must be connected to the internet to perform this task. Microclimate downloads software for creating and configuring your environment.
 
