@@ -16,7 +16,7 @@ Microclimate has a built in load tester that lets you drive data through your ap
 
 Follow the steps to edit and test your code:
 1. Select a project or generate a new project.
-2. To generate the initial test plan, click the **App monitor** tab, and then click the **Run load** button. You start to see the graphs on the screen indicating that the Run load test is running.
+2. To generate the initial test plan, click the **App monitor** tab, and then click the **Run load** button. You start to see the graphs on the screen indicating that the Run load test is running. To cancel the Run load test, click **Cancel load**. 
 4. Click the **Edit code** tab and expand your project directory. From the directory, you can access `load-test`>`config.json` and edit the code in the `config.json` file. For example, you can add your own endpoints or change the number of threads that are running.  The default `config.json` contains the following information:
 
    ```json

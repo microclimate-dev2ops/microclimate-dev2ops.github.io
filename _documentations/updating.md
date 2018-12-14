@@ -37,7 +37,7 @@ Before you run the update, you can check to see if you have the latest images:
 
 To update a local installation of Microclimate, complete the following steps:
 1. Stop Microclimate with the `~/mcdev stop` command.
-2. Run the `~/mcdev update` command to refresh your current version of Microclimate by pulling the newest images. This command does not upgrade Microclimate to a newer version, but it refreshes the existing version if a patch to your currently installed version is available.
+2. Run the `~/mcdev refresh` command to refresh your current version of Microclimate by pulling the newest images. This command does not upgrade Microclimate to a newer version, but it refreshes the existing version if a patch to your currently installed version is available.
 3. Restart Microclimate with the `~/mcdev start` command.
 
 #### Updating IBM Cloud Private installations of Microclimate

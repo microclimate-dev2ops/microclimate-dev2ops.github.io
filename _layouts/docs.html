@@ -2,6 +2,15 @@
 {% include header.html %}
 {% include banner-release-news.html %}
 {% include masthead.html %}
+
+<style>
+.anchorjs-link {
+  transition: all .25s linear;
+}
+*:hover > .anchorjs-link {
+  margin-left: -1.125em !important;
+}
+</style>
 <body class="doc-template {{ page.permalink }}">
 <div class="grid-x">
     <div class="sidebar cell small-12 medium-4" data-equalizer>
@@ -101,5 +110,9 @@ $(document).ready(function(){
     	  resultsContainer: document.getElementById('results-container'),
     	  json: 'search.json'
     	});
+	
+    anchors.options.placement = 'left';
+    anchors.add('h1');
+    anchors.add('h2');
 });
 </script>

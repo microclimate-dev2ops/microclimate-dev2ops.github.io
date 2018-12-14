@@ -9,7 +9,7 @@ permalink: about
 
 ## What is Microclimate
 
-Microclimate is a Dockerized, end-to-end development environment that enables agile development and delivery of microservices, hybrid, and Docker containerized apps in Java, Node.js, and Swift. Microclimate offers services and tools to help you create and modernize applications in one seamless experience. You can use Microclimate for every step of the process, from writing and testing code locally to building and deployment with a pipeline.
+Microclimate is a Dockerized, end-to-end development environment that enables agile development and delivery of microservices, hybrid, and Docker containerized apps in Java, Node.js, and Swift. It can also [be extended](addingdevelopmentlanguages) to support development in any language of your choice. Example extensions are provided for Go and Python applications. Microclimate offers services and tools to help you create and modernize applications in one seamless experience. You can use Microclimate for every step of the process, from writing and testing code locally to building and deployment with a pipeline.
 
 Teams are increasingly turning to continuous delivery, microservices, DevOps, and containers as the foundation for application architectures to enable faster innovation and business agility. To achieve agility and stability, use a microservices architecture to develop and deliver modern, lightweight, and composable workloads across public, private, and hybrid application environments.
 
@@ -35,7 +35,7 @@ Learn more about:
   - [Built using the latest standards](#built-using-the-latest-standards)
   - [End-to-end Docker deployment](#end-to-end-docker-deployment)
   - [Fast, flexible development](#fast-and-flexible-development)
-  - [Multiple IDE options](#multiple-ide-options)
+  - [Multiple IDE options](#ide)
 * [What is IBM Cloud Private?](#ibm-cloud-private)
 * [GDPR Guidelines](#gdpr-guidelines)
 * [What to do next](#what-to-do-next)
@@ -57,19 +57,19 @@ By default, Microclimate comes with Theia IDE as well as application monitoring 
 
 ## Containers
 
-If you're deploying to containers, why not start your development there, too? Use Microclimate to create your microservices and automated build in Docker from day one.
+If you're deploying to containers, why not start your development there, too? Use Microclimate to create your microservices and automate your application build from day one.
 
 Check out some of the benefits of developing inside a container:
 - You have a cleaner environment when all the application components exist in the Docker container.
 - If you're using versioned Docker images for your build environment, you can know and reproduce exactly what Docker built.
 - You can avoid issues with local settings and installers for multiple tools.
-- You have less machine setup. Simply use the Docker pull command to begin.
+- Set up a new machine with the `docker pull` command.
 
 ## IDE
 
 The powerful Theia IDE is included in the box. We've extended its capabilities by putting some [language servers](http://langserver.org) in the image, including our very own [XML Language Support](https://marketplace.visualstudio.com/items?itemName=IBM.XMLLanguageSupport).
 
-Don't want to use a web-based IDE? No problem - that's why we've taken care to set up your project for rapid development in any popular IDE, including Eclipse, Visual Studio Code, Orion, and Atom IDE. Point your IDE at the project, and it's ready to go! For more information, see [Setting up your own IDE to use with Microclimate](settingownide).
+Don't want to use a web-based IDE? No problem - that's why we've taken care to make your project ready for rapid development in any editor. Microclimate also provides plug-ins for both [Eclipse](mdteclipseoverview) and [Visual Studio Code](mdt-vsc-overview), which integrate Microclimate features directly into your IDE. For more information, see [Working with Microclimate from your editor](settingownide).
 
 ## Iterative Development
 
@@ -90,11 +90,7 @@ Provides productivity tools with cross platform, multiple runtime support that a
 Enables you to create microservices and automated builds in Docker from the beginning. Eliminate the need to recreate problems that only happen on one machine, or differences when switching to containers in production. The environment is also built using Docker, enabling you to run it locally or host it on the cloud platform for use over the web. You can bypass issues with local settings or installers for multiple tools.
 
 #### Fast and flexible development
-Enables you to generate microservices in Java, Node.js and Swift; edit and see your changes as you go. When coding is complete, you can check it in and the pipeline automatically builds and deploys to Kubernetes. Save time with application monitoring tools and an HTTP load-driver to start. Each is preinstalled and preconfigured, and you can add more tools as needed.
-
-#### Multiple IDE options
-Includes Theia IDE in the box. Microclimate can also leverage popular IDEs including Eclipse, Visual Studio Code, Orion, and Atom IDE, for more information, see [Setting up your own IDE to use with Microclimate](settingownide).
-
+Enables you to generate microservices in Java, Node.js, Swift and, [by extension](addingdevelopmentlanguages), any language of your choice, including Go and Python. Edit and see your changes as you go. When coding is complete, you can check it in and the pipeline automatically builds and deploys to Kubernetes. Save time with application monitoring tools and an HTTP load-driver to start. Each is preinstalled and preconfigured, and you can add more tools as needed.
 
 ## IBM Cloud Private
 IBM Cloud Private provides an integrated IaaS and PaaS environment that can be deployed on premise, behind firewalls, and managed and controlled by any user that the enterprise determines. For containerized applications, IBM Cloud Private offers a Kubernetes-based container orchestrator, a private image repository, along with security, event management, a management console, and monitoring frameworks.
