@@ -21,7 +21,7 @@ To create, build, and start a new project in your Microclimate workspace:
    - Click **Go** to create a Go project based on the Go sample template.
    - Click **Java** to create a Java project based on available frameworks, including:
      - [Lagom](https://developer.ibm.com/code/partners/reactive-platform/)
-     - [Microprofile](https://microprofile.io/) (not supported on Linux® on Power® (ppc64le))
+     - [Microprofile](https://microprofile.io/)
      - [Spring](https://spring.io/)
    - Click **Node.js** to create a Node.js project with optional services, or a Node.js project based on a sample template.
    - Click **Python** to create a Python project based on the Python Hello World template.
