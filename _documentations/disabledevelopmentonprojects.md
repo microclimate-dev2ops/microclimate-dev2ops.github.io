@@ -6,7 +6,7 @@ keywords: disable, disabled, project, resources, usage
 duration: 1 minute
 permalink: disabledevelopmentonprojects
 type: document
-order: 14
+order: 13
 parent: usingmicroclimate
 ---
 
@@ -20,3 +20,6 @@ To disable project development on a project:
 3. Confirm that you want to disable the project.
 
 To enable a project you have disabled, click the project, click **Enable project**, and then confirm that you want to enable the project. This restarts the application and build containers.
+
+## Need help?
+If you encounter problems with disabling development on specific projects, check the [Troubleshooting page](troubleshooting#disabling-development-on-specific-projects).

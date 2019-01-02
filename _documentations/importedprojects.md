@@ -23,7 +23,7 @@ Microclimate is designed to develop cloud native microservices, therefore, each 
 * [Node.js projects](#nodejs-projects)
 * [Swift projects](#swift-projects)
 * [Generic Docker projects](#generic-docker-projects)
-* [Importing in IBM Cloud Private](#importing-in-IBM-Cloud-Private)
+* [Importing in IBM Cloud Private](#importing-in-ibm-cloud-private)
 
 ## Eclipse MicroProfile projects
 
@@ -157,15 +157,22 @@ FROM ibmjava:8-sfj
 
 ## Node.js projects
 
-Node.js projects require a dependency on Nodemon. Nodemon is used to quickly process source file updates while the project is running.
+Your `package.json` must meet the following requirements. For an example of a good `package.json` for importing, see [the express application generator](https://github.com/ibm-developer/generator-ibm-core-node-express/blob/develop/app/templates/package.json):
 
-Requirements:
+- Ensure the project provides a `start` npm script in `package.json` so it can be started by `npm start`.
+    - For example: `start: "node server/server.js"`
+- In local installations of Microclimate, you can restart the project in Debug mode. To use this feature, the project must also provide a `debug` npm script, which accepts connections from all hosts on port 9229. For help configuring this script, see [the Node.js debugging guide](https://nodejs.org/en/docs/guides/debugging-getting-started/#command-line-options).
+    - For example: `debug: "node --inspect=0.0.0.0:9229 server/server.js"`
+- If auto-build is enabled, `nodemon` is used to restart your project automatically. `nodemon` calls either the `start` or `debug` script on a code change, depending on whether or not the project is debugging. Consequently, neither of these scripts should invoke `nodemon`.
+    - If a problem occurs with either script, the error appears in the Application Logs view in Microclimate.
 
-- Ensure the project can be started by running `nodemon start`.
-- A `Dockerfile` file is generated if it does not exist. Ensure the Dockerfile exposes port 3000, for example:
-  `EXPOSE 3000`.
-- The application is expected to be in the `/app` folder within the Docker container.
-- The working directory must also be set to `/app`.
+If you have a `Dockerfile`, it must meet the following requirements:
+- A `Dockerfile` is generated if it does not exist. Ensure the `Dockerfile` exposes your application port.
+    - For example, if you're using port 3000, the `Dockerfile` needs to include `EXPOSE 3000`.
+- Ensure that the application is located in the `/app` directory within the Docker container.
+- Ensure that the `Dockerfile` sets the working directory to `/app`:
+    - `WORKDIR "/app"`
+
 
 ## Swift projects
 

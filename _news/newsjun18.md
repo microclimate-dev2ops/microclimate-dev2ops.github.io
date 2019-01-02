@@ -9,11 +9,12 @@ order: 5
 linkname: June 2018
 ---
 
-## June release a go-go!
+## June updates
+## Microclimate 18.06
 
 *Friday, 29 June, 2018*
 
-Summer is here, the temperature outside is definitely rising, and we're on the up as we release another fresh version of Microclimate. With this release, we've added a bunch of new features, and we've also continued the good work under the covers improving Microclimate's foundations.
+Summer is here, the temperature outside is definitely rising, and we're on the up as we release another fresh version of Microclimate. With this release, we've added a bunch of new features, and we've also continued the good work under the covers improving Microclimate's foundations. The following list features updates for the Microclimate 18.06 release:
 
 - You can now install Microclimate into a non-default namespace.
 

@@ -6,18 +6,61 @@ keywords: Using, coding, code, edit, log, App monitor, test plan, performance, r
 duration: 1 minute
 permalink: performancetesting
 type: document
-order: 8
+order: 9
 parent: usingmicroclimate
 ---
 
 ## Performance testing your project
 
-When you generate a project, Microclimate generates a basic test plan. You can edit this test plan or use your own. You can then go to the **App monitor** tab to see the application traffic.
+Microclimate has a built in load tester that lets you drive data through your application to test its performance.  When you first run the load tester, Microclimate generates a basic configuration for you. You can then customise this configuration for your application.
 
 Follow the steps to edit and test your code:
 1. Select a project or generate a new project.
-2. Click the **Edit code** tab and expand your project directory. From the directory, you can access `load-test`>`TestPlan.jmx` and edit the code in the `TestPlan.jmx` file. For example, you can add your own endpoints or change the number of threads that are running. If you don't want to edit the test plan, Microclimate uses the default test plan that is already provided for you.
-3. Save your changes and wait for the project to build.
-4. After the project builds, click the **App monitor** tab to see that your changes are applied. To test your application, click the **Run load** button. A text box appears that states, "**Run load** The request to start the process has been sent."
-5. Wait for the test to run. You can watch the test metrics while the test is running.
-6. When the test is complete, navigate back to the **Edit code** tab to see the result of the latest run. A `load-test` directory appears with a time stamp.
+2. To generate the initial test plan, click the **App monitor** tab, and then click the **Run load** button. You start to see the graphs on the screen indicating that the Run load test is running. To cancel the Run load test, click **Cancel load**. 
+4. Click the **Edit code** tab and expand your project directory. From the directory, you can access `load-test`>`config.json` and edit the code in the `config.json` file. For example, you can add your own endpoints or change the number of threads that are running.  The default `config.json` contains the following information:
+
+   ```json
+   {"path":"/","requestsPerSecond":"100","concurrency":"20","maxSeconds":"120"}
+   ```
+
+   Where:
+
+   `path` is the endpoint of the application to test.
+
+   `requestsPerSecond` is the number of requests to send to the endpoint every second.
+
+   `concurrency` is the number of multiple users to simulate hitting the endpoint.
+
+   `maxSeconds` is how long to run the test for.
+
+   This default configuration performs a `GET` request on the `/` endpoint, `100` times a second, for `20` users, for `120` seconds
+
+## Passing a payload to an endpoint
+
+To modify the configuration to pass an object to endpoint, include the following additional fields:
+
+`method` is the method to use: POST, PUT. The default is GET.
+
+`contentType` is the MIME type to use for the body. The default content type is text/plain.
+
+`body` is the contents to send in the body of the message for POST or PUT requests; this can be a string or an object which is converted to JSON.
+
+For example, the following `config.json` sends the json object to the `/api/vi/hello` endpoint for `5` seconds.
+
+```json
+{"method":"POST","contentType":"application/JSON","body":{"message":"microclimate"},"path":"/api/v1/hello","maxSeconds":"5"}
+```
+
+Where the json object is defined as:
+
+```json
+{ "message" : "microclimate"}
+```
+
+For a full list of options, see the [loadtest module documentation](https://www.npmjs.com/package/loadtest).
+
+To pass a payload to an endpoint:
+1. Edit the `config.json`, and then save your changes.
+2. Click **App monitor**, and then click the **Run load** button. A text box appears that states `**Run load** The request to start the process has been sent`.
+3. Wait for the test to run. You can watch the test metrics while the test is running.
+4. When the test is complete, navigate back to the **Edit code** tab to see the result of the latest run. An entry appears under the `load-test` directory with a time stamp containing a summary of the run.

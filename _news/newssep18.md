@@ -9,14 +9,15 @@ order: 8
 linkname: September 2018
 ---
 
-## September release spotlight!
+## September updates
+## Microclimate 18.09
 
 *Friday 14 September 2018*
 
 If you've been following Microclimate thus far, you've probably noticed that the website has been redesigned! It includes a new logo, a search bar, and a table of contents that displays on all of the **Docs** pages. You can even share the **News** pages on social media with the **Tweet** button for Twitter and the **Share** button for Facebook.
 
-The following list showcases updates for September:
-- Microclimate supports IBM Cloud Private 3.1. For more information about staying up to date, see [Important](#important). 
+The following list showcases updates for the Microclimate 18.09 release:
+- Microclimate supports IBM Cloud Private 3.1. For more information about staying up to date, see [Important](#important).
 - You can [add more development languages to Microclimate](addingdevelopmentlanguages). After you add the languages, they appear with Java, Node.js, and Swift when you create a new project.
 - The [Acme Air sample application](acmeair) runs in Microclimate with the Java Liberty runtime.
 - Installation into a non-default namespace for Microclimate on IBM Cloud Private is simpler. The `Role` and `ClusterRole` bindings are now created automatically.
