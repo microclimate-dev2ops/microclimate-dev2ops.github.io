@@ -30,7 +30,7 @@ Whichever type of installation that you run, you can uninstall and reinstall Mic
 
 Before you run the update, you can check to see if you have the latest images:
 1. Run the `docker images` command. For each image that you have installed, this command gives you an image ID.
-2. Run the `docker image inspect <image ID>` command. Use the image ID that is associated with the image repository that is named on the [Microclimate versions with updates](updateslist) page for the version that you want to update. Output from this command produces data from which you can view the date.
+2. Run the `docker image inspect <image ID>` command or, if you have grep, run the `docker inspect ibmcom/<image ID> | grep org.label-schema.build-date` command. Use the image ID that is associated with the image repository that is named on the [Microclimate versions with updates](updateslist) page for the version that you want to update. Output from this command produces data from which you can view the date.
 3. Look in the output for `"org.label-schema.build-date": "<date and time>"`.
     1. If the date in your output matches the date listed for your version on the [Microclimate versions with updates](updateslist) page, you have an earlier version of Microclimate, and you should upgrade.
     2. If the date is later than the date shown on the [Microclimate versions with updates](updateslist) page, you have the latest version and do not need to upgrade.
@@ -45,7 +45,7 @@ To update a local installation of Microclimate, complete the following steps:
 Before you run the update and delete pods, you can check to see if you have the latest images:
 1. Log in to a worker node on your IBM Cloud Private cluster.
 2. Run the `docker images` command to list the image IDs.
-3. Run the `docker image inspect <image ID>` command.
+3. Run the `docker image inspect <image ID>` command or, if you have grep, run the `docker inspect ibmcom/<image ID> | grep org.label-schema.build-date` command.
 4. Look in the output for `"org.label-schema.build-date": "<date and time>"`.
     1. If the date in your output matches the date listed for your version on the [Microclimate versions with updates](updateslist) page, you have an earlier version of Microclimate, and you should upgrade.
     2. If the date is later than the date shown on the [Microclimate versions with updates](updateslist) page, you have the latest version and do not need to upgrade.
