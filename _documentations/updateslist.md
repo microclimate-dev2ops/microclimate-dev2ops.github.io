@@ -30,7 +30,7 @@ If you installed any of these versions of Microclimate, please [update to the la
   * `ibmcom/microclimate-loadrunner-amd64`
   * `ibmcom/microclimate-portal-amd64`
   * `ibmcom/microclimate-theia-amd64`
-* To see if you need an update, use grep to run the `docker inspect ibmcom/microclimate-portal-amd64:1812 | grep org.label-schema.build-date` command. If you see a date of `2018-12-12T21:06:45+0000` in the output, update the images.
+* To see if you need an update, use grep to run the `docker inspect microclimate-portal-amd64:1812 | grep org.label-schema.build-date` command. If you see a date of `2018-12-12T21:06:45+0000` in the output, update the images.
 
 ## Microclimate Version 18.09
 
