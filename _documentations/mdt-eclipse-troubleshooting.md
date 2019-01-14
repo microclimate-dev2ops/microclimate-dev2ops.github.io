@@ -10,7 +10,7 @@ order: 60
 parent: mdteclipseoverview
 ---
 
-## Troubleshooting Microclimate Developer Tools
+# Troubleshooting Microclimate Developer Tools
 
 When troubleshooting, check the project in Microclimate to make sure the status is what you expect.  If not, refer to [Microclimate troubleshooting](troubleshooting).  For Microclimate Developer Tools specific problem solving tips, see the following information.
 
@@ -22,7 +22,7 @@ When troubleshooting, check the project in Microclimate to make sure the status 
 The logs are found in your Eclipse workspace under .metadata/.log.
 
 ---
-## Solving common problems
+# Solving common problems
 The following list describes common problems that might affect Microclimate Developer Tools.
 
 - [Test connection fails](#test-connection-fails)

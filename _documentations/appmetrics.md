@@ -10,7 +10,7 @@ parent: usingmicroclimate
 order: 6
 ---
 
-## Understanding Application Metrics
+# Understanding Application Metrics
 
 ## What is Application Metrics?
 

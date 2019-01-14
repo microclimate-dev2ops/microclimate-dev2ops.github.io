@@ -10,7 +10,7 @@ parent: usingmicroclimate
 order: 7
 ---
 
-## Checking the application and build statuses
+# Checking the application and build statuses
 
 Builds automatically begin when Microclimate detects changes. If a build fails, navigate to the **Build logs** tab for more information.
 

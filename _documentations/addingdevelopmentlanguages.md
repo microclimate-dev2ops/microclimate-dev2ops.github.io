@@ -10,7 +10,7 @@ order: 5
 parent: usingmicroclimate
 ---
 
-## Adding development languages and sample projects
+# Adding development languages and sample projects
 
 Beginning with Microclimate Version 18.09, you can add more development languages and sample projects by adding Microclimate extensions, called templates. These templates appear as new language and project types within the Microclimate user interface. You can code and develop in languages of your choice and provide sample projects that are suited to your environment.
 

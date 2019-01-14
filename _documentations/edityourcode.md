@@ -10,7 +10,7 @@ order: 8
 parent: usingmicroclimate
 ---
 
-## Editing your project
+# Editing your project
 
 You can use your own editor to edit and test your code. For more information, see [Setting up your own IDE to use with Microclimate](settingownide). Or, you can use the Theia editor that is shipped with Microclimate by following these instructions.
 

@@ -12,14 +12,14 @@ order: 50
 parent: root
 ---
 
-## Tutorials and samples
-
+# Tutorials and samples
 
 ## Tutorials
 
-The following tutorial is available for you to use:
+The following tutorials are available for you to use:
 
 * [Adding a New Endpoint to an Application in Microclimate](addendpoint)
+* [Using Microclimate Developer Tools for Visual Studio Code](mdt-vsc-tutorial)
 
 ## Samples
 

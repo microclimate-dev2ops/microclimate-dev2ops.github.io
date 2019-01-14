@@ -10,17 +10,17 @@ order: 50
 parent: mdteclipseoverview
 ---
 
-## Debugging Microclimate projects
+# Debugging Microclimate projects
 
 Microclimate Developer Tools for Eclipse supports debugging Microprofile/JEE and Spring projects.
 
-### Prerequisites
+## Prerequisites
 1. If you have not done so already, import your project into Eclipse to make the source available to debug.
 - Right-click your project in the **Microclimate Explorer** view.
 - Select **Import Project**.
 2. If you need to debug any initialization code, set breakpoints in this code now. You can also set breakpoints in your application code at this time.
 
-### Debugging
+## Debugging
 1. To restart your application in debug mode, right-click on the project in the **Miroclimate Explorer** view and select **Restart in Debug Mode**. This menu item is only available for Microclimate/Java EE and Spring applications.
 2. If you did not import your project into Eclipse you are prompted to do so now. Select one of the following:
 - **Yes**: To import your project into Eclipse and make the source available for debugging.
@@ -33,9 +33,9 @@ Microclimate Developer Tools for Eclipse supports debugging Microprofile/JEE and
 7. You can reload your application multiple times to isolate the problem. However, if you are debugging initialization code, you must restart your project in debug mode to stop in this code again.
 8. When you have finished debugging, you can switch back to run mode. Right-click on your project in the **Miroclimate Explorer** view and select **Restart in Run Mode**.
 
-### Attaching to a project in debug mode
+## Attaching to a project in debug mode
 
-If you restarted your application in debug mode from the Microclimate UI, or you detached from the debugger, or you restarted Eclipse, you can attach the debugger without restarting again: 
+If you restarted your application in debug mode from the Microclimate UI, or you detached from the debugger, or you restarted Eclipse, you can attach the debugger without restarting again:
 
 1. Make sure to do any of the setup you need such as importing your project into Eclipse and setting breakpoints. For more information, see [Prerequisites](#prerequisites).
 2. Right click on your project in the **Microclimate Explorer** view and select **Attach Debugger**. The **Attach Debugger** menu item is only available for Microclimate/Java EE or Spring applications in debug mode if a debugger is not already attached.

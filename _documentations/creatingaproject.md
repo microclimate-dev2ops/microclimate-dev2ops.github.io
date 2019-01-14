@@ -10,7 +10,7 @@ order: 2
 parent: usingmicroclimate
 ---
 
-## Creating a new project
+# Creating a new project
 
 To create, build, and start a new project in your Microclimate workspace:
 

@@ -10,7 +10,7 @@ order: 70
 parent: root
 ---
 
-## Updating Microclimate
+# Updating Microclimate
 
 ## Updating to a new version of Microclimate
 
@@ -26,11 +26,11 @@ From time to time, updates to existing Microclimate images roll out for fixes th
 
 Whichever type of installation that you run, you can uninstall and reinstall Microclimate to get the latest images. However, when images are updated, you can update the current images without removing the old ones first.
 
-#### Updating local installations of Microclimate
+### Updating local installations of Microclimate
 
 Before you run the update, you can check to see if you have the latest images:
 1. Run the `docker images` command. For each image that you have installed, this command gives you an image ID.
-2. Run the `docker image inspect <image ID>` command or, if you have grep, run the `docker inspect <image ID> | grep org.label-schema.build-date` command. Use the image ID that is associated with the image repository that is named on the [Microclimate versions with updates](updateslist) page for the version that you want to update. Output from this command produces data from which you can view the date.
+2. Run the `docker image inspect <image ID>` command or, if you have grep, run the `docker inspect ibmcom/<image ID> | grep org.label-schema.build-date` command. Use the image ID that is associated with the image repository that is named on the [Microclimate versions with updates](updateslist) page for the version that you want to update. Output from this command produces data from which you can view the date.
 3. Look in the output for `"org.label-schema.build-date": "<date and time>"`.
     1. If the date in your output matches the date listed for your version on the [Microclimate versions with updates](updateslist) page, you have an earlier version of Microclimate, and you should upgrade.
     2. If the date is later than the date shown on the [Microclimate versions with updates](updateslist) page, you have the latest version and do not need to upgrade.
@@ -40,12 +40,12 @@ To update a local installation of Microclimate, complete the following steps:
 2. Run the `~/mcdev refresh` command to refresh your current version of Microclimate by pulling the newest images. This command does not upgrade Microclimate to a newer version, but it refreshes the existing version if a patch to your currently installed version is available.
 3. Restart Microclimate with the `~/mcdev start` command.
 
-#### Updating IBM Cloud Private installations of Microclimate
+### Updating IBM Cloud Private installations of Microclimate
 
 Before you run the update and delete pods, you can check to see if you have the latest images:
 1. Log in to a worker node on your IBM Cloud Private cluster.
 2. Run the `docker images` command to list the image IDs.
-3. Run the `docker image inspect <image ID>` command or, if you have grep, run the `docker inspect <image ID> | grep org.label-schema.build-date` command.
+3. Run the `docker image inspect <image ID>` command or, if you have grep, run the `docker inspect ibmcom/<image ID> | grep org.label-schema.build-date` command.
 4. Look in the output for `"org.label-schema.build-date": "<date and time>"`.
     1. If the date in your output matches the date listed for your version on the [Microclimate versions with updates](updateslist) page, you have an earlier version of Microclimate, and you should upgrade.
     2. If the date is later than the date shown on the [Microclimate versions with updates](updateslist) page, you have the latest version and do not need to upgrade.

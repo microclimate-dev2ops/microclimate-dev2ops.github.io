@@ -10,7 +10,7 @@ order: 30
 parent: mdteclipseoverview
 ---
 
-## Managing Microclimate projects
+# Managing Microclimate projects
 
 You can work with your Microclimate projects from the **Microclimate Explorer** view in Eclipse. If the view is not showing, open it as follows:
 

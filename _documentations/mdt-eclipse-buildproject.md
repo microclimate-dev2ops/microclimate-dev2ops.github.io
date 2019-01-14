@@ -10,16 +10,16 @@ order: 40
 parent: mdteclipseoverview
 ---
 
-## Building Microclimate projects
+# Building Microclimate projects
 
-By default, Microclimate detects when you make a change and starts a build automatically.  There are two exceptions to this:
+By default, Microclimate detects when you make a change and starts a build automatically. However, two exceptions exist:
 
-1. If you have disabled auto build for the project
-2. If you are using Windows
+1. If you have disabled auto build for the project.
+2. If you are using Windows.
 
 In these cases, start a build manually when you have made a change or a set of changes:
 
-1. Right-click on your project in the **Microclimate Explorer** view and select **Build**.
+1. Right-click your project in the **Microclimate Explorer** view and select **Build**.
 2. Wait for the project state to return to **Running** or **Debugging** in the **Microclimate Explorer** view and then test your changes.
 
 [Next: Debugging Microclimate projects](mdteclipsedebugproject)

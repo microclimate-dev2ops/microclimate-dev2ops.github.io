@@ -10,7 +10,7 @@ order: 10
 parent: mdteclipseoverview
 ---
 
-## Installing Microclimate Developer Tools for Eclipse
+# Installing Microclimate Developer Tools for Eclipse
 
 Complete the following steps to install Microclimate Developer Tools for Eclipse:
 

@@ -10,19 +10,17 @@ order: 5
 parent: mdt-vsc-overview
 ---
 
-## Tutorial: Microclimate Developer Tools for VS Code
-
-***
+# Tutorial: Microclimate Developer Tools for VS Code
 
 Follow this example workflow to use the tools for VS Code to develop a Microclimate Node.js project. All the features demonstrated in this tutorial are also available for Microprofile and Spring projects.<br>
-For more detail on any of the commands, refer to the [commands overview](mdt-vsc-commands-overview).
+For more detail on any of the commands, see the [commands overview](mdt-vsc-commands-overview).
 
-### Prerequisites
-- Run a local Microclimate instance.
+## Prerequisites
+- Run a local Microclimate instance, Version 18.12 or later.
 
-1. First, [connect to your Microclimate instance](mdt-vsc-commands-connection#new-default-local-microclimate-connection). For more information, see the [getting started](mdt-vsc-getting-started) page. Proceed after your projects appear in the Microclimate connection.
+1. First, [connect to your Microclimate instance](mdt-vsc-commands-connection#new-default-local-microclimate-connection). For more information, see the [getting started](mdt-vsc-getting-started) page. Proceed after your projects appear with the Microclimate connection.
 2. Create a Node.js project in Microclimate. Skip this step if a Node.js project already exists. This tutorial assumes that your project is called `nodeproject`.
-    - Right-click the connection in the Microclimate tree and select [`Create new project`](mdt-vsc-commands-connection#create-new-project). The Microclimate **New project** page opens in the browser.
+    - Right-click the connection in the Microclimate tree and select [`Create new project`](mdt-vsc-commands-connection). The Microclimate **New project** page opens in the browser.
     - Create a Node.js project. The default project works for this tutorial, but for more information, see [creating a project](creatingaproject). After the project is created, it appears in the Microclimate tree in VS Code.
 3. Make the new project your workspace folder because it's the only project that you need to work on for this tutorial.
     - Right-click the project and select [`Open Folder as Workspace`](mdt-vsc-commands-project#open-folder-as-workspace). VS Code restarts with the selected project folder as the workspace folder. The tools reconnect to Microclimate automatically.
@@ -34,7 +32,7 @@ For more detail on any of the commands, refer to the [commands overview](mdt-vsc
 6. Open a file to edit. For example, modify the `health` endpoint of the default Node.js project.
     - Open a Javascript file, such as `nodeproject/server/routers/health.js`.
     - Make a code change.
-    - For example, you can add the following endpoint to `health.js` after the existing `GET /` middleware function, as shown in the following screenshot:
+    - For example, you can add the following endpoint to `health.js` after the existing `GET /` middleware function:
         ```
         router.get('/test', function (req, res, next) {
             return res.send("Yep, it worked!!");
@@ -56,7 +54,7 @@ For more detail on any of the commands, refer to the [commands overview](mdt-vsc
     - The project restarts into the **Debugging** state.
     - A debug launch configuration is created in `nodeproject/.vscode/launch.json`.
     - The debugger attaches, and VS Code opens the **Debug** view.
-    - You can detach and [re-attach the debugger](mdt-vsc-commands-restart-and-debug#attach-debugger) at any time, as long as the project is still in **Debug** mode.
+    - You can detach and [reattach the debugger](mdt-vsc-commands-restart-and-debug#attach-debugger) at any time, as long as the project is still in **Debug** mode.
 9. All of the VS Code debug functionality is now available.
     - If your code matches the screenshot, set a breakpoint at line 11 in `health.js`.
     - Refresh the new endpoint page that you opened in step 7 so a new request is made, and the breakpoint gets hit.

@@ -10,13 +10,11 @@ order: 5
 parent: mdt-vsc-overview
 ---
 
-## Commands overview: Microclimate Developer Tools for VS Code
+# Commands overview: Microclimate Developer Tools for VS Code
 
-***
+All commands provided by this extension are available in the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette). You can also right-click the Microclimate view to invoke most commands with the context menu. The commands differ for connections and projects.
 
-All commands provided by this extension are available in the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette). You can also invoke most commands with the context (right-click) menu of items in the Microclimate view. The commands differ for connections and projects.
-
-Commands can be enabled for Microclimate connections, projects, or both. Run a command from the Command Palette to view a list of connections and projects on which you can run the command. Additionally, the list may be filtered depending on the command. For example, the **Disable project** command runs only on projects that are **Enabled**.
+Commands can be enabled for Microclimate connections, projects, or both. Run a command from the Command Palette to view a list of connections and projects on which you can run the command. Additionally, the list might be filtered depending on the command. For example, the **Disable project** command runs only on projects that are **Enabled**.
 
 Commands are separated into categories. See the following pages:
 - [Connection commands](mdt-vsc-commands-connection)

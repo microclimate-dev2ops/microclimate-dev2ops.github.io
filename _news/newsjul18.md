@@ -9,7 +9,8 @@ order: 6
 linkname: July 2018
 ---
 
-## July updates
+# July updates
+
 ## Microclimate 18.07
 
 *Friday , 20 July, 2018*
