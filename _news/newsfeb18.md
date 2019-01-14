@@ -9,7 +9,7 @@ order: 1
 linkname: February 2018
 ---
 
-## Microclimate beta refresh now available
+# Microclimate beta refresh now available
 
 *Friday, February 16th, 2018*
 

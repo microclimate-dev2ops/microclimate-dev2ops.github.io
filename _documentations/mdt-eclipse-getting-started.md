@@ -10,7 +10,7 @@ order: 5
 parent: mdteclipseoverview
 ---
 
-## Getting started with Microclimate Developer Tools for Eclipse
+# Getting started with Microclimate Developer Tools for Eclipse
 
 Microclimate Developer Tools for Eclipse enables you to develop and debug your Microclimate projects from within Eclipse (debug is only supported for Microprofile/JEE and Spring projects).
 

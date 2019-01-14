@@ -10,8 +10,8 @@ order: 1
 parent: updating
 ---
 
-## Microclimate versions with updates
-If you installed any of these versions of Microclimate, please [update to the latest images](updating).
+# Microclimate versions with updates
+If you have installed any of these versions of Microclimate, [update to the latest images](updating).
 
 ## Microclimate Version 18.12
 

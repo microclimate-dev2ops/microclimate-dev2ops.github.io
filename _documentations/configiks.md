@@ -10,7 +10,7 @@ order: 4
 parent: usingapipeline
 ---
 
-## Configuring Microclimate to deploy applications to the IBM Cloud Kubernetes Service
+# Configuring Microclimate to deploy applications to the IBM Cloud Kubernetes Service
 
 ## Prerequisites
 Decide to deploy to the IBM Cloud Kubernetes Service before you install Microclimate. When you install Microclimate, specify a Docker registry location on the `jenkins.Pipeline.Registry.URL` property. Both Microclimate and the IBM Cloud Kubernetes Service need to access this registry. The following instructions assume the use of IBM Cloud Container Registry.

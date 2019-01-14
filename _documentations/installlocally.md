@@ -11,17 +11,18 @@ order: 10
 parent: root
 ---
 
-## Installing Microclimate locally
+# Installing Microclimate locally
 
 ## Download the Microclimate compressed file.
 
-<a href="{{ site.downloadlink }}" class="download-link trackdownload" id="zipDownload">Download Microclimate 18.12</a>
+<a href="{{ site.downloadlink }}" class="download-link trackdownload" id="zipDownload">Download Microclimate 1901</a>
 
 ## Installing and starting Microclimate locally on your machine
 
 * [Installing on Linux or MacOS](#installing-on-linux-or-macos)
 * [Installing on Windows](#installing-on-windows)
 
+***
 ## Installing on Linux or MacOS
 
 You can install the Microclimate Command Line Interface (CLI) to run Microclimate from anywhere on your computer.
@@ -53,6 +54,7 @@ cd ..
 ```
 6. After you complete the CLI installation, you can enter [CLI commands](clicommands).
 
+***
 ## Installing on Windows
 
 ### Prerequisites
@@ -77,8 +79,10 @@ mcdev start -o
 ```
 6. After you complete the CLI installation, you can enter [CLI commands](clicommands).
 
+***
 ## What next
 After you install Microclimate and accept the [license agreement](license), you can start [using Microclimate to work with projects](usingmicroclimate).
 
+***
 ## Need help?
 If you encounter problems with installing Microclimate locally, check the [Troubleshooting page](troubleshooting#installing-microclimate-locally).

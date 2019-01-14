@@ -10,7 +10,7 @@ order: 0
 parent: managingprojects
 ---
 
-## Using the project view
+# Using the project view
 
 ## Project list
 

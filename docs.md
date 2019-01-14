@@ -8,7 +8,7 @@ permalink: documentation
 type: document
 ---
 
-## Docs
+# Microclimate documentation
 
 Welcome to the Microclimate product documentation. You can find detailed instructions on how to complete the tasks that you need to perform to install and use Microclimate.
 

@@ -10,7 +10,7 @@ order: 11
 parent: usingmicroclimate
 ---
 
-## Using a pipeline
+# Using a pipeline
 
 You can use a pipeline to build the application and Docker image from source in a Git repository, publish the image to a Docker registry, run tests, and deploy your application to a Kubernetes-based cluster. By [configuring webhooks](./configurewebhooks) on your Git repository, your pipeline can be automatically triggered based on certain Git repository events, such as on pushes to the branch or on the creation of pull requests.
 

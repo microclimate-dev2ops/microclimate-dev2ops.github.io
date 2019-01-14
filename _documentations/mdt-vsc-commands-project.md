@@ -10,9 +10,9 @@ order: 5
 parent: mdt-vsc-commands-overview
 ---
 
-## Project commands: Microclimate Developer Tools for VS Code
+# Project commands: Microclimate Developer Tools for VS Code
 
-### Also see:
+## See also:
 - [Commands overview](mdt-vsc-commands-overview)
 - [Connection commands](mdt-vsc-commands-connection)
 - [Restart and debug](mdt-vsc-commands-restart-and-debug)
@@ -70,7 +70,7 @@ To remove the output channel, use the **Hide logs** command.<br>
 The output is equivalent to the **Build logs** page in Microclimate.
 
 ### **Hide logs**
-Presents a list of Microclimate project logs that are currently open in the **Output** view. Select the logs you wish to hide from that view.
+This command presents a list of Microclimate project logs that are currently open in the **Output** view. Select the logs you want to hide from that view.
 
 ### **Show logs when they change**
 If you want VS Code to bring your logs to the front when they have new output, you can set the following options:

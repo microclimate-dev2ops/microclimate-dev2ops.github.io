@@ -9,7 +9,8 @@ order: 9
 linkname: October 2018
 ---
 
-## October updates
+# October updates
+
 ## Microclimate 18.10
 
 *Friday 12 October 2018*

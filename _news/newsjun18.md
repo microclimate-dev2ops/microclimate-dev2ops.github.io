@@ -9,7 +9,8 @@ order: 5
 linkname: June 2018
 ---
 
-## June updates
+# June updates
+
 ## Microclimate 18.06
 
 *Friday, 29 June, 2018*

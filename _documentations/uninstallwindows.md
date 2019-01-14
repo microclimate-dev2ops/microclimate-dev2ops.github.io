@@ -10,7 +10,7 @@ category: How-tos and Guides
 parent: Uninstalling Microclimate
 ---
 
-## Uninstalling Microclimate on Windows
+# Uninstalling Microclimate on Windows
 
 To uninstall Microclimate on Windows:
 

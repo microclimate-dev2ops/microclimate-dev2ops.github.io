@@ -10,7 +10,7 @@ order: 4
 parent: usingmicroclimate
 ---
 
-## Managing projects
+# Managing projects
 
 The project list page contains a listing of all the projects in your Microclimate workspace, and you can use this page to determine the status of your applications.
 

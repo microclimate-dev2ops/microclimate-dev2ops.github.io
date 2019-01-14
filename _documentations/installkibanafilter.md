@@ -10,7 +10,7 @@ parent: linkinstallionicp
 order: 3
 ---
 
-## Installing Kibana and filtering logs in IBM Cloud Private
+# Installing Kibana and filtering logs in IBM Cloud Private
 
 To see what's going on with your IBM Cloud Private applications, view the log files.
 

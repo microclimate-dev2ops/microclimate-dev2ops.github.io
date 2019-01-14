@@ -11,7 +11,7 @@ category: How-tos and Guides
 order: 2
 ---
 
-## Getting started
+# Getting started
 
 Quickly build and deploy microservices.
 

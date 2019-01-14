@@ -10,7 +10,7 @@ order: 13
 parent: usingmicroclimate
 ---
 
-## Disabling development on specific projects
+# Disabling development on specific projects
 
 Every active project in Microclimate has a number of resources allocated to it. If you have created a large number of projects, and want to save resources or avoid high CPU usage when you restart Microclimate, you can disable development on a specific project. Disabling project development means that the project will not be built until project development is re-enabled.
 

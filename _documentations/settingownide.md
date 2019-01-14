@@ -10,7 +10,7 @@ order: 2
 parent: installlocally
 ---
 
-## Working with Microclimate from your editor
+# Working with Microclimate from your editor
 
 Microclimate includes the powerful Theia IDE with extended capabilities, such as [language servers](http://langserver.org) that include our very own [XML Language Support](https://marketplace.visualstudio.com/items?itemName=IBM.XMLLanguageSupport).
 

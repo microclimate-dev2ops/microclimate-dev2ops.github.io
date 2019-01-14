@@ -11,7 +11,7 @@ order: 12
 parent: usingmicroclimate
 ---
 
-## Connecting Microclimate installation options
+# Connecting Microclimate installation options
 
 Connect the local installation to the IBM Cloud Private installation so that your local Microclimate can have full access to the build pipeline. You can work on your local Microclimate installation projects and work with pipelines within the same portal.
 

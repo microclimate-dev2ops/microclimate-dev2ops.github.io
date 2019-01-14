@@ -10,7 +10,7 @@ order: 10
 parent: usingmicroclimate
 ---
 
-## Committing a new project to GitHub
+# Committing a new project to GitHub
 
 To commit a project created in Microclimate to GitHub:
 

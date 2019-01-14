@@ -10,7 +10,7 @@ order: 70
 parent: mdteclipseoverview
 ---
 
-## Uninstalling Microclimate Developer Tools
+# Uninstalling Microclimate Developer Tools
 
 Use the Eclipse uninstall support to uninstall Microclimate Developer Tools for Eclipse:
 

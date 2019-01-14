@@ -10,7 +10,7 @@ order: 1
 parent: usingmicroclimate
 ---
 
-## Entering Microclimate CLI commands
+# Entering Microclimate CLI commands
 Enter the Microclimate CLI commands with `mcdev COMMAND [options]`.
 
 Run the `mcdev COMMAND --help` command for more information on a command.
@@ -23,7 +23,7 @@ Choose from the following commands:
 * [healthcheck](#health-check)
 * [delete](#delete)
 
-### Start
+## Start
 Start Microclimate.
 ```
 mcdev start [OPTIONS]
@@ -32,32 +32,32 @@ Options
 * `-o, --open`: Open Microclimate in your default browser after it starts.
 * `-u, --update`: Update Microclimate to the latest version before starting.
 
-### Stop
+## Stop
 Stop Microclimate.
 ```
 mcdev stop
 ```
 
-### Open
+## Open
 Open Microclimate in your default browser.
 ```
 mcdev open
 ```
 **Note:** This command looks for the port that `microclimate-portal` is on and opens it.
 
-### Update
+## Update
 Refresh your current version of Microclimate by pulling the newest images. This command does not upgrade Microclimate to a newer version, but it refreshes the existing version if a patch to your currently installed version is available.
 ```
 mcdev refresh
 ```
 
-### Health check
+## Health check
 Run a check through your system to ensure that `microclimate-workspace`, the config directory, and your Git username and email are set correctly. This command also prints the current amount of projects in your workspace.
 ```
 mcdev healthcheck
 ```
 
-### Delete
+## Delete
 Delete all Microclimate images on your machine.
 ```
 mcdev delete

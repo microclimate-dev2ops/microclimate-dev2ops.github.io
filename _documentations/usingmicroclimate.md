@@ -10,7 +10,7 @@ order: 30
 parent: root
 ---
 
-## Using Microclimate
+# Using Microclimate
 
 After you install Microclimate and use it for the first time, accept the [license agreement](license). You can then begin to work with projects.
 

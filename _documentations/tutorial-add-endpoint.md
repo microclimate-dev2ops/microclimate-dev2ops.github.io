@@ -8,7 +8,7 @@ permalink: addendpoint
 type: document
 ---
 
-## Adding a new endpoint to an application in Microclimate
+# Adding a new endpoint to an application in Microclimate
 
 In this tutorial, you learn how to add a new endpoint to an application in Microclimate that can accept and parse JSON data.
 

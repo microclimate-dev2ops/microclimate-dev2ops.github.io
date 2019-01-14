@@ -10,7 +10,7 @@ parent: importingaproject
 order: 0
 ---
 
-## Importing projects and supported project types
+# Importing projects and supported project types
 
 Microclimate projects can be imported from GitHub, a local directory, or an archive. Modifications are usually required to import and deploy projects that have never been run in Microclimate before. The import process creates required files if they do not exist. This guide covers the basics of configuring a project to run in Microclimate.
 
@@ -29,11 +29,11 @@ Microclimate is designed to develop cloud native microservices, therefore, each 
 
 MicroProfile projects are Java applications that are deployed to WebSphere Liberty. They are built by using Maven and the `liberty-maven-plugin` and are based on the [WebSphere Liberty Docker image](https://hub.docker.com/_/websphere-liberty/). MicroProfile projects support rapid iterative development in Microclimate with a few changes to your `pom.xml` file.
 
-#### Instructions
+### Instructions
 
 Avoid copying files from the project’s Maven target folder as part of any Dockerfile instructions because Microclimate builds your project within the container. The application builds against the same runtime that is used in production in order to avoid inconsistencies between development and production environments.
 
-#### Pre-import instructions
+### Pre-import instructions
 
 MicroProfile projects must be configured to build by using Maven.
 
@@ -113,6 +113,8 @@ Configure your `pom.xml` file as follows:
   <jvmOptionsFile>${basedir}/src/main/liberty/config/jvm.options</jvmOptionsFile>
   ```
 
+3. Add `/mc-target` to the `.gitignore` file to ignore build output from the `microclimate` build profile.
+
 Note: Due to a known issue the server needs to be configured to use port 9080 in order for the project to be detected as started. See [Troubleshooting](troubleshooting) for more details.
 
 ### Post-import instructions
@@ -140,6 +142,7 @@ Java Spring Boot projects are built by using Maven and produce stand-alone runna
 Requirements:
 
 - The project must be a valid Spring Boot project. The `pom.xml` must contain a dependency on an artifact from the `<groupId>org.springframework.boot</groupId> group`.
+- The `artifactId` value in the `pom.xml` file must match the project name.
 - Configure the project to build with Maven and produce a exectutable `.jar` file.
 - Configure the application to use port 8080.
 - Copy the executable `.jar` file produced by the Maven build to `/app.jar` within the Docker container. To do this, simply add a `COPY` instruction to the Dockerfile. If your project does not have a Dockerfile, one is generated for you.
