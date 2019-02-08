@@ -2,7 +2,7 @@
 layout: docs
 title: Disabling development on specific projects
 description: Disabling development on specific projects
-keywords: disable, disabled, project, resources, usage
+keywords: disable, disabled, project, resources, usage, active project, high CPU usage, built, re-enable project development, disable project development, enable
 duration: 1 minute
 permalink: disabledevelopmentonprojects
 type: document

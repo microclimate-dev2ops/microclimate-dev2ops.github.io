@@ -35,6 +35,20 @@
         font-weight: 700;
     }
 
+    &_number {
+        border-radius: 50%;
+        border: 9px solid #fed860;
+        float: left;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+        width: 80px;
+    }
+
+    img {
+        margin-bottom: 1.5rem;
+    }
+
     .button {
         margin-bottom: 0;
     }

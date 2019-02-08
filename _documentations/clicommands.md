@@ -2,7 +2,7 @@
 layout: docs
 title: Entering Microclimate CLI commands
 description: How to run Microclimate from the command line
-keywords: command line, cli, command, start, stop, update, open, delete, options, operation, devops, healthcheck
+keywords: command line, cli, command, start, stop, update, open, delete, options, operation, devops, health check, entering cli commands
 duration: 1 minute
 permalink: clicommands
 type: document

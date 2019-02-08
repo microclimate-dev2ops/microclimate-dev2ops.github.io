@@ -2,7 +2,7 @@
 layout: docs
 title: "Getting started: Tools for VS Code"
 description: "Getting started: Tools for VS Code"
-keywords: introducing, introduction, overview, tools, get, getting, start, started, vscode, visual, studio, code
+keywords: introducing, introduction, overview, tools, get, getting, start, started, vscode, visual, studio, code, Microclimate Developer Tools for VS Code getting started, VS Code Marketplace, VS Code Extensions view, VS Code workspace
 duration: 1 minute
 permalink: mdt-vsc-getting-started
 type: document
@@ -17,7 +17,7 @@ parent: mdt-vsc-overview
     - If you're going to work on Java projects, also install the [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
 3. Open the Microclimate view in the [Explorer view group](https://code.visualstudio.com/docs/getstarted/userinterface), or enter `Focus on Microclimate` into the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
     - If you do not see the Microclimate view in either the Explorer or the Command Palette, the extension did not install correctly.
-4. Connect to your local Microclimate instance. Right-click anywhere in the view and select **New Default Local Microclimate Connection**. You can also run this command from the Command Palette.
+4. Connect to your local Microclimate instance. Right-click anywhere in the view and select **New Default Local Microclimate Connection**. You can also run this command from the Command Palette.<br>
 ![New connection context menu](dist/images/mdt-vsc/new-connection.png)<br>
     - If your Microclimate instance is not running on port 9090, use the non-default **New Microclimate Connection** command.
     - For more information on working with connections, see [Connection commands](mdt-vsc-commands-connection).

@@ -2,7 +2,7 @@
 layout: docs
 title: Building Microclimate projects
 description: How to build a Microclimate project
-keywords: build, tools, eclipse
+keywords: build, tools, eclipse, disabled autobuild, Windows, start a build, manually build
 duration: 1 minute
 permalink: mdteclipsebuildproject
 type: document

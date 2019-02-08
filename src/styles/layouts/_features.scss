@@ -1,0 +1,91 @@
+.features {
+    background-color: #100a2d;
+    color: #fff;
+}
+
+.features_headline {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.feature { 
+    &.second-child, 
+    &.third-child,
+    &.fourth-child,
+    &.fifth-child {
+        margin-top: 50px;
+    }
+
+    @include breakpoint(large) {
+        &.second-child {
+            margin-top: 150px;
+        }
+
+        &.third-child {
+            margin-top: 300px;
+        }
+
+        &.fourth-child {
+            margin-top: -140px;
+        }
+
+        &.fifth-child {
+            margin-top: 60px;
+        }
+    }
+
+    .feature_title {
+        font-size: 20px;
+        font-weight: 700;
+    } 
+
+    .feature_content {
+        p {
+            color: #fff;
+        }
+    }
+
+    .feature_number {
+        color: #ffaa64;
+        float: left;
+        font-family: 'IBM Plex Mono';
+        font-style: italic;
+        font-size: 80px;
+    }
+}
+
+.feature-deep-dive {
+    background-color: #f4f7f9;
+    padding: 60px 0;
+    position: relative;
+
+    .header {
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+
+        @include breakpoint(large) {
+            font-size: 36px;
+        }
+    }
+}
+
+.features-benefits {
+    padding: 60px 0;
+
+    .header {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .card_title {
+        font-size: 29px;
+        margin: 20px 0;
+        text-align: center;
+    }
+}

@@ -2,7 +2,7 @@
 layout: docs
 title: Getting started with Microclimate Developer Tools for Eclipse
 description: Getting started with Microclimate Developer Tools for Eclipse
-keywords: introducing, introduction, overview, what is, tools, eclipse, getting started
+keywords: introducing, introduction, overview, what is, tools, eclipse, getting started, Microclimate Developer Tools for Eclipse, work within Eclipse
 duration: 1 minute
 permalink: mdteclipsegettingstarted
 type: document
@@ -16,15 +16,19 @@ Microclimate Developer Tools for Eclipse enables you to develop and debug your M
 
 The following steps give you an overview of using Microclimate Developer Tools for Eclipse. For more detailed instructions, start with [Installing Microclimate Developer Tools for Eclipse](mdteclipseinstall):
 
-1. Install Microclimate Developer Tools for Eclipse from the [Eclipse Marketplace Microclimate Developer Tools website](https://marketplace.eclipse.org/content/microclimate-developer-tools).
+1. Install and start a local Microclimate instance. [Microclimate version 18.12 or later](https://microclimate-dev2ops.github.io/installlocally) is required.
 
-2. To create a new connection, from the **File** menu select **New** > **Other** > **Microclimate** > **New Microclimate Connection**:
+2. Create new projects or import existing projects into Microclimate using the Microclimate UI. Microclimate Developer Tools do not support project creation or import.
+
+3. On an installation of [Eclipse IDE for Enterprise Java Developers version 4.8 (Photon) or later](https://www.eclipse.org/downloads/packages/release/), install Microclimate Developer Tools from the [Eclipse Marketplace Microclimate Developer Tools website](https://marketplace.eclipse.org/content/microclimate-developer-tools).
+
+4. To create a new connection, from the **File** menu select **New** > **Other** > **Microclimate** > **New Microclimate Connection**:
    ![Create a connection](./dist/images/mdt-eclipse-connection.png)
 
-3. In the **Microclimate Explorer** view import the project you want to work with into Eclipse:
+5. In the **Microclimate Explorer** view, import the project you want to work with into the Eclipse workspace:
    ![Import your Microclimate project](./dist/images/mdt-eclipse-importproject.png)
 
-4. Work with your Microclimate project from within Eclipse including:
+6. Work with your Microclimate project from within Eclipse including:
     - Editing
     - Debugging
     - Opening the application in a browser

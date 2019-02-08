@@ -2,7 +2,7 @@
 layout: docs
 title: Microclimate Developer Tools for Eclipse
 description: Microclimate Developer Tools for Eclipse
-keywords: introducing, introduction, overview, what is, tools, eclipse
+keywords: introducing, introduction, overview, what is, tools, eclipse, Microclimate Developer Tools for Eclipse, Eclipse tools, Eclipse IDE, local installation
 duration: 1 minute
 permalink: mdteclipseoverview
 type: document
@@ -11,6 +11,8 @@ parent: settingownide
 ---
 
 # Microclimate Developer Tools for Eclipse
+
+{% include docs-video.html src="https://ibm.box.com/shared/static/tospm0idmn25mqvpu4yhtv0ex7a75ouy.mp4" description="Developing and debugging Microclimate projects from within Eclipse" %}
 
 Microclimate Developer Tools for Eclipse enables you to work on your Microclimate applications from within Eclipse. Note that this is applicable to a local installation of Microclimate; IBM Cloud Private is not supported.  
 

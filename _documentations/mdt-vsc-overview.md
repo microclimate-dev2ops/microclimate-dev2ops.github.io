@@ -2,7 +2,7 @@
 layout: docs
 title: "Microclimate Developer Tools for VS Code"
 description: "Microclimate Developer Tools for VS Code"
-keywords: introducing, introduction, overview, what is, tools, vscode, visual, studio, code, java, microprofile, spring, node, nodejs, node.js, javascript
+keywords: introducing, introduction, overview, what is, tools, vscode, visual, studio, code, java, microprofile, spring, node, nodejs, node.js, javascript, Microclimate Developer Tools for VS Code, tools, view, debug, integrate, open a shell session, toggle auto build, manually build, scope VS Code workspace, disable, enable, delete
 duration: 1 minute
 permalink: mdt-vsc-overview
 type: document
@@ -11,6 +11,8 @@ parent: settingownide
 ---
 
 # Microclimate Developer Tools for Visual Studio Code
+
+{% include docs-video.html src="https://ibm.box.com/shared/static/tjcpshqlf5c9ts03m3n43fdv3ulatled.mp4" description="Developing and debugging applications with Microclimate Developer Tools for VS Code" %}
 
 You can use [Microclimate Developer Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=IBM.microclimate-tools) to develop your Microclimate projects from within VS Code. Use the tools to access Microclimate features in the comfort of your IDE.
 

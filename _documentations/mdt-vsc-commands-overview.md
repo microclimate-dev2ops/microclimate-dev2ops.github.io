@@ -2,7 +2,7 @@
 layout: docs
 title: "Commands overview: Tools for VS Code"
 description: "Commands Overview: Tools for VS Code"
-keywords: overview, tools, vscode, visual, studio, code, commands
+keywords: overview, tools, vscode, visual, studio, code, commands, Microclimate Developer Tools for VS Code commands overview, connection commands, project commands, restart, debug
 duration: 1 minute
 permalink: mdt-vsc-commands-overview
 type: document

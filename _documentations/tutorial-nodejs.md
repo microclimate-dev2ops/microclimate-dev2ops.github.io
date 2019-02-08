@@ -2,7 +2,7 @@
 layout: document
 title: Microclimate for Node.js developers
 description: Microclimate for Node.js developers
-keywords: Node.js, tutorial, deployment, development, IBM Cloud Private, cloud
+keywords: Node.js, tutorial, deployment, development, IBM Cloud Private, cloud, deploy to IBM Cloud Private, Jenkins, DevOps
 duration: 15 minutes
 permalink: tutorial-nodejs
 ---

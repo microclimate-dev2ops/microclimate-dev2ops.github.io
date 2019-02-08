@@ -4,6 +4,11 @@ a {
     color: $content-color;
 }
 
+hr {
+    border-bottom: 2px solid #ff6464;
+    max-width: 100%;
+}
+
 body {
     background-color: #fff;
     font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
@@ -13,6 +18,69 @@ body {
     -moz-animation: fadein 2s;
     -webkit-animation: fadein 2s;
     -o-animation: fadein 2s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    display: block;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 40px;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 300;
+}
+
+.pullquote {
+    font-size: 36px;
+    font-weight: 300;
+    text-align: center;
+    margin: 80px 0;
+}
+
+.callout-box {
+    background-color: #152935;
+    color: #fff;
+    margin: 30px 0 120px 0;
+    padding: 30px;
+
+    .callout-box_header {
+        font-size: 30px;
+        font-weight: 300;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    ul {
+        list-style-position: inside;
+
+        li {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+    }
 }
 
 p {
@@ -74,4 +142,18 @@ main {
     @include breakpoint(large){
         font-size: 36px;
     }
+}
+
+.control-panel-man {
+    overflow: hidden;
+    
+    img {
+        margin: 50px 0;
+        position: relative;
+        right: -65px;
+    }
+}
+
+.waterfall-cube {
+    width: 359px;
 }

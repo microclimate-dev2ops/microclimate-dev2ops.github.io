@@ -5,7 +5,7 @@ description: Latest news
 keywords: GA, beta, release, version, history
 duration: 20 seconds
 permalink: newsaug18
-order: 7
+order: 9
 linkname: August 2018
 ---
 

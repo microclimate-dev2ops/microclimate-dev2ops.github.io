@@ -2,7 +2,7 @@
 layout: docs
 title: Uninstalling Microclimate in IBM Cloud Private
 description: Uninstalling Microclimate in IBM Cloud Private
-keywords: uninstall, IBM Cloud Private, remove, delete, helm
+keywords: uninstall, IBM Cloud Private, remove, delete, helm, uninstall Microclimate in IBM Cloud Private
 duration: 1 minute
 permalink: uninstallicp
 type: document

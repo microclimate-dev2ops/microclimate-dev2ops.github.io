@@ -2,7 +2,7 @@
 layout: docs
 title: Uninstalling Microclimate Developer Tools
 description: How to uninstall Microclimate Developer Tools from Eclipse
-keywords: uninstall, remove, delete, tools, eclipse
+keywords: uninstall, remove, delete, tools, eclipse, uninstalling Microclimate Developer Tools for Eclipse, restart Eclipse
 duration: 1 minute
 permalink: mdteclipseuninstall
 type: document

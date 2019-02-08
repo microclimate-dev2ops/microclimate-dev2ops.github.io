@@ -2,7 +2,7 @@
 layout: docs
 title: Using Microclimate
 description: Using Microclimate
-keywords: Using, coding, run, apply, import, create, edit, log, monitor, testing
+keywords: using, coding, run, apply, import, create, edit, log, monitor, testing, testing your application, project generation, basic test plan, edit test plan, App monitor, application traffic
 duration: 1 minute
 permalink: testyourcode
 type: document

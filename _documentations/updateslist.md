@@ -2,7 +2,7 @@
 layout: docs
 title: Microclimate versions with updates
 description: List of Microclimate versions that have updates
-keywords: update, refresh, upgrade, fix, image
+keywords: update, refresh, upgrade, fix, image, Microclimate Version 18.12, Microclimate Version 18.09
 duration: 1 minute
 permalink: updateslist
 type: document

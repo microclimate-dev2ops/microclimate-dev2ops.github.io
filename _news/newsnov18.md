@@ -5,7 +5,7 @@ description: Latest news
 keywords: GA, release, version, history
 duration: 20 seconds
 permalink: newsnov18
-order: 10
+order: 12
 linkname: November 2018
 ---
 
