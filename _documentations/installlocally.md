@@ -2,7 +2,7 @@
 layout: docs
 title: Installing Microclimate locally
 description: Installing Microclimate locally
-keywords: linux, macos, windows, install, mcdev, power, ppc64le
+keywords: linux, macos, windows, install, mcdev, power, ppc64le, download, installing locally, installing linux, installing MacOS, installing Windows, Git, Docker Desktop, Docker Compose, start Microclimate, license agreement, accept
 duration: 1 minute
 auto_ids: true
 permalink: installlocally
@@ -15,7 +15,7 @@ parent: root
 
 ## Download the Microclimate compressed file.
 
-<a href="{{ site.downloadlink }}" class="download-link trackdownload" id="zipDownload">Download Microclimate 1901</a>
+<a href="{{ site.downloadlink }}" class="download-link trackdownload" id="zipDownload">Download Microclimate 19.02</a>
 
 ## Installing and starting Microclimate locally on your machine
 
@@ -31,7 +31,7 @@ You can install the Microclimate Command Line Interface (CLI) to run Microclimat
 * Linux or MacOS, on x86_64 architecture only
 * The downloaded Microclimate compressed file
 * [Git](https://git-scm.com/)
-* [Docker](https://www.docker.com/get-docker) **Version 17.06 minimum**
+* [Docker Desktop for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac) **Version 17.06 minimum**
 * [Docker Compose](https://docs.docker.com/compose/install/).
 * On Linux, follow the post-installation steps to [run Docker as a non-root user](https://docs.docker.com/engine/installation/linux/linux-postinstall/).
 * You must be connected to the internet to perform this task. Microclimate downloads software for creating and configuring your environment.
@@ -60,7 +60,7 @@ cd ..
 ### Prerequisites
 * Supported Windows versions are Windows 10 and Windows Server 2016.
 * [Git](https://git-scm.com/)
-* Install [Docker for Windows](https://www.docker.com/docker-windows).
+* Install [Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows).
 * Enable your local disk drive for sharing in Docker. Open the **Docker Settings** window, click the **Shared Drives** tab, and select the drive on which you are installing Microclimate.
 * Use the default Linux containers setting. From the **Docker for Windows** menu, you can toggle between the Linux or Windows daemon. If your settings have been changed from the default, select **Switch to Linux containers...** to use Linux containers. Microclimate runs only on Linux containers.
 * Disable Docker Experimental features. Open the **Docker Settings** window, click the **Daemon** tab, and clear the **Experimental features** check box.

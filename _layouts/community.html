@@ -30,7 +30,7 @@
     <!-- /.hero-content -->
 </section>
 <!-- /.hero -->
-
+                        
 <main id="content">
     <div class="grid-container">
         <div class="grid-x">
@@ -39,36 +39,57 @@
             </div>
         </div>
         <div class="grid-x grid-margin-x" data-equalizer>
-            <div class="cell large-6">
+            <div class="cell small-12 large-4">
                 <div class="card" data-equalizer-watch>
                     <div class="card_content">
-                        <div class="card_title">Chat with us on Slack</div>
-                        <p>If you are looking for a more interactive way to communicate with us, drop in to our <a href="https://ibm-cloud-tech.slack.com/messages/microclimate">Slack channel</a> to ask questions, share ideas, or just hang out and chat about all things Microclimate. If you have not previously used the ibm-cloud-tech slack instance, <a href="https://slack-invite-ibm-cloud-tech.mybluemix.net/">click here to request an invite</a>.</p>
-                        <a href="https://ibm-cloud-tech.slack.com/messages/microclimate" class="button">Go to Channel</a>
+                        <div class="grid-x">
+                            <div class="cell medium-4 medium-offset-4">
+                                <img src="{% if site.baseurl | size > 1 %}{{site.baseurl | append: '--@@' | remove: '/--@@' | remove: '--@@' }}{% endif %}/dist/images/icon-logo-slack.svg" alt="Microclimate slack channel" style="width:96px;height:96px;">
+                            </div>
+                            <div class="cell">
+                                <div class="card_title">Chat with us on Slack</div>
+                                <p>If you are looking for a more interactive way to communicate with us, drop in to our <a href="https://ibm-cloud-tech.slack.com/messages/microclimate">Slack channel</a> to ask questions, share ideas, or just hang out and chat about all things Microclimate. If you have not previously used the ibm-cloud-tech slack instance, <a href="https://slack-invite-ibm-cloud-tech.mybluemix.net/">click here to request an invite</a>.</p>
+                                <a href="https://ibm-cloud-tech.slack.com/messages/microclimate" class="button">Go to Channel</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="cell large-6">
+            <div class="cell small-12 large-4">
                 <div class="card" data-equalizer-watch>
                     <div class="card_content">
-                        <div class="card_title">Bugs or recommendations</div>
-                        <p>Found a bug? Have a recommendation on something we can do to improve the Microclimate experience? We opened up shop on <a href="https://github.com/microclimate-dev2ops/microclimate-dev2ops.github.io">GitHub</a>, where you can notify us by creating an issue. And while our moving vans haven’t all arrived yet, they are all in transit. In the meantime, we have enough of our project in place to start working with you. Help us help you!</p>
-                        <a href="https://github.com/microclimate-dev2ops" class="button">Go to GitHub</a>
+                    
+                    <div class="grid-x">
+                        <div class="cell medium-4 medium-offset-4">
+                                <img src="{% if site.baseurl | size > 1 %}{{site.baseurl | append: '--@@' | remove: '/--@@' | remove: '--@@' }}{% endif %}/dist/images/icon-dark-logo-github.svg" alt="Microclimate guthub link" style="width:96px;height:96px;">
+                            </div>
+                            <div class="cell">
+                                <div class="card_title">Bugs or recommendations</div>
+                        			<p>Found a bug? Have a recommendation on something we can do to improve the Microclimate experience? We opened up shop on <a href="https://github.com/microclimate-dev2ops/microclimate-dev2ops.github.io">GitHub</a>, where you can notify us by creating an issue. And while our moving vans haven’t all arrived yet, they are all in transit. In the meantime, we have enough of our project in place to start working with you. Help us help you!</p>
+                        			<a href="https://github.com/microclimate-dev2ops" class="button">Go to GitHub</a>
+                            </div>
+                        </div>
+                        
+                        
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="grid-x grid-margin-x" data-equalizer>
-            <div class="cell large-6">
+            <div class="cell small-12 large-4">
                 <div class="card" data-equalizer-watch>
                     <div class="card_content">
-                        <div class="card_title">Need answers?</div>
-                        <p>While we put a lot of effort into making Microclimate easy to use, we know there will always be questions. If you have something you need help with, post your question to <a href="https://stackoverflow.com/questions/tagged/microclimate">Stack Overflow</a> to leverage the minds and experiences of an army of developers…including ours!</p>
-                        <a href="https://stackoverflow.com/questions/tagged/microclimate" class="button">Go to StackOverflow</a>
+                        <div class="grid-x">
+                            <div class="cell medium-4 medium-offset-4">
+                                <img src="{% if site.baseurl | size > 1 %}{{site.baseurl | append: '--@@' | remove: '/--@@' | remove: '--@@' }}{% endif %}/dist/images/icon-logo-stackoverflow.svg" alt="Microclimate stackoverflow link" style="width:96px;height:96px;">
+                            </div>
+                            <div class="cell">
+                                <div class="card_title">Need answers?</div>
+                                <p>While we put a lot of effort into making Microclimate easy to use, we know there will always be questions. If you have something you need help with, post your question to <a href="https://stackoverflow.com/questions/tagged/microclimate">Stack Overflow</a> to leverage the minds and experiences of an army of developers…including ours!</p>
+                                <a href="https://stackoverflow.com/questions/tagged/microclimate" class="button">Go to StackOverflow</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
 </main>

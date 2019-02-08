@@ -2,7 +2,7 @@
 layout: docs
 title: Managing Microclimate Projects
 description: How to work with your Microclimate projects in Eclipse
-keywords: run, open, import, edit, build, logs, tools, eclipse
+keywords: run, open, import, show, restart, edit, build, logs, tools, eclipse, Microclimate Explorer view in Eclipse, project actions, attach, build, disable, enable, validate, refresh
 duration: 1 minute
 permalink: mdteclipsemanagingprojects
 type: document
@@ -20,7 +20,7 @@ You can work with your Microclimate projects from the **Microclimate Explorer** 
 
 If the view is empty, you need to create a new Microclimate connection: [Managing Microclimate connections](mdteclipsemanagingconnections).
 
-When you have a connection, you can expand it in the view to see your projects. Each project shows the application status and the build status. A context menu on each project enables you to open your application in a browser, view application and build logs, restart in debug mode, and much more. The first thing you might want to do is import your project into Eclipse so you can start editing files. This also makes your source available for debugging.
+When you have a connection, you can expand it in the view to see your projects. Each project shows the application status and the build status. A context menu on each project enables you to open your application in a browser, view application and build logs, restart in debug mode, and much more. The first thing you might want to do is import your project into the Eclipse workspace so you can start editing files. This also makes your source available for debugging. If there are no projects showing for your connection, create new projects or import existing projects into Microclimate using the Microclimate UI. The tools do not support project creation or import.
 
 ## Project actions
 
@@ -32,7 +32,7 @@ Some actions open the default Eclipse browser. If you find that the default Ecli
 - **Open Project Overview**: Opens the Microclimate UI in the default Eclipse browser at the project overview page. Use this to access features and information that is not currently available in Eclipse such as enabling or disabling projects and the time of the last build.
 - **Open Container Shell**: Opens a shell into your application container. This action is only available when the container is active.
 - **Open Application Monitor**: Opens the application monitor in the default Eclipse browser. Use this to monitor the activity and health of your application. This action is only available when the application is running or debugging.
-- **Import Project**: Imports your project into Eclipse.
+- **Import Project**: Imports your project into the Eclipse workspace.
 - **Show Application Log**: Opens the application log in the Eclipse **Console** view. This is a toggle action, select again to remove the log from the **Console** view.
 - **Show Build Log**: Opens the build log in the Eclipse **Console** view. Not all project types have a build log. This is a toggle action, select again to remove the log from the **Console** view.
 - **Restart in Run Mode**: Restarts the application in run mode.

@@ -2,7 +2,7 @@
 layout: docs
 title: Using the project view
 description: Project view
-keywords: project, view, list, using, coding, run, apply, import, create, edit, log, monitor
+keywords: project, view, list, using, coding, run, apply, import, create, edit, log, monitor, project list, project view, page header, project view menu, project view main workspace
 duration: 1 minute
 permalink: projectview
 type: document

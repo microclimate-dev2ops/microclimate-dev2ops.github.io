@@ -2,7 +2,7 @@
 layout: docs
 title: Troubleshooting
 description: Troubleshooting Microclimate
-keywords: troubleshooting, issues, workaround, IBM Cloud Private, logs, common problems, Mac, Windows, Linux, Theia, Docker, help
+keywords: troubleshooting, issues, workaround, IBM Cloud Private, logs, common problems, Mac, Windows, Linux, Theia, Docker, help, open a new issue, contact us, help, check the logs
 duration: 1 minute
 permalink: troubleshooting
 type: document
@@ -17,6 +17,7 @@ The following sections contain workarounds for issues that you might encounter w
 
 * [Troubleshooting basics](#troubleshooting-basics)
 * [Installing Microclimate locally](#installing-microclimate-locally)
+* [Installing on IBM Cloud Private](#installing-on-ibm-cloud-private)
 * [Working with Microclimate from your editor](#working-with-microclimate-from-your-editor)
 * [Using Microclimate](#using-microclimate)
 * [Creating a new project](#creating-a-new-project)
@@ -28,6 +29,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [Committing a new project to GitHub](#committing-a-new-project-to-github)
 * [Using a pipeline](#using-a-pipeline)
 * [Configuring Microclimate to deploy applications to the IBM Cloud Kubernetes Service](#configuring-microclimate-to-deploy-applications-to-the-ibm-cloud-kubernetes-service)
+* [Configuring Microclimate on IBM Cloud Private using NFS to store project data](#configuring-microclimate-on-ibm-cloud-private-using-nfs-to-store-project-data)
 * [Connecting Microclimate installation options](#connecting-microclimate-installation-options)
 * [Disabling development on specific projects](#disabling-development-on-specific-projects)
 * [Uninstalling Microclimate](#uninstalling-microclimate)
@@ -123,6 +125,20 @@ Issue link:
 Your Docker container might crash unexpectedly.
 
 **Workaround:** For tips about how to debug a crashed container image, see the Medium.com article, [5 ways to debug an exploding Docker container](https://medium.com/@pimterry/5-ways-to-debug-an-exploding-docker-container-4f729e2c0aa8).
+
+***
+# Installing on IBM Cloud Private
+
+<!--
+Action/Topic: Installing on IBM Cloud Private
+Issue type: info
+Issue link: none
+19.02: Still an issue
+-->
+## Microclimate pod does not show up on IBM Cloud Private 3.1.0
+If Microclimate was installed on IBM Cloud Private 3.1.0 without the `global.useSecurityContext` flag set to `false`, the Microclimate pod might not start.
+
+**Workaround:** Reinstall Microclimate with `global.useSecurityContext` set to `false`.
 
 ***
 # Working with Microclimate from your editor
@@ -554,9 +570,9 @@ Issue link:
 Platform: IBM Cloud Private
 -->
 ## Unable to deploy applications or deployed applications not appearing
-Your Helm secret certificate has expired if you are unable to deploy applications to the IBM Cloud Private tiller, your deployed applications are not appearing in Helm releases, you see errors in the DevOps logs, or nothing gets deployed through the pipeline. On IBM Cloud Private 2.1.0.3, the certificate lasts for 90 days.
+Your Helm secret certificate might have expired if you are unable to deploy applications to the IBM Cloud Private tiller, your deployed applications are not appearing in Helm releases, you see errors in the DevOps logs, or nothing gets deployed through the pipeline. On IBM Cloud Private 2.1.0.3, the certificate lasts for 90 days. If the certificate didn't expire, the cluster configuration secret might not have been created correctly.
 
-**Workaround:** Regenerate the `microclimate-helm-secret` with the following procedure:
+**Workaround:** If the Helm secret certificate expired, regenerate the `microclimate-helm-secret` with the following procedure:
 
 1. Log in. For example:
 ```
@@ -567,6 +583,29 @@ bx pr login -a https://mycluster.icp:8443
 ```
 kubectl create secret generic microclimate-helm-secret --from-file=cert.pem=<user path>/.helm/cert.pem --from-file=ca.pem=<user path>/.helm/ca.pem --from-file=key.pem=<user path>/.helm/key.pem
 ```
+
+**Workaround:** If the cluster configuration secret wasn't created correctly, re-create the cluster configuration. During the re-creation, the following remarks help to correctly create the secret:
+```
+kubectl create secret generic <secret_name> \
+  --from-file=kube-config.yml=<yaml_file>.yml \
+  --from-file=<certificate_file>.pem
+```
+1. View the contents of the `<yaml_file>.yml` and ensure that only one cluster is defined in the file.
+2. Ensure that the argument contains `yml` instead of `yaml`. This example shows the correct format of the argument: `--from-file=kube-config.yml=<yaml_file>.yml`
+
+***
+# Configuring Microclimate on IBM Cloud Private using NFS to store project data
+
+<!--
+Action/Topic: Configuring Microclimate on IBM Cloud Private using NFS to store project data
+Issue type: bug/info
+Issue link: https://github.ibm.com/dev-ex/landing-pages/issues/736
+19.02
+Platform: IBM Cloud Private
+-->
+Microclimate Portal is able to run generators and create files but the logs for the portal container show that it is then unable to `chown` them to root. Jenkins does not start.
+
+**Workaround:**  Add the `no_root_squash` flag to `/etc/exports` and then reload the NFS configuration on the NFS server. After updating the `/etc/exports` file, restart the NFS server.
 
 ***
 # Connecting Microclimate installation options

@@ -2,7 +2,7 @@
 layout: docs
 title: Using Microclimate
 description: Using Microclimate
-keywords: coding, run, apply, import, create, edit, video, projects, introduction, user interface
+keywords: coding, run, apply, import, create, edit, video, projects, introduction, user interface, working with projects, deploying projects, own IDE, performance testing, disabling development, creating a pipeline
 duration: 1 minute
 permalink: usingmicroclimate
 type: document
@@ -16,11 +16,7 @@ After you install Microclimate and use it for the first time, accept the [licens
 
 ## Working with projects
 
-<video width="78%" controls class="center-block embeded-video">
-  <source src="./videos/MicroclimateUI_2018_M17_I.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-Introduction to the Microclimate user interface in Microclimate Version 18.08.
+{% include docs-video.html src="./videos/MicroclimateUI_2018_M17_I.mp4" description="Introduction to the Microclimate user interface in Microclimate Version 18.08" %}
 
 You can use Microclimate to [create a new project](creatingaproject) or [import an existing one](importingaproject). Projects appear in the [project list](projectview). You can [check the application status and build status](checkingstatuses) of your application.
 

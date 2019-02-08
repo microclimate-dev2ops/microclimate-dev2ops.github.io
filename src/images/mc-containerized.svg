@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="398px" height="463px" viewBox="0 0 398 463" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 26</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F8F8F8" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="About" transform="translate(-934.000000, -3445.000000)">
+            <g id="Group-26" transform="translate(933.000000, 3445.000000)">
+                <polygon id="Fill-1" fill="#0D1D3A" points="325 281.5 201 215 77 281.5 201 348"></polygon>
+                <polygon id="Fill-2" fill="#0D1D3A" points="200 347.182528 200 463 324 396.817472 324 281"></polygon>
+                <polygon id="Fill-3" fill="#1B0D44" points="77 396.817472 201 463 201 347.182528 77 281"></polygon>
+                <g id="Group-6" fill="url(#linearGradient-1)" opacity="0.522991071">
+                    <polygon id="Fill-4" points="108.28771 281.859381 201.124318 331.638428 293.960925 281.859381 398.741455 0.281725 0.998435294 0.281725"></polygon>
+                </g>
+                <polygon id="Fill-7" fill="#FF6464" points="199.666667 81 187 59 212.335969 59 225 81 225 81 224.997364 81"></polygon>
+                <polygon id="Fill-8" fill="#FF6464" points="200 80.5 187.5 102 175 80.5 187.5 59"></polygon>
+                <polygon id="Fill-9" fill="#FFAA64" points="187 102 199.666667 80 224.997364 80 225 80.0026426 212.333333 102"></polygon>
+                <polygon id="Fill-10" fill="#FF6464" points="237 101.5 249.5 80 262 101.5 249.5 123 249.5 123"></polygon>
+                <polygon id="Fill-11" fill="#FF6464" points="237.330698 102 212 102 224.664031 80 250 80 237.333333 102"></polygon>
+                <polygon id="Fill-12" fill="#FFAA64" points="212 102 237.333333 102 250 124 250 124 224.666667 124"></polygon>
+                <polygon id="Fill-13" fill="#FF6464" points="237.668424 146 263 146 250.334212 168 225 168 225 168 225.002635 168"></polygon>
+                <polygon id="Fill-14" fill="#FF6464" points="237.666667 145.997357 225 124 250.333333 124 263 146 237.666667 146"></polygon>
+                <polygon id="Fill-15" fill="#FFAA64" points="225.4987 124 238 145.502583 225.5013 167 225.4987 167 213 145.502583"></polygon>
+                <polygon id="Fill-16" fill="#FF6464" points="200.331576 167 213 189 187.665788 189 175 167 175.002635 167 175.002635 167"></polygon>
+                <polygon id="Fill-17" fill="#FF6464" points="200.002601 167.5 212.502601 146 225 167.5 212.502601 189 200 167.5"></polygon>
+                <polygon id="Fill-18" fill="#FFAA64" points="213 146 200.330698 168 175 168 175 168 187.666667 146"></polygon>
+                <polygon id="Fill-19" fill="#FF6464" points="162 145.5 149.497399 167 137 145.5 149.497399 124 149.5 124 149.5 124"></polygon>
+                <polygon id="Fill-20" fill="#FF6464" points="162.669302 146 188 146 175.335969 168 150 168"></polygon>
+                <polygon id="Fill-21" fill="#FFAA64" points="188 146 162.667545 146 150 124 150 124 175.332455 124"></polygon>
+                <polygon id="Fill-22" fill="#FF6464" points="162.333333 103 137 103 149.664031 81 175 81 175 81"></polygon>
+                <polygon id="Fill-23" fill="#FF6464" points="162.332455 102 175 124 149.664909 124 137 102 162.335091 102"></polygon>
+                <polygon id="Fill-24" fill="#FFAA64" points="174.4987 124 162 102.5 174.4987 81 187 102.5"></polygon>
+                <polygon id="Fill-25" fill="#FFE38D" points="213.250654 102 187.749346 102 175 124 187.749346 146 213.250654 146 226 124"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -2,7 +2,7 @@
 layout: docs
 title: Microclimate considerations for GDPR readiness
 description: Microclimate considerations for GDPR readiness
-keywords: introducing, GDPR
+keywords: introducing, GDPR, General Data Protection Regulation
 duration: 1 minute
 permalink: gdpr-deployment-guidelines
 type: document

@@ -2,7 +2,7 @@
 layout: docs
 title: "Restart and debug: Tools for VS Code"
 description: "Restart and debug: Tools for VS Code"
-keywords: tools, vscode, visual, studio, code, commands, project, restart, debug, attach, debugger
+keywords: tools, vscode, visual, studio, code, commands, project, restart, debug, attach, debugger, Microclimate Developer Tools for VS Code restart and debug, commands overview, connection commands, project commands
 duration: 1 minute
 permalink: mdt-vsc-commands-restart-and-debug
 type: document
@@ -12,7 +12,7 @@ parent: mdt-vsc-commands-overview
 
 # Restart and debug: Microclimate Developer Tools for VS Code
 
-## See also:
+### **See also:**
 - [Commands overview](mdt-vsc-commands-overview)
 - [Connection commands](mdt-vsc-commands-connection)
 - [Project commands](mdt-vsc-commands-project)

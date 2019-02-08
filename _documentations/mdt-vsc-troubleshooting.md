@@ -2,7 +2,7 @@
 layout: docs
 title: "Troubleshooting: Tools for VS Code"
 description: "Troubleshooting: Tools for VS Code"
-keywords: tools, vscode, visual, studio, code, faq, trouble, troubleshoot, problem, bug
+keywords: tools, vscode, visual, studio, code, faq, trouble, troubleshoot, problem, bug, Microclimate Developer Tools for VS Code troubleshooting, extension logs, stuck, project status, No ESLint warnings or errors for Node.js projects, debug
 duration: 1 minute
 permalink: mdt-vsc-troubleshooting
 type: document
@@ -18,7 +18,7 @@ You can also post questions in the Microclimate [public Slack workspace](https:/
 
 ***
 
-## **Finding the extension logs**
+### **Finding the extension logs**
 
 If you report an issue, you will be asked to upload your logs.
 
@@ -30,16 +30,19 @@ If you report an issue, you will be asked to upload your logs.
 
 ***
 
-## **Build succeeded, but project is stuck in the Stopped state**
+### **Build succeeded, but project is stuck in the Stopped state**
 If your project fails to start, check the application logs for anything that might indicate the failure.
 If your application does not have problems, you can [check the Microclimate logs](troubleshooting#check-the-logs).
 If the error persists, you can reset the project by [disabling and re-enabling](mdt-vsc-commands-project#enable-or-disable-project) the project.
 
-## **Project status does not match web interface**
+### **Project status does not match web interface**
 Run the [refresh connection command](mdt-vsc-commands-connection#refresh-connection). If the issue persists, you might need to [restart Microclimate](clicommands).
 
-## **No ESLint warnings or errors for Node.js projects**
+### **No ESLint warnings or errors for Node.js projects**
 Install the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and follow the instructions to activate the extension.
+
+### Unknown configuration setting `microclimate.connections`
+This setting is deprecated and no longer used. You can safely delete it from your settings.
 
 ***
 

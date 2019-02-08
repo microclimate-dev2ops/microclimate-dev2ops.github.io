@@ -2,7 +2,7 @@
 layout: docs
 title: Creating a personal access token in GitHub
 description: Microclimate Documents
-keywords: Jenkins, pipeline, microservice, microservices, project, projects, tokens
+keywords: Jenkins, pipeline, microservice, microservices, project, projects, tokens, creating personal access token
 duration: 1 minute
 permalink: creatingpat
 type: document

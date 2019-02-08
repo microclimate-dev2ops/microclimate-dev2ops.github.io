@@ -18,7 +18,7 @@ You can configure webhooks on your Git repository so that your pipeline is autom
 
 GitLab can be deployed to a Kubernetes cluster by using the [Helm chart](https://docs.gitlab.com/ce/install/kubernetes/gitlab_omnibus.html).
 
-Microclimate automatically attempts to create webhooks for repositories in GitLab and does not succeed if you do not provide a valid personal access token on the pipeline credentials. For GitLab, the automatically created webhook, if successfully made, is configured to trigger whenever a push event occurs and whenever a merge request event occurs. SSL validation is currently disabled by default for the automatically created webhook, this is because MicroClimate uses a self-signed certificate.  Note: This certificate can be changed and you can manually modify the webhook to have SSL validation enabled should you want to. See [Troubleshooting](troubleshooting) for more details.
+Microclimate automatically attempts to create webhooks for repositories in GitLab and does not succeed if you do not provide a valid personal access token on the pipeline credentials. For GitLab, the automatically created webhook, if successfully made, is configured to trigger whenever a push event occurs and whenever a merge request event occurs. SSL validation is currently disabled by default for the automatically created webhook, this is because Microclimate uses a self-signed certificate.  Note: This certificate can be changed and you can manually modify the webhook to have SSL validation enabled should you want to. See [Troubleshooting](troubleshooting) for more details.
 
 If the webhook is not automatically added on your repository, follow these steps to manually create a webhook.
 
@@ -39,7 +39,7 @@ To edit a webhook, perhaps to add additional triggers:
 
 ## GitHub
 
-Microclimate automatically attempts to create webhooks for repositories in GitHub and does not succeed if you do not provide a valid personal access token on the pipeline credentials. These credentials can be user name and password or personal access token. For GitHub, the automatically created webhook, if successfully made, is configured to trigger whenever a push event occurs and whenever a pull request event occurs. SSL validation is currently disabled by default for the automatically created webhook, this is because MicroClimate uses a self-signed certificate. **Note:** This certificate can be changed and you can manually modify the webhook to have SSL validation enabled should you want to. See [Troubleshooting](troubleshooting) for more details.
+Microclimate automatically attempts to create webhooks for repositories in GitHub and does not succeed if you do not provide a valid personal access token on the pipeline credentials. These credentials can be user name and password or personal access token. For GitHub, the automatically created webhook, if successfully made, is configured to trigger whenever a push event occurs and whenever a pull request event occurs. SSL validation is currently disabled by default for the automatically created webhook, this is because Microclimate uses a self-signed certificate. **Note:** This certificate can be changed and you can manually modify the webhook to have SSL validation enabled should you want to. See [Troubleshooting](troubleshooting) for more details.
 
 If the webhook is not automatically added on your repository, follow these steps to manually create a webhook:
 

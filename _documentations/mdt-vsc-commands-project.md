@@ -2,7 +2,7 @@
 layout: docs
 title: "Project commands: Tools for VS Code"
 description: "Project commands: Tools for VS Code"
-keywords: tools, vscode, visual, studio, code, commands, project
+keywords: tools, vscode, visual, studio, code, commands, project, Microclimate Developer Tools for VS Code project commands overview, connection commands, restart, debug
 duration: 1 minute
 permalink: mdt-vsc-commands-project
 type: document
@@ -12,7 +12,7 @@ parent: mdt-vsc-commands-overview
 
 # Project commands: Microclimate Developer Tools for VS Code
 
-## See also:
+### **See also:**
 - [Commands overview](mdt-vsc-commands-overview)
 - [Connection commands](mdt-vsc-commands-connection)
 - [Restart and debug](mdt-vsc-commands-restart-and-debug)

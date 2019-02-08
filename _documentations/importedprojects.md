@@ -2,7 +2,7 @@
 layout: docs
 title: Importing projects and supported project types
 description: Documents
-keywords: importing, directory, archive, configuring, cloud, microservices, application, Eclipse, MicroProfile, Java, Spring, Node.js, Swift, Maven, Dockerfile, GitHub, container, Liberty, Helm, Dockerfile-lang
+keywords: importing, directory, archive, configuring, cloud, microservices, application, Eclipse, MicroProfile, Java, Spring, Node.js, Swift, Maven, Dockerfile, GitHub, container, Liberty, Helm, Dockerfile-lang, local directory, import, pre-import, pom.xml, server.xml, Maven, Docker, Helm chart
 duration: 1 minute
 permalink: importedprojects
 type: document
