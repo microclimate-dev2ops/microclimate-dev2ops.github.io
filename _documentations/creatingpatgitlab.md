@@ -2,7 +2,7 @@
 layout: docs
 title: Creating a personal access token in GitLab
 description: Microclimate Documents
-keywords: Jenkins, pipeline, microservice, microservices, project, projects, tokens
+keywords: Jenkins, pipeline, microservice, microservices, project, projects, tokens, creating personal access token
 duration: 1 minute
 permalink: creatingpatgitlab
 type: document

@@ -2,7 +2,7 @@
 layout: docs
 title: Troubleshooting Microclimate Developer Tools
 description: How to troubleshoot Microclimate Developer Tools
-keywords: troubleshooting, issues, workaround, common problems, help, tools, eclipse
+keywords: troubleshooting, issues, workaround, common problems, help, tools, eclipse, check the logs, solving common problems, fail, stuck, not rebuild, not showing the correct
 duration: 1 minute
 permalink: mdteclipsetroubleshooting
 type: document

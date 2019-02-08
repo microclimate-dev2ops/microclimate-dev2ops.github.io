@@ -2,7 +2,7 @@
 layout: docs
 title: Microclimate Licenses
 description: Landing page for microclimate licenses
-keywords: license
+keywords: license, Microclimate license, IBM license, non IBM license
 duration: 1 minute
 permalink: license
 # type: document
@@ -10,6 +10,13 @@ permalink: license
 
 
 
+
+
+## Microclimate 19.02 Licenses
+
+* [IBM License.](./licenses-19_02-ibmlicense)
+
+* [Non IBM Licenses.](./licenses-19_02-nonibmlicense)
 
 ## Microclimate 19.01 Licenses
 

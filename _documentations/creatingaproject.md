@@ -2,7 +2,7 @@
 layout: docs
 title: Creating a new project
 description: Creating a new project
-keywords: create, build, start, Java, Node.js, Swift, workspace
+keywords: create, build, start, Go, Java, Node.js, Python, Swift, workspace, post-import
 duration: 1 minute
 permalink: creatingaproject
 type: document

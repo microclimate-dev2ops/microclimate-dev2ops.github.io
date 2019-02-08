@@ -2,7 +2,7 @@
 layout: docs
 title: Managing Microclimate Connections
 description: How to manage connections to Microclimate instances
-keywords: create, connect, delete, remove, disconnect, tools, eclipse
+keywords: create, connect, delete, remove, manage, disconnect, tools, eclipse, opening the Microclimate UI for a connection, creating a new Microclimate project, importing a project into Microclimate, refreshing a connection, deleting a connection, managing connections using Eclipse preferences, creating, connecting, deleting, removing, refreshing, managing, disconnecting
 duration: 1 minute
 permalink: mdteclipsemanagingconnections
 type: document

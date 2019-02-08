@@ -2,7 +2,7 @@
 layout: docs
 title: Adding development languages and sample projects
 description: Adding development languages and sample projects
-keywords: template, project, projects, develop, development, language, languages, build, custom, layout, sample
+keywords: template, project, projects, develop, development, language, languages, build, custom, layout, sample, dockerfile, docker, code, python, go, java, node, yaml
 duration: 1 minute
 permalink: addingdevelopmentlanguages
 type: document

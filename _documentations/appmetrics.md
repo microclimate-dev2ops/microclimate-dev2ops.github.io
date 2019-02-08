@@ -2,7 +2,7 @@
 layout: docs
 title: Understanding Application Metrics
 description: Understanding Application Metrics
-keywords: import, help, metrics, Swift, Node.js, Java, performance monitoring, App monitor, dashboard, CPU, HTTP Incoming Requests, Memory, HTTP Throughput, Heap, HTTP Outbound Requests, Loop Times, Other Requests, Run load, HTTP Requests, Environment, Resource usage, Profiling
+keywords: import, help, metrics, Swift, Node.js, Java, performance monitoring, app monitor, dashboard, CPU, HTTP incoming requests, memory, HTTP throughput, Heap, HTTP outbound requests, loop times, other requests, run load, HTTP Requests, environment, resource usage, profiling, enabling, graph
 duration: 1 minute
 permalink: appmetrics
 type: document

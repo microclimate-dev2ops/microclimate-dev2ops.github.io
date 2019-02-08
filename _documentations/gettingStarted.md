@@ -3,7 +3,7 @@ layout: docs
 collections: documentation
 title: Getting started
 description: Microclimate getting started
-keywords: build, deploy, local, IBM Cloud Private
+keywords: build, deploy, local, IBM Cloud Private, install, develop, public cloud, services, command line, cli, command, start, stop, update, open, delete, options, operation, devops
 duration: 1 minute
 auto_ids: true
 permalink: gettingstarted

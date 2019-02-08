@@ -1,5 +1,6 @@
 {% include header.html %}
 <body class="{{ page.permalink }}">
+<div role="main">
 <div role="banner" class="hero">
     {% include masthead.html %}
     <div class="hero-content">
@@ -32,12 +33,8 @@
 </div>
 <!-- /.hero -->
 
-<div role="main" class="grid-container">
-    <div class="grid-x">
-        <div class="cell large-12">
-            {{ content }}
-        </div>
-    </div>
-</div>
+{{ content }}
 
 {% include footer.html %}
+</div>
+</body>

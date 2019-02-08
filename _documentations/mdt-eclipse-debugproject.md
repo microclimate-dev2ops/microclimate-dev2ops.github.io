@@ -2,7 +2,7 @@
 layout: docs
 title: Debugging Microclimate Projects
 description: How to debug a Microclimate project
-keywords: restart, run, debug, attach, tools, eclipse
+keywords: restart, run, debug, attach, tools, eclipse, debugging MicroProfile, debugging Java EE, debugging Spring, debugging Node.js, import project into Eclipse, restarting a project in debug mode, Chromium based web browser, launching a debug session, modifying Node.js debug launch preferences
 duration: 1 minute
 permalink: mdteclipsedebugproject
 type: document
@@ -12,16 +12,21 @@ parent: mdteclipseoverview
 
 # Debugging Microclimate projects
 
-Microclimate Developer Tools for Eclipse supports debugging Microprofile/JEE and Spring projects.
+Microclimate Developer Tools for Eclipse supports debugging Microprofile/Java EE and Spring projects. The tools also help you set up a debug session for Node.js projects in a Chromium based browser.
 
-## Prerequisites
+* [Debugging Microprofile/Java EE and Spring projects](#debugging-microprofile/java-ee-and-spring-projects)
+* [Debugging Node.js projects](#debugging-nodejs-projects)
+
+## Debugging Microprofile/Java EE and Spring projects
+
+### Prerequisites
 1. If you have not done so already, import your project into Eclipse to make the source available to debug.
 - Right-click your project in the **Microclimate Explorer** view.
 - Select **Import Project**.
 2. If you need to debug any initialization code, set breakpoints in this code now. You can also set breakpoints in your application code at this time.
 
-## Debugging
-1. To restart your application in debug mode, right-click on the project in the **Miroclimate Explorer** view and select **Restart in Debug Mode**. This menu item is only available for Microclimate/Java EE and Spring applications.
+### Debugging
+1. To restart your Microprofile/Java EE or Spring application in debug mode, right-click on the project in the **Miroclimate Explorer** view and select **Restart in Debug Mode**.
 2. If you did not import your project into Eclipse you are prompted to do so now. Select one of the following:
 - **Yes**: To import your project into Eclipse and make the source available for debugging.
 - **No**: To continue restarting in debug mode without importing your project. There might be no source available for debugging if you choose this option.
@@ -33,12 +38,42 @@ Microclimate Developer Tools for Eclipse supports debugging Microprofile/JEE and
 7. You can reload your application multiple times to isolate the problem. However, if you are debugging initialization code, you must restart your project in debug mode to stop in this code again.
 8. When you have finished debugging, you can switch back to run mode. Right-click on your project in the **Miroclimate Explorer** view and select **Restart in Run Mode**.
 
-## Attaching to a project in debug mode
+### Attaching to a project in debug mode
 
 If you restarted your application in debug mode from the Microclimate UI, or you detached from the debugger, or you restarted Eclipse, you can attach the debugger without restarting again:
 
 1. Make sure to do any of the setup you need such as importing your project into Eclipse and setting breakpoints. For more information, see [Prerequisites](#prerequisites).
 2. Right click on your project in the **Microclimate Explorer** view and select **Attach Debugger**. The **Attach Debugger** menu item is only available for Microclimate/Java EE or Spring applications in debug mode if a debugger is not already attached.
+
+## Debugging Node.js projects
+
+You can restart your Node.js application in debug mode and the tools help you launch a debug session in a Chromium based web browser:
+
+1. To restart your Node.js application in debug mode, right-click on the project in the **Miroclimate Explorer** view and select **Restart in Debug Mode**.
+2. If you are prompted to select a Chromium based web browser for launching the debug session:
+    - Select a Chromium based browser from the list of browsers or use the **Manage** link to add one.
+    - Optionally, select to always use this browser for Node.js debugging.
+	- Click **OK** to continue.
+3. Launch a debug session using the information on the **Node.js Debug Inspector URL** dialog:
+    - Click the **Copy URL to Clipboard** button to copy the debug URL.
+	- Click the **Open Browser** button to open the browser you selected in the previous dialog.
+	- Paste the URL into the address bar of the browser to start the debug session.
+
+### Launching a debug session for a Node.js project in debug mode
+
+You can launch a debug session for a Node.js project that is already in debug mode.
+
+1. Right-click on your project in the **Microclimate Explorer** view and select **Launch Debug Session**. This menu item is only available for Node.js projects in debug mode if a debug session is not already started.
+2. Follow the steps in [Debugging Node.js projects](#debugging-nodejs-projects) to launch a Node.js debug session, starting with step 2.
+
+### Modifying the Node.js debug launch preferences
+
+To change the browser to use when launching a Node.js debug session, edit the Microclimate preferences:
+
+1. Open the Eclipse preferences and select **Microclimate** from the list.
+2. In the **Select a Chromium based web browser for launching the Node.js debugger** group, choose a Chromium based web browser from the list of browsers or add one using the **Manage** link. You can also clear the selected browser by selecting **No web browser selected** in the list.
+3. Click **Apply and Close**.
+
 
 [Next: Troubleshooting Microclimate Developer Tools](mdteclipsetroubleshooting)
 

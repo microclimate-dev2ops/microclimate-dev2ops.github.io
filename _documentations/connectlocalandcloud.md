@@ -2,7 +2,7 @@
 layout: docs
 title: Connecting Microclimate installation options
 description: Microclimate connecting local and IBM Cloud Private installations
-keywords: local, IBM Cloud Private, pipeline, portal, DevOps, cloud, pipelines
+keywords: local, IBM Cloud Private, pipeline, portal, DevOps, cloud, pipelines, connect, download, run, install
 duration: 1 minute
 auto_ids: true
 permalink: connectlocalandcloud

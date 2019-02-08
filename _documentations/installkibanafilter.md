@@ -2,7 +2,7 @@
 layout: docs
 title: Installing Kibana and filtering logs in IBM Cloud Private
 description: Installing Kibana and filtering logs in IBM Cloud Private
-keywords: troubleshooting, issues, workaround, logs, Elasticsearch, ELK Stack
+keywords: troubleshooting, issues, workaround, logs, Elasticsearch, ELK Stack, installing Kibana, filtering logs, filter, logging infrastructure, filter logs, IBM Cloud Private, Kibana, query logs
 duration: 3 minutes
 permalink: installkibanafilter
 type: document

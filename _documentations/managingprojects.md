@@ -2,7 +2,7 @@
 layout: docs
 title: Managing projects
 description: Managing projects
-keywords: project, list, using, status, application, monitor
+keywords: project, list, using, status, application, monitor, workspace, application status, view project list page, view project, delete project, project view
 duration: 1 minute
 permalink: managingprojects
 type: document

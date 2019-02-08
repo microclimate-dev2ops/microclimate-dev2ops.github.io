@@ -2,7 +2,7 @@
 layout: docs
 title: Installing Microclimate
 description: Installing Microclimate
-keywords: install, command line, cli, command, start, stop, update, open, delete, options, operation, devops
+keywords: build, deploy, local, IBM Cloud Private, install, develop, public cloud, services, command line, cli, command, start, stop, update, open, delete, options, operation, devops
 duration: 1 minute
 permalink: installing
 type: document

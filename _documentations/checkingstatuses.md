@@ -2,7 +2,7 @@
 layout: docs
 title: Checking the application and build statuses
 description: Checking the application and build statuses
-keywords: using, run, monitor, getting started,  builds, changes, status, state, help, troubleshooting, stopped, starting, unknown, failed, logs, app, error, message, messages
+keywords: using, run, monitor, getting started,  builds, changes, status, state, help, troubleshooting, stopped, starting, unknown, failed, logs, app, error, message, messages, application, build
 duration: 1 minute
 permalink: checkingstatuses
 type: document

@@ -2,7 +2,7 @@
 layout: docs
 title: Performance testing your project
 description: Performance testing
-keywords: Using, coding, code, edit, log, App monitor, test plan, performance, run load, metrics, load test directory
+keywords: using, coding, code, edit, log, App monitor, test plan, performance, run load, metrics, load test directory, load tester, payload, endpoint, passing a payload to an endpoint
 duration: 1 minute
 permalink: performancetesting
 type: document
@@ -12,7 +12,7 @@ parent: usingmicroclimate
 
 # Performance testing your project
 
-Microclimate has a built in load tester that lets you drive data through your application to test its performance.  When you first run the load tester, Microclimate generates a basic configuration for you. You can then customise this configuration for your application.
+Microclimate has a built in load tester that lets you drive data through your application to test its performance.  When you first run the load tester, Microclimate generates a basic configuration for you. You can then customize this configuration for your application.
 
 Follow the steps to edit and test your code:
 1. Select a project or generate a new project.

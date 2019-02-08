@@ -2,7 +2,7 @@
 layout: docs
 title: Using a pipeline
 description: Using a pipeline
-keywords: build, pipeline, configure, config, webhook, GitHub, GitLab, Git, Jenkins, Docker, cluster, IBM Cloud Private, Helm chart, deploying, applications, IBM Cloud Kubernetes Service, delete, deleting
+keywords: build, pipeline, configure, config, webhook, GitHub, GitLab, Git, Jenkins, Docker, cluster, IBM Cloud Private, Helm chart, deploying, applications, IBM Cloud Kubernetes Service, delete, deleting, using a pipeline, creating a build pipeline, overriding chart values, pipeline deployment limitation, deleting a pipeline or project
 duration: 1 minute
 permalink: usingapipeline
 type: document
@@ -20,6 +20,8 @@ To use the pipeline, install Microclimate onto an IBM Cloud Private cluster, or 
 
 Jenkins provides the pipeline capability only when Microclimate is deployed onto IBM Cloud Private by way of the Microclimate Helm chart. The installation instructions for the chart include specifying the Docker registry that the pipeline uses for images, any credentials required to access that registry, and the namespace that the pipeline uses to deploy applications to. Unlike an individual's Microclimate development workspace, pipeline instances are shared among all users of the Microclimate installation.
 
+{% include docs-video.html src="https://ibm.box.com/shared/static/da47ohno0mw6ps0wg9ktgg7ifc8q8mm6.mp4" description="Creating a pipeline" %}
+
 ## Creating a build pipeline
 
 Follow these steps to create a pipeline:
@@ -34,6 +36,8 @@ Follow these steps to create a pipeline:
 At this point, a multi-branch pipeline job is automatically configured in Jenkins. In the Git repository specified by the pipeline, Jenkins sets up a child job to build any branch with a Jenkinsfile. The default Jenkinsfile generated for projects by Microclimate builds the application and Docker image and publishes the image to the Docker registry and namespace specified on the Microclimate Helm chart. The image name is specified in the Jenkinsfile, and the image tag is the short form of the Git commit ID.
 
 Click **Open pipeline** to access the newly created Jenkins pipeline. If necessary, log in with the same identity used to authenticate against IBM Cloud Private.
+
+{% include docs-video.html src="https://ibm.box.com/shared/static/c0sw95xojiuz0du5u0mwuekh8x5w56w4.mp4" description="Pipeline deployments" %}
 
 ## Deploying applications
 

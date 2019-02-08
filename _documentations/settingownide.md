@@ -2,7 +2,7 @@
 layout: docs
 title: Working with Microclimate from your editor
 description: Working with Microclimate from your editor
-keywords: using, working with, your, own, editor, ide, eclipse, application, edit, ide, vsc, visual studio code, vscode, intellij
+keywords: using, working with, your, own, editor, ide, eclipse, application, edit, ide, vsc, visual studio code, vscode, intellij, working with Microclimate, Theia IDE, project files, Eclipse, Visual Studio Code
 duration: 1 minute
 permalink: settingownide
 type: document

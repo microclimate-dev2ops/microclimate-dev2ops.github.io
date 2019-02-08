@@ -1,0 +1,92 @@
+.tabs {
+    background: none;
+    border: none;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    z-index: 20;
+
+    @include breakpoint(medium) {
+        background: url('../images/bkg-orange-line.png');
+        background-position-y: 100px;
+        background-repeat: repeat-x;
+        display: flex;
+        margin-top: 70px;
+    }
+
+    .tabs-title {
+        float: none;
+        
+        @include breakpoint(medium) {
+            flex: 1 1 auto;
+            padding-top: 75px;
+        }
+
+        &.is-active {
+            @include breakpoint(medium) {
+                background: url('../images/icon-mc-cube.svg');
+                background-position: top center;
+                background-repeat: no-repeat;
+            }
+
+            a{
+                &:after {
+                    background-color: #100a2d;
+                }
+            }
+        }
+    }
+
+    .tabs-link {
+        text-align: center;
+        
+        @include breakpoint(medium) {
+            padding-top: 55px;
+        }
+
+        &:after {
+            @include breakpoint(medium) {
+                content: '';
+                display: block;
+                background: #fff;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                border: 3px solid #100a2d;
+                margin: -55px auto 0 auto;
+            }
+        }
+
+        &:focus {
+            outline: none;  
+        }
+    }
+}
+
+.tabs-title>a {
+    color: #011c33;
+    text-decoration: none;
+
+    &:hover {
+        background: none;
+    }
+}
+
+.tabs-title>a:focus, 
+.tabs-title>a[aria-selected='true'] {
+    background: none;
+    color: #011c33;
+}
+
+.tabs-content {
+    background: none;
+    border: none;
+
+    @include breakpoint(medium) {
+        padding: 30px;
+    }
+    
+    @include breakpoint(large) {
+        padding: 30px 90px;
+    }
+}

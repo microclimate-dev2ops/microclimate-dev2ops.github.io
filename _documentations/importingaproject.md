@@ -2,7 +2,7 @@
 layout: docs
 title: Importing a project
 description: Documents
-keywords: import, projects, Git, GitHub, project type, validation, validated
+keywords: import, projects, Git, GitHub, project type, validation, validated, workspace, Microclimate workspace, clone, download, project archive, verify repository
 duration: 1 minute
 permalink: importingaproject
 type: document

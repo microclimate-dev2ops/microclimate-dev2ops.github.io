@@ -2,7 +2,7 @@
 layout: docs
 title: Tutorials and samples
 description: Tutorials and samples
-keywords: tutorials, samples, examples
+keywords: tutorials, samples, examples, adding a new endpoint, using Microclimate Developer Tools for Visual Studio Code, Rogue Cloud, Acme Air
 duration: 1 minute
 auto_ids: true
 permalink: tutorials-and-samples

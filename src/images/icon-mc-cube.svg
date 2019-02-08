@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="51px" height="58px" viewBox="0 0 51 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>cube</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="About" transform="translate(-189.000000, -3210.000000)" stroke="#FFAA64" stroke-width="4">
+            <g id="Group-7" transform="translate(0.000000, 3057.000000)">
+                <g id="Group-21">
+                    <g id="Group-5" transform="translate(0.000000, 41.000000)">
+                        <g id="cube" transform="translate(214.500000, 141.000000) scale(1, -1) rotate(90.000000) translate(-214.500000, -141.000000) translate(187.500000, 117.500000)">
+                            <polygon id="Fill-16" points="13.4521554 0.393289286 8.39285714e-05 23.6935393 26.9042268 23.6935393 40.3558786 0.3953875 40.3575571 0.3953875 40.3562982 0.393289286"></polygon>
+                            <polygon id="Fill-17" points="0 23.6934134 13.4520714 46.9936634 40.3549554 46.9936634 26.9037232 23.695092 26.9041429 23.6934134"></polygon>
+                            <polygon id="Fill-18" points="40.3566339 46.9934116 26.9045625 23.6935812 40.3557946 0.395009821 40.3574732 0.395009821 53.809125 23.6935812"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

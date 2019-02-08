@@ -2,7 +2,7 @@
 layout: docs
 title: Updating Microclimate
 description: Update Microclimate
-keywords: update, refresh, uninstall, install, upgrade, path, fix, image
+keywords: update, refresh, uninstall, install, upgrade, path, fix, image, updating to a new version, updating images, updating local installations, updating IBM Cloud Private installations
 duration: 1 minute
 permalink: updating
 type: document

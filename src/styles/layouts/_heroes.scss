@@ -65,23 +65,6 @@
         background-image: url('../images/hero-home.svg');
     }
 
-    // ipad portrait
-    // @media only screen 
-    // and (min-device-width: 768px) 
-    // and (max-device-width: 1024px) 
-    // and (orientation: portrait) 
-    // and (-webkit-min-device-pixel-ratio: 1) {
-    //     background-position: -180px -80px;
-    // }
-
-    // @media only screen 
-    // and (min-device-width: 768px) 
-    // and (max-device-width: 1024px) 
-    // and (orientation: landscape) 
-    // and (-webkit-min-device-pixel-ratio: 1) {
-    //     background-position: -230px -80px;
-    // }
-
     @media (min-width: 641px) and (max-width: 720px){
         background-position: -265px -50px
     }
@@ -113,23 +96,41 @@
 
 .about {
     .hero {
-        background-image: url('../images/hero-about-mobile.svg');
+        background-image: url('../images/hero-getting-started-mobile.svg');
 
         @include breakpoint(medium){
-            background-image: url('../images/hero-about.svg');
-            background-position: -185px -15px;
+            background-image: url('../images/hero-getting-started.svg');
+            background-position: -95px -15px;
         }
 
-        @media (min-width: 641px) and (max-width: 810px){
-            background-position: -315px -20px;
+        @media (min-width: 720px) and (max-width: 780px){
+            background-position: -145px -15px;
+        }
+
+        @media (min-width: 781px) and (max-width: 920px){
+            background-position: -35px -15px;
+        }
+
+        @media (min-width: 1020px) and (max-width: 1100px){
+            background-position: -225px -45px;
+        }
+
+        @media (min-width: 1200px) and (max-width: 1280px){
+            background-position: -85px -95px !important;
         }
 
         @include breakpoint(large){
-            background-position: -475px -45px;
+            background-position: -105px -45px;
         }
 
         @include breakpoint(xlarge){
-            background-position: -395px -45px;
+            background-position: -45px -95px;
+        }
+
+        .hero-content {
+            @include breakpoint(small only){
+                margin-top: 95%;
+            }
         }
     }
 }

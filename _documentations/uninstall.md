@@ -2,7 +2,7 @@
 layout: docs
 title: Uninstalling Microclimate
 description: How to uninstall Microclimate
-keywords: uninstall, remove, delete, macos, windows, linux, IBM Cloud Private
+keywords: uninstall, remove, delete, macos, windows, linux, IBM Cloud Private, uninstall on Linux or MacOS, uninstall on Windows, uninstall Microclimate in IBM Cloud Private
 duration: 1 minute
 permalink: uninstall
 type: document

@@ -2,7 +2,7 @@
 layout: docs
 title: "Tutorial: Tools for VS Code"
 description: "Tutorial: Tools for VS Code"
-keywords: tools, vscode, visual, studio, code, example, how, use, using, tutorial
+keywords: tools, vscode, visual, studio, code, example, how, use, using, tutorial, Microclimate Developer Tools for VS Code tutorial
 duration: 1 minute
 permalink: mdt-vsc-tutorial
 type: document
@@ -15,7 +15,7 @@ parent: mdt-vsc-overview
 Follow this example workflow to use the tools for VS Code to develop a Microclimate Node.js project. All the features demonstrated in this tutorial are also available for Microprofile and Spring projects.<br>
 For more detail on any of the commands, see the [commands overview](mdt-vsc-commands-overview).
 
-## Prerequisites
+### Prerequisites
 - Run a local Microclimate instance, Version 18.12 or later.
 
 1. First, [connect to your Microclimate instance](mdt-vsc-commands-connection#new-default-local-microclimate-connection). For more information, see the [getting started](mdt-vsc-getting-started) page. Proceed after your projects appear with the Microclimate connection.
