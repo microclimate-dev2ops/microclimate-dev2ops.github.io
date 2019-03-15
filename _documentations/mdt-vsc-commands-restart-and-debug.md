@@ -6,7 +6,7 @@ keywords: tools, vscode, visual, studio, code, commands, project, restart, debug
 duration: 1 minute
 permalink: mdt-vsc-commands-restart-and-debug
 type: document
-order: 5
+order: 3
 parent: mdt-vsc-commands-overview
 ---
 

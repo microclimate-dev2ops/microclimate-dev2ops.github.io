@@ -24,8 +24,3 @@ Complete the following steps to install Microclimate Developer Tools for Eclipse
         3. Click the **Install** button.
         4. Finish the wizard and accept licenses as needed.
         5. When the installation is complete, restart Eclipse.
-
-
-[Next: Managing Microclimate connections](mdteclipsemanagingconnections)
-
-[Back to Microclimate Developer Tools overview](mdteclipseoverview)

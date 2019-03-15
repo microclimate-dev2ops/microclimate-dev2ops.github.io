@@ -7,7 +7,8 @@ duration: 1 minute
 permalink: uninstallicp
 type: document
 category: How-tos and Guides
-parent: Uninstalling Microclimate
+order: 3
+parent: uninstall
 ---
 
 # Uninstalling Microclimate in IBM Cloud Private

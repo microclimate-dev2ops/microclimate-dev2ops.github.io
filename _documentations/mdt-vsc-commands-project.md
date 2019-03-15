@@ -6,7 +6,7 @@ keywords: tools, vscode, visual, studio, code, commands, project, Microclimate D
 duration: 1 minute
 permalink: mdt-vsc-commands-project
 type: document
-order: 5
+order: 2
 parent: mdt-vsc-commands-overview
 ---
 

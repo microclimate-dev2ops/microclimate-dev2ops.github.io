@@ -61,7 +61,3 @@ Try refreshing the connection by right-clicking on it in the **Microclimate Expl
 
 ## Application is not showing the correct status
 Try refreshing the application by right-clicking on it in the **Microclimate Explorer** view and selecting **Refresh**. If this does not solve the problem, there could be an issue with Microclimate itself, see [Microclimate troubleshooting](troubleshooting).
-
-[Next: Uninistalling Microclimate Developer Tools](mdteclipseuninstall)
-
-[Back to Microclimate Developer Tools overview](mdteclipseoverview)

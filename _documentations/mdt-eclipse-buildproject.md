@@ -21,7 +21,3 @@ In these cases, start a build manually when you have made a change or a set of c
 
 1. Right-click your project in the **Microclimate Explorer** view and select **Build**.
 2. Wait for the project state to return to **Running** or **Debugging** in the **Microclimate Explorer** view and then test your changes.
-
-[Next: Debugging Microclimate projects](mdteclipsedebugproject)
-
-[Back to Microclimate Developer Tools overview](mdteclipseoverview)

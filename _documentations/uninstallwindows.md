@@ -7,7 +7,8 @@ duration: 1 minute
 permalink: uninstallwindows
 type: document
 category: How-tos and Guides
-parent: Uninstalling Microclimate
+order: 2
+parent: uninstall
 ---
 
 # Uninstalling Microclimate on Windows

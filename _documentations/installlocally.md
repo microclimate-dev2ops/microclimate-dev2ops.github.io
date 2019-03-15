@@ -13,9 +13,9 @@ parent: root
 
 # Installing Microclimate locally
 
-## Download the Microclimate compressed file.
+## Download the Microclimate compressed file
 
-<a href="{{ site.downloadlink }}" class="download-link trackdownload" id="zipDownload">Download Microclimate 19.02</a>
+<a href="{{ site.downloadlink }}" class="download-link trackdownload" id="zipDownload">Download Microclimate 19.03</a>
 
 ## Installing and starting Microclimate locally on your machine
 
@@ -32,7 +32,7 @@ You can install the Microclimate Command Line Interface (CLI) to run Microclimat
 * The downloaded Microclimate compressed file
 * [Git](https://git-scm.com/)
 * [Docker Desktop for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac) **Version 17.06 minimum**
-* [Docker Compose](https://docs.docker.com/compose/install/).
+* [Docker Compose](https://docs.docker.com/compose/install/)
 * On Linux, follow the post-installation steps to [run Docker as a non-root user](https://docs.docker.com/engine/installation/linux/linux-postinstall/).
 * You must be connected to the internet to perform this task. Microclimate downloads software for creating and configuring your environment.
 
@@ -48,10 +48,7 @@ cd ..
 ```
 * This script installs the `mcdev` command as a link in your `HOME` directory, which is normally `$HOME/microclimate-workspace`.
 * The `./install.sh` command installs `mcdev` to your `/usr/local/bin` directory, automatically adding it to the path.
-5. Start Microclimate with the `~/mcdev start` command or by manually adding `mcdev` to your path. Instructions are included at the end of the installation script. The command downloads Docker images and opens Microclimate in your default browser. Completion time can vary and depends on the speed of your internet connection.
-```
-~/mcdev start -o
-```
+5. Start Microclimate with the `~/mcdev start` command or by manually adding `mcdev` to your path. To start Microclimate and open it in a browser, add the `-o` option. Instructions are included at the end of the installation script. The command downloads Docker images and opens Microclimate in your default browser. Completion time can vary and depends on the speed of your internet connection.
 6. After you complete the CLI installation, you can enter [CLI commands](clicommands).
 
 ***

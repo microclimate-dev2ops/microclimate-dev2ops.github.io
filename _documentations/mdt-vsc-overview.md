@@ -6,13 +6,16 @@ keywords: introducing, introduction, overview, what is, tools, vscode, visual, s
 duration: 1 minute
 permalink: mdt-vsc-overview
 type: document
-order: 140
+order: 2
 parent: settingownide
 ---
 
 # Microclimate Developer Tools for Visual Studio Code
 
+<details>
+<summary style="cursor: pointer;"><img src="dist/images/icon-video.svg" alt="Microclimate video icon" class="inline" width="40px"/> Watch the video for developing and debugging applications with Microclimate Developer Tools for VS Code.</summary>
 {% include docs-video.html src="https://ibm.box.com/shared/static/tjcpshqlf5c9ts03m3n43fdv3ulatled.mp4" description="Developing and debugging applications with Microclimate Developer Tools for VS Code" %}
+</details><br>
 
 You can use [Microclimate Developer Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=IBM.microclimate-tools) to develop your Microclimate projects from within VS Code. Use the tools to access Microclimate features in the comfort of your IDE.
 
@@ -33,13 +36,3 @@ The VS Code tools [are open source](https://github.com/microclimate-dev2ops/micr
 - Toggle project auto build and manually initiate project builds.
 - Scope your VS Code workspace to a Microclimate project or to your `microclimate-workspace`.
 - Disable, enable, and delete projects.
-
-## [Get started with Microclimate Developer Tools for VS Code](mdt-vsc-getting-started)
-
-***
-
-[Go to the tutorial](mdt-vsc-tutorial)
-
-[Go to the commands overview](mdt-vsc-commands-overview)
-
-[Troubleshooting](mdt-vsc-troubleshooting)

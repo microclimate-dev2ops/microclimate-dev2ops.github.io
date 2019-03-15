@@ -318,6 +318,27 @@ After importing an application, when you click `App Monitor`, the dashboard is n
 
 **Workaround:** Enable AppMetrics for your application. You can enable AppMetrics for [Node.js](https://developer.ibm.com/node/monitoring-post-mortem/application-metrics-node-js/), [Swift](https://developer.ibm.com/swift/monitoring-diagnostics/application-metrics-for-swift/), and [SpringBoot](https://github.com/RuntimeTools/javametrics#spring-boot) projects.
 
+<!--
+Action/Topic: Understanding application metrics
+Issue type: info
+Issue link: https://github.ibm.com/dev-ex/landing-pages/issues/923
+19.03: Info added in 19.03.
+-->
+## Profiling markers do not appear
+If you have the Microclimate Language Server for Node.js Profiling extension enabled and have run a load test, profiling markers still might not appear. Ensure that your project and load run conform to the following requirements to use profiling:
+- Your project exists in Theia or VS Code. Profiling is available only in Theia and VS Code.
+- Your project is a Node.js project that was created through Microclimate.
+- Your project has `Run Load` executed on it.
+- The load run successfully completed. Profiling data is written to the `load-test/<datestamp>/profiling.json` file in your Microclimate project only on a successfully completed load run. If the load run was cancelled, it won't be written to the workspace.
+- The load run ran for a minimum of 45 seconds to gather enough profiling data to generate the `profiling.json` file.
+- If a function runs quickly, in less than 5 milliseconds with the default configuration, then the function might not run during any of the samples, so it might not be included in the profiling data for that load run.
+- Profiling is not disabled. To enable profiling, access the profiling in one of the following ways:
+  - Right-click in the editor and select `Toggle Profiling`.
+  - Open the command palette with `cmd+shift+p` on a Mac or `ctrl+shift+p` on Windows. Then, select `Microclimate: Profiling: Toggle Profiling`.
+  - Toggle the `Microprofile Profiling: Show Profiling` setting in the extensions settings.
+
+**Workaround:** Review the preceding list and ensure that your project conforms to all of the items in the list.
+
 ***
 # Checking the application and build statuses
 
@@ -441,6 +462,17 @@ If a problem occurs with the application and it fails to start, it might stay in
 
 **Workaround:** Check the application logs to find out why the application did not start. Then, make changes to the application to fix the problem. If automatic build is enabled, a new build starts. Otherwise, start a new build manually by clicking the **Build** button.
 
+<!--
+Action/Topic:
+Issue type: bug ?
+Issue link: https://github.ibm.com/dev-ex/iterative-dev/issues/947
+19.03: Issue forecast to be fixed for 19.04
+-->
+## Java projects not restarting after cluster restart
+After a cluster restart, your Java projects are not restarting automatically.
+
+**Workaround:** Click on your Java project, and then go to the Overview page. Click **Disable project**, and then click **Enable project**. This successfully restarts your Java project.
+
 ***
 # Editing your project
 
@@ -511,11 +543,22 @@ The changes you make to your code do not get reflected in the `Edit Code` view i
 # Using a pipeline
 
 <!--
+Action/Topic: Using a pipeline
+Issue type: bug
+Issue link: https://github.ibm.com/dev-ex/devops-planning/issues/541
+19.02: still an issue
+Platform: IBM Cloud Private
+-->
+## The Jenkins build fails for a Git repository URL that includes a user name and password or API token
+When creating a pipeline, the Jenkins build fails if the **Git repository** field is filled with a project URL with the format `https://USERNAME:API_TOKEN@github.com/USERNAME/PROJECT.git`, where `USERNAME` is your username, and `API_TOKEN` is your password or API token.
+
+**Workaround:** Fill the **Git repository** field with your project URL, but don't include your user name and password or API token. For example, instead of using `https://USERNAME:API_TOKEN@github.com/USERNAME/PROJECT.git` for the URL, use `https://github.com/USERNAME/PROJECT.git` instead. Find this URL in your project repository in the **Clone with HTTPS** option. If your project is in a private repository, you can create credentials in Microclimate by using your API token or your user name and password.
+
+<!--
 Action/Topic: Using a pipeline: Configuring webhooks
 Status updates:
 18.10: Updated to reflect new certificate use (Aki)
 -->
-
 ## Webhooks not triggering Jenkins builds
 Webhooks that are automatically created by Microclimate are configured so that SSL validation is disabled. If you manually create a webhook or modify an existing webhook to use SSL validation, the webhook might fail to trigger Jenkins jobs because IBM Cloud Private signs a certificate on the Jenkins Kubernetes ingress definition.
 

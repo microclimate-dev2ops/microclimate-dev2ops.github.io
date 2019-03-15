@@ -4,7 +4,7 @@ title: Adding a new endpoint to an application in Microclimate
 description: A guide on how to add a new endpoint to a Node.js application in microclimate
 keywords: example, tutorial, endpoints, JSON, Node.js, GET request, code, POST requests, Postman application, Todo list, error, add endpoint, parse JSON data, code examples, using Curl, using Postman application
 duration: 10 minutes
-permalink: addendpoint
+permalink: tutorial-add-endpoint
 type: document
 ---
 

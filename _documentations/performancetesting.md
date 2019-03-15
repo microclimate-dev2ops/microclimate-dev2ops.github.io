@@ -12,15 +12,20 @@ parent: usingmicroclimate
 
 # Performance testing your project
 
-Microclimate has a built in load tester that lets you drive data through your application to test its performance.  When you first run the load tester, Microclimate generates a basic configuration for you. You can then customize this configuration for your application.
+Microclimate has a built in load tester that lets you drive data through your application to test its performance. When you first run the load tester, Microclimate generates a basic configuration for you. You can then customize this configuration for your application.
 
 Follow the steps to edit and test your code:
 1. Select a project or generate a new project.
-2. To generate the initial test plan, click the **App monitor** tab, and then click the **Run load** button. You start to see the graphs on the screen indicating that the Run load test is running. To cancel the Run load test, click **Cancel load**.
-4. Click the **Edit code** tab and expand your project directory. From the directory, you can access `load-test`>`config.json` and edit the code in the `config.json` file. For example, you can add your own endpoints or change the number of threads that are running.  The default `config.json` contains the following information:
+2. To generate the initial test plan, click the **App monitor** tab, and then click the **Run load** button. You start to see the graphs on the screen indicating that the run load test is running. To cancel the run load test, click **Cancel load**.
+4. Click the **Edit code** tab and expand your project directory. From the directory, you can access `load-test`>`config.json` and edit the code in the `config.json` file. For example, you can add your own endpoints or change the number of threads that are running. The default `config.json` contains the following information:
 
    ```json
-   {"path":"/","requestsPerSecond":"100","concurrency":"20","maxSeconds":"120"}
+   {
+     "path":"/",
+     "requestsPerSecond":"100",
+     "concurrency":"20",
+     "maxSeconds":"120"
+   }
    ```
 
    Where:
@@ -33,7 +38,7 @@ Follow the steps to edit and test your code:
 
    `maxSeconds` is how long to run the test for.
 
-   This default configuration performs a `GET` request on the `/` endpoint, `100` times a second, for `20` users, for `120` seconds
+   This default configuration performs a `GET` request on the `/` endpoint, `100` times a second, for `20` users, for `120` seconds.
 
 ## Passing a payload to an endpoint
 
@@ -45,10 +50,16 @@ To modify the configuration to pass an object to endpoint, include the following
 
 `body` is the contents to send in the body of the message for POST or PUT requests; this can be a string or an object which is converted to JSON.
 
-For example, the following `config.json` sends the json object to the `/api/vi/hello` endpoint for `5` seconds.
+For example, the following `config.json` sends the json object to the `/api/v1/hello` endpoint for `5` seconds.
 
 ```json
-{"method":"POST","contentType":"application/JSON","body":{"message":"microclimate"},"path":"/api/v1/hello","maxSeconds":"5"}
+{
+  "method":"POST",
+  "contentType":"application/JSON",
+  "body":{"message":"microclimate"},
+  "path":"/api/v1/hello",
+  "maxSeconds":"5"
+}
 ```
 
 Where the json object is defined as:

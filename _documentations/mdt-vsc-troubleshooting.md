@@ -6,7 +6,7 @@ keywords: tools, vscode, visual, studio, code, faq, trouble, troubleshoot, probl
 duration: 1 minute
 permalink: mdt-vsc-troubleshooting
 type: document
-order: 5
+order: 9
 parent: mdt-vsc-overview
 ---
 
@@ -53,9 +53,3 @@ Liberty servers started in **Debug** mode do not start until the debugger attach
 Install and enable the [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
 ### **Debugger fails to attach after restarting project into Debug mode**
 Run the [attach debugger command](mdt-vsc-commands-restart-and-debug#attach-debugger) again. If the issue persists after a few attempts, restart the project in **Debug** mode a second time.
-
-***
-
-[Back to the commands overview](mdt-vsc-commands-overview)
-
-[Back to the VS Code tools overview](mdt-vsc-overview)

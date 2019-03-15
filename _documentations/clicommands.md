@@ -2,7 +2,7 @@
 layout: docs
 title: Entering Microclimate CLI commands
 description: How to run Microclimate from the command line
-keywords: command line, cli, command, start, stop, update, open, delete, options, operation, devops, health check, entering cli commands
+keywords: command line, cli, command, start, stop, refresh, open, delete, options, operation, devops, health check, entering cli commands
 duration: 1 minute
 permalink: clicommands
 type: document
@@ -19,7 +19,7 @@ Choose from the following commands:
 * [start](#start)
 * [stop](#stop)
 * [open](#open)
-* [update](#update)
+* [refresh](#refresh)
 * [healthcheck](#health-check)
 * [delete](#delete)
 
@@ -45,7 +45,7 @@ mcdev open
 ```
 **Note:** This command looks for the port that `microclimate-portal` is on and opens it.
 
-## Update
+## Refresh
 Refresh your current version of Microclimate by pulling the newest images. This command does not upgrade Microclimate to a newer version, but it refreshes the existing version if a patch to your currently installed version is available.
 ```
 mcdev refresh

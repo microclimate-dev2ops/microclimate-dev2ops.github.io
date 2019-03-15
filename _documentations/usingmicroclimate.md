@@ -16,7 +16,10 @@ After you install Microclimate and use it for the first time, accept the [licens
 
 ## Working with projects
 
-{% include docs-video.html src="./videos/MicroclimateUI_2018_M17_I.mp4" description="Introduction to the Microclimate user interface in Microclimate Version 18.08" %}
+<details>
+<summary style="cursor: pointer;"><img src="dist/images/icon-video.svg" alt="Microclimate video icon" class="inline" width="40px"/> Watch the video introduction to the Microclimate user interface in Microclimate Version 18.08.</summary>
+{% include docs-video.html src="https://ibm.box.com/shared/static/0m1lp5kqpb3ylu90qi708ie8belk2san.mp4" description="Introduction to the Microclimate user interface in Microclimate Version 18.08" %}
+</details><br>
 
 You can use Microclimate to [create a new project](creatingaproject) or [import an existing one](importingaproject). Projects appear in the [project list](projectview). You can [check the application status and build status](checkingstatuses) of your application.
 
