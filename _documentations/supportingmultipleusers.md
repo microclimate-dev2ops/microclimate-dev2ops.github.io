@@ -6,8 +6,8 @@ keywords: users, projects, IBM Cloud Private, LDAP, supporting multiple users, u
 duration: 5 minutes
 permalink: supportingmultipleusers
 type: document
-parent: linkinstallionicp
-order: 2
+parent: installonicp
+order: 1
 ---
 
 # Support for multiple users

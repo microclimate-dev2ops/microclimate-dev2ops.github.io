@@ -5,8 +5,8 @@ description: Microclimate Developer Tools overview
 keywords: Microclimate Developer Tools, IDE, guides, videos, blog, blogs, getting started, github, features
 duration: 1 minute
 permalink: mdt-overview
-order: 1
-parent: news
+order: 3
+parent: February 2019
 linkname: Microclimate Developer Tools overview
 ---
 

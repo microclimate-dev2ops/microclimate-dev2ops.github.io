@@ -6,7 +6,7 @@ keywords: overview, tools, vscode, visual, studio, code, commands, Microclimate 
 duration: 1 minute
 permalink: mdt-vsc-commands-overview
 type: document
-order: 5
+order: 3
 parent: mdt-vsc-overview
 ---
 
@@ -20,11 +20,3 @@ Commands are separated into categories. See the following pages:
 - [Connection commands](mdt-vsc-commands-connection)
 - [Project commands](mdt-vsc-commands-project)
 - [Restart and debug](mdt-vsc-commands-restart-and-debug)
-
-***
-
-[Back to the tutorial](mdt-vsc-tutorial)
-
-[Back to the VS Code tools overview](mdt-vsc-overview)
-
-[Troubleshooting](mdt-vsc-troubleshooting)

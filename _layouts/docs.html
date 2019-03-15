@@ -10,51 +10,92 @@
 *:hover > .anchorjs-link {
   margin-left: -1.125em !important;
 }
+
+.collapsed {
+    background: url("dist/images/chevron--down.svg") no-repeat;
+    background-size: 48px;
+    background-position: right 0px top -9px;
+}
+
+@media screen and (min-width: 40em) {
+.mobile-nav-expander-parent {
+display: none;
+}
+}
+
+
+
+.up-down-container {
+	display: block;
+}
 </style>
 <body class="doc-template {{ page.permalink }}">
 <div class="grid-x">
     <div class="sidebar cell small-12 medium-4" data-equalizer>
         <aside aria-label="sidebar-asid" data-equalizer-watch>
             <nav aria-label="sidebar" >
-            <ul>
+            <ul class="nav">
+            <li class="text-center mobile-nav-expander-parent"><a class="mobile-nav-expander expanded">Hide document navigation tree</a></li>
 {% assign rootCollection = site.documentations | group_by: 'parent' %}
 {% for rootItems in rootCollection %}
-  {% assign roots = rootItems.items | sort: 'order' %}
+  {% assign roots = rootItems.items | where: 'parent', 'root' | sort: 'order' %}
   {% for root in roots %}
     {% if root.parent == 'root' %}
         {% if root.extlink != nil %}
 	      <li class="doc-category"><a href="{{ root.extlink}}">{{ root.title }}</a>
 	    {% else %}
-	      <li class="doc-category"><a {% if root.url == page.url %}class="current-page" {% else %} class="default-link" {% endif %} href="{{ root.url | replace : '/' | append: '#doc' }}">{{ root.title }}</a>
+	      <li class="doc-category"><span class="up-down-container"><a {% if root.url == page.url %}class="current-page" {% else %} class="default-link" {% endif %} href="{{ root.url | replace : '/' | append: '#doc' }}">{{ root.title }}</a></span>
 	    {% endif %}
 	    <!-- Second level by category-->
 	    {% for docsInCatCollection in rootCollection %}
-	      {% assign docs = docsInCatCollection.items | sort: 'order' %}
+	      {% assign docs = docsInCatCollection.items | where: 'parent', root.permalink | sort: 'order' %}
 	      {% assign ulPrinted1 = false %}
 	      {% for doc in docs %}
 	        {% if doc.parent == root.permalink %}
 	            
 			    {% if ulPrinted1 == false %}
-				  <ul>
+				  <ul class="level1" style="display:none;">
 				{% endif %}
 				{% assign ulPrinted1 = true %}
 				{% if doc.extlink != nil %}
 		          <li><a href="{{ doc.extlink}}">{{ doc.title }}</a>
 		        {% else %}
-	              <li><a {% if doc.url == page.url %}class="current-page" {% else %} class="default-link" {% endif %} href="{{ doc.url | replace : '/' | append: '#doc' }}">{{ doc.title }}</a>
+	              <li><span class="up-down-container"><a {% if doc.url == page.url %}class="current-page" {% else %} class="default-link" {% endif %} href="{{ doc.url | replace : '/' | append: '#doc' }}">{{ doc.title }}</a></span>
 	            {% endif %}
 	            <!-- Third level by category-->
 			    {% for docsInCatCollection2 in rootCollection %}
-			      {% assign docs2 = docsInCatCollection2.items | sort: 'order' %}
+			      {% assign docs2 = docsInCatCollection2.items | where: 'parent', doc.permalink | sort: 'order' %}
 			      {% assign ulPrinted2 = false %}
 			      {% for doc2 in docs2 %}
 			        {% if doc2.parent == doc.permalink %}
 			          {% if ulPrinted2 == false %}
-				        <ul>
+				        <ul class="level2" style="display:none;">
 				      {% endif %}
 				      {% assign ulPrinted2 = true %}
-			          <li><a {% if doc2.url == page.url %}class="current-page" {% else %} class="default-link" {% endif %} href="{{ doc2.url | replace : '/' | append: '#doc' }}">{{ doc2.title }}</a></li>
-			        {% endif %}
+			          <li><span class="up-down-container"><a {% if doc2.url == page.url %}class="current-page" {% else %} class="default-link" {% endif %} href="{{ doc2.url | replace : '/' | append: '#doc' }}">{{ doc2.title }}</a></span>
+			          {% endif %}
+			          
+			          <!-- 4h level --> 
+			          {% for docsInCatCollection3 in rootCollection %}
+					      {% assign docs3 = docsInCatCollection3.items | where: 'parent', doc2.permalink | sort: 'order' %}
+					      {% assign ulPrinted3 = false %}
+					      {% for doc3 in docs3 %}
+					        {% if doc3.parent == doc2.permalink %}
+					          {% if ulPrinted3 == false %}
+						        <ul class="level3" style="display:none;">
+						      {% endif %}
+						      {% assign ulPrinted3 = true %}
+					          <li><a {% if doc3.url == page.url %}class="current-page" {% else %} class="default-link" {% endif %} href="{{ doc3.url | replace : '/' | append: '#doc' }}">{{ doc3.title }}</a></li>
+					        {% endif %}
+					      {% endfor %}
+					      {% if ulPrinted3 == true %}
+						    </ul>
+						  {% endif %}
+					  {% endfor %}
+			          <!-- end 4th level -->
+			          
+			          </li>
+			        
 			      {% endfor %}
 			      {% if ulPrinted2 == true %}
 				    </ul>
@@ -114,5 +155,89 @@ $(document).ready(function(){
     anchors.options.placement = 'left';
     anchors.add('h1');
     anchors.add('h2');
+    
+    fixNavTree();
+    bindListener();
 });
+
+function bindListener() {
+	$(".mobile-nav-expander").on("click", function(){
+		if ( $(this).hasClass("expanded")) {
+			$(this).removeClass("expanded");
+			$(".doc-category").slideUp();
+			$(this).text("Show document navigation tree");
+		} else {
+			$(this).addClass("expanded");
+			$(".doc-category").slideDown();
+			$(this).text("Hide document navigation tree");
+		}
+	});
+}
+function fixNavTree() {
+	var path = window.location.pathname;
+	var link = path.replace("/dev-ex/landing-pages/","") + window.location.hash;
+	var tag = $("a[href='"+link+"']");
+	if (tag.length>0) {
+		var parentUL = tag.closest( "ul" );
+		parentUL.show();
+		var isLevel2 = parentUL.hasClass("level2");
+		
+		if ( isLevel2) {
+			var topLevel = parentUL.parents( "ul" );
+			if (topLevel) {
+				topLevel.show();
+			}
+			
+			
+		} else {
+			var isLevel3 = parentUL.hasClass("level3");
+			if ( isLevel3 )
+			{
+				var topLevel = parentUL.parents( "ul" );
+				if (topLevel) {
+					topLevel.show();
+					var topLevel = topLevel.parents( "ul" );
+					if ( topLevel ) {
+						topLevel.show();
+					}
+				}
+			}
+		}
+		
+		var childUL = tag.find('ul').first();
+		if ( tag.parent().hasClass("up-down-container") ) {
+			if ( tag.parent().next("ul").length>0 ) {
+				tag.parent().next("ul").show();
+			}
+			
+		}
+		
+		var level1s = $(".level1");
+		for ( var i = 0; i < level1s.length; i++ ) {
+			var ul = level1s.eq(i);
+			if( ! level1s.eq(i).is(":visible")){
+				
+				if ( ul.prev().hasClass("up-down-container")) {
+					ul.prev().addClass("collapsed");
+				}
+			} else {
+				var lis = ul.find("li");
+				for ( var j = 0; j < lis.length; j++ ) {
+					var li = lis.eq(j);
+					if ( li.find("ul").length>0) {
+						if (!li.find("ul").eq(0).is(":visible")) {
+							li.children("span[class='up-down-container']").addClass("collapsed");
+						}
+					}
+				}
+			}
+			
+		}
+		
+	} else {
+		$(".level1").show();
+		$(".level2").show();
+		$(".level3").show();
+	}
+}
 </script>

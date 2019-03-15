@@ -18,7 +18,7 @@ parent: root
 
 The following tutorials are available for you to use:
 
-* [Adding a New Endpoint to an Application in Microclimate](addendpoint)
+* [Adding a New Endpoint to an Application in Microclimate](tutorial-add-endpoint)
 * [Using Microclimate Developer Tools for Visual Studio Code](mdt-vsc-tutorial)
 
 ## Samples

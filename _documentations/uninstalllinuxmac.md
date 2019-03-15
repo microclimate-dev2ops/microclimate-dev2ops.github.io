@@ -7,7 +7,8 @@ duration: 1 minute
 permalink: uninstalllinuxmac
 type: document
 category: How-tos and Guides
-parent: Uninstalling Microclimate
+order: 1
+parent: uninstall
 ---
 
 # Uninstalling Microclimate on Linux or Mac/OS

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Debugging Microclimate Projects
+title: Debugging Microclimate projects
 description: How to debug a Microclimate project
 keywords: restart, run, debug, attach, tools, eclipse, debugging MicroProfile, debugging Java EE, debugging Spring, debugging Node.js, import project into Eclipse, restarting a project in debug mode, Chromium based web browser, launching a debug session, modifying Node.js debug launch preferences
 duration: 1 minute
@@ -73,8 +73,3 @@ To change the browser to use when launching a Node.js debug session, edit the Mi
 1. Open the Eclipse preferences and select **Microclimate** from the list.
 2. In the **Select a Chromium based web browser for launching the Node.js debugger** group, choose a Chromium based web browser from the list of browsers or add one using the **Manage** link. You can also clear the selected browser by selecting **No web browser selected** in the list.
 3. Click **Apply and Close**.
-
-
-[Next: Troubleshooting Microclimate Developer Tools](mdteclipsetroubleshooting)
-
-[Back to Microclimate Developer Tools overview](mdteclipseoverview)

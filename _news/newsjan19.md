@@ -5,8 +5,9 @@ description: Latest news
 keywords: GA, release, version, history
 duration: 20 seconds
 permalink: newsjan19
-order: 14
-linkname: January 2019
+order: 2
+linkname: January Release Updates
+parent: January 2019
 ---
 
 # January updates

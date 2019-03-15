@@ -6,8 +6,8 @@ keywords: troubleshooting, issues, workaround, logs, Elasticsearch, ELK Stack, i
 duration: 3 minutes
 permalink: installkibanafilter
 type: document
-parent: linkinstallionicp
-order: 3
+parent: installonicp
+order: 2
 ---
 
 # Installing Kibana and filtering logs in IBM Cloud Private

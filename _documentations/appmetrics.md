@@ -54,5 +54,35 @@ View a summary of the information from the performance metrics graphs that you s
 ## Viewing the graph in the **Profiling** tab
 The **Profiling** tab is available only in Node.js projects. This tab pulls information from the CPU metric in the **Dashboard** tab. CPU cycles are caused by an execution of code. Receiving an endpoint doesn't cause many CPU cycles, but receiving an incoming payload can. Profiling shows you what occurs when a spike appears in the CPU metric. Each spike on the flame graph shows a call stack in the path. The width of a spike indicates how much time the CPU spends on a function. Wide spikes indicate that your CPU spends much time on a particular function and where you might want change the code to optimize it.
 
+## Profiling Data Support
+In Theia or VS Code, you can use the Profiling Language Server to provide code highlighting. Code highlighting displays the relative time spent in JavaScript functions based on profiling data gathered through [Microclimate load testing](performancetesting). Profiling support is only available for Node.js projects that are created through Microclimate and then profiled.
+
+- Profiling data is written to the workspace only on a successfully completed load run. If the load run is cancelled, it won't be written to the workspace.
+- Run the load run for a minimum of 45 seconds for enough profiling data to be gathered to generate the `profiling.json` file.
+- You can configure the load run time in the `config.json` file in the `load-test` directory. The default time is 2 minutes.
+- Out of all the folders that contain a `profiling.json` file, the most up-to-date `profiling.json` file is the one that is displayed. The code for the older profiling data might be out of date, such as pointing to lines that have been moved.
+
+To display code highlighting:
+1. Open a project created with Microclimate and profiled using the [performance testing](performancetesting) feature of Microclimate. Profiling data is created in a `load-test/<datestamp>/profiling.json` file in your Microclimate project.
+2. In the **Editor** view, open a JavaScript file. The Editor highlights any lines that were found in the profiling data and annotates them to show how often they were seen and where they were called from.
+
+To enable or disable the profile highlighting in the code, access the profiling in one of the following ways:
+- Right-click in the editor and select `Toggle Profiling`.
+- Open the command palette with `cmd+shift+p` on a Mac or `ctrl+shift+p` on Windows. Then, select `Microclimate: Profiling: Toggle Profiling`.
+- Toggle the `Microprofile Profiling: Show Profiling` setting in the extensions settings.
+
+For more information on sample-based profiling, see [Sample-based profiling](https://www.ibm.com/support/knowledgecenter/en/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/profiling_using.html).
+
+If profiling markers do not appear, check to see if your project and load run conform to the [necessary requirements to use profiling](troubleshooting#profiling-markers-do-not-appear).
+
+## Interpreting the annotation tooltip
+After you start the load test and the test completes, view the source code. Theia displays an annotation tooltip with a specified message in a similar format to the following example:
+
+![image of Theia annotation tooltip](dist/images/theia-annotation-tooltip.png)
+
+- The bullet points indicate the parent callers of the function. The percentages equal the number of times that a parent caller called a function. In this example, `<anonymous function>` probably made 2 calls to the `app.get()` function, and the `handle()` function probably made 1 call.
+- The numbers in the parenthesis indicate the position of the parent function in the file, such as the line and character number. This position information is ambiguous for anonymous functions, but the message includes the information regardless.
+- If a function runs quickly, in less than 5 milliseconds with the default configuration, then the function might not run during any of the samples, so it might not be included in the profiling data for that load run.
+
 ## Need help?
 If you encounter problems with application metrics, check the [Troubleshooting page](troubleshooting#understanding-application-metrics).

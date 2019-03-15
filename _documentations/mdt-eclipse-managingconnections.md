@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Managing Microclimate Connections
+title: Managing Microclimate connections
 description: How to manage connections to Microclimate instances
 keywords: create, connect, delete, remove, manage, disconnect, tools, eclipse, opening the Microclimate UI for a connection, creating a new Microclimate project, importing a project into Microclimate, refreshing a connection, deleting a connection, managing connections using Eclipse preferences, creating, connecting, deleting, removing, refreshing, managing, disconnecting
 duration: 1 minute
@@ -26,7 +26,7 @@ Creating a connection in Eclipse to Microclimate enables you to view and work wi
 
 1. Make sure that your local Microclimate instance is up and running.
 2. Create a connection to your local Microclimate:
-    - From the **File** menu select **New** > **Other**:
+    - From the **File** menu select **New** > **Other**.
 	- Start typing **Microclimate** in the filter field or locate and expand the **Microclimate** entry in the list.
 	- Select **New Microclimate Connection** and click **Next**.
     - Fill in the Microclimate **Hostname** (localhost only is supported) and **Port** (usually 9090).
@@ -91,7 +91,3 @@ Microclimate connections can also be managed through Eclipse preferences.
 ### Deleting a connection
 
 To delete a connection, select the connection and click the **Remove** button.
-
-[Next: Managing Microclimate projects](mdteclipsemanagingprojects)
-
-[Back to Microclimate Developer Tools overview](mdteclipseoverview)

@@ -6,7 +6,7 @@ keywords: tools, vscode, visual, studio, code, commands, connection, Microclimat
 duration: 1 minute
 permalink: mdt-vsc-commands-connection
 type: document
-order: 5
+order: 1
 parent: mdt-vsc-commands-overview
 ---
 

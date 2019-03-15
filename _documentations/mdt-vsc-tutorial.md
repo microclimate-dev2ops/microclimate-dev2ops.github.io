@@ -6,7 +6,7 @@ keywords: tools, vscode, visual, studio, code, example, how, use, using, tutoria
 duration: 1 minute
 permalink: mdt-vsc-tutorial
 type: document
-order: 5
+order: 2
 parent: mdt-vsc-overview
 ---
 
@@ -38,7 +38,7 @@ For more detail on any of the commands, see the [commands overview](mdt-vsc-comm
             return res.send("Yep, it worked!!");
         });
         ```
-    - If you want to make a more complex change, see [adding a new endpoint](addendpoint).
+    - If you want to make a more complex change, see [adding a new endpoint](tutorial-add-endpoint).
     - Microclimate detects the file changes and restarts your application.
         - In the Microclimate tree, the application stops and starts again as the application server restarts.
         - You can also see `nodemon` restart the project in the application logs.
@@ -60,11 +60,3 @@ For more detail on any of the commands, see the [commands overview](mdt-vsc-comm
     - Refresh the new endpoint page that you opened in step 7 so a new request is made, and the breakpoint gets hit.
     - VS Code suspends your application at the breakpoint. Here you can step through the code, inspect variables, see the call stack, and evaluate expressions in the **Debug Console**.
     ![Debugging](dist/images/mdt-vsc/tutorial-3.png)
-
-***
-
-[Next: Commands overview](mdt-vsc-commands-overview)
-
-[Back to getting started](mdt-vsc-getting-started)
-
-[Troubleshooting](mdt-vsc-troubleshooting)

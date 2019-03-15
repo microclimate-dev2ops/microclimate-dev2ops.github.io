@@ -12,6 +12,24 @@
   <meta property="og:image"         content="https://microclimate-dev2ops.github.io/dist/images/logo.jpg" />
   <meta property="og:image:width"   content="400"/>
   <meta property="og:image:height"  content="400"/>
+  <style>
+  .expanded {
+    background: url("dist/images/chevron--up.svg") no-repeat;
+    background-size: 48px;
+    background-position: right 0px top -9px;
+}
+
+.collapsed {
+    background: url("dist/images/chevron--down.svg") no-repeat;
+    background-size: 48px;
+    background-position: right 0px top -9px;
+}
+
+.up-down-container {
+	display: block;
+	cursor: pointer;
+}
+  </style>
 </head>
 <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
@@ -37,7 +55,11 @@
     js = d.createElement(s); js.id = id;
     js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
     fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+  }(document, 'script', 'facebook-jssdk'));
+  
+
+
+  </script>
   
 {% include masthead.html %}
 <body class="doc-template {{ page.permalink }}">
@@ -48,11 +70,45 @@
         <nav aria-label="sidebar">
             <h4>News Archive</h4>
             <ul>
-              {% assign allnews = site.news %}
-              {% assign newsitems = allnews | sort: 'order' | reverse %}
-              {% for news in newsitems %}
-              <li><a class="newslink {% if forloop.first == true %}active-link{% endif %}" href="{{ news.permalink}}">{{ news.linkname}}</a></li>
-              {% endfor %}
+            {% assign parenttopic = 'kkk' %}
+            {% assign ulprinted = false %}
+            {% assign pages = site.news | sort: 'order' | reverse %}
+            {% for item in pages %}
+               {% if parenttopic != item.parent %}
+
+	               {% if ulprinted==true %}
+	                 </ul>
+	              	 </li>
+	               {% endif %}
+              	   <li><span class="news-parent">{{ item.parent}}</span>
+				      <ul>    
+				      {% assign ulprinted = true %}           
+              {% endif %}
+              <li><a {% if item.url == page.url %} class="current-page news-link" {% else %} class="news-link" {% endif %} href="{{ item.permalink}}">{{ item.linkname}}</a></li>
+        		  {% assign parenttopic = item.parent %}
+        		{% endfor %}
+             {% if ulprinted==true %}
+                 </ul>
+              	 </li>
+               {% endif %}
+             
+              
+              {% assign rootCollection = site.newsarchive | group_by: 'parent' %}
+            {% for rootItems in rootCollection %}
+              {% assign roots = rootItems.items | sort: 'order' | reverse %}
+              {% assign ulPrinted1 = false %}
+              {% for root in roots %}
+              {% if ulPrinted1 == false %}
+                  <li><span class="news-parent up-down-container expanded">{{ root.parent}}</span>
+				  <ul>
+				{% endif %}
+				{% assign ulPrinted1 = true %}
+                <li><a {% if root.url == page.url %} class="current-page news-link" {% else %} class="news-link" {% endif %} href="{{ root.permalink}}">{{ root.linkname}}</a></li>
+        		  {% endfor %}
+        		  </ul>
+        		  </li>
+        		{% endfor %}
+              
             </ul>
         </nav>
       </aside>
@@ -85,5 +141,22 @@
 <!-- /.grid-x -->
 
 {% include footer.html %}
+
+<script>
+$( document ).ready(function() {
+	$(".up-down-container").on("click", function(){
+		
+		if ( $(this).hasClass("expanded")) {
+			$(this).removeClass("expanded");
+			$(this).addClass("collapsed");
+			$(this).parent().find("ul").slideUp();
+		} else {
+			$(this).removeClass("collapsed");
+			$(this).addClass("expanded");
+			$(this).parent().find("ul").slideDown();			
+		}
+	});
+});
+</script>
 
 

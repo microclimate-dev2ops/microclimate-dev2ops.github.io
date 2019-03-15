@@ -6,7 +6,7 @@ keywords: introducing, introduction, overview, tools, get, getting, start, start
 duration: 1 minute
 permalink: mdt-vsc-getting-started
 type: document
-order: 5
+order: 1
 parent: mdt-vsc-overview
 ---
 
@@ -26,11 +26,3 @@ parent: mdt-vsc-overview
 6. Open your `microclimate-workspace` or a project within the workspace as your VS Code workspace. The tools offer to open the workspace for you if it's not open already.
 
 You are now ready to use the tools. Right-click a project in the Microclimate tree or enter `Microclimate` into the Command Palette to look at the features available.
-
-***
-
-[Next: Tutorial](mdt-vsc-tutorial) to see a walkthrough.
-
-[Next: Commands overview](mdt-vsc-commands-overview) to see a breakdown of the features.
-
-[Back to the VS Code tools overview](mdt-vsc-overview)

@@ -1,0 +1,19 @@
+<svg width="640" height="640" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet">
+ <defs>
+  <path id="baVOiu9nJ" d="m369.53,291.2l44.77,-62.66l-89.55,0l-89.56,0l44.77,62.66l44.79,62.66l44.78,-62.66z"/>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g transform="rotate(-180 324.7449951171875,291.1999816894532) " id="svg_1">
+   <g id="svg_2">
+    <g id="svg_3">
+     <use id="svg_4" fill="#ff6464" xlink:href="#baVOiu9nJ"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
