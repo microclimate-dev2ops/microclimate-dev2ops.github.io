@@ -22,7 +22,7 @@ Following a month of the team working hard preparing for launch, the countdown i
 - Newly created projects are now set up to dynamically pull in the latest available JDK service release to pick up patches and security fixes.
 - Shutdown of projects is more efficient when you close or log off Microclimate.
 - A new validation step on project import generates any missing files which means a better experience getting your imported projects working in Microclimate.
-- A new tutorial about [Adding a new endpoint to an application in Microclimate](https://microclimate-dev2ops.github.io/addendpoint).
+- A new tutorial about [Adding a new endpoint to an application in Microclimate](https://microclimate-dev2ops.github.io/tutorial-add-endpoint).
 - More information to help you if you get stuck, see our new  [Troubleshooting](./troubleshooting) section.
 - Under the covers we've been refining the code, fixing a few things, and making Microclimate even easier for you to use.
 
