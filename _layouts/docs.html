@@ -175,7 +175,12 @@ function bindListener() {
 }
 function fixNavTree() {
 	var path = window.location.pathname;
-	var link = path.replace("/dev-ex/landing-pages/","") + window.location.hash;
+	if ( path.startsWith("/dev-ex/landing-pages/")) {
+		path = path.replace("/dev-ex/landing-pages/","")
+	} else if ( path.startsWith("/")) {
+		path = path.substring(1);
+	}
+	var link = path + window.location.hash;
 	var tag = $("a[href='"+link+"']");
 	if (tag.length>0) {
 		var parentUL = tag.closest( "ul" );
