@@ -45,7 +45,7 @@ Projects must be located in `<user>/microclimate-workspace`.
 
 #### Downloading the release binary on MacOS
 1. Download <a href="download/codewind" class="download-link trackdownload">codewind</a> to a folder on your system.
-2. Make the `codewind` file usable with the `chmod +r codewind` command.
+2. Make the `codewind` file usable with the `chmod +x codewind` command.
 3. Enter the `./codewind install` command in the Terminal.
 4. Run the `./codewind` command to see the available commands.
 
