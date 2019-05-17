@@ -45,10 +45,9 @@ Projects must be located in `<user>/microclimate-workspace`.
 
 #### Downloading the release binary on MacOS
 1. Download <a href="download/codewind" class="download-link trackdownload">codewind</a> to a folder on your system.
-2. If the binary file has the `.dms` extension, remove the extension so that the file is named `codewind`.
-3. Make the `codewind` file usable with the `chmod +x codewind` command.
-4. Enter the `./codewind install` command in the Terminal.
-5. Run the `./codewind` command to see the available commands.
+2. Make the `codewind` file usable with the `chmod +x codewind` command.
+3. Enter the `./codewind install` command in the Terminal.
+4. Run the `./codewind` command to see the available commands.
 
 #### Installing the VS Code extension
 1. Install VS Code Version 1.27 or later.
@@ -58,13 +57,12 @@ Projects must be located in `<user>/microclimate-workspace`.
 
 #### Installing the Eclipse plug-in
 1. Download and install the latest Eclipse IDE for Java EE Developers or use an existing installation. The earliest supported version of the Eclipse IDE is Version 4.8 (Photon).
-2. Open the [Eclipse IDE](https://marketplace.eclipse.org/content/codewind) and go to **Help**>**Eclipse Marketplace**.
-3. Search for `Codewind`.
-4. Click **Install**.
-5. Finish the wizard and accept licenses as prompted.
-6. When the installation is complete, restart Eclipse.
-7. Open the Codewind Explorer view. Go to **Window**>**Show View**>**Other** and type `Codewind` in the filter field.
-8. Then, select **Codewind Explorer** and click **Open**.
+2. Obtain the plug-in in one of the following ways: 
+    - Open the [Eclipse IDE](https://marketplace.eclipse.org/content/codewind) and go to **Help**>**Eclipse Marketplace**. Then, search for `Codewind`. Click **Install** and finish the wizard and accept licenses as prompted.
+   - You can also use the [Marketplace Drag to Install button](https://marketplace.eclipse.org/content/codewind#group-external-install-button).
+3. When the installation is complete, restart Eclipse.
+4. Open the Codewind Explorer view. Go to **Window**>**Show View**>**Other** and type `Codewind` in the filter field.
+5. Then, select **Codewind Explorer** and click **Open**.
 
 ## Getting started
 
@@ -92,4 +90,4 @@ With Codewind, you have a single connection that is either active or inactive. T
 
 ## Discovering more
 
-For more information, see the [Eclipse Codewind site](https://projects.eclipse.org/projects/ecd.codewind). If you can't find what you need, contact in at our `ibm-cloud-tech` [Slack channel](https://ibm-cloud-tech.slack.com/messages/microclimate)! If you are new to Slack, you can [create a user ID here](https://slack-invite-ibm-cloud-tech.mybluemix.net/)!
+For more information, see the [Eclipse Codewind site](https://projects.eclipse.org/projects/ecd.codewind). If you can't find what you need, contact us in our `ibm-cloud-tech` [Slack channel](https://ibm-cloud-tech.slack.com/messages/microclimate)! If you are new to Slack, you can [create a user ID here](https://slack-invite-ibm-cloud-tech.mybluemix.net/)!
