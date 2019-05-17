@@ -45,10 +45,9 @@ Projects must be located in `<user>/microclimate-workspace`.
 
 #### Downloading the release binary on MacOS
 1. Download <a href="download/codewind" class="download-link trackdownload">codewind</a> to a folder on your system.
-2. If the binary file has the `.dms` extension, remove the extension so that the file is named `codewind`.
-3. Make the `codewind` file usable with the `chmod 775 codewind` command.
-4. Enter the `./codewind install` command in the Terminal.
-5. Run the `./codewind` command to see the available commands.
+2. Make the `codewind` file usable with the `chmod 775 codewind` command.
+3. Enter the `./codewind install` command in the Terminal.
+4. Run the `./codewind` command to see the available commands.
 
 #### Installing the VS Code extension
 1. Install VS Code Version 1.27 or later.
