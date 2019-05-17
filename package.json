@@ -22,7 +22,7 @@
     "gulp-uglify": "1.2.0"
   },
   "dependencies": {
-    "@ibm/plex": "^1.1.4",
-    "foundation-sites": "^6.5.0-rc.2"
+    "@ibm/plex": "^1.4.1",
+    "foundation-sites": "^6.5.3"
   }
 }

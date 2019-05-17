@@ -19,7 +19,8 @@
                     </ul> -->
                     <ul class="vertical medium-horizontal menu">
                         <li><a href="about" {% if page.permalink == 'about' %} class="current-page" {% endif %}>About</a></li>
-                        <li><a href="documentation" {% if page.type == 'document' %} class="current-page" {% endif %}>Docs</a></li>
+                        <li><a href="codewindtechpreview" class="high-light">Codewind</a></li>
+                        <li><a href="documentation" {% if page.type == 'document' and page.permalink != 'codewindtechpreview' %} class="current-page" {% endif %}>Docs</a></li>
                         <li><a href="community" {% if page.permalink == 'community' %} class="current-page" {% endif %}>Community</a></li>
                         <li><a href="news" {% if page.permalink == 'news' %} class="current-page" {% endif %}>News</a></li>
                         <li><a href="roguecloud" {% if page.permalink == 'roguecloud' %} class="current-page" {% endif %}>Rogue Cloud</a></li>

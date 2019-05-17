@@ -11,6 +11,9 @@
         margin-top: 20px;
     }
 
+	ul {
+	    align-items: center;
+	}
     li{       
         display: inline-block;
 
@@ -49,6 +52,22 @@
                 box-shadow: 0 4px 0 0 #ff6464;
             }
         }
+        
+        &.high-light {
+		  -webkit-border-radius: 30;
+		  -moz-border-radius: 30;
+		  border-radius: 30px;
+		  color: #ffffff;
+		  background: #ff6464;
+		  padding: 12px 12px;
+		  text-decoration: none;
+		}
+		
+		&.high-light:hover {
+		  background: #ff1919;
+		  text-decoration: none;
+		  box-shadow: unset !important;
+		}
     }
 }
 
@@ -112,6 +131,23 @@
                 box-shadow: 0 4px 0 0 #ff6464;
             }
         }
+        &.high-light {
+		  -webkit-border-radius: 30;
+		  -moz-border-radius: 30;
+		  border-radius: 30px;
+		  color: #ffffff;
+		  background: #ff6464;
+		  padding: 12px 12px;
+		  text-decoration: none;
+		}
+		
+		&.high-light:hover {
+		  background: #ff1919;
+		  text-decoration: none;
+		  color: #ffffff;
+		  box-shadow: unset !important;
+		}
+		
     }
 
     .doc-category {
