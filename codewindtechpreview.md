@@ -51,7 +51,7 @@ Projects must be located in `<user>/microclimate-workspace`.
 
 #### Installing the VS Code extension
 1. Install VS Code Version 1.27 or later.
-2. Install the [Codewind VS Code extension](https://marketplace.visualstudio.com/items?itemName=IBM.codewind) from the VS Code Marketplace or by searching for `Codewind` in the VS Code Extensions view.
+2. Install the [Codewind VS Code extension](https://marketplace.visualstudio.com/items?itemName=IBM.codewind) from the VS Code Marketplace or by searching for `Codewind` in the VS Code Extensions view. You can also use the [Marketplace Drag to Install button](https://marketplace.eclipse.org/content/codewind#group-external-install-button).
 3. **Optional:** If you plan to work on Java projects, also install the Java Extension Pack.
 4. After installing the extension, the Codewind view is available in the Explorer view and the Command Palette. In the VS Code Explorer view group, open the Codewind view, or enter `Focus on Codewind` into the Command Palette.
 
