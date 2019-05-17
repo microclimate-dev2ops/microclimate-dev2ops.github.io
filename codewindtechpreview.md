@@ -51,19 +51,18 @@ Projects must be located in `<user>/microclimate-workspace`.
 
 #### Installing the VS Code extension
 1. Install VS Code Version 1.27 or later.
-2. Install the [Codewind VS Code extension](https://marketplace.visualstudio.com/items?itemName=IBM.codewind) from the VS Code Marketplace or by searching for `Codewind` in the VS Code Extensions view. You can also use the [Marketplace Drag to Install button](https://marketplace.eclipse.org/content/codewind#group-external-install-button).
+2. Install the [Codewind VS Code extension](https://marketplace.visualstudio.com/items?itemName=IBM.codewind) from the VS Code Marketplace or by searching for `Codewind` in the VS Code Extensions view.
 3. **Optional:** If you plan to work on Java projects, also install the Java Extension Pack.
 4. After installing the extension, the Codewind view is available in the Explorer view and the Command Palette. In the VS Code Explorer view group, open the Codewind view, or enter `Focus on Codewind` into the Command Palette.
 
 #### Installing the Eclipse plug-in
 1. Download and install the latest Eclipse IDE for Java EE Developers or use an existing installation. The earliest supported version of the Eclipse IDE is Version 4.8 (Photon).
-2. Open the [Eclipse IDE](https://marketplace.eclipse.org/content/codewind) and go to **Help**>**Eclipse Marketplace**.
-3. Search for `Codewind`.
-4. Click **Install**.
-5. Finish the wizard and accept licenses as prompted.
-6. When the installation is complete, restart Eclipse.
-7. Open the Codewind Explorer view. Go to **Window**>**Show View**>**Other** and type `Codewind` in the filter field.
-8. Then, select **Codewind Explorer** and click **Open**.
+2. Obtain the plug-in in one of the following ways: 
+    - Open the [Eclipse IDE](https://marketplace.eclipse.org/content/codewind) and go to **Help**>**Eclipse Marketplace**. Then, search for `Codewind`. Click **Install** and finish the wizard and accept licenses as prompted.
+   - You can also use the [Marketplace Drag to Install button](https://marketplace.eclipse.org/content/codewind#group-external-install-button).
+3. When the installation is complete, restart Eclipse.
+4. Open the Codewind Explorer view. Go to **Window**>**Show View**>**Other** and type `Codewind` in the filter field.
+5. Then, select **Codewind Explorer** and click **Open**.
 
 ## Getting started
 
