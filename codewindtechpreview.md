@@ -57,9 +57,7 @@ Projects must be located in `<user>/microclimate-workspace`.
 
 #### Installing the Eclipse plug-in
 1. Download and install the latest Eclipse IDE for Java EE Developers or use an existing installation. The earliest supported version of the Eclipse IDE is Version 4.8 (Photon).
-2. Obtain the plug-in in one of the following ways: 
-    - Open the [Eclipse IDE](https://marketplace.eclipse.org/content/codewind) and go to **Help**>**Eclipse Marketplace**. Then, search for `Codewind`. Click **Install** and finish the wizard and accept licenses as prompted.
-   - You can also use the [Marketplace Drag to Install button](https://marketplace.eclipse.org/content/codewind#group-external-install-button).
+2. Open the [Eclipse IDE](https://marketplace.eclipse.org/content/codewind) and go to **Help**>**Eclipse Marketplace**. Then, search for `Codewind`. Click **Install** and finish the wizard and accept licenses as prompted.
 3. When the installation is complete, restart Eclipse.
 4. Open the Codewind Explorer view. Go to **Window**>**Show View**>**Other** and type `Codewind` in the filter field.
 5. Then, select **Codewind Explorer** and click **Open**.
