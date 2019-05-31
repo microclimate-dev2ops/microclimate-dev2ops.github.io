@@ -18,8 +18,9 @@ parent: mdt-vsc-commands-overview
 - [Restart and debug](mdt-vsc-commands-restart-and-debug)
 
 ***
+All commands are available in the Command Palette. You can also right-click the background of the Microclimate view and right-click an existing connection to access the connection commands.
 
-Right-click the background of the Microclimate view to access the new connection commands. Right-click an existing connection to access the other connection commands. All commands are available in the Command Palette.
+In Microclimate Version 19.05, you can create projects by right-clicking a connection or by clicking the plus sign (+) icon on the connection.
 
 The tools support only local instances of Microclimate, so only one connection at a time is necessary.
 

@@ -17,6 +17,7 @@ Creating a connection in Eclipse to Microclimate enables you to view and work wi
 * [Creating a connection](#creating-a-connection)
 * [Opening the Microclimate UI for a connection](#opening-the-microclimate-ui-for-a-connection)
 * [Creating a new Microclimate project](#creating-a-new-microclimate-project)
+* [Creating a new Microclimate project from the Microclimate UI](#creating-a-new-microclimate-project-from-the-microclimate-ui)
 * [Importing a project into Microclimate](#importing-a-project-into-microclimate)
 * [Refreshing a connection](#refreshing-a-connection)
 * [Deleting a connection](#deleting-a-connection)
@@ -47,7 +48,16 @@ For some actions such as creating and deleting projects, you need to use the Mic
 
 ## Creating a new Microclimate project
 
-You can open the Microclimate UI for a connection directly on the new project page:
+In Microclimate Version 19.05 and later, you can create new Microclimate projects from within Eclipse:
+
+1. Right-click the connection in the **Microclimate Explorer** view and select **New Project**.
+2. Enter a unique name for the project and select a template from the list.
+3. By default the project is imported into the Eclipse workspace after it is created. If you don't want to import the project, you can clear the **Import project after it is created** check box.
+4. Click **Finish** to create your project.
+
+## Creating a new Microclimate project from the Microclimate UI
+
+In Microclimate Version 19.02 and earlier, you can open the Microclimate UI for a connection directly on the new project page:
 
 1. Right-click the connection in the **Microclimate Explorer** view and select **Open New Project Page**. For versions earlier than 19.01, select **Create New Project**.
 2. If the browser does not support the Microclimate content, change the default browser. Go to **Window**>**Web Browser** and select from the list of available browsers. Repeat the previous step.

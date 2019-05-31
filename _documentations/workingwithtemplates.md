@@ -39,7 +39,7 @@ To create a template using the wizard:
 - Change the **Branch** value if necessary.
 - Select the **Language**. Options available are Java, Node.js, Swift, Python, and Go. If your project uses a different language, [create the template manually](#creating-a-template-manually).
 - A **Build type** is selected for you based on the chosen language. Select a different build type if necessary.
-- A default **Application Port** value is entered for you based on the chosen build type. Enter a different value if necessary.
+- A default **Application port** value is entered for you based on the chosen build type. Enter a different value if necessary.
 - Click **Create**.
 
 ## Creating a template manually
@@ -59,6 +59,7 @@ To make your own template:
 **Note:**
 - The `<your-template-directory>` directory must end in a forward slash (/) so that the `kubectl` command performs a recursive directory copy.
 - The `extensions` directory in the root of the file system for the `ibm-microclimate` pod contains only the templates that Microclimate supplies. Place your new template in the `microclimate-workspace/<icp-username>/.extensions` directory as previously described.
+- In addition to the provided language options, you can type in your own language. The manually added language will then be included as an option in the template wizard.
 
 4. If you are running in a local installation, restart Microclimate. If you are running in IBM Cloud Private, restart the `ibm-microclimate` pod. After you restart, your template appears as a selectable project type when you create a new project.
 

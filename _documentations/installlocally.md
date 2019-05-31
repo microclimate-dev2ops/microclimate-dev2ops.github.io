@@ -15,7 +15,7 @@ parent: root
 
 ## Download the Microclimate compressed file
 
-<a href="{{ site.downloadlink }}" class="download-link trackdownload" id="zipDownload">Download Microclimate 19.03</a>
+<a href="{{ site.downloadlink }}" class="download-link trackdownload" id="zipDownload">Download Microclimate 19.05</a>
 
 ## Installing and starting Microclimate locally on your machine
 
@@ -55,11 +55,12 @@ cd ..
 ## Installing on Windows
 
 ### Prerequisites
-* Supported Windows versions are Windows 10 and Windows Server 2016.
+* Windows 10 and Windows Server 2016 are supported.
 * [Git](https://git-scm.com/)
 * Install [Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows).
+  * Use the default Linux containers setting. From the **Docker for Windows** menu, you can toggle between the Linux or Windows daemon. If your settings have been changed from the default, select **Switch to Linux containers...** to use Linux containers. Microclimate runs only on Linux containers.
 * Enable your local disk drive for sharing in Docker. Open the **Docker Settings** window, click the **Shared Drives** tab, and select the drive on which you are installing Microclimate.
-* Use the default Linux containers setting. From the **Docker for Windows** menu, you can toggle between the Linux or Windows daemon. If your settings have been changed from the default, select **Switch to Linux containers...** to use Linux containers. Microclimate runs only on Linux containers.
+  * For help resolving issues when using OS authentication setups such as AzureAD, see the [Troubleshooting page](troubleshooting#docker-shared-drive-not-accepting-os-credentials-for-windows).
 * Disable Docker Experimental features. Open the **Docker Settings** window, click the **Daemon** tab, and clear the **Experimental features** check box.
 
 ### Installing and running on Windows

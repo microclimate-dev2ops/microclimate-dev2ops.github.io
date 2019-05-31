@@ -5,7 +5,7 @@ description: Rogue Cloud
 keywords: coding, game, competition, play, fun, adventure, Kubernetes, IBM Cloud Private, IBM Cloud Containers services, video, sample, Java, Open Liberty
 duration: 1 minute
 permalink: roguecloud
----  
+---
 
 <br>
 <br>
@@ -24,18 +24,18 @@ We wanted to introduce you to some work we have been doing on [**Microclimate**,
 
 The game also allows us to showcase the work of a few of our friends. Rogue Cloud is built on [**Open Liberty**, the premier platform for building Java cloud-native applications and microservices](https://openliberty.io). Swing by their site to learn more about their amazing open source enterprise application server.
 
-Additionally, Rogue Cloud is also designed to showcase the capabilities of Kubernetes-based [**IBM Cloud Private**](https://www.ibm.com/cloud-computing/products/ibm-cloud-private/) and [**IBM Cloud Containers services**](https://www.ibm.com/cloud/container-service).
+Additionally, Rogue Cloud is also designed to showcase the capabilities of Kubernetes-based [**IBM Cloud Private**](https://www.ibm.com/marketplace/ibm-cloud-private/) and [**IBM Cloud Containers services**](https://www.ibm.com/cloud/container-service).
 
 ### Get Rogue-ing!
 
-Ready for an adventure? Here are some links to get you started!  
+Ready for an adventure? Here are some links to get you started!
 
-* [See how easy it is to get started!](https://github.com/microclimate-dev2ops/rogue-cloud/blob/master/docs/GettingStarted.md)  
-* [Introduction and Concepts](https://github.com/microclimate-dev2ops/rogue-cloud/tree/master/docs)  
-* [Coding a Rogue Cloud agent](https://github.com/microclimate-dev2ops/rogue-cloud/blob/master/docs/Developing-CodingNextSteps.md)  
-* Develop your code using:  
-   * [Microclimate](https://github.com/microclimate-dev2ops/rogue-cloud/blob/master/docs/Developing-Microclimate.md)  
-   * [A text editor like Visual Studio Code, Atom, and so on](https://github.com/microclimate-dev2ops/rogue-cloud/blob/master/docs/Developing-Text-Editor.md)  
+* [See how easy it is to get started!](https://github.com/microclimate-dev2ops/rogue-cloud/blob/master/docs/GettingStarted.md)
+* [Introduction and Concepts](https://github.com/microclimate-dev2ops/rogue-cloud/tree/master/docs)
+* [Coding a Rogue Cloud agent](https://github.com/microclimate-dev2ops/rogue-cloud/blob/master/docs/Developing-CodingNextSteps.md)
+* Develop your code using:
+   * [Microclimate](https://github.com/microclimate-dev2ops/rogue-cloud/blob/master/docs/Developing-Microclimate.md)
+   * [A text editor like Visual Studio Code, Atom, and so on](https://github.com/microclimate-dev2ops/rogue-cloud/blob/master/docs/Developing-Text-Editor.md)
    * [Eclipse and IBM Liberty Developer Tools](https://github.com/microclimate-dev2ops/rogue-cloud/blob/master/docs/Developing-LibertyDevTools.md)
 
 

@@ -25,7 +25,7 @@ Jenkins provides the pipeline capability only when Microclimate is deployed onto
 {% include docs-video.html src="https://ibm.box.com/shared/static/da47ohno0mw6ps0wg9ktgg7ifc8q8mm6.mp4" description="Creating a pipeline" %}
 </details><br>
 
-## Creating a build pipeline
+## Creating a build pipeline with a local project
 
 Follow these steps to create a pipeline:
 
@@ -42,6 +42,13 @@ Follow these steps to create a pipeline:
 <summary style="cursor: pointer;"><img src="dist/images/icon-video.svg" alt="Microclimate video icon" class="inline" width="40px"/> Watch the video for pipeline deployments.</summary>
 {% include docs-video.html src="https://ibm.box.com/shared/static/c0sw95xojiuz0du5u0mwuekh8x5w56w4.mp4" description="Pipeline deployments" %}
 </details><br>
+
+## Creating a build pipeline with a Git project
+
+You can create a pipeline outside of a local project. Instead of creating or cloning a project locally, you can create a pipeline for a project in a Git repository.
+
+1. On the Microclimate UI Welcome page, click the **New pipeline** button. The pipeline appears as a project on the project list page.
+2. You can use the pipeline without development options. You can clone or create projects later and configure the pipeline differently.
 
 ## Deploying applications
 

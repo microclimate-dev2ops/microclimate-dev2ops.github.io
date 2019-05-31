@@ -7,8 +7,8 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Please change both downloadlink and version for every new release.
-downloadlink: download/microclimate-19.03.zip
-version: "19.03"
+downloadlink: download/microclimate-19.05.zip
+version: "19.05"
 
 # Build settings
 markdown: kramdown

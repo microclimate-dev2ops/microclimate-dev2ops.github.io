@@ -59,23 +59,18 @@ This command is equivalent to clicking the **Enable/Disable project** button in 
 
 ## Logs
 
-### **Show application log**
-Open a channel in the **Output** view that contains the project application logs. The application logs are updated every 20 seconds.<br>
+### **Show all logs**
+Open a channel in the **Output** view for each of the project's logs.<br>
 To remove the output channel, use the **Hide logs** command.<br>
-The output is equivalent to the **App logs** page in Microclimate.
 
-### **Show build log**
-Open a channel in the **Output** view that contains the project build logs. The build logs are updated every 5 seconds.<br>
-To remove the output channel, use the **Hide logs** command.<br>
-The output is equivalent to the **Build logs** page in Microclimate.
+### **Hide all logs**
+This command hides all the output channels that contain logs for this project.<br>
 
-### **Hide logs**
-This command presents a list of Microclimate project logs that are currently open in the **Output** view. Select the logs you want to hide from that view.
+### **Manage logs**
+This command presents a list of all logs for this project, which you can toggle individually.<br>
 
-### **Show logs when they change**
-If you want VS Code to bring your logs to the front when they have new output, you can set the following options:
-- Set `microclimate.openLogsOnChange.app` for application logs. This option is disabled by default.
-- Set `microclimate.openLogsOnChange.build` for build logs. This option is enabled by default.
+## Project-specific settings
+Edit the internal app and debug ports as well as the **application endpoint**, sometimes known as the **context root**, from the **Project Overview** page.
 
 ***
 
