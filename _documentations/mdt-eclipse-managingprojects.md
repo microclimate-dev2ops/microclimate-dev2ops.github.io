@@ -33,8 +33,9 @@ Some actions open the default Eclipse browser. If you find that the default Ecli
 - **Open Container Shell**: Opens a shell into your application container. This action is only available when the container is active.
 - **Open Application Monitor**: Opens the application monitor in the default Eclipse browser. Use this to monitor the activity and health of your application. This action is only available when the application is running or debugging.
 - **Import Project**: Imports your project into the Eclipse workspace.
-- **Show Application Log**: Opens the application log in the Eclipse **Console** view. This is a toggle action, select again to remove the log from the **Console** view.
-- **Show Build Log**: Opens the build log in the Eclipse **Console** view. Not all project types have a build log. This is a toggle action, select again to remove the log from the **Console** view.
+- **Show Log Files** (Version 19.05 and later): If log files are available, this action displays a list of log files. In the Eclipse **Console** view, click a log file to open it, or click **Show All** to open all available log files. The individual log files are toggle actions. Click the log file again to remove the log file, or click **Hide All** to remove all log files from the **Console** view.
+- **Show Application Log** (Version 19.02 and earlier): This action opens the application log in the Eclipse **Console** view. Select this toggle action again to remove the log from the **Console** view.
+- **Show Build Log** (Version 19.02 and earlier): Opens the build log in the Eclipse **Console** view. Not all project types have a build log. This is a toggle action, select again to remove the log from the **Console** view.
 - **Restart in Run Mode**: Restarts the application in run mode.
 - **Restart in Debug Mode**: Restarts the application in debug mode and attaches the debugger. Only Microprofile/Java EE, Spring, and Node.js projects can be debugged. For more information, see [Debugging Microclimate projects](mdteclipsedebugproject).
 - **Attach Debugger**: If you detached the debugger accidentally or restarted Eclipse, use this to re-attach the debugger to an application in debug mode. For more information, see [Debugging Microclimate projects](mdteclipsedebugproject).
@@ -42,4 +43,5 @@ Some actions open the default Eclipse browser. If you find that the default Ecli
 - **Disable Auto Build**: Use this to disable automatic builds if you are making a lot of changes and don't want builds to be triggered until you are done. This action is only available when auto build is enabled.
 - **Enable Auto Build**: Use this to re-enable automatic builds whenever a change is made. This action is only available when auto build is disabled.
 - **Validate**: Initiate validation. This action is only available when auto build is disabled to allow you to perform validation without running a build. Otherwise, validation is run automatically as part of a build. Any problems that are found during validation are shown in the **Markers** view in Eclipse under the **Microclimate Problems** heading. Check for quick fixes on the marker to help you resolve the problem.
+- **Delete**: Delete a project. This action deletes the project from Microclimate, the file system, and the Eclipse workspace if the project was imported into Eclipse.
 - **Refresh**: If the project gets out of sync, use this option to refresh it. To refresh all projects, right click on the connection in the **Microclimate Explorer** view and select **Refresh**.

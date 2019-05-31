@@ -27,7 +27,7 @@ For more detail on any of the commands, see the [commands overview](mdt-vsc-comm
 4. Open the **Project Overview** page to view project information.
     - Right-click the project and select [`Show Project Overview`](mdt-vsc-commands-project#show-project-overview).
 5. To view the project's standard output and error as you develop it, open the application logs.
-    - Right-click the project and select [`Show Application Log`](mdt-vsc-commands-project#show-application-log). The log appears in the **Output** view.
+    - Right-click the project and select [`Show Application Log`](mdt-vsc-commands-project#logs). The log appears in the **Output** view.
     - Node.js projects do not have build logs, but if you work on another type of project, you can also view the build log.
 6. Open a file to edit. For example, modify the `health` endpoint of the default Node.js project.
     - Open a Javascript file, such as `nodeproject/server/routers/health.js`.

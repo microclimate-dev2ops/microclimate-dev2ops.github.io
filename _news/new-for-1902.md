@@ -20,7 +20,7 @@ After lots of hard work over the last several months, Microclimate is now offici
 
 ![Microclimate with Cloud Pak icon in catalog](dist/images/news-1902/news-1902-ibm-cloud-pak-mc.png "Microclimate with Cloud Pak icon in catalog")
 
-The official [Cloud Pak page](https://www.ibm.com/cloud/private/why-containers) states that Cloud Paks "accelerate time to production and improve enterprise readiness." Cloud Paks also provide answers to these questions:
+The official Cloud Pak page states that Cloud Paks "accelerate time to production and improve enterprise readiness." Cloud Paks also provide answers to these questions:
 
 - **Q:** Are your software containers secure?
 - **A:** Yes, they are! Microclimate scans and remediates container image vulnerabilities, uses the minimum required privileges, documents the required privileges of its containers, and provides monthly updates.

@@ -23,7 +23,6 @@ Microclimate is designed to develop cloud native microservices, therefore, each 
 * [Node.js projects](#nodejs-projects)
 * [Swift projects](#swift-projects)
 * [Generic Docker projects](#generic-docker-projects)
-* [Importing in IBM Cloud Private](#importing-in-ibm-cloud-private)
 
 ## Eclipse MicroProfile projects
 
@@ -191,8 +190,3 @@ For example, you should be able to build the project by using the command
 ## Generic Docker projects
 
 If you have a Dockerized application that doesn't fit an existing template, you can still import the project into Microclimate by selecting the **Docker** import option. For the application state detection to work, the Dockerfile needs to include an `EXPOSE` instruction to point to the port that is used to determine whether the project is running.
-
-## Importing in IBM Cloud Private
-
-### Helm charts
-When you import a Microclimate project to be deployed on IBM Cloud Private, the chart name must be the same as the project name in order for Microclimate to detect its status.

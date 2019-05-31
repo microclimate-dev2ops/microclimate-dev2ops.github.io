@@ -56,10 +56,10 @@ Projects must be located in `<user>/microclimate-workspace`.
 4. After installing the extension, the Codewind view is available in the Explorer view and the Command Palette. In the VS Code Explorer view group, open the Codewind view, or enter `Focus on Codewind` into the Command Palette.
 
 #### Installing the Eclipse plug-in
-1. Download and install the latest Eclipse IDE for Java EE Developers or use an existing installation. The earliest supported version of the Eclipse IDE is Version 2019-03 (4.11).
-2. Obtain the plug-in in one of the following ways: 
-   - [![Drag this install button to your running Eclipse workspace. Note: You need to have the Eclipse Marketplace Client.](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=4638524 "Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client") Drag this install button to your running Eclipse workspace. Note: You need to have the Eclipse Marketplace Client.
-   - Open the [Eclipse IDE](https://marketplace.eclipse.org/content/codewind) and go to **Help**>**Eclipse Marketplace**. Then, search for `Codewind`. Click **Install** and finish the wizard and accept licenses as prompted.
+1. Download and install the [latest Eclipse IDE for Java EE Developers](https://www.eclipse.org/downloads/packages/release/) or use an existing installation. The earliest supported version of the Eclipse IDE is Version 2019-03 (4.11).
+2. Obtain the plug-in in one of the following ways:
+    - [![Drag this install button to your running Eclipse workspace. Note: You need to have the Eclipse Marketplace Client.](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=4638524 "Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client") Drag this install button to your running Eclipse workspace. Note: You need to have the Eclipse Marketplace Client.
+    - Open the [Eclipse IDE](https://marketplace.eclipse.org/content/codewind) and go to **Help**>**Eclipse Marketplace**. Then, search for `Codewind`. Click **Install** and finish the wizard and accept licenses as prompted.
 3. When the installation is complete, restart Eclipse.
 4. Open the Codewind Explorer view. Go to **Window**>**Show View**>**Other** and type `Codewind` in the filter field.
 5. Then, select **Codewind Explorer** and click **Open**.

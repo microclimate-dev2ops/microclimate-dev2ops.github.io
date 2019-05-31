@@ -23,11 +23,15 @@ To install Kibana and filter Microclimate log files in IBM Cloud Private:
 
 ## Install the logging infrastructure by using Kibana and ELK Stack
 
+**Note:** The steps in this section are not necessary for IBM Cloud Private 2.1.0.3 and later. IBM Cloud Private 2.1.0.3 introduced logging built in to IBM Cloud Private, and logs from user applications are now automatically indexed and made available for you to view from Kibana.
+
 1. Go to `Catalog` in the IBM Cloud Private dashboard.
 
-2. Search for "kibana", and install the `ibm-icplogging-kibana` chart. This must be installed in the same namespace as the `ibm-icplogging` deployment.
+2. Search for **Kibana** and install the `ibm-icplogging-kibana` chart. This chart must be installed in the same namespace as the `ibm-icplogging` deployment.
 
-3. Go to `http://<ICP_proxy_ip>:32601/app/kibana` to see the Kibana dashboard.
+## Access the Kibana dashboard
+
+- In the IBM Cloud Private web console, select **Platform**>**Logging** to view the Kibana interface.
 
 ## Build a query to filter the logs
 
