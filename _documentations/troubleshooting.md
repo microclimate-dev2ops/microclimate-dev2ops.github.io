@@ -543,6 +543,20 @@ Sometimes the **Edit code** view doesn't display correctly. When you click the *
 
 <!--
 Action/Topic: Editing your project
+Issue type: bug/info
+Issue link: https://github.ibm.com/dev-ex/iterative-dev/issues/1116
+19.05: Still an issue
+-->
+## A `settings update failed` event occurs
+You might receive `settings update failed` events if you create or enable a project or if you create or modify the `.mc-settings` file for a project that is not debuggable:
+```
+error:"BAD_REQUEST: The project does not support debug mode."
+```
+
+**Workaround:** The `.mc-settings` file for a project does not support debug mode or projects on IBM Cloud Private. Remove the `internalDebugPort` field in the `.mc-settings` file to avoid the error.
+
+<!--
+Action/Topic: Editing your project
 Issue type: bug
 Issue link: https://github.ibm.com/dev-ex/theia/issues/3
 18.10: Still an issue
