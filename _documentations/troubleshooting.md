@@ -547,8 +547,8 @@ Issue type: bug/info
 Issue link: https://github.ibm.com/dev-ex/iterative-dev/issues/1116
 19.05: Still an issue
 -->
-## Error message appears when an `.mc-settings` file is created or modified
-You might receive `settings update failed` events if you create or enable a project that is not debuggable and create or modify the `.mc-settings` file:
+## A `settings update failed` event occurs
+You might receive `settings update failed` events if you create or enable a project or if you create or modify the `.mc-settings` file for a project that is not debuggable:
 ```
 error:"BAD_REQUEST: The project does not support debug mode."
 ```
