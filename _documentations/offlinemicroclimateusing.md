@@ -420,7 +420,7 @@ The default Microclimate Helm chart references public resources that you need to
   - [Previous releases](https://github.com/IBM/charts/tree/master/repo/stable)
 
 2. Store the following images in your `mycluster.icp` private Docker registry:<br>
-**Note:** To push to the private registry from outside the cluster, see [Configuring authentication for the Docker CLI](https://www-03preprod.ibm.com/support/knowledgecenter/SSBS6K_3.1.2/manage_images/configuring_docker_cli.html).
+**Note:** To push to the private registry from outside the cluster, see [Configuring authentication for the Docker CLI](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.2/manage_images/configuring_docker_cli.html).
  ```
 ibmcom/microclimate-theia
 ibmcom/microclimate-file-watcher
