@@ -299,10 +299,10 @@ Issue type: bug/info
 Issue link: https://github.ibm.com/dev-ex/iterative-dev/issues/1091
 19.05: Info added in 19.05.
 -->
-## Microprofile projects do not start
-When creating a Microprofile project through the create wizard, the projects do not go to the `Started` state because of the missing `unzip` tool.
+## In Microclimate versions before 19.05, Microprofile projects fail on Docker builds and do not start
+In Microclimate versions before 19.05, Microprofile project templates fail on Docker builds and do not start because of the missing `unzip` and `wget` tools.
 
-**Workaround:** The issue occurs when the Microprofile project template does not have unzip installed for the project container. You will need to install unzip during the project's Docker builds. This can be done by adding the line `RUN if [ -z $(which unzip) ]; then apt update; apt install -y unzip; fi` to the project Dockerfile.
+**Workaround:** The issue occurs when the Microprofile project template does not have `unzip` and `wget` installed for the project container. You will need to install `unzip` and `wget` during the project Docker builds. Add the lines `RUN if [ -z $(which unzip) ]; then apt update; apt install -y unzip; fi` and `RUN if [ -z $(which wget) ]; then apt update; apt install -y wget; fi` to the project `Dockerfile-build` after the `USER root` line.
 
 # Importing a project
 
