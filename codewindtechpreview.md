@@ -90,4 +90,4 @@ With Codewind, you have a single connection that is either active or inactive. T
 
 ## Discovering more
 
-For more information, see the [Eclipse Codewind site](https://projects.eclipse.org/projects/ecd.codewind). If you can't find what you need, contact us in our `ibm-cloud-tech` [Slack channel](https://ibm-cloud-tech.slack.com/messages/microclimate)! If you are new to Slack, you can [create a user ID here](https://slack-invite-ibm-cloud-tech.mybluemix.net/)!
+For more information, see the [Eclipse Codewind site](http://codewind.dev). If you can't find what you need, contact us in our `ibm-cloud-tech` [Slack channel](https://ibm-cloud-tech.slack.com/messages/microclimate)! If you are new to Slack, you can [create a user ID here](https://slack-invite-ibm-cloud-tech.mybluemix.net/)!
